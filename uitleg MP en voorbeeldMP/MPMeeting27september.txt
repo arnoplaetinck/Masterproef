@@ -1,0 +1,11 @@
+voor elk platform afzonderlijk tenserflow opzetten en laten draaien
+en drie verschillende types van experimenten te testen
+
+wat ik doe, the state of the art en wat ik verbeter (literatuurstudie)
+
+1) Benchmarking van de verschillende platformen 
+ zoals MNIST( classificatie), VLP(Regressie)
+	waarom zou je welke board gebruiken 
+	Reïnforcement learning toepasbaar?
+2) Recept voor de ANN te implementeren op verschillende SBC's (platformen) 
+3) Robuustheid (test op ruis) (optioneel)
