@@ -10,11 +10,11 @@
 \contentsline {subsubsection}{Type ontvanger}{4}{section*.8}
 \contentsline {subsection}{\numberline {2.2.2}Taxonomy}{4}{subsection.2.2.2}
 \contentsline {subsubsection}{Wiskundige methode}{4}{section*.9}
-\contentsline {subsubsection}{Sensor assisted methode}{4}{section*.10}
-\contentsline {subsubsection}{Optimization methode}{4}{section*.11}
-\contentsline {section}{\numberline {2.3}Artifici\~A\IeC {\guillemotleft }le Neurale Netwerken}{4}{section.2.3}
-\contentsline {chapter}{\numberline {3}This is the another Chapter}{5}{chapter.3}
-\contentsline {section}{\numberline {3.1}This is a Section Heading}{5}{section.3.1}
-\contentsline {chapter}{\numberline {A}Een aanhangsel}{8}{appendix.A}
-\contentsline {chapter}{\numberline {B}Beschrijving van deze masterproef in de vorm van een wetenschappelijk artikel}{9}{appendix.B}
-\contentsline {chapter}{\numberline {C}Poster}{10}{appendix.C}
+\contentsline {subsubsection}{Sensor assisted methode}{5}{section*.10}
+\contentsline {subsubsection}{Optimization methode}{5}{section*.11}
+\contentsline {section}{\numberline {2.3}Artifici\~A\IeC {\guillemotleft }le Neurale Netwerken}{5}{section.2.3}
+\contentsline {chapter}{\numberline {3}This is the another Chapter}{6}{chapter.3}
+\contentsline {section}{\numberline {3.1}This is a Section Heading}{6}{section.3.1}
+\contentsline {chapter}{\numberline {A}Een aanhangsel}{9}{appendix.A}
+\contentsline {chapter}{\numberline {B}Beschrijving van deze masterproef in de vorm van een wetenschappelijk artikel}{10}{appendix.B}
+\contentsline {chapter}{\numberline {C}Poster}{11}{appendix.C}
