@@ -1,0 +1,18 @@
+Latex Info 22/10/2019
+
+ppt zie toledo
+referenties: kuleuven.ezproxy.kuleuven.be => toegang tot IEEE explore, google scholar , limo
+* via natbib:  \cite
+* Bibtex: bridge .bib en .tex µ
+
+abbreviations: \newacronym{iot}{IoT{Internet-of Things} => in uw tekst: \gls{iot}
+
+tabellen: tabularomgeving optimale plaatsing van uw tabel met captions ( mag lang zijn, om een rando de tabel te laten begrijpen) en labels
+
+Booktabs: achteraf mogelijk
+www.tablesgenerator.com <====== !!!!!!!!!!!!
+altijd labels gebruiken, ook prefixen ( fig:/ tab:/...) gebruiken
+
+SI Units gebruiken
+template zie link (overleaf)
+tips en tricks zie dramcosite
