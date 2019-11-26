@@ -1,0 +1,11 @@
+python runnen met numpy, pyrenn, matplotlib 
+
+
+op pc: .csv file maken en die uploaden naarBB en daar implementeren
+
+Beginnen bij kleine stappen van pyrenn en zo opbouwen
+datafiles eerst proberen omzetten op de pc naar bruikbaren op de BB
+
+python3 -m pip install --user package
+
+literatuurstudie: benchmarkingpapers, state of the art,... 

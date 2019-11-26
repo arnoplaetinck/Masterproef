@@ -1,0 +1,4 @@
+Headless (commandline nano)
+volgende deadlines in de gaten houden
+install via pip van oudere versies ()
+via ethernetkabel eens kijken voor beter internet

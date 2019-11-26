@@ -1,0 +1,69 @@
+Wat is er al gerealiseerd:
+- doornemen van de literatuur (3 opgegeven papers en 2 extra papers)
+- runnen van een programma met ANN (python)(2e programma had ik een data pakket nodig voor VLP)
+- Beaglebone opstarten en proberen python programma al een eerste keer runnen
+
+Wat zijn de uitdagingen op dit moment:
+- opstellen van lijst met parameters waar ik naar kijk om mijn beslissingen te nemen
+- uitdijnen naar meerdere papers en bronnen (google scholar)
+- pythonprogramm runnen
+- nota's nemen van de verschillende ondernomen stappen
+
+Korte Termijn planning:
+
+- pythonprogramma runnen
+- 2e programma opstellen om te runnen
+- overgaan naar volgende board om op te starten
+- schrijven aan paper (lit.studie)
+
+
+planning
+opdrachtomschrijving
+tabel met wat ik heb geïmplementeerd
+voor testen klaar te maken 
+literatuurstudie verder uitwerken:
+- kijken naar NN in plaatsbepalingen
+
+
+- IEEE explore website 
+- google scholar
+- limo
+
+richtlijnen: voor nieuwjaar
+op elk bordje kunnen werken met python
+tensorflow, scikit learn (pyrenn)
+imports en runnen laten testen
+
+
+PYrenn (bibliotheek voor ANN)
+- trainingsfase (gewicht van perceptrons beperkt)
+- executie (uitvoeren van ANN bij willekeurige input)
+
+code van website (examples) eens uitproberen
+-trainen op pc
+-uitvoeren op BB en andere boards
+=>the sooner the better
+
+volgende meeting half 2 volgende week
+boards langs boven
+en verschillende examples in de zijkant en tijden als data
++presentatie van wat bereikt, wat te doen en uitdagingen
+
+https://pyrenn.readthedocs.io/en/latest/examples.html#compressed-air-storage-system
+
+
+1e semester:
+MP: 10 sp
+AO2: 6 sp
+MC:  3 sp
+Pol: 6 sp
+APP: 3 sp
+d&a: 3 sp
+totaal: 31 sp
+
+2e semester:
+MP: 10 sp
+AT:  3 sp
+APP: 3 sp
+BPG: 3 sp
+totaal: 19 sp

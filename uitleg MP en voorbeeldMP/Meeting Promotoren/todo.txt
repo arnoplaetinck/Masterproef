@@ -1,0 +1,16 @@
+To Do Masterproef:
+
+Literatuurstudie:
+
+1) opzoekwerk naar benchmarkpapers, papers, state of the art in tech,...
+1,1) afschuimen van IEEE explore website, google scholar, limo,...
+
+2) schrijven van literatuurstudie
+
+Praktijk:
+
+1) python runnen met pyrenn, numpy, matplotlib
+
+datafiles op pc omzetten naar .csv file en op BB implementeren
+
+2) opzoekwerk scikit learn
