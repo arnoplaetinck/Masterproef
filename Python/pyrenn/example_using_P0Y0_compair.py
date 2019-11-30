@@ -1,16 +1,16 @@
 import numpy as np
-import pandas as pd
 import matplotlib.pyplot as plt
-
+from numpy import genfromtxt
 import pyrenn as prn
 
 ###
 #Read Example Data
-df = pd.ExcelFile('example_data.xlsx').parse('compressed_air')
-P = np.array([df['P1'].values,df['P2'].values,df['P3'].values])
-Y = np.array([df['Y1'].values,df['Y2']])
-Ptest_ = np.array([df['P1test'].values,df['P2test'].values,df['P3test'].values])
-Ytest_ = np.array([df['Y1test'].values,df['Y2test']])
+df = genfromtxt('example_data_compressed_air.csv', delimiter=',')
+
+P = np.array([df[1], df[2], df[3]])
+Y = np.array([df[4], df[5]])
+Ptest_ = np.array([df[6], df[7], df[8]])
+Ytest_ = np.array([df[9], df[10]])
 
 #define the first timestep t=0 of Test Data as previous (known) data P0test and Y0test
 P0test = Ptest_[:,0:1]

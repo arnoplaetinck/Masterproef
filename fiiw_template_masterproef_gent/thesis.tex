@@ -26,6 +26,34 @@
 \allsectionsfont{\sffamily}
 \chapterfont{\raggedleft\sffamily}
 
+
+\usepackage[acronym]{glossaries}        % voor afkortingen
+\makeglossaries
+\newacronym[plural=LPWANs,firstplural=Low-Power Wide-Area Networks (LPWANs)]{lpwan}{LPWAN}{Low-Power
+	Wide-Area Network}
+\newacronym{iot}{IoT}{Internet-of-Things} % default expression for defining a new acronym
+\newacronym{ook}{OOK}{On-Off Keying}
+\newacronym{ppm}{PPM}{Pulse Position Modulation}
+\newacronym{ofdm}{OFDM}{Orthogonal Frequency Division Multiplexing}
+\newacronym{csk}{CSK}{Color Shift Keying}
+\newacronym{cap}{CAP}{Carrier-less Ampltitude and Phase}
+\newacronym{aoa}{AOA}{Angle Of Arrival}
+\newacronym{toa}{TOA}{Time Of Arrival}
+\newacronym{rss}{RSS}{Received Signal Strength}
+\newacronym[plural=LEDs,firstplural=Light Emitting Diodes (LEDs)]{led}{LED}{Light Emitting Diode}
+\newacronym{vlc}{VLC}{Visible Light Communication}
+\newacronym{vlp}{VLP}{Visible Light based Positioning}
+\newacronym{rfid}{RFID}{Radio-Frequency Identification}
+\newacronym{uwb}{UWB}{Ultra-WideBand}
+\newacronym{ap}{AP}{Acces Point}
+\newacronym{ask}{ASK}{Amplitude-Shift Keying}
+\newacronym{nrz}{NRZ}{Non-return-to-zero}
+\newacronym{rz}{RZ}{Return-to-zero}
+\newacronym{vppm}{VPPM}{Variable PPM}
+\newacronym{oppm}{OPPM}{Overlapping PPM}
+\newacronym{mppm}{MPPM}{Multi-Pulse PPM}
+\newacronym{isi}{ISI}{Inter-Symbol Interference}
+
 \usepackage{float}                      % De optie H voor de plaatsing van figuren op de plaats waar je ze invoegt. bvb. \begin{figure}[H]
 %\usepackage{longtable}					% tabellen die over meerdere pagina's gespreid worden
 %\usepackage[times]{quotchap}           % indien je fancy hoofdstuktitels wil
@@ -76,7 +104,7 @@
 \selectlanguage{dutch}
 % \selectlanguage{english} % For the english version
 
-\input{preface}
+%\input{preface}
 
 \input{Inleiding}
 \input{Literatuurstudie}

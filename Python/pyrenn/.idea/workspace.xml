@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9d59d51-24d1-4994-a752-0edb3156dde0" name="Default Changelist" comment="" />
+    <list default="true" id="c9d59d51-24d1-4994-a752-0edb3156dde0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/mnist-in-csv/mnist_test.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mnist-in-csv/mnist_train.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mnist_data.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/t10k-images.idx3-ubyte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/t10k-labels.idx1-ubyte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/train-images.idx3-ubyte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/train-labels.idx1-ubyte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_classification_mnist.py" beforeDir="false" afterPath="$PROJECT_DIR$/example_classification_mnist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_friction.py" beforeDir="false" afterPath="$PROJECT_DIR$/example_friction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_narendra4.py" beforeDir="false" afterPath="$PROJECT_DIR$/example_narendra4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_pt2.py" beforeDir="false" afterPath="$PROJECT_DIR$/example_pt2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_using_P0Y0_compair.py" beforeDir="false" afterPath="$PROJECT_DIR$/example_using_P0Y0_compair.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_using_P0Y0_narendra4.py" beforeDir="false" afterPath="$PROJECT_DIR$/example_using_P0Y0_narendra4.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,9 +35,13 @@
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="ProjectId" id="1TW0ql7hb6ZhlplUKWUrDvTIDtZ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="D:/Git/cmd/git.exe" />
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Python/Test/TF-test.py" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunDashboard">
@@ -37,8 +56,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.example_compair">
-    <configuration name="example_compair" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.example_classification_mnist">
+    <configuration name="TF-test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pyrenn" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -46,11 +65,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../../Python/Test" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/example_compair.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../../Python/Test/TF-test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -59,7 +78,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="gradient_calculation" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="example_classification_mnist" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pyrenn" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -71,7 +90,70 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gradient_calculation.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/example_classification_mnist.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="example_friction" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="pyrenn" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/example_friction.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="example_using_P0Y0_compair" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="pyrenn" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/example_using_P0Y0_compair.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="example_using_P0Y0_narendra4" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="pyrenn" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/example_using_P0Y0_narendra4.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -82,8 +164,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.example_compair" />
-        <item itemvalue="Python.gradient_calculation" />
+        <item itemvalue="Python.example_classification_mnist" />
+        <item itemvalue="Python.TF-test" />
+        <item itemvalue="Python.example_using_P0Y0_narendra4" />
+        <item itemvalue="Python.example_using_P0Y0_compair" />
+        <item itemvalue="Python.example_friction" />
       </list>
     </recent_temporary>
   </component>
@@ -112,5 +197,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

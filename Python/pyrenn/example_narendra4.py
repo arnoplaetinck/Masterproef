@@ -1,21 +1,20 @@
-import pandas as pd
-import matplotlib.pyplot as plt
-
+import numpy as np
+from numpy import genfromtxt
 import pyrenn as prn
-
+import matplotlib.pyplot as plt
 ###
 #Read Example Data
-df = pd.ExcelFile('example_data.xlsx').parse('narendra4')
-P = df['P'].values
-Y = df['Y'].values
-Ptest = df['Ptest'].values
-Ytest = df['Ytest'].values
+df = genfromtxt('example_data_narendra4.csv', delimiter=',')
+P = df[1]
+Y = df[2]
+Ptest = df[3]
+Ytest = df[4]
 
 
 ###
 #Create and train NN
 
-#create recurrent neural network with 1 input, 2 hidden layers with 
+#create recurrent neural network with 1 input, 2 hidden layers with
 #3 neurons each and 1 output
 #the NN uses the input data at timestep t-1 and t-2
 #The NN has a recurrent connection with delay of 1,2 and 3 timesteps from the output
@@ -26,7 +25,7 @@ net = prn.CreateNN([1,3,3,1],dIn=[1,2],dIntern=[],dOut=[1,2,3])
 #Set maximum number of iterations k_max to 200
 #Set termination condition for Error E_stop to 1e-3
 #The Training will stop after 200 iterations or when the Error <=E_stop
-prn.train_LM(P,Y,net,verbose=True,k_max=200,E_stop=1e-3) 
+prn.train_LM(P,Y,net,verbose=True,k_max=200,E_stop=1e-3)
 
 
 ###
@@ -35,7 +34,7 @@ y = prn.NNOut(P,net)
 ytest = prn.NNOut(Ptest,net)
 
 ###
-#Plot results
+#plotting results
 fig = plt.figure(figsize=(11,7))
 ax0 = fig.add_subplot(211)
 ax1 = fig.add_subplot(212)

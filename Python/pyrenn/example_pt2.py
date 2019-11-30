@@ -1,16 +1,15 @@
 import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-
+from numpy import genfromtxt
 import pyrenn as prn
+import matplotlib.pyplot as plt
 
 ###
 #Read Example Data
-df = pd.ExcelFile('example_data.xlsx').parse('pt2')
-P = df['P'].values
-Y = df['Y'].values
-Ptest = df['Ptest'].values
-Ytest = df['Ytest'].values
+df = genfromtxt('example_data_friction.csv', delimiter=',')
+P = df[1]
+Y = df[2]
+Ptest = df[3]
+Ytest = df[4]
 
 
 ###
