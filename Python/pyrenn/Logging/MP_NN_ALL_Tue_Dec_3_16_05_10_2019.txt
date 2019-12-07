@@ -1,0 +1,35 @@
+root - INFO - Start
+root - INFO - example_compair.py:
+root - INFO - CPU percentage gebruik: 
+root - INFO - 45.5
+root - INFO - Virtual memory: 
+root - INFO - svmem(total=8476856320, available=2428657664, percent=71.3, used=6048198656, free=2428657664)
+root - INFO - example_friction.py:
+root - INFO - CPU percentage gebruik: 
+root - INFO - 44.4
+root - INFO - Virtual memory: 
+root - INFO - svmem(total=8476856320, available=2428649472, percent=71.3, used=6048206848, free=2428649472)
+root - INFO - example_narendra4.py:
+root - INFO - CPU percentage gebruik: 
+root - INFO - 50.0
+root - INFO - Virtual memory: 
+root - INFO - svmem(total=8476856320, available=2428542976, percent=71.4, used=6048313344, free=2428542976)
+root - INFO - example_pt2.py:
+root - INFO -  
+root - INFO - example_using_P0Y0_narendra4.py:
+root - INFO - CPU percentage gebruik: 
+root - INFO - 37.5
+root - INFO - Virtual memory: 
+root - INFO - svmem(total=8476856320, available=2427990016, percent=71.4, used=6048866304, free=2427990016)
+root - INFO - example_using_P0Y0_compair.py:
+root - INFO - CPU percentage gebruik: 
+root - INFO - 48.0
+root - INFO - Virtual memory: 
+root - INFO - svmem(total=8476856320, available=2439286784, percent=71.2, used=6037569536, free=2439286784)
+root - INFO - example_gradient.py:
+root - INFO - CPU percentage gebruik: 
+root - INFO - 0.0
+root - INFO - Virtual memory: 
+root - INFO - svmem(total=8476856320, available=2439249920, percent=71.2, used=6037606400, free=2439249920)
+root - INFO - Stop
+root - INFO - Times:

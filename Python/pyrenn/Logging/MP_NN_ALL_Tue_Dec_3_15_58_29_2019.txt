@@ -1,0 +1,3 @@
+root - INFO - Start
+root - INFO - example_compair.py:
+root - INFO - example_friction.py:

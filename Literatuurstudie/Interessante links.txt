@@ -1,1 +1,3 @@
 https://www.spiedigitallibrary.org/journals/Optical-Engineering/volume-56/issue-10/106103/High-precision-approach-to-localization-scheme-of-visible-light-communication/10.1117/1.OE.56.10.106103.short?SSO=1
+https://books.google.be/books?hl=nl&lr=&id=yeu-DwAAQBAJ&oi=fnd&pg=PP1&dq=GPU+accelerated+edge+computing+state+of+the+art+benchmarking+visible+light+based+indoor+positioning&ots=cZ-On4ptOj&sig=LJZBsmQc5iEIPJoYmnhJkhfekd4&redir_esc=y#v=onepage&q&f=false
+

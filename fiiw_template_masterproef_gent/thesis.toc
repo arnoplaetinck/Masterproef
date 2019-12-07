@@ -1,20 +1,35 @@
 \babel@toc {dutch}{}
 \babel@toc {dutch}{}
 \contentsline {chapter}{\numberline {1}Inleiding}{1}{chapter.1}
-\contentsline {chapter}{\numberline {2}Literatuurstudie}{4}{chapter.2}
-\contentsline {section}{\numberline {2.1}Visible Light Communication}{4}{section.2.1}
-\contentsline {section}{\numberline {2.2}Visible Light based Positioning}{4}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}techniques}{4}{subsection.2.2.1}
-\contentsline {subsubsection}{LED Technologie}{4}{section*.6}
-\contentsline {subsubsection}{Modulatie methode}{4}{section*.7}
-\contentsline {subsubsection}{Type ontvanger}{4}{section*.8}
-\contentsline {subsection}{\numberline {2.2.2}Taxonomy}{4}{subsection.2.2.2}
-\contentsline {subsubsection}{Wiskundige methode}{4}{section*.9}
+\contentsline {chapter}{\numberline {2}Literatuurstudie}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}\acrfull {vlc}}{3}{section.2.1}
+\contentsline {section}{\numberline {2.2}\acrfull {vlp}}{3}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Indoor Positioning Techniques}{3}{subsection.2.2.1}
+\contentsline {subsubsection}{\gls {led} Technologie}{3}{section*.6}
+\contentsline {subsubsection}{Modulatiemethode}{4}{section*.7}
+\contentsline {subsubsection}{Type ontvanger}{5}{section*.8}
+\contentsline {subsection}{\numberline {2.2.2}Classificatie}{5}{subsection.2.2.2}
+\contentsline {subsubsection}{Wiskundige methode}{5}{section*.9}
 \contentsline {subsubsection}{Sensor assisted methode}{5}{section*.10}
 \contentsline {subsubsection}{Optimization methode}{5}{section*.11}
-\contentsline {section}{\numberline {2.3}Artifici\~A\IeC {\guillemotleft }le Neurale Netwerken}{5}{section.2.3}
-\contentsline {chapter}{\numberline {3}This is the another Chapter}{6}{chapter.3}
-\contentsline {section}{\numberline {3.1}This is a Section Heading}{6}{section.3.1}
-\contentsline {chapter}{\numberline {A}Een aanhangsel}{9}{appendix.A}
-\contentsline {chapter}{\numberline {B}Beschrijving van deze masterproef in de vorm van een wetenschappelijk artikel}{10}{appendix.B}
-\contentsline {chapter}{\numberline {C}Poster}{11}{appendix.C}
+\contentsline {section}{\numberline {2.3}\gls {ann}}{6}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Structuur van een \gls {nn}}{6}{subsection.2.3.1}
+\contentsline {subsubsection}{Lagen}{6}{section*.13}
+\contentsline {subsubsection}{Nodes}{7}{section*.14}
+\contentsline {subsubsection}{Propagation function}{7}{section*.15}
+\contentsline {paragraph}{types transfer functies}{7}{section*.17}
+\contentsline {paragraph}{Leer technieken}{8}{section*.18}
+\contentsline {section}{\numberline {2.4}Evolutie \gls {sbc}}{9}{section.2.4}
+\contentsline {section}{\numberline {2.5}Benchmarking van \gls {ml} algoritmes}{9}{section.2.5}
+\contentsline {section}{\numberline {2.6}Assortiment aan 'on the shelf' toestellen}{9}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Beaglebone AI}{9}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}Coral Dev }{9}{subsection.2.6.2}
+\contentsline {subsection}{\numberline {2.6.3}Nvidia Jetson Nano}{9}{subsection.2.6.3}
+\contentsline {subsection}{\numberline {2.6.4}Nvidia Jetson T2}{9}{subsection.2.6.4}
+\contentsline {subsection}{\numberline {2.6.5}Raspberry Pi}{9}{subsection.2.6.5}
+\contentsline {subsection}{\numberline {2.6.6}...}{9}{subsection.2.6.6}
+\contentsline {chapter}{\numberline {3}This is the another Chapter}{11}{chapter.3}
+\contentsline {section}{\numberline {3.1}This is a Section Heading}{11}{section.3.1}
+\contentsline {chapter}{\numberline {A}Een aanhangsel}{15}{appendix.A}
+\contentsline {chapter}{\numberline {B}Beschrijving van deze masterproef in de vorm van een wetenschappelijk artikel}{17}{appendix.B}
+\contentsline {chapter}{\numberline {C}Poster}{19}{appendix.C}

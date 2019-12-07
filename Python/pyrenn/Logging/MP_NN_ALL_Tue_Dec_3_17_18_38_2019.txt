@@ -1,0 +1,8 @@
+example_compair.py: 33.3  svmem(total=8476856320, available=2867294208, percent=66.2, used=5609562112, free=2867294208)time: 2.8899521827697754
+example_friction.py: 0.0  svmem(total=8476856320, available=2867286016, percent=66.2, used=5609570304, free=2867286016)time: 0.010025501251220703
+example_narendra4.py: 25.0  svmem(total=8476856320, available=2867249152, percent=66.2, used=5609607168, free=2867249152)time: 0.029601335525512695
+example_pt2.py: 33.3  svmem(total=8476856320, available=2867249152, percent=66.2, used=5609607168, free=2867249152)time: 0.04053759574890137
+example_using_P0Y0_narendra4.py: 62.5  svmem(total=8476856320, available=2828640256, percent=66.6, used=5648216064, free=2828640256)time: 0.02985835075378418
+example_using_P0Y0_compair.py: 34.3  svmem(total=8476856320, available=2838265856, percent=66.5, used=5638590464, free=2838265856)time: 2.879725694656372
+example_gradient.py: 25.0  svmem(total=8476856320, available=2838228992, percent=66.5, used=5638627328, free=2838228992)time: 0.010088205337524414
+Total time: 5.889788866043091

@@ -2,11 +2,22 @@
 \BOOKMARK [0][-]{chapter.2}{Literatuurstudie}{}% 2
 \BOOKMARK [1][-]{section.2.1}{vlc}{chapter.2}% 3
 \BOOKMARK [1][-]{section.2.2}{vlp}{chapter.2}% 4
-\BOOKMARK [2][-]{subsection.2.2.1}{techniques}{section.2.2}% 5
-\BOOKMARK [2][-]{subsection.2.2.2}{Taxonomy}{section.2.2}% 6
-\BOOKMARK [1][-]{section.2.3}{Artifici\353le Neurale Netwerken}{chapter.2}% 7
-\BOOKMARK [0][-]{chapter.3}{This is the another Chapter}{}% 8
-\BOOKMARK [1][-]{section.3.1}{This is a Section Heading}{chapter.3}% 9
-\BOOKMARK [0][-]{appendix.A}{Een aanhangsel}{}% 10
-\BOOKMARK [0][-]{appendix.B}{Beschrijving van deze masterproef in de vorm van een wetenschappelijk artikel}{}% 11
-\BOOKMARK [0][-]{appendix.C}{Poster}{}% 12
+\BOOKMARK [2][-]{subsection.2.2.1}{Indoor Positioning Techniques}{section.2.2}% 5
+\BOOKMARK [2][-]{subsection.2.2.2}{Classificatie}{section.2.2}% 6
+\BOOKMARK [1][-]{section.2.3}{ann}{chapter.2}% 7
+\BOOKMARK [2][-]{subsection.2.3.1}{Structuur van een nn}{section.2.3}% 8
+\BOOKMARK [1][-]{section.2.4}{Evolutie sbc}{chapter.2}% 9
+\BOOKMARK [2][-]{subsection.2.4.1}{Geschiedenis}{section.2.4}% 10
+\BOOKMARK [1][-]{section.2.5}{Benchmarking van ml algoritmes}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.6}{Assortiment aan 'on the shelf' toestellen}{chapter.2}% 12
+\BOOKMARK [2][-]{subsection.2.6.1}{Beaglebone AI}{section.2.6}% 13
+\BOOKMARK [2][-]{subsection.2.6.2}{Coral Dev }{section.2.6}% 14
+\BOOKMARK [2][-]{subsection.2.6.3}{Nvidia Jetson Nano}{section.2.6}% 15
+\BOOKMARK [2][-]{subsection.2.6.4}{Nvidia Jetson T2}{section.2.6}% 16
+\BOOKMARK [2][-]{subsection.2.6.5}{Raspberry Pi}{section.2.6}% 17
+\BOOKMARK [2][-]{subsection.2.6.6}{...}{section.2.6}% 18
+\BOOKMARK [0][-]{chapter.3}{This is the another Chapter}{}% 19
+\BOOKMARK [1][-]{section.3.1}{This is a Section Heading}{chapter.3}% 20
+\BOOKMARK [0][-]{appendix.A}{Een aanhangsel}{}% 21
+\BOOKMARK [0][-]{appendix.B}{Beschrijving van deze masterproef in de vorm van een wetenschappelijk artikel}{}% 22
+\BOOKMARK [0][-]{appendix.C}{Poster}{}% 23

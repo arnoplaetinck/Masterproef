@@ -1,0 +1,19 @@
+Literatuurstudie:
+
+-evolutie SBC (desktops, laatste 20 jaar, CPU-RAM-kostprijs, algemene performantie, eventuele overzichtspaper
+-benchmarking mbt machinelearning
+-hedendaags on the shelf toestellen (waarom ontworpen ,zijn er gp-devices)
+- specs verschillende devices 
+-als laatste: uitleggen waarom het kan kaderen binnen het VLP (latency,...)
+
+-hoe lang support voor SBC? 
+
+
+-coral dev tov rbpi, waar ligt de grens van keuze
+
+mnist tensorflowlite!
+
+-cpu-usage: scheiden van background
+	+ betekenis verschillende waarden
+
+Volgende meeting: kwart na 2 (Powerpointpres)

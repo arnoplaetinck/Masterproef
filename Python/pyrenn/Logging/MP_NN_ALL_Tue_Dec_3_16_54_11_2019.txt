@@ -1,0 +1,21 @@
+root - WARNING - example_compair.py: 
+root - WARNING - cpu usage: 33.3
+root - WARNING - vm usage: svmem(total=8476856320, available=2563301376, percent=69.8, used=5913554944, free=2563301376)
+root - WARNING - example_friction.py: 
+root - WARNING - cpu usage: 0.0
+root - WARNING - vm usage: svmem(total=8476856320, available=2563293184, percent=69.8, used=5913563136, free=2563293184)
+root - WARNING - example_narendra4.py: 
+root - WARNING - cpu usage: 0.0
+root - WARNING - vm usage: svmem(total=8476856320, available=2563256320, percent=69.8, used=5913600000, free=2563256320)
+root - WARNING - example_pt2.py: 
+root - WARNING - cpu usage: 40.0
+root - WARNING - vm usage: svmem(total=8476856320, available=2563256320, percent=69.8, used=5913600000, free=2563256320)
+root - WARNING - example_using_P0Y0_narendra4.py: 
+root - WARNING - cpu usage: 20.0
+root - WARNING - vm usage: svmem(total=8476856320, available=2563256320, percent=69.8, used=5913600000, free=2563256320)
+root - WARNING - example_using_P0Y0_compair.py: 
+root - WARNING - cpu usage: 34.0
+root - WARNING - vm usage: svmem(total=8476856320, available=2563268608, percent=69.8, used=5913587712, free=2563268608)
+root - WARNING - example_gradient.py: 
+root - WARNING - cpu usage: 25.0
+root - WARNING - vm usage: svmem(total=8476856320, available=2563231744, percent=69.8, used=5913624576, free=2563231744)

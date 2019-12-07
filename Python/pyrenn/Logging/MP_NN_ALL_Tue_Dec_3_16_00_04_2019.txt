@@ -1,0 +1,5 @@
+root - INFO - Start
+root - INFO - example_compair.py:
+root - INFO - example_friction.py:
+root - INFO - CPU percentage gebruik: 
+root - INFO - 29.9

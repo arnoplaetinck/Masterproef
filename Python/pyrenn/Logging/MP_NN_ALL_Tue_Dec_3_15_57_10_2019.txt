@@ -1,0 +1,2 @@
+root - INFO - Start
+root - INFO - example_compair.py:

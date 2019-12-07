@@ -25,7 +25,8 @@
 \usepackage{sectsty}					% aanpassen van de fonts van sections en chapters
 \allsectionsfont{\sffamily}
 \chapterfont{\raggedleft\sffamily}
-
+\usepackage{xcolor}						% om todo's aan te maken
+\newcommand\todo[1]{\textcolor{red}{#1}}
 
 \usepackage[acronym]{glossaries}        % voor afkortingen
 \makeglossaries
@@ -53,14 +54,23 @@
 \newacronym{oppm}{OPPM}{Overlapping PPM}
 \newacronym{mppm}{MPPM}{Multi-Pulse PPM}
 \newacronym{isi}{ISI}{Inter-Symbol Interference}
+\newacronym{ips}{IPS}{Indoor Positioning System}
+\newacronym{pd}{PD}{Photodiode}
+\newacronym{tdoa}{TDOA}{Time Difference of Arrival}
+\newacronym{sbc}{SBC}{Single Board Computers}
+\newacronym{ml}{ML}{Machine Learning}
+\newacronym{ann}{ANN}{Artifici\"ele Neurale Netwerken}
+\newacronym{nn}{NN}{Neurale Netwerken}
+\newacronym{gpu}{GPU}{Graphics Processing Unit}
+
 
 \usepackage{float}                      % De optie H voor de plaatsing van figuren op de plaats waar je ze invoegt. bvb. \begin{figure}[H]
-%\usepackage{longtable}					% tabellen die over meerdere pagina's gespreid worden
+\usepackage{longtable}					% tabellen die over meerdere pagina's gespreid worden
 %\usepackage[times]{quotchap}           % indien je fancy hoofdstuktitels wil
-%\usepackage[none]{hyphenat}
-%\usepackage{latexsym}
-%\usepackage{amsmath}
-%\usepackage{amssymb}
+\usepackage[none]{hyphenat}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
 
 \usepackage{fiiw_gent}
 % \usepackage{fiiw_ghent_eng} % For the english version (also change last page at the bottom of this file!
@@ -79,15 +89,17 @@
 %lijst van tabellen toevoegen?
 \listoftablespagetrue
 %lijst van symbolen toevoegen?
-%\listofsymbolspagetrue
-%\listofsymbols{symbolen}				%.tex file met daarin de lijst van symbolen
+\listofsymbolspagetrue
+\listofsymbols{symbolen}				%.tex file met daarin de lijst van symbolen
 %lijst van afkortingen toevoegen?
 
 
 %informatie over het eindwerk, de promotor, ...
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\opleiding{master of Science in de Industrie\¨le Ingenieurswetenschappen Elektronica-ICT}
+\opleiding{master of Science in de Industri\¨ele Ingenieurswetenschappen Elektronica-ICT}
 \afdeling{Embedded Systems}
+
+%\campus{gent}
 
 \title{GPU accelerated edge computing for visible light based indoor positioning
 }
@@ -104,7 +116,7 @@
 \selectlanguage{dutch}
 % \selectlanguage{english} % For the english version
 
-%\input{preface}
+\chapter*{preface}
 
 \input{Inleiding}
 \input{Literatuurstudie}
