@@ -27,7 +27,7 @@
 \chapterfont{\raggedleft\sffamily}
 \usepackage{xcolor}						% om todo's aan te maken
 \newcommand\todo[1]{\textcolor{red}{#1}}
-
+					% andere lettertype's dan de standaard types
 
 \usepackage[acronym]{glossaries}        % voor afkortingen
 \makeglossaries
@@ -69,6 +69,12 @@
 \newacronym{eve}{EVE}{embedded-vision-engine}
 \newacronym{svm}{SVMs}{Support Vector Machines}
 
+
+
+\usepackage{sectsty}					% aanpassen van de fonts van sections en chapters
+\allsectionsfont{\sffamily}
+\chapterfont{\raggedleft\sffamily}
+
 \usepackage{float}                      % De optie H voor de plaatsing van figuren op de plaats waar je ze invoegt. bvb. \begin{figure}[H]
 \usepackage{longtable}					% tabellen die over meerdere pagina's gespreid worden
 %\usepackage[times]{quotchap}           % indien je fancy hoofdstuktitels wil
@@ -96,12 +102,12 @@
 %lijst van symbolen toevoegen?
 \listofsymbolspagetrue
 \listofsymbols{symbolen}				%.tex file met daarin de lijst van symbolen
-%lijst van afkortingen toevoegen?
+
 
 
 %informatie over het eindwerk, de promotor, ...
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\opleiding{master of Science in de Industri\¨ele Ingenieurswetenschappen Elektronica-ICT}
+\opleiding{Industri\"ele Ingenieurswetenschappen Elektronica-ICT}
 \afdeling{Embedded Systems}
 
 %\campus{gent}
@@ -120,19 +126,16 @@
 \begin{document}
 \selectlanguage{dutch}
 % \selectlanguage{english} % For the english version
+\preface
 
-\chapter*{preface}
-\tableofcontents
-\input{Inleiding}
+
 \input{Literatuurstudie}
-\input{hfdst3}
-
 % Bibliografie: referenties. De items zitten in bibliografie.bib
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Indien je ook de niet geciteerde werken in je bibliografie wil opnemen, commentarieer dan onderstaande regel uit!
 %\nocite{*}
 \bibliographystyle{apalike}
-\bibliography{bibfile}
+\bibliography{bibliografie}
 
 % Eventueel enkele appendices
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

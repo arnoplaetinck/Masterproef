@@ -1,0 +1,44 @@
+\babel@toc {dutch}{}
+\babel@toc {dutch}{}
+\contentsline {chapter}{\numberline {1}Literatuurstudie}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}\gls {ml}}{1}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Leermodellen}{1}{subsection.1.1.1}
+\contentsline {subsubsection}{Artifici\"ele Neurale Netwerken}{1}{section*.9}
+\contentsline {paragraph}{Structuur van een \gls {nn}}{1}{section*.10}
+\contentsline {subparagraph}{Lagen}{2}{section*.12}
+\contentsline {subparagraph}{Nodes}{2}{section*.13}
+\contentsline {subparagraph}{Propagation function}{2}{section*.14}
+\contentsline {subparagraph}{types transfer functies}{3}{section*.16}
+\contentsline {paragraph}{Voor- en nadelen}{3}{section*.17}
+\contentsline {subsubsection}{Beslissingsboom}{4}{section*.18}
+\contentsline {paragraph}{Structuur van een beslissingsboom}{4}{section*.19}
+\contentsline {paragraph}{Voor- en nadelen}{4}{section*.21}
+\contentsline {subsubsection}{Support Vector Machines}{4}{section*.22}
+\contentsline {paragraph}{Voor- en nadelen}{5}{section*.24}
+\contentsline {subsubsection}{Regressie Analyse}{5}{section*.25}
+\contentsline {paragraph}{Voor- en nadelen}{5}{section*.27}
+\contentsline {subsubsection}{Bayesian Netwerken}{5}{section*.28}
+\contentsline {subsubsection}{Genetisch Algoritmes}{6}{section*.29}
+\contentsline {subsection}{\numberline {1.1.2}Keuze voor neurale netwerken }{6}{subsection.1.1.2}
+\contentsline {subsection}{\numberline {1.1.3}Leertechnieken}{6}{subsection.1.1.3}
+\contentsline {subsubsection}{Supervised Learning:}{6}{section*.30}
+\contentsline {subsubsection}{Unsupervised Learning:}{6}{section*.31}
+\contentsline {subsubsection}{Reinforcement Learning:}{7}{section*.32}
+\contentsline {section}{\numberline {1.2}Evolutie \gls {sbc}}{8}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Geschiedenis}{8}{subsection.1.2.1}
+\contentsline {section}{\numberline {1.3}Benchmarking van \gls {ml} algoritmes}{10}{section.1.3}
+\contentsline {section}{\numberline {1.4}Assortiment aan 'on the shelf' toestellen}{11}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}Beaglebone AI}{11}{subsection.1.4.1}
+\contentsline {subsubsection}{Specifications}{11}{section*.35}
+\contentsline {subsection}{\numberline {1.4.2}Coral Dev }{11}{subsection.1.4.2}
+\contentsline {subsubsection}{Specifications}{11}{section*.36}
+\contentsline {subsection}{\numberline {1.4.3}Nvidia Jetson Nano}{11}{subsection.1.4.3}
+\contentsline {subsubsection}{Specifications}{11}{section*.37}
+\contentsline {subsection}{\numberline {1.4.4}Nvidia Jetson T2}{12}{subsection.1.4.4}
+\contentsline {subsubsection}{Specifications}{12}{section*.38}
+\contentsline {subsection}{\numberline {1.4.5}Raspberry Pi}{12}{subsection.1.4.5}
+\contentsline {subsubsection}{Specifications}{12}{section*.39}
+\contentsline {subsection}{\numberline {1.4.6}...}{12}{subsection.1.4.6}
+\contentsline {chapter}{\numberline {A}Een aanhangsel}{15}{appendix.A}
+\contentsline {chapter}{\numberline {B}Beschrijving van deze masterproef in de vorm van een wetenschappelijk artikel}{17}{appendix.B}
+\contentsline {chapter}{\numberline {C}Poster}{19}{appendix.C}
