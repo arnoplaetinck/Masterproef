@@ -1,0 +1,24 @@
+refferenties foto's bijhouden (eventueel in bibtex)
+de volledige literatuurstudie!
+
+dia 3 :
+waarom: cloud tov edge verhaal (niet lokaal) 
+motivatie van low latency ( zie zelfrijdende auto's)
+
+dia 4: kadering NN binnen ML
+sterktes, zwaktes van alle verschillende ML-technieken en waarom wij voor NN kiezen
+
+
+Dia 6: node figuur koppelen aan NN figuur
+
+dia 7 phi is geen getal maar een functie (geen verm gebruiken)
+
+dia 9 zijn zelfde algoritmes geen verschilllende
+gebruik liever benchmark/ toepassingen
+
+waarom data er uit halen? 
+-> geintresseerd in data om te vgl met cloud comp
+wij schrijven iets om het in gebruiksvriendelijke manier te kunnen lezen en begrijpen.
+
+Literatuurstudie tegen 24 af!!
+

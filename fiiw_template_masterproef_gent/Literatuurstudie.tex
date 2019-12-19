@@ -1,146 +1,153 @@
 %second chapter of your thesis
 \chapter{Literatuurstudie}
-%intro
-\section{\acrfull{vlc}}
-	%RF bandwidths are failing to meet requirements, VLC is promising alternatives
-	%korte intro
-	De \acrfull{led} is een technologie dat gebruikt kan worden voor verlichting als communicatie. Hierdoor is het geschikt voor optische draadloze communicatie in de vrije ruimte. \gls{vlc} is een technologie dat hier op bouwt en veel verwachting heeft naar toekomstige applicaties toe. 
-\section{\acrfull{vlp}}
-	Naast communicatie is lokalisatie nog een belangrijke toepassing met een groot potentieel. Op plekken waar traditionele lokalisatiemethoden zoals GPS falen, zoals indoor scenario's, is men op zoek naar een technologie die wel kan voldoen aan de voorschriften. \acrfull{vlp} is naast o.a. \acrfull{uwb}, \acrfull{rfid}, Wi-Fi en fingerprint een uitdager om deze rol in te vullen. Het nadeel van deze laatste technologie\"en is dat er nood is aan het installeren van een extra \acrfull{ap} en apparatuur. Dit leidt tot stijgende kosten voor het installeren, gebruik en onderhoud.
-	\gls{vlp} is veel belovend juist omdat het deze extra kosten kan vermijden door de duale rol van de apparatuur. De \glspl{led} zorgen voor zowel verlichting als lokalisatie in dezelfde behuizing, door slechts één installatie en heeft dezelfde noden als gewone verlichting. In komende paragrafen leggen we verschillende onderdelen en technieken van \gls{vlp} uit.
-	\subsection{Indoor Positioning Techniques}
-	\gls{vlc}-based-\gls{ips} kan op verscheidene manieren uitgevoerd worden. In de paragrafen hieronder bespreken we hoe de verschillende technieken ingevuld kunnen worden. We bespreken onder andere \gls{led} technologie, modulatiemethodes, type ontvangers en classificatie van \gls{vlc}-based-\gls{ips} op basis van 3 sleuteleigenschappen.
+
+\section{\gls{ml}}
+\gls{ml} is een onderdeel van \gls{ai} en staat voor het wetenschappelijke onderzoek naar algoritmes en statistische modellen dat gebruikt kan worden door verschillende computersystemen. Deze systemen zijn hierdoor in staat om specifieke taken te voltooien zonder rechtstreekse instructies of regels mee gekregen te hebben. Ze steunen in de plek op onder meer patroonherkenning om de kans op het succesvol uit te voeren van taken te maximaliseren. Hiervoor wordt er een wiskundig model gebouwd op basis van training-data. Deze mathematische modellen en \textit{datahandling} kan op verscheidene manieren gebeuren. Hieronder bespreken we een aantal gebruikelijke modellen. We maken ook een afweging welk model het interessantst is voor onze toepassing. 
+
+\subsection{Leermodellen}
+Om \gls{ml} technieken toe te passen moet men gebruik maken van een bepaald model. Een model dat is toegepast op trainingsdata en nieuwe data kan verwerken om voorspellingen te maken. Er bestaat een hele waaier aan mogelijke modellen. In de volgende paragrafen bespreken we een aantal opties waarna we de verschillende modellen afwegen tegen over elkaar.
+
+	\subsubsection{Artifici\"ele Neurale Netwerken}
+	\gls{ann} is een term dat gebruikt wordt om een algoritme te omschrijven dat lijkt op maar niet hetzelfde is als een biologisch neuraal netwerk in de hersens van dieren. Deze systemen zijn in staat om een bepaalde taak te leren, en zichzelf te verbeteren. In de meeste gevallen worden er zelf geen richtlijnen of omschrijving meegegeven. Het systeem ontdekt zelf hoe deze regels in elkaar zitten. Een bekend voorbeeld is het herkennen van de cijfers 0 tot 9. Hierin wordt er niet aan het systeem verteld dat het cijfer 8 uit twee cirkels bestaat die verticaal tegen elkaar aansluiten. Het algoritme zal dit gaandeweg ontdekken met behulp van de vele voorbeelden waar het gebruik van kan maken. Met behulp van veel data kan een algoritme zichzelf verfijnen en nauwkeuriger bepaalde cijfers herkennen.
 	
-		\subsubsection{\gls{led} Technologie}
-		Door het lage vermogensverbruik en de lange levensduur is \gls{led} een veel gebruikt middel om verlichting van ruimtes te bereiken. Er zijn twee veelgebruikte \gls{led}-technologie\"en om wit licht te produceren: 
-		
-			\begin{itemize}
-				\item \textbf{White \glspl{led}:} Bij dit ontwerp cre\"ert men wit licht door een gele fosfor over een blauwe \gls{led} te plaatsen. De combinatie van zowel de gele fosfor als het blauwe uitgestraalde licht zorgt dat ons oog de stralen als wit licht interpreteert. De eenvoud laat toe om de prijs en de complexiteit laag te houden, waardoor dit de meest gekozen techniek is.
-				
-				\item \textbf{RGB-\glspl{led}:} Door de combinatie van de kleuren rood, groen en blauw is het ook mogelijk om een wit licht te cre\"eren. Deze optie vraagt wel om twee extra \glspl{led} waardoor de kostprijs stijgt. Het gebruik van de RGB-\glspl{led} heeft wel het voordeel dat er aan \gls{csk} kan gedaan worden. Deze methode heeft dus een bredere functionaliteit.
-			\end{itemize}
-		
-		\subsubsection{Modulatiemethode}
-		Doordat de \glspl{led} voor zowel verlichting als communicatie dienen is van uiterst belang dat voorzieningen voor het ene, het andere niet in gedrang brengen. De gekozen modulatiemethode voor communicatie moet dus ondersteuning bieden zodat de werking van de verlichting normaal kan blijven verlopen. Om hier aan te voldoen moet er dus ondersteuning zijn voor dimming en flicker controle.
-			\begin{itemize}
-				\item \textbf{\acrfull{ook}:} \gls{ook} is de simpelste vorm van \acrfull{ask} modulatie waarbij de \gls{led} aan en uit wordt gezet. De eenvoudige implementatie is de reden waarom de techniek wijd gebruikt wordt in de draadloze communicatie. Er kan een onderscheid gemaakt worden tussen \acrfull{nrz} \gls{ook} en \acrfull{rz}\gls{ook}. Bij \gls{rz}\gls{ook} zal het signaal terug naar 0 gaan achter elk uitgezonden symbool. Dit zorgt ervoor dat de grote van de bandbreedte verdubbeld terwijl de data rate hetzelfde blijft. Echter biedt \gls{ook} geen ondersteuning voor zowel dimming of flicker controle.
-				
-				\item \textbf{\acrfull{ppm}:} \gls{ppm} is een modulatiemethode waarbij bits gecodeerd worden door een puls op een bepaalde plaats of tijdstip uit te zenden. De symboolduur is onderverdeeld in T verschillende tijdslots en de positie van de puls bepaalt het verzonden symbool. Dit is ook een eenvoudige versie waar veel varianten op bestaan. Zo zijn er \acrfull{vppm}, \acrfull{oppm}, \acrfull{mppm} en nog veel meer. Elk met zijn voordelen en nadelen die afgewogen moeten worden bij het maken van een keuze. 
-				
-				\item \textbf{\acrfull{ofdm}:} \gls{ofdm} kan gebruikt worden om in het kader van VLC \acrfull{isi} te verminderen en het gebruik van bandbreedte te verbreden. De methode staat toe om data te encoderen op meerdere carrierfrequenties. Deze carriers overlappen elkaar op het frequentiespectrum en voor demodulatie worden er Fast Fourier Transformatie algoritmes gebruikt.
-				
-				\item \textbf{\acrfull{csk}:} In \gls{csk} varieert de kleuren rood, groen en blauw in een \gls{led} om een signaal te moduleren. Dit maakt het geschikter voor VLC dan gebruikelijke technieken doordat men met een hogere bandbreedte kan werken, en makkelijker dimming en flicker controle kan implementeren.
-			\end{itemize}
-		
-		\subsubsection{Type ontvanger}
-		De ontvanger is een belangrijk onderdeel van het positieneersysteem. Het ontvangen van data zoals ID, positie, signaalsterkte en \gls{toa} zijn afhankelijk van het type ontvanger. Ook de data rate is een belangrijke factor die meespeelt in de keuze. We kunnen de types ontvanger onderverdelen in twee categorie\"en: De photodiode en Image Sensors.
-			\begin{itemize}
-				\item \textbf{\gls{pd}:} De \gls{pd} bestaat uit halfgeleidermateriaal dat invallende fotonen omzet in een elektrische stroom. Deze kunnen in verschillende formaten voorkomen en gevoelig zijn voor bepaalde delen van het optisch spectrum door middel van optische filters. Door de snelle responsie is de \gls{pd} geschikt voor \gls{rss}, \gls{toa} en \gls{tdoa} algoritmes.
-				
-				\item \textbf{Image Sensors:}  Vergeleken met de \gls{pd} is de Image Sensor een goedkopere optie. De Image Sensor of imager zet lichtgolven om in elektrische stroom.
-				\todo{verschil PD en image sensors uitleggen, nog op te zoeken}
-			\end{itemize}
-	\subsection{Classificatie}
-	% classificatie van VLC-based-IPS op 3 keyeigenschappen
-		\subsubsection{Wiskundige methode}
-		
-			\begin{itemize}
-				\item Proximity
-				\item Triangulation
-					\begin{itemize}
-						\item \acrfull{aoa}
-						\item \acrfull{toa}
-						\item \acrfull{rss}
-					\end{itemize}
-				\item Fingerprint
-					\begin{itemize}
-						\item Map-Based fingerprint
-						\item Online stage/runtime stage
-					\end{itemize}
-			\end{itemize}
-		\subsubsection{Sensor assisted methode}
-		\subsubsection{Optimization methode}
-		
-\newpage
-
-\section{\gls{ann}}
-\gls{ann} is een term dat gebruikt wordt om een algoritme te omschrijven dat lijkt op maar niet hetzelfde is als een biologisch neuraal netwerk in de hersens van dieren. Deze systemen zijn in staat om een bepaalde taak te leren, en zichzelf te verbeteren. In de meeste gevallen worden er zelf geen richtlijnen of omschrijving meegegeven. Het systeem ontdekt zelf hoe deze regels in elkaar zitten. Een bekend voorbeeld is het herkennen van de cijfers 0 tot 9. Hierin wordt er niet aan het systeem verteld dat het cijfer 8 uit twee cirkels bestaat die verticaal tegen elkaar aansluiten. Het algoritme zal dit gaandeweg ontdekken met behulp van de vele voorbeelden waar het gebruik van kan maken. Met behulp van veel data kan een algoritme zichzelf verfijnen en nauwkeuriger bepaalde cijfers herkennen.
-
-	\subsection{Structuur van een \gls{nn}}
-	Een \gls{ann} is verzameling van nodes die met elkaar verbonden zijn zoals neuronen in de hersens van een mens. Hierbij kan elke neuron een signaal doorgeven naar de volgende neuron waar het signaal verwerkt kan worden en weer doorgegeven kan worden. Hetzelfde principe geldt ook bij \gls{nn} met het verschil dat er meerdere lagen van nodes te onderscheiden zijn. 
+		\paragraph{Structuur van een \gls{nn}}
+		Een \gls{ann} is verzameling van nodes die met elkaar verbonden zijn zoals neuronen in de hersens van een mens. Hierbij kan elke neuron een signaal doorgeven naar de volgende neuron waar het signaal verwerkt kan worden en weer doorgegeven kan worden. Hetzelfde principe geldt ook bij \gls{nn} met het verschil dat er meerdere lagen van nodes te onderscheiden zijn. 
 	
-	\begin{figure}
-	    \centering
-		\includegraphics[width=140mm]{afbeeldingen/neuralNetwork2.PNG}
-		\caption{Structuur van een Neuraal Netwerk}
-		\label{fig:neuralNetworkStructuur}
-	\end{figure}
+		\begin{figure}
+			\centering
+			\includegraphics[width=140mm]{afbeeldingen/neuralNetwork2.PNG}
+			\caption{Structuur van een Neuraal Netwerk}
+			\label{fig:neuralNetworkStructuur}
+		\end{figure}
+		
+			\subparagraph{Lagen}
+			Er zijn drie soorten lagen te onderscheiden: een Input Layer, Hidden Layers en een Output Layer. Elke laag is verbonden met de volgende laag door middel van de connecties of \textit{edges} tussen de verschillende nodes. In figuur \ref{fig:neuralNetworkStructuur} is de algemene vorm te vinden van een \gls{nn}.
+		
+				\begin{itemize}
+					\item \textbf{Input Layer:} De eerste laag van elk \gls{nn} is de Input Layer. Deze bestaat uit een aantal inputnodes. Elke inputnode krijgt de ruwe data binnen waar er een operatie op uitgevoerd wordt en vervolgens bepaalde parameters doorgeeft aan de volgende laag. 
+					\item \textbf{Hidden Layers:}  Na de inputlaag komen een aantal Hidden Layers. Het aantal Hidden Layers en de hoeveelheid nodes binnen \'e\'en Hidden Layer kan vari\"eren van applicatie tot applicatie en is sterk gerelateerd aan de complexiteit van de toepassing.
+					\item \textbf{Output Layer:} Na de Hidden Layers is de laatste laag de Output Layer. Hier worden de laatste operaties uitgevoerd en worden de eindwaarden verkregen.
+				\end{itemize}
+			
+			\subparagraph{Nodes}
+			Een node is op zich gebaseerd op zijn biologisch tegenbeeld. Het krijgt een bepaald aantal inputs, verwerkt deze en geeft een bepaald aantal outputs. Deze inputs en outputs worden van node naar node doorgegeven via verbindingen. Elke node heeft met elke node in de volgende laag een connectie. Deze worden \textit{edges} genoemd. Elke edge draagt een bepaald gewicht. Via dit gewicht kan de invloed van de  huidige node versterken of verzwakken in de volgende node.
+	
+			\subparagraph{Propagation function}
+			De mathematische functie die een node gebruikt voor het verwerken van inputs naar outputs heet de propagatie functie.
+			In figuur \ref{fig:artificial_neuron} bespreken we de algemene vorm van een neuron. 
+			Voor een bepaalde neuron met m+1 inputs $\left(  x_0 t.e.m. x_m \right) $ en bijhorende gewichten $\left(  w_0 t.e.m. w_m \right) $.
+			Gebruikelijk wordt $x_0 = +1$ genomen. Hierdoor blijven er maar m echte inputs over waardoor er voor een bepaalde output volgende functie opgesteld kan worden. Hierbij is $\phi$ een van de mogelijke transfer functies die verder besproken zal worden.
 
-		\subsubsection{Lagen}
-		Er zijn drie soorten lagen te onderscheiden: een Input Layer, Hidden Layers en een Output Layer. Elke laag is verbonden met de volgende laag door middel van de connecties of \textit{edges} tussen de verschillende nodes. In figuur \ref{fig:neuralNetworkStructuur} is de algemene vorm te vinden van een \gls{nn}.
-		\begin{itemize}
-			\item \textbf{Input Layer:} De eerste laag van elk \gls{nn} is de Input Layer. Deze bestaat uit een aantal inputnodes. Elke inputnode krijgt de ruwe data binnen waar er een operatie op uitgevoerd wordt en vervolgens bepaalde parameters doorgeeft aan de volgende laag. 
-			\item \textbf{Hidden Layers:}  Na de inputlaag komen een aantal Hidden Layers. Het aantal Hidden Layers en de hoeveelheid nodes binnen \'e\'en Hidden Layer kan vari\"eren van applicatie tot applicatie en is sterk gerelateerd aan de complexiteit van de toepassing.
-			\item \textbf{Output Layer:} Na de Hidden Layers is de laatste laag de Output Layer. Hier worden de laatste operaties uitgevoerd en worden de eindwaarden verkregen.
-		\end{itemize}
+			\begin{equation}
+				y_k = \phi \left( \sum_{j=0}^{m}w_{kj}x_j\right) 
+			\end{equation}
+			
+			\begin{figure}
+				\centering
+				\includegraphics[width=60mm]{afbeeldingen/Artificial_neuron.PNG}
+				\caption{Algemene structuur van een node.}
+				\label{fig:artificial_neuron}
+			\end{figure}
+			
+			\subparagraph{types transfer functies}
+			De transfer functie of activatiefunctie van een neuron bevat bepaalde eigenschappen die het volledige netwerk kan verbeteren of versimpelen. Hieronder bespreken we enkele transfer functies.
+			
+			\begin{itemize}
+				\item \textbf{Stapfunctie:} Hier wordt er gekeken naar de verkregen waarde van de gewogen som u van m+1 inputs. Bedraagt deze waarde minder dan een bepaalde drempel $\theta$, dan wordt de output gelijkgesteld aan nul, bij een hogere waarde dan weer aan 1. Dit is te zien in formule \ref{eq:stapfunctie}. Dit type wordt vooral gebruikt om binaire inputs te verzorgen bij de volgende laag. 
+				\begin{equation}
+				u =  \left( \sum_{j=0}^{m}w_{kj}x_j\right) 
+				\end{equation}
+				\begin{equation}\label{eq:stapfunctie}
+				y={\begin{cases}1&{\text{als }}u\geq \theta
+					\\0&{\text{als }}u<\theta \end{cases}}
+				\end{equation}
+				
+				\item \textbf{Lineare Combinaties:} In dit geval is de output niets minder dan de gewogen som plus e
+				\item \textbf{Sigmoid:}
+				\item \textbf{Rectifier:}
+			\end{itemize}
+			
+		\paragraph{Voor- en nadelen}
 		
-		\subsubsection{Nodes}
-		Een node is op zich gebaseerd op zijn biologisch tegenbeeld. Het krijgt een bepaald aantal inputs, verwerkt deze en geeft een bepaald aantal outputs. Deze inputs en outputs worden van node naar node doorgegeven via verbindingen. Elke node heeft met elke node in de volgende laag een connectie. Deze worden \textit{edges} genoemd. Elke edge draagt een bepaald gewicht. Via dit gewicht kan de invloed van de  huidige node versterken of verzwakken in de volgende node.
 		
-		\subsubsection{Propagation function}
-		De mathematische functie die een node gebruikt voor het verwerken van inputs naar outputs heet de propagatie functie.
-		In figuur \ref{fig:artificial_neuron} bespreken we de algemene vorm van een neuron. 
-		Voor een bepaalde neuron met m+1 inputs $\left(  x_0 t.e.m. x_m \right) $ en bijhorende gewichten $\left(  w_0 t.e.m. w_m \right) $.
-		Gebruikelijk wordt $x_0 = +1$ genomen. Hierdoor blijven er maar m echte inputs over waardoor er voor een bepaalde output volgende functie opgesteld kan worden. Hierbij is $\phi$ een van de mogelijke transfer functies die verder besproken zal worden.
+	\subsubsection{Beslissingsboom} 
+	Het gebruik van een beslissingsboom is een leermethode die met regelmaat terugkomt in de statistiek als een voorspellend model. Men maakt gebruik van observaties rond een bepaald onderwerp om een beslissing te nemen rond de aard van het onderwerp. Deze beslissing leidt naar een variabele outputwaarde. Indien deze waarde valt onder te verdelen in discrete klassen spreekt men over een \textit{classificatie boom}. Neemt de gezochte variabele eerder een continue vorm aan, dan maakt men gebruik van \textit{regressie bomen}.
+	
+
+	
+		\paragraph{Structuur van een beslissingsboom}
 		
 		
-		\begin{equation}
-			y_k = \phi \left( \sum_{j=0}^{m}w_{kj}x_j\right) 
-		\end{equation}
+		Net zoals bij de \gls{nn} bestaat een beslissingsboom uit verschillende lagen en nodes. Er zijn echter wel belangrijke verschillen in het gebruik bij \gls{nn} en een beslissingsboom. Om te beginnen worden lagen horizontaal weergegeven t.o.v. verticaal bij Neurale Netwerken. Zoals te zien is in figuur \ref{fig:beslissingsBoom} word er in elke laag een onderscheid gemaakt op basis van een bepaalde statement of parameter. Deze parameter kan een enkele inputwaarde zijn of een lineaire combinatie van meerdere inputwaarden. 
+		
+		Bij de nodes kan er onderscheid gemaakt worden tussen een gewone node en een eindnode. Bij elke gewone node wordt een bepaalde statement geverifi\"eerd en wordt er naar een node overgegaan in de volgende laag op basis van die statement. Bij een eindnode is het niet meer mogelijk om door te gaan naar een volgende laag, maar wordt er een outputwaarde gegeven.
 		
 		\begin{figure}
 			\centering
-			\includegraphics[width=60mm]{afbeeldingen/Artificial_neuron.PNG}
-			\caption{Algemene structuur van een node}
-			\label{fig:artificial_neuron}
+			\includegraphics[width=80mm]{afbeeldingen/beslissingsBoom.PNG}
+			\caption{Algemene structuur van een beslissingsboom.}
+			\label{fig:beslissingsBoom}
+			%bron: https://medium.com/machine-learning-bites/machine-learning-decision-tree-classifier-9eb67cad263e
 		\end{figure}
-		\paragraph{types transfer functies}
-		De transfer functie of activatiefunctie van een neuron bevat bepaalde eigenschappen die het volledige netwerk kan verbeteren of versimpelen. Hieronder bespreken we enkele transfer functies.
-
-		\begin{itemize}
-			\item \textbf{Stapfunctie:} Hier wordt er gekeken naar de verkregen waarde van de gewogen som u van m+1 inputs. Bedraagt deze waarde minder dan een bepaalde drempel $\theta$, dan wordt de output gelijkgesteld aan nul, bij een hogere waarde dan weer aan 1. Dit is te zien in formule \ref{eq:stapfunctie}. Dit type wordt vooral gebruikt om binaire inputs te verzorgen bij de volgende laag. 
-			\begin{equation}
-				u =  \left( \sum_{j=0}^{m}w_{kj}x_j\right) 
-			\end{equation}
-			\begin{equation}\label{eq:stapfunctie}
-			y={\begin{cases}1&{\text{als }}u\geq \theta
-					   	\\0&{\text{als }}u<\theta \end{cases}}
-			\end{equation}
+		
+		\paragraph{Voor- en nadelen}
+		
+	
+	
+	\subsubsection{Support Vector Machines}
+	\gls{svm} of ook wel gekend als support vector networks is een model dat veelvuldig gebruikt wordt in classificatie en regressie-analyse. \gls{svm} verdeelt objecten onder in twee verschillende klassen aan de hand van een aantal kenmerken. Het is dus een binaire classificeerder. Om aan de hand van kenmerken een onderverdeling te maken moeten deze kenmerken eerst omgezet worden in een numeriek model. De data wordt hervormd tot een vectorruimte . In de trainingsfase wordt er getracht een zo optimaal mogelijke scheiding tussen beide klassen te vinden. Deze optimale scheiding wordt ook wel een \textit{hypervlak} genoemd en ligt op zo groot mogelijke afstand tussen de dichtstbijgelegen objecten van beide klasses of support vectors. in figuur \ref{fig:supportVectorMachines} kan U een twee dimensionaal voorbeeld vinden. Hierin is scheidingslijn H1 geen acceptabele scheiding doordat er objecten van de zwarte klasse fout geclassificeerd worden. H2 is acceptabel maar is nog niet optimaal aangezien er weinig foutmarge is voor een nieuw object. H3 is het hypervlak doordat de foutenmarge tussen de twee klassen zo groot mogelijk is. Deze methode is niet alleen in mogelijk in toepassingen met een lineaire scheiding. Ook in niet-lineaire gevallen kan men een transformatie uitvoeren om toch een lineaire scheiding te bekomen. Deze hervorming wordt ook wel de \textit{kernel trick} genoemd. 
+	
+	
+	\begin{figure}
+		\centering
+		\includegraphics[width=80mm]{afbeeldingen/supportVectorMachines.PNG}
+		\caption{Twee dimensionale Support Vector Machine.}
+		\label{fig:supportVectorMachines}
+		%bron: https://subscription.packtpub.com/book/big_data_and_business_intelligence/9781788994170/5/ch05lvl1sec36/support-vector-machines
+	\end{figure}
+		\paragraph{Voor- en nadelen}
+		
 			
-			\item \textbf{Lineare Combinaties:} In dit geval is de output niets minder dan de gewogen som plus e
-			\item \textbf{Sigmoid:}
-			\item \textbf{Rectifier:}
-		\end{itemize}
-		\paragraph{Leer technieken}
-		Om een neuraal netwerk te laten leren zijn er verschillende parkours om te bewandelen de drie belangrijkste methodes om een mathematische functie te verkrijgen worden hieronder opgesomd.
-		\begin{itemize}
-			\item \textbf{Supervised Learning:} Deze techniek maakt gebruik van gepaarde datasets van inputobjecten en de te verwachten outputobjecten. Het doel is om een mathematische functie te cre\"eren waarbij de gegenereerde outputs zo nauw mogelijk overeenkomen met de gelabelde outputs uit de datasets. De functie kan dan ook gebruikt worden voor nieuwe datasets zonder gelabelde output. Een toepassing van Supervised Learning is bijvoorbeeld het detecteren van spam met een trainingset van al gelabelde e-mails.
-			
-			\item \textbf{Unsupervised Learning:} Unsupervised learning is een techniek dat gebruik maakt van Hebbian Learning om onbekende patronen te ontdekken in datasets. De twee meestgebruikte methodes onder Unsupervised Learning zijn principal component en cluster analysis. De tweede methode is .../////////
-			Een belangrijke toepassing van Unsupervised Learning is het clusteren van gelijkaardige documenten op basis van de inhoud van de tekst.
-			% Discovering patterns in unlabeled data Example: cluster similar documents based on the text content
-			\item \textbf{Reinforcement Learning:} Deze leertechniek heeft betrekking tot hoe agents acties moeten ondernemen in een omgeving om een bepaald attribuut te maximaliseren. Het verschilt van Supervised en Unsupervised Learning door de onafhankelijkheid van gelabelde outputdatasets en dat minder optimale acties niet manueel gecorrigeerd worden. De techniek heeft als doel om een evenwicht te vinden tussen exploratie van ongekend gebied en exploitatie van de huidige kennis. In figuur \ref{fig:reinforcemntLearning} kan je een eenvoudige routine vinden van Reinforcement Learning-algoritme. Hierbij maakt een agent een bepaalde actie gebaseerd op de staat waar hij in is. Deze actie heeft in een omgeving een zekere invloed die door een Interpreter beoordeeld wordt en een score toekent. De agent kan deze verandering daarna gebruiken om zichzelf te verbeteren en zijn acties aanpassen. 
-			\begin{figure}
-				\centering
-				\includegraphics[width=60mm]{afbeeldingen/Reinforcement_learning_diagram.PNG}
-				\caption{Routine bij Reinforcement Learning}
-				\label{fig:reinforcemntLearning}
-			\end{figure}
-			Een van de vele mogelijke toepassingen van Reinforcement Learning is het aanleren van schaken door enkel mee te geven of het algoritme gewonnen of verloren heeft. 
+	\subsubsection{Regressie Analyse}
+	Regressie Analyse is techniek uit de statistiek, die gebruikt wordt om gegevens te analyseren met een specifieke verband. Er bestaat vaak een relatie tussen een afhankelijke variabele en een (of meerdere) onafhankelijke variabelen. De meest voorkomende vorm van regressie analyse is de lineaire regressie, waar men op zoek gaat naar de functie die het dichtst aanleunt bij de data en dit volgens specifieke criteria zoals het voldoen aan een bepaalde graad. Regressie analyse wordt vooral gebruikt voor het voorspellen van nieuwe data of gebeurtenissen. In figuur \ref{fig:regressieAnalyse} kan je een voorbeeld van lineaire regressie vinden.
+	\begin{figure}
+		\centering
+		\includegraphics[width=60mm]{afbeeldingen/regressieAnalyse.PNG}
+		\caption{Voorbeeld van Lineaire Regressie.}
+		\label{fig:regressieAnalyse}
+		%bron: https://en.wikipedia.org/wiki/Regression_analysis
+	\end{figure}
+		\paragraph{Voor- en nadelen}
+	
+	
+	\subsubsection{Bayesian Netwerken}
+	Bayesian Netwerken, ook wel probabilistische netwerken, is een structuur waarin data op probabilistische wijze geanalyseerd kan worden. Men maakt gebruik van gerichte grafen. Hierin bestaan de knopen uit variabelen en de arcs beschrijven de conditionele afhankelijkheden tussen de verschillende knopen. Bayesian Netwerken worden vooral gebruikt om te analyseren wat de bepalende oorzaak is voor een zekere gebeurtenis. 
+	
+	\subsubsection{Genetisch Algoritmes}
+	Genetische Algoritmes zijn een heuristiek ge\"inspireerd op het principe van natuurlijke selectie en zijn een klasse binnen evolutionaire algoritmes. Dit type algoritme kan gebruikt worden om oplossingen te vinden in optimalisatie- en zoekproblemen. Door te steunen op biologische principes zoals mutatie, selectie en kruisbestuiving worden er nieuwe \textit{chromosomen} gegenereerd die mogelijks een betere oplossing geven voor een bepaald probleem.
+\subsection{Keuze voor een neurale netwerken }	
+\subsection{Leertechnieken}
+Om een neuraal netwerk te laten leren zijn er verschillende parcours om te bewandelen de drie belangrijkste methodes om een mathematische functie te verkrijgen worden hieronder opgesomd.
 
-		\end{itemize}
 
-\newpage		
+	\subsubsection{Supervised Learning:} Deze techniek maakt gebruik van gepaarde datasets van inputobjecten en de te verwachten outputobjecten. Het doel is om een mathematische functie te cre\"eren waarbij de gegenereerde outputs zo nauw mogelijk overeenkomen met de gelabelde outputs uit de datasets. Men optimaliseert deze mathematische functie door iteratief te trainen. De bijgeschaafde functie kan dan ook gebruikt worden voor nieuwe datasets zonder gelabelde output. Een toepassing van Supervised Learning is bijvoorbeeld het detecteren van spam met een trainingset van al gelabelde e-mails.
+	
+	\subsubsection{Unsupervised Learning:} Unsupervised learning is een techniek dat gebruik maakt van Hebbian Learning om onbekende patronen te herkennen in datasets. De twee meestgebruikte methodes onder Unsupervised Learning zijn principal component en cluster analysis. Principal component maakt gebruik van orthogonale transformaties om een set van mogelijke afhankelijke variabelen om te zetten in een set van lineaire onafhankelijke variabelen. In cluster analyse wordt er getracht om een groep objecten te identificeren en verdelen in een cluster van gelijkaardige objecten. 
+	Een belangrijke toepassing van Unsupervised Learning is het clusteren van gelijkaardige documenten op basis van de inhoud van de tekst.
+	% Discovering patterns in unlabeled data Example: cluster similar documents based on the text content
+	\subsubsection{Reinforcement Learning:} Deze leertechniek heeft betrekking tot hoe agents acties moeten ondernemen in een omgeving om een bepaald attribuut te maximaliseren. Het verschilt van Supervised en Unsupervised Learning door de onafhankelijkheid van gelabelde outputdatasets en dat minder optimale acties niet manueel gecorrigeerd worden. De techniek heeft als doel om een evenwicht te vinden tussen exploratie van ongekend gebied en exploitatie van de huidige kennis. In figuur \ref{fig:reinforcemntLearning} kan je een eenvoudige routine vinden van Reinforcement Learning-algoritme. Hierbij maakt een agent een bepaalde actie gebaseerd op de staat waar hij in is. Deze actie heeft in een omgeving een zekere invloed die door een Interpreter beoordeeld wordt en een score toekent. De agent kan deze verandering daarna gebruiken om zichzelf te verbeteren en zijn acties aanpassen. 
+	\begin{figure}
+		\centering
+		\includegraphics[width=60mm]{afbeeldingen/Reinforcement_learning_diagram.PNG}
+		\caption{Routine bij Reinforcement Learning}
+		\label{fig:reinforcemntLearning}
+	\end{figure}
+	Een van de vele mogelijke toepassingen van Reinforcement Learning is het aanleren van schaken door enkel mee te geven of het algoritme gewonnen of verloren heeft. 
+	
+
+\newpage	
+
+%------------------------------------------------------------------------------	
 \section{Evolutie \gls{sbc}}
 Een \gls{sbc} is een volledige computer gemaakt op 1 enkele printplaat. Het bevat onderdelen zoals een microprocessor, geheugen, inputs en outputs. De \gls{sbc} werd ontwikkeld als een voorstel-hulpmiddel bij educatieve doelstellingen of het gebruik als een embedded computer controller. Tegenwoordig zijn ook vele (draagbare) computers ge\"integreerd op \'e\'en printplaat. Het grote verschil met (draagbare) computers is dat er geen nood is aan expansion slots zoals bijvoorbeeld voor RAM-geheugen of een \gls{gpu}.
 	\subsection{Geschiedenis}
@@ -157,19 +164,76 @@ Een \gls{sbc} is een volledige computer gemaakt op 1 enkele printplaat. Het beva
 
 	
 	In het jaar 2004 werd er in Itali\"e een nieuwe microcontroller uitgebracht onder de naam "Arduino". Dit ontwerp had naast het voordeel van compact en goedkoop te zijn, ook nog eenvoudigheid mee. Door de eenvoud werd het Arduino-platform snel populair onder techneuten van alle soorten. 
-	Twee jaar later kwam er uit de Universiteit van Cambridge ook het nieuws van een nieuwe goedkope \gls{sbc} uit. De bekende Raspberry Pi werd gelanceerd voor de prijs van \$35. Het hoofddoel van dit project was een nieuw leermiddel om te programmeren maar werd door het grote aantal toepassingsmogelijkheden ook zeer populair.
+	Twee jaar later kwam er uit de Universiteit van Cambridge ook het nieuws van een nieuwe goedkope \gls{sbc} uit. De bekende Raspberry Pi werd gelanceerd voor de prijs van \$35. Het hoofddoel van dit project was een nieuw leermiddel om te programmeren maar werd door het grote aantal applicaties ook zeer populair.
 	
+	De laatste jaren kende een grote explosie aan nieuwe \gls{sbc}. Een hele reeks nieuwe namen verscheen. Banana Pi, Beaglebone, Intel Galileo, Google Coral Dev en Asus Tinker Board zijn maar enkele van de vele voorbeelden. Deze toestellen hebben vaak een processor gebasserd op de x86- of ARM-series en maken gebruik van een Linux besturingssysteem zoals Debian.
 	
 
 %https://nl.wikipedia.org/wiki/Singleboardcomputer
+
+\newpage
+
+%------------------------------------------------------------------------------
 \section{Benchmarking van \gls{ml} algoritmes}
+
+
+%http://www.cs.toronto.edu/~serailhydra/publications/tbd-iiswc18.pdf
+
+\newpage
+
+%------------------------------------------------------------------------------
 \section{Assortiment aan 'on the shelf' toestellen}
 
 	\subsection{Beaglebone AI}
+	\gls{bbai} is een \gls{sbc} dat verder bouwt op de succesvolle  BeagleBoard-series. Het is een open source project met een op Linux gebaseerd aanpak. De \gls{bbai} probeert het gat tussen kleinere \gls{sbc} en krachtigere industri\"ele computers te overbruggen. Met dank aan de krachtige Texas Instruments AM5729 CPU kunnen ontwikkelaars de krachtige \gls{soc} gebruiken van een hele brede waaier aan toepassingen op het \gls{ai} terrein. De \gls{bbai} maakt het makkelijk om dat terrein te ontdekken en verkennen. Door gebruik te maken van onder andere \gls{eve} cores die steuenen op een geoptimaliseerde TIDL machine learning OpenCL API met gebruiksklare hulpmiddelen kan je terecht in alledaagse automatisatie in industri\"ele, commerci\"ele en thuisapplicaties.
+	%https://beagleboard.org/ai
+	
+		\subsubsection{Specifications}
+		\begin{itemize}
+			\item \textbf{GPU:} 
+			\item \textbf{CPU:} Texas Isntruments AM5729
+			\item \textbf{Memory:} 16 GB on-board eMMC flash
+			\item \textbf{Storage:} 1GB RAM + micro SD-slot
+			\item \textbf{Power:}
+		\end{itemize}
+	
 	\subsection{Coral Dev }
+		\subsubsection{Specifications}
+		\begin{itemize}
+			\item \textbf{GPU:} Integrated GC7000 Lite Graphics
+			\item \textbf{CPU:} NXP i.MX 8M SOC (quad Cortex-A53, Cortex-M4F) + coprocessor Google Edge TPU
+			\item \textbf{Memory:} 8 GB on-board eMMC flash
+			\item \textbf{Storage:} 1GB RAM LPDDR4 + micro SD-slot
+			\item \textbf{Power:}
+		\end{itemize}
 	\subsection{Nvidia Jetson Nano}
+		\subsubsection{Specifications}
+		\begin{itemize}
+			\item \textbf{GPU:} 128-core Maxwell
+			\item \textbf{CPU:} Quad-core ARM A57 @ 1.43 GHz
+			\item \textbf{Memory:} 4 GB 64-bit LPDDR4 25.6 GB/s
+			\item \textbf{Storage:}  micro SD-slot
+			\item \textbf{Power:} 5 W
+		\end{itemize}	
 	\subsection{Nvidia Jetson T2}
+		\subsubsection{Specifications}
+		\begin{itemize}
+			\item \textbf{GPU:} 256-core NVIDIA Pascal GPU architecture with 256 NVIDIA CUDA cores
+			\item \textbf{CPU:} Dual-Core NVIDIA Denver 2 64-Bit CPU Quad-Core ARM® Cortex®-A57 MPCore
+			\item \textbf{Memory:} 8GB 128-bit LPDDR4 Memory 1866 MHx - 59.7 GB/s
+			\item \textbf{Storage:}  32GB eMMC 5.1
+			\item \textbf{Power:} 7,5 - 15 W
+		\end{itemize}	
 	\subsection{Raspberry Pi}
+		\subsubsection{Specifications}
+		\begin{itemize}
+			\item \textbf{GPU:} 
+			\item \textbf{CPU:} Broadcom BCM2711, Quad core Cortex-A72 (ARM v8) 64-bit SoC @ 1.5GHz
+			\item \textbf{Memory:} 1GB, 2GB or 4GB LPDDR4-3200 SDRAM 
+			\item \textbf{Storage:}  micro SD-kaart
+			\item \textbf{Power:} 2,8 - 5,2 W
+		\end{itemize}	
+	
 	\subsection{...}
 	
 	%specs van verschillende devices

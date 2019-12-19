@@ -1,35 +1,46 @@
 \babel@toc {dutch}{}
 \babel@toc {dutch}{}
-\contentsline {chapter}{\numberline {1}Inleiding}{1}{chapter.1}
-\contentsline {chapter}{\numberline {2}Literatuurstudie}{3}{chapter.2}
-\contentsline {section}{\numberline {2.1}\acrfull {vlc}}{3}{section.2.1}
-\contentsline {section}{\numberline {2.2}\acrfull {vlp}}{3}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Indoor Positioning Techniques}{3}{subsection.2.2.1}
-\contentsline {subsubsection}{\gls {led} Technologie}{3}{section*.6}
-\contentsline {subsubsection}{Modulatiemethode}{4}{section*.7}
-\contentsline {subsubsection}{Type ontvanger}{5}{section*.8}
-\contentsline {subsection}{\numberline {2.2.2}Classificatie}{5}{subsection.2.2.2}
-\contentsline {subsubsection}{Wiskundige methode}{5}{section*.9}
-\contentsline {subsubsection}{Sensor assisted methode}{5}{section*.10}
-\contentsline {subsubsection}{Optimization methode}{5}{section*.11}
-\contentsline {section}{\numberline {2.3}\gls {ann}}{6}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Structuur van een \gls {nn}}{6}{subsection.2.3.1}
-\contentsline {subsubsection}{Lagen}{6}{section*.13}
-\contentsline {subsubsection}{Nodes}{7}{section*.14}
-\contentsline {subsubsection}{Propagation function}{7}{section*.15}
-\contentsline {paragraph}{types transfer functies}{7}{section*.17}
-\contentsline {paragraph}{Leer technieken}{8}{section*.18}
-\contentsline {section}{\numberline {2.4}Evolutie \gls {sbc}}{9}{section.2.4}
-\contentsline {section}{\numberline {2.5}Benchmarking van \gls {ml} algoritmes}{9}{section.2.5}
-\contentsline {section}{\numberline {2.6}Assortiment aan 'on the shelf' toestellen}{9}{section.2.6}
-\contentsline {subsection}{\numberline {2.6.1}Beaglebone AI}{9}{subsection.2.6.1}
-\contentsline {subsection}{\numberline {2.6.2}Coral Dev }{9}{subsection.2.6.2}
-\contentsline {subsection}{\numberline {2.6.3}Nvidia Jetson Nano}{9}{subsection.2.6.3}
-\contentsline {subsection}{\numberline {2.6.4}Nvidia Jetson T2}{9}{subsection.2.6.4}
-\contentsline {subsection}{\numberline {2.6.5}Raspberry Pi}{9}{subsection.2.6.5}
-\contentsline {subsection}{\numberline {2.6.6}...}{9}{subsection.2.6.6}
-\contentsline {chapter}{\numberline {3}This is the another Chapter}{11}{chapter.3}
-\contentsline {section}{\numberline {3.1}This is a Section Heading}{11}{section.3.1}
-\contentsline {chapter}{\numberline {A}Een aanhangsel}{15}{appendix.A}
-\contentsline {chapter}{\numberline {B}Beschrijving van deze masterproef in de vorm van een wetenschappelijk artikel}{17}{appendix.B}
-\contentsline {chapter}{\numberline {C}Poster}{19}{appendix.C}
+\contentsline {chapter}{\numberline {1}Inleiding}{5}{chapter.1}
+\contentsline {chapter}{\numberline {2}Literatuurstudie}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}\gls {ml}}{7}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Leermodellen}{7}{subsection.2.1.1}
+\contentsline {subsubsection}{Artifici\"ele Neurale Netwerken}{7}{section*.3}
+\contentsline {paragraph}{Structuur van een \gls {nn}}{7}{section*.4}
+\contentsline {subparagraph}{Lagen}{8}{section*.6}
+\contentsline {subparagraph}{Nodes}{8}{section*.7}
+\contentsline {subparagraph}{Propagation function}{8}{section*.8}
+\contentsline {subparagraph}{types transfer functies}{9}{section*.10}
+\contentsline {paragraph}{Voor- en nadelen}{9}{section*.11}
+\contentsline {subsubsection}{Beslissingsboom}{10}{section*.12}
+\contentsline {paragraph}{Structuur van een beslissingsboom}{10}{section*.13}
+\contentsline {paragraph}{Voor- en nadelen}{10}{section*.15}
+\contentsline {subsubsection}{Support Vector Machines}{10}{section*.16}
+\contentsline {paragraph}{Voor- en nadelen}{11}{section*.18}
+\contentsline {subsubsection}{Regressie Analyse}{11}{section*.19}
+\contentsline {paragraph}{Voor- en nadelen}{11}{section*.21}
+\contentsline {subsubsection}{Bayesian Netwerken}{11}{section*.22}
+\contentsline {subsubsection}{Genetisch Algoritmes}{12}{section*.23}
+\contentsline {subsection}{\numberline {2.1.2}Leertechnieken}{12}{subsection.2.1.2}
+\contentsline {subsubsection}{Supervised Learning:}{12}{section*.24}
+\contentsline {subsubsection}{Unsupervised Learning:}{12}{section*.25}
+\contentsline {subsubsection}{Reinforcement Learning:}{13}{section*.26}
+\contentsline {section}{\numberline {2.2}Evolutie \gls {sbc}}{14}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Geschiedenis}{14}{subsection.2.2.1}
+\contentsline {section}{\numberline {2.3}Benchmarking van \gls {ml} algoritmes}{16}{section.2.3}
+\contentsline {section}{\numberline {2.4}Assortiment aan 'on the shelf' toestellen}{17}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Beaglebone AI}{17}{subsection.2.4.1}
+\contentsline {subsubsection}{Specifications}{17}{section*.29}
+\contentsline {subsection}{\numberline {2.4.2}Coral Dev }{17}{subsection.2.4.2}
+\contentsline {subsubsection}{Specifications}{17}{section*.30}
+\contentsline {subsection}{\numberline {2.4.3}Nvidia Jetson Nano}{17}{subsection.2.4.3}
+\contentsline {subsubsection}{Specifications}{17}{section*.31}
+\contentsline {subsection}{\numberline {2.4.4}Nvidia Jetson T2}{18}{subsection.2.4.4}
+\contentsline {subsubsection}{Specifications}{18}{section*.32}
+\contentsline {subsection}{\numberline {2.4.5}Raspberry Pi}{18}{subsection.2.4.5}
+\contentsline {subsubsection}{Specifications}{18}{section*.33}
+\contentsline {subsection}{\numberline {2.4.6}...}{18}{subsection.2.4.6}
+\contentsline {chapter}{\numberline {3}This is the another Chapter}{19}{chapter.3}
+\contentsline {section}{\numberline {3.1}This is a Section Heading}{19}{section.3.1}
+\contentsline {chapter}{\numberline {A}Een aanhangsel}{23}{appendix.A}
+\contentsline {chapter}{\numberline {B}Beschrijving van deze masterproef in de vorm van een wetenschappelijk artikel}{25}{appendix.B}
+\contentsline {chapter}{\numberline {C}Poster}{27}{appendix.C}

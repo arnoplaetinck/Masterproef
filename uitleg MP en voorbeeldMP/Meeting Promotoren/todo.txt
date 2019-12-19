@@ -2,11 +2,17 @@ To Do Masterproef:
 
 Literatuurstudie:
 
-1) opzoekwerk naar benchmarkpapers, papers, state of the art in tech,...
-1,1) afschuimen van IEEE explore website, google scholar, limo,...
-
-2) schrijven van literatuurstudie
-
+( 1) situering cloud tov edge verhaal (niet lokaal))
+2) bespreken ML algemeen
+3) kadering NN binnen ML: sterktes, zwaktes van alle verschillende ML-technieken en waarom wij voor NN kiezen
+	-> nood aan low latency ( zie zelfrijdende auto's)
+4) SBC's beschrijven + hoe lang nog ondersteund?
+5) evolutie SBC (CPU-RAM-kostprijs, algemene performantie, eventuele overzichtspaper)
+6) benchmarking mbt machinelearning
+7) mogelijke use-case uitwerken
+8) state of the art
+9) korte vermelding van deep learning
+10) toep per MML techniek
 Praktijk:
 
 1) python runnen met pyrenn, numpy, matplotlib
