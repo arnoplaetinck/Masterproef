@@ -1,0 +1,946 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2019.10.1)  20 DEC 2019 20:07
+entering extended mode
+**./thesis.tex
+(thesis.tex
+LaTeX2e <2017-04-15>
+Babel <3.18> and hyphenation patterns for 75 language(s) loaded.
+(D:\Programmas\tex\latex\base\report.cls
+Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
+(D:\Programmas\tex\latex\base\size11.clo
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(D:\Programmas\tex\latex\geometry\geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(D:\Programmas\tex\latex\graphics\keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(D:\Programmas\tex\generic\oberdiek\ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+(D:\Programmas\tex\generic\oberdiek\ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(D:\Programmas\tex\generic\ifxetex\ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count88
+\Gm@cntv=\count89
+\c@Gm@tempcnt=\count90
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
+\Gm@dimlist=\toks15
+
+(D:\Programmas\tex\latex\geometry\geometry.cfg))
+(D:\Programmas\tex\generic\babel\babel.sty
+Package: babel 2018/02/14 3.18 The Babel package
+
+(D:\Programmas\tex\generic\babel\switch.def
+File: switch.def 2018/02/14 3.18 Babel switching mechanism
+)
+*************************************
+* Local config file bblopts.cfg used
+*
+(D:\Programmas\tex\latex\arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(D:\Programmas\tex\latex\babel-dutch\dutch.ldf
+Language: dutch 2005/03/30 v3.8i Dutch support from the babel system
+
+(D:\Programmas\tex\generic\babel\babel.def
+File: babel.def 2018/02/14 3.18 Babel common definitions
+\babel@savecnt=\count91
+\U@D=\dimen111
+
+(D:\Programmas\tex\generic\babel\txtbabel.def)
+\bbl@dirlevel=\count92
+)
+Package babel Info: Making " an active character on input line 132.
+))
+(D:\Programmas\tex\latex\graphics\graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(D:\Programmas\tex\latex\graphics\graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(D:\Programmas\tex\latex\graphics\trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(D:\Programmas\tex\latex\graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(D:\Programmas\tex\latex\graphics-def\pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen112
+\Gin@req@width=\dimen113
+)
+(D:\Programmas\tex\latex\base\inputenc.sty
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks16
+\inpenc@posthook=\toks17
+
+(D:\Programmas\tex\latex\base\latin1.def
+File: latin1.def 2015/03/17 v1.2c Input encoding file
+))
+(D:\Programmas\tex\latex\natbib\natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip43
+\bibsep=\skip44
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count93
+)
+(D:\Programmas\tex\latex\listings\listings.sty
+\lst@mode=\count94
+\lst@gtempboxa=\box26
+\lst@token=\toks18
+\lst@length=\count95
+\lst@currlwidth=\dimen114
+\lst@column=\count96
+\lst@pos=\count97
+\lst@lostspace=\dimen115
+\lst@width=\dimen116
+\lst@newlines=\count98
+\lst@lineno=\count99
+\lst@maxwidth=\dimen117
+
+(D:\Programmas\tex\latex\listings\lstmisc.sty
+File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
+\c@lstnumber=\count100
+\lst@skipnumbers=\count101
+\lst@framebox=\box27
+)
+(D:\Programmas\tex\latex\listings\listings.cfg
+File: listings.cfg 2019/09/10 1.8c listings configuration
+))
+Package: listings 2019/09/10 1.8c (Carsten Heinz)
+
+(D:\Programmas\tex\latex\tools\verbatim.sty
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks19
+\verbatim@line=\toks20
+\verbatim@in@stream=\read1
+)
+(D:\Programmas\tex\latex\hyperref\hyperref.sty
+Package: hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
+
+(D:\Programmas\tex\generic\oberdiek\hobsub-hyperref.sty
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+(D:\Programmas\tex\generic\oberdiek\hobsub-generic.sty
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+(D:\Programmas\tex\latex\oberdiek\auxhook.sty
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+(D:\Programmas\tex\latex\oberdiek\kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen118
+\Hy@linkcounter=\count102
+\Hy@pagecounter=\count103
+
+(D:\Programmas\tex\latex\hyperref\pd1enc.def
+File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count104
+
+(D:\Programmas\tex\latex\00miktex\hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4509.
+Package hyperref Info: Link nesting OFF on input line 4514.
+Package hyperref Info: Hyper index ON on input line 4517.
+Package hyperref Info: Plain pages OFF on input line 4524.
+Package hyperref Info: Backreferencing OFF on input line 4529.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4762.
+\c@Hy@tempcnt=\count105
+
+(D:\Programmas\tex\latex\url\url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5115.
+\XeTeXLinkMargin=\dimen119
+\Fld@menulength=\count106
+\Field@Width=\dimen120
+\Fld@charsize=\dimen121
+Package hyperref Info: Hyper figures OFF on input line 6369.
+Package hyperref Info: Link nesting OFF on input line 6374.
+Package hyperref Info: Hyper index ON on input line 6377.
+Package hyperref Info: backreferencing OFF on input line 6384.
+Package hyperref Info: Link coloring OFF on input line 6389.
+Package hyperref Info: Link coloring with OCG OFF on input line 6394.
+Package hyperref Info: PDF/A mode OFF on input line 6399.
+LaTeX Info: Redefining \ref on input line 6439.
+LaTeX Info: Redefining \pageref on input line 6443.
+\Hy@abspage=\count107
+\c@Item=\count108
+\c@Hfootnote=\count109
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(D:\Programmas\tex\latex\hyperref\hpdftex.def
+File: hpdftex.def 2018/02/06 v6.86b Hyperref driver for pdfTeX
+\Fld@listcount=\count110
+\c@bookmark@seq@number=\count111
+
+(D:\Programmas\tex\latex\oberdiek\rerunfilecheck.sty
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip45
+)
+(D:\Programmas\tex\latex\caption\caption.sty
+Package: caption 2019/09/01 v3.3d Customizing captions (AR)
+
+(D:\Programmas\tex\latex\caption\caption3.sty
+Package: caption3 2019/09/01 v1.8d caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 64.
+\captionmargin=\dimen122
+\captionmargin@=\dimen123
+\captionwidth=\dimen124
+\caption@tempdima=\dimen125
+\caption@indent=\dimen126
+\caption@parindent=\dimen127
+\caption@hangindent=\dimen128
+)
+\c@caption@flags=\count112
+\c@ContinuedFloat=\count113
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+)
+(D:\Programmas\tex\latex\pdfpages\pdfpages.sty
+Package: pdfpages 2019/09/21 v0.5n Insert pages of external PDF documents (AM)
+
+(D:\Programmas\tex\latex\base\ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(D:\Programmas\tex\latex\tools\calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count114
+\calc@Bcount=\count115
+\calc@Adimen=\dimen129
+\calc@Bdimen=\dimen130
+\calc@Askip=\skip46
+\calc@Bskip=\skip47
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count116
+\calc@Cskip=\skip48
+)
+(D:\Programmas\tex\latex\eso-pic\eso-pic.sty
+Package: eso-pic 2018/04/12 v2.0h eso-pic (RN)
+
+(D:\Programmas\tex\latex\xcolor\xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(D:\Programmas\tex\latex\graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+))
+\AM@pagewidth=\dimen131
+\AM@pageheight=\dimen132
+
+(D:\Programmas\tex\latex\pdfpages\pppdftex.def
+File: pppdftex.def 2019/09/21 v0.5n Pdfpages driver for pdfTeX (AM)
+)
+\AM@pagebox=\box28
+\AM@global@opts=\toks21
+\AM@toc@title=\toks22
+\c@AM@survey=\count117
+\AM@templatesizebox=\box29
+)
+(D:\Programmas\tex\latex\pslatex\pslatex.sty
+Package: pslatex 1996/07/24 v1.2 pslatex emulation (DPC)
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 65.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/ptmcm/m/n on input line 65.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ptmcm/m/n on input line 65.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 66.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/ptmcm/m/it on input line 66.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/ptmcm/m/it on input line 66.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 67.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/pzccm/m/n on input line 67.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/pzccm/m/n on input line 67.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 68.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/psycm/m/n on input line 68.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/psycm/m/n on input line 68.
+\symbold=\mathgroup4
+\symitalic=\mathgroup5
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 74.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 74.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 74.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 75.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/ptm/m/it on input line 75.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 75.
+)
+(D:\Programmas\tex\latex\sectsty\sectsty.sty
+Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
+les
+)
+(D:\Programmas\tex\latex\float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count118
+\float@exts=\toks23
+\float@box=\box30
+\@float@everytoks=\toks24
+\@floatcapt=\box31
+) (fiiw_gent.sty (parallel.sty
+Package: parallel 2003/04/13, setting two texts parallel (me)
+
+`parallel': setting two texts parallel, (beta 4) 2003/04/13.
+\ParallelLWidth=\dimen133
+\ParallelRWidth=\dimen134
+\ParallelTextWidth=\dimen135
+\ParallelLeftMargin=\dimen136
+\ParallelUserMidSkip=\dimen137
+\ParallelMainMidSkip=\dimen138
+\ParallelLBox=\box32
+\ParallelRBox=\box33
+\ParallelBoxVar=\box34
+\ParallelLTok=\box35
+\ParallelRTok=\box36
+\ParallelBoolVar=\count119
+\ParallelBoolMid=\count120
+\ParallelWhichBox=\count121
+\ParallelMainMode=\count122
+\ParallelFNMode=\count123
+\ParallelLFNCounter=\count124
+\ParallelRFNCounter=\count125
+\ParallelMaxFN=\count126
+\ParallelFNNumMode=\count127
+)
+(D:\Programmas\tex\latex\textpos\textpos.sty
+Package: textpos 2019/04/15 v1.9.1
+
+Package: textpos 2019/04/15 1.9.1, absolute positioning of text on the page
+\TP@textbox=\box37
+\TPHorizModule=\dimen139
+\TPVertModule=\dimen140
+\TP@margin=\dimen141
+\TP@absmargin=\dimen142
+Grid set 16 x 16 = 37.34424pt x 52.81541pt
+\TPboxrulesize=\dimen143
+\TP@tbargs=\toks25
+\TP@prevdepth=\dimen144
+) (D:\Programmas\tex\latex\fancyhdr\fancyhdr.sty
+Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip49
+\f@nch@O@elh=\skip50
+\f@nch@O@erh=\skip51
+\f@nch@O@olh=\skip52
+\f@nch@O@orh=\skip53
+\f@nch@O@elf=\skip54
+\f@nch@O@erf=\skip55
+\f@nch@O@olf=\skip56
+\f@nch@O@orf=\skip57
+)
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 32.
+
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 33.
+
+) (thesis.aux)
+\openout1 = `thesis.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 74.
+LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 74
+.
+ (D:\Programmas\tex\latex\psnfss\omspzccm.fd
+File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
+)
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
+(Font)              scaled to size 9.85492pt on input line 74.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(99.58464pt, 426.79135pt, 71.13188pt)
+* v-part:(T,H,B)=(99.58464pt, 645.87756pt, 99.58464pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=426.79135pt
+* \textheight=645.87756pt
+* \oddsidemargin=27.31465pt
+* \evensidemargin=27.31465pt
+* \topmargin=-9.68535pt
+* \headheight=14.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=50.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(D:\Programmas\tex\context\base\mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count128
+\scratchdimen=\dimen145
+\scratchbox=\box38
+\nofMPsegments=\count129
+\nofMParguments=\count130
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count131
+\MPscratchDim=\dimen146
+\MPnumerator=\count132
+\makeMPintoPDFobject=\count133
+\everyMPtoPDFconversion=\toks27
+) (D:\Programmas\tex\latex\oberdiek\epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(D:\Programmas\tex\latex\oberdiek\grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
+\c@lstlisting=\count134
+\AtBeginShipoutBox=\box39
+Package hyperref Info: Link coloring OFF on input line 74.
+
+(D:\Programmas\tex\latex\hyperref\nameref.sty
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+
+(D:\Programmas\tex\generic\oberdiek\gettitlestring.sty
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count135
+)
+LaTeX Info: Redefining \ref on input line 74.
+LaTeX Info: Redefining \pageref on input line 74.
+LaTeX Info: Redefining \nameref on input line 74.
+ (thesis.out)
+(thesis.out)
+\@outlinefile=\write3
+\openout3 = `thesis.out'.
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: End \AtBeginDocument code.
+ (D:\Programmas\tex\latex\oberdiek\pdflscape.sty
+Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
+
+(D:\Programmas\tex\latex\graphics\lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)
+<cover_fiiw_gent.pdf, id=31, 597.432pt x 845.07718pt>
+File: cover_fiiw_gent.pdf Graphic file (type pdf)
+<use cover_fiiw_gent.pdf>
+Package pdftex.def Info: cover_fiiw_gent.pdf  used on input line 77.
+(pdftex.def)             Requested size: 597.50787pt x 845.25565pt.
+LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
+(Font)              scaled to size 35.99976pt on input line 77.
+LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
+(Font)              scaled to size 15.55188pt on input line 77.
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--77
+
+ []
+
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <17.28> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 77.
+LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
+(Font)              scaled to size 15.55188pt on input line 77.
+LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
+(Font)              scaled to size 10.79993pt on input line 77.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 77.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 77.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 77.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 77.
+[1
+
+{C:/Users/arnop/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./cover_fii
+w_gent.pdf>]
+LaTeX Font Info:    Try loading font information for OMS+phv on input line 77.
+ (D:\Programmas\tex\latex\psnfss\omsphv.fd
+File: omsphv.fd 
+)
+LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 77.
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--77
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--77
+
+ []
+
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 77.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 77.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 77.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 77.
+[2
+
+]
+LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
+(Font)              scaled to size 22.39185pt on input line 77.
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <24.88> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 77.
+LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
+(Font)              scaled to size 22.39185pt on input line 77.
+ (voorwoord.tex)
+LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
+(Font)              scaled to size 7.19995pt on input line 77.
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <8> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 77.
+LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
+(Font)              scaled to size 7.19995pt on input line 77.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 77.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 77.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 77.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 77.
+ [3
+
+
+] (abstract.tex
+LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 3.
+
+
+(D:\Programmas\tex\latex\psnfss\ot1ptmcm.fd
+File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
+)
+LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 3.
+
+
+(D:\Programmas\tex\latex\psnfss\omlptmcm.fd
+File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
+)
+LaTeX Font Info:    Try loading font information for OMX+psycm on input line 3.
+
+
+(D:\Programmas\tex\latex\psnfss\omxpsycm.fd
+File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
+)
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 77.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 77.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 77.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 77.
+ [4
+
+] (thesis.toc
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 3.
+LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
+(Font)              scaled to size 9.85492pt on input line 3.
+)
+\tf@toc=\write4
+\openout4 = `thesis.toc'.
+
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 77.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 77.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 77.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 77.
+ [5
+
+] (thesis.lof)
+\tf@lof=\write5
+\openout5 = `thesis.lof'.
+
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 77.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 77.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 77.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 77.
+[6
+
+] (thesis.lot)
+\tf@lot=\write6
+\openout6 = `thesis.lot'.
+
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 77.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 77.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 77.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 77.
+ [7
+
+] (hfdst1.tex
+Hoofdstuk 1.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 2.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 2.
+LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
+(Font)              scaled to size 18.66588pt on input line 2.
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <20.74> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 2.
+LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
+(Font)              scaled to size 18.66588pt on input line 2.
+LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
+(Font)              scaled to size 8.09995pt on input line 3.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
+LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
+(Font)              scaled to size 6.29996pt on input line 3.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 4.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 4.
+[1
+
+
+]
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 9.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 9.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 9.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 9.
+ [2]) (hfdst2.tex
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 2.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 2.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 2.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 2.
+ [3]
+Hoofdstuk 2.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 2.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 2.
+) (hfdst3.tex
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 7.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 7.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 7.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 7.
+ [4
+
+]
+Hoofdstuk 3.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 7.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 7.
+LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 15.
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 15.
+LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
+(Font)              scaled to size 8.99994pt on input line 15.
+LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
+(Font)              scaled to size 12.9599pt on input line 27.
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 27.
+LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
+(Font)              scaled to size 12.9599pt on input line 27.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 27.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 27.
+) (thesis.bbl
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 3.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 3.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 3.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 3.
+ [5
+
+]
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10.95> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 8.
+LaTeX Font Info:    Font shape `OT1/phv/m/sl' will be
+(Font)              scaled to size 9.85492pt on input line 8.
+) (bijlage1.tex
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 1.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 1.
+ [6
+
+]
+B"ylage A.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 1.
+)
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 97.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 97.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 97.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 97.
+ [7
+
+]
+B"ylage B.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 97.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 97.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 102.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 102.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 102.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 102.
+[8
+
+]
+B"ylage C.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 102.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 102.
+<back_fiiw_gent.pdf, id=145, 597.432pt x 845.07718pt>
+File: back_fiiw_gent.pdf Graphic file (type pdf)
+<use back_fiiw_gent.pdf>
+Package pdftex.def Info: back_fiiw_gent.pdf  used on input line 105.
+(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
+File: back_fiiw_gent.pdf Graphic file (type pdf)
+<use back_fiiw_gent.pdf>
+Package pdftex.def Info: back_fiiw_gent.pdf  used on input line 105.
+(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
+<back_fiiw_gent.pdf, id=148, page=1, 597.432pt x 845.07718pt>
+File: back_fiiw_gent.pdf Graphic file (type pdf)
+<use back_fiiw_gent.pdf, page 1>
+Package pdftex.def Info: back_fiiw_gent.pdf , page1 used on input line 105.
+(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
+File: back_fiiw_gent.pdf Graphic file (type pdf)
+<use back_fiiw_gent.pdf, page 1>
+Package pdftex.def Info: back_fiiw_gent.pdf , page1 used on input line 105.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 105.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 105.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 105.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 105.
+[9
+
+]
+File: back_fiiw_gent.pdf Graphic file (type pdf)
+<use back_fiiw_gent.pdf, page 1>
+Package pdftex.def Info: back_fiiw_gent.pdf , page1 used on input line 105.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+File: back_fiiw_gent.pdf Graphic file (type pdf)
+<use back_fiiw_gent.pdf, page 1>
+Package pdftex.def Info: back_fiiw_gent.pdf , page1 used on input line 105.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 105.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 105.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 105.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 105.
+File: back_fiiw_gent.pdf Graphic file (type pdf)
+<use back_fiiw_gent.pdf, page 1>
+Package pdftex.def Info: back_fiiw_gent.pdf , page1 used on input line 105.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+ [10 <./back_fiiw_gent.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 108.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 108.
+ (thesis.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 108.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 108.
+Package rerunfilecheck Info: File `thesis.out' has not changed.
+(rerunfilecheck)             Checksum: 494EF7B288DA53E990D245A185DBD9DE;434.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 108.
+ ) 
+Here is how much of TeX's memory you used:
+ 10809 strings out of 493305
+ 158985 string characters out of 3144950
+ 269293 words of memory out of 3000000
+ 14135 multiletter control sequences out of 15000+200000
+ 49963 words of font info for 88 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 37i,18n,45p,524b,480s stack positions out of 5000i,500n,10000p,200000b,50000s
+{D:/Programmas/fonts/enc/dvips/base/8r.enc}<D:/Programmas/fonts/type1/public/
+amsfonts/cm/cmsy10.pfb><D:/Programmas/fonts/type1/urw/helvetic/uhvb8a.pfb><D:/P
+rogrammas/fonts/type1/urw/helvetic/uhvr8a.pfb><D:/Programmas/fonts/type1/urw/he
+lvetic/uhvro8a.pfb>
+Output written on thesis.pdf (17 pages, 105525 bytes).
+PDF statistics:
+ 194 PDF objects out of 1000 (max. 8388607)
+ 36 named destinations out of 1000 (max. 500000)
+ 82 words of extra memory for PDF output out of 10000 (max. 10000000)
+

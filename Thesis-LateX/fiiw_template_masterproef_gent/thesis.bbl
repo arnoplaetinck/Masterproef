@@ -1,0 +1,23 @@
+\newcommand{\noopsort}[1]{} \newcommand{\printfirst}[2]{#1}
+  \newcommand{\singleletter}[1]{#1} \newcommand{\switchargs}[2]{#2#1}
+\begin{thebibliography}{}
+
+\bibitem[Castleman et~al., 1998]{Castleman98}
+Castleman, K.~R., Schulze, M.~A., and Wu, Q. (1998).
+\newblock Simplified design of steerable pyramid filters.
+\newblock In {\em Proc. IEEE ISCAS}.
+
+\bibitem[Granlund and Knutsson, 1995]{Granlund95}
+Granlund, G. and Knutsson, H. (1995).
+\newblock {\em Signal Processing for Computer Vision}.
+\newblock Kluwer Academic Publishers.
+
+\bibitem[Holmes et~al., 1995]{Holmes95}
+Holmes, T., Bhattacharyya, S., Cooper, J., Hanzel, D., and Krishnamurti, V.
+  (1995).
+\newblock {\em Handbook of biological Confocal Microscopy (2nd ed.)}, chapter
+  Light Microscopic Images reconstructed by Maximum Likelihood deconvolution,
+  pages 389--402.
+\newblock Plenum Press, New York.
+
+\end{thebibliography}
