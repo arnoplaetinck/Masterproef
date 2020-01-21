@@ -1,0 +1,38 @@
+Hierin beschrijf ik welke stappen ik heb doorgenomen voor het opzetten van de pythonfiles:
+
+gevolgde tutorial:https://solarianprogrammer.com/2018/04/25/install-numpy-scipy-matplotlib-opencv-python-ubuntu/
+
+
+Eerst isntalleren python 3.7 en enkele basispakketten (alles via commandline):
+	sudo apt install python3-venv python3-pip python3-tk
+Installeren virtual environments: 
+	sudo apt install python3.7 python3.7-dev python3.7-venv
+Oproepen python3.7:
+	python3.7
+Aanmaken van nieuwe environment 'masterproefvenv':
+	python3.7 -m venv masterproefvenv
+Activeren van environment:
+	source masterproefvenv/bin/activate
+In geactiveerde venv installeren we numpy:
+	pip install numpy
+	sudo pip3 install -U numpy => installeert in 3.6
+	sudo python3.7 -m pip install -U numpy => installeert in 3.7
+Nu pyrenn en psutil modules isntalleren voor 3.7 (time is al standaar geïnstalleerd):
+	sudo python3.7 -m pip install -U pyrenn psutil
+
+Overzetten van nodige (python) bestanden naar nano via PSFTP: (volgens :https://www.youtube.com/watch?v=u_ohQMGV4Ug&list=FLgC8JcWgCMU6tqpAKWU40bQ&index=5&t=315s)
+
+Weergeven local/remote directory:
+	lpwd/pwd
+aanpassen local/remote directory:
+	lcd/cd PATH
+Oplijsten bestanden in local/remote directory:
+	!dir/ls
+Overzetten meerder bestanden van lokale directory naar remote directory: 
+	mput example_all.py example_classification_mnist.py example_compair.py example_compressed_air.csv example_data_friction.csv example_narendra4.csv example_data_pt2.csv example_friction.py example_narendra4.py example_pt2.py example_using_P0Y0_compair.py example_using_P0Y0_narendra4.py example_calculation.py
+	example.calculation.py nog te doen (luktniet)
+Eerste runs, en aanpassen locatie logging.
+
+
+
+
