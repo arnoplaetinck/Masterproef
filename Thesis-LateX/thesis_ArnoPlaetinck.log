@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2019.10.1)  7 JAN 2020 19:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2019.10.1)  22 JAN 2020 14:50
 entering extended mode
 **./thesis_ArnoPlaetinck.tex
 (thesis_ArnoPlaetinck.tex
@@ -1122,6 +1122,12 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <20.74> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 2.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
 (Font)              scaled to size 18.66588pt on input line 2.
+
+Overfull \hbox (4.8pt too wide) in paragraph at lines 4--5
+\OT1/phv/m/n/10.95 vor-men. Ver-vol-gens wordt er een over-zicht van de voor- e
+n na-de-len van de ver-schil-lende tech-nie-ken.
+ []
+
 Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 6.
 Package babel Info: Redefining dutch shorthand "~
@@ -1138,9 +1144,9 @@ Package babel Info: Redefining dutch shorthand "|
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 8.
 
-Overfull \hbox (2.34543pt too wide) in paragraph at lines 10--11
-\OT1/phv/m/n/10.95 te-rug-ge-von-den wor-den. Van hart-rit-me-stoor-nis-sen in 
-de me-di-sche sec-tor tot com-men-taar-her-ken-ning
+Overfull \hbox (40.99686pt too wide) in paragraph at lines 10--11
+\OT1/phv/m/n/10.95 vor-de-rin-gen wer-den ge-dre-ven door on-der meer de nieuw-
+ste ont-wik-ke-lin-gen op vlak van com-pu-ter-re-ken-kracht
  []
 
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10.95> not available
@@ -1179,7 +1185,7 @@ Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 23.
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 23.
-<afbeeldingen/neuralNetwork2.PNG, id=272, 853.1875pt x 499.8675pt>
+<afbeeldingen/neuralNetwork2.PNG, id=282, 853.1875pt x 499.8675pt>
 File: afbeeldingen/neuralNetwork2.PNG Graphic file (type png)
 <use afbeeldingen/neuralNetwork2.PNG>
 Package pdftex.def Info: afbeeldingen/neuralNetwork2.PNG  used on input line 34
@@ -1200,7 +1206,7 @@ Package babel Info: Redefining dutch shorthand "|
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 46.
 [3]
-<afbeeldingen/Artificial_neuron.PNG, id=287, 273.02pt x 187.70125pt>
+<afbeeldingen/Artificial_neuron.PNG, id=297, 273.02pt x 187.70125pt>
 File: afbeeldingen/Artificial_neuron.PNG Graphic file (type png)
 <use afbeeldingen/Artificial_neuron.PNG>
 Package pdftex.def Info: afbeeldingen/Artificial_neuron.PNG  used on input line
@@ -1223,7 +1229,7 @@ Overfull \hbox (23.76868pt too wide) in paragraph at lines 80--81
 s de out-put niets min-der dan de ge-wo-gen som ver-me-nig-vul-digd
  []
 
-<afbeeldingen/sigmoid.PNG, id=302, 276.03125pt x 183.68625pt>
+<afbeeldingen/sigmoid.PNG, id=312, 276.03125pt x 183.68625pt>
 File: afbeeldingen/sigmoid.PNG Graphic file (type png)
 <use afbeeldingen/sigmoid.PNG>
 Package pdftex.def Info: afbeeldingen/sigmoid.PNG  used on input line 90.
@@ -1249,7 +1255,7 @@ Overfull \hbox (13.6095pt too wide) in paragraph at lines 102--103
 l-len in het ge-bruik bij [][]NN[] en een be-slis-sings-boom.
  []
 
-<afbeeldingen/beslissingsBoom.PNG, id=318, 665.48625pt x 529.98pt>
+<afbeeldingen/beslissingsBoom.PNG, id=328, 665.48625pt x 529.98pt>
 File: afbeeldingen/beslissingsBoom.PNG Graphic file (type png)
 <use afbeeldingen/beslissingsBoom.PNG>
 Package pdftex.def Info: afbeeldingen/beslissingsBoom.PNG  used on input line 1
@@ -1264,13 +1270,13 @@ Package babel Info: Redefining dutch shorthand "|
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 119.
 [6 <./afbeeldingen/beslissingsBoom.PNG (PNG copy)>]
-<afbeeldingen/supportVectorMachines.PNG, id=332, 391.4625pt x 338.26375pt>
+<afbeeldingen/supportVectorMachines.PNG, id=342, 391.4625pt x 338.26375pt>
 File: afbeeldingen/supportVectorMachines.PNG Graphic file (type png)
 <use afbeeldingen/supportVectorMachines.PNG>
 Package pdftex.def Info: afbeeldingen/supportVectorMachines.PNG  used on input 
 line 123.
 (pdftex.def)             Requested size: 227.62204pt x 196.6886pt.
-<afbeeldingen/regressieAnalyse.PNG, id=337, 1204.5pt x 796.9775pt>
+<afbeeldingen/regressieAnalyse.PNG, id=347, 1204.5pt x 796.9775pt>
 File: afbeeldingen/regressieAnalyse.PNG Graphic file (type png)
 <use afbeeldingen/regressieAnalyse.PNG>
 Package pdftex.def Info: afbeeldingen/regressieAnalyse.PNG  used on input line 
@@ -1406,7 +1412,7 @@ Overfull \hbox (27.18985pt too wide) in paragraph at lines 200--201
 e da-ta-sets. Men op-ti-ma-li-seert deze ma-the-ma-ti-sche
  []
 
-<afbeeldingen/Reinforcement_learning_diagram.PNG, id=377, 376.40625pt x 364.361
+<afbeeldingen/Reinforcement_learning_diagram.PNG, id=387, 376.40625pt x 364.361
 25pt>
 File: afbeeldingen/Reinforcement_learning_diagram.PNG Graphic file (type png)
 <use afbeeldingen/Reinforcement_learning_diagram.PNG>
@@ -1465,7 +1471,7 @@ Overfull \hbox (19.97581pt too wide) in paragraph at lines 223--224
  en werd po-pu-lair door-dat het werd ge-pre-sen-teerd
  []
 
-<afbeeldingen/Early_1976_MMD1_Prototype_most_chips_removed.PNG, id=391, 1798.72
+<afbeeldingen/Early_1976_MMD1_Prototype_most_chips_removed.PNG, id=401, 1798.72
 pt x 1204.5pt>
 File: afbeeldingen/Early_1976_MMD1_Prototype_most_chips_removed.PNG Graphic fil
 e (type png)
@@ -1510,7 +1516,7 @@ Package babel Info: Redefining dutch shorthand "|
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 265.
 
-Overfull \hbox (21.46356pt too wide) in paragraph at lines 266--267
+Overfull \hbox (26.94283pt too wide) in paragraph at lines 266--267
 \OT1/phv/m/n/10.95 Google[[]]. Het board is ont-wor-pen om het ont-wik-ke-len v
 an on-device ML pro-duc-ten te ver-ge-mak-ke-lij-ken.
  []
@@ -1526,15 +1532,9 @@ Package babel Info: Redefining dutch shorthand "|
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 280.
 
-Overfull \hbox (0.43413pt too wide) in paragraph at lines 281--282
-\OT1/phv/m/n/10.95 krach-tige com-pu-ter ont-wik-keld voor em-bed-ded ap-pli-ca
--ties en low-power [][]AI[]-[][]Internet-of-Things (IoT)[].
- []
-
-
-Overfull \hbox (3.72722pt too wide) in paragraph at lines 281--282
-\OT1/phv/m/n/10.95 Deze [][]SBC[] wordt on-der-steund door meer-dere bi-bli-o-t
-he-ken in sec-to-ren zo-als deep learning, com-pu-ter
+Overfull \hbox (7.1273pt too wide) in paragraph at lines 281--282
+\OT1/phv/m/n/10.95 com-pu-ter vi-sion, beeld en mul-ti-me-dia. De hard-ware be-
+vat zo-wel een [][]GPU[] als een [][]Cen-tral Pro-ces-sing
  []
 
 Package babel Info: Redefining dutch shorthand "|
@@ -1835,7 +1835,7 @@ Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 159.
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 159.
-<back_fiiw_gent.pdf, id=565, 597.432pt x 845.07718pt>
+<back_fiiw_gent.pdf, id=576, 597.432pt x 845.07718pt>
 File: back_fiiw_gent.pdf Graphic file (type pdf)
 <use back_fiiw_gent.pdf>
 Package pdftex.def Info: back_fiiw_gent.pdf  used on input line 162.
@@ -1844,7 +1844,7 @@ File: back_fiiw_gent.pdf Graphic file (type pdf)
 <use back_fiiw_gent.pdf>
 Package pdftex.def Info: back_fiiw_gent.pdf  used on input line 162.
 (pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
-<back_fiiw_gent.pdf, id=568, page=1, 597.432pt x 845.07718pt>
+<back_fiiw_gent.pdf, id=579, page=1, 597.432pt x 845.07718pt>
 File: back_fiiw_gent.pdf Graphic file (type pdf)
 <use back_fiiw_gent.pdf, page 1>
 Package pdftex.def Info: back_fiiw_gent.pdf , page1 used on input line 162.
@@ -1901,10 +1901,10 @@ Package rerunfilecheck Info: File `thesis_ArnoPlaetinck.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 164.
  ) 
 Here is how much of TeX's memory you used:
- 19280 strings out of 493305
- 302983 string characters out of 3144950
- 454126 words of memory out of 3000000
- 22279 multiletter control sequences out of 15000+200000
+ 19296 strings out of 493305
+ 303323 string characters out of 3144950
+ 454371 words of memory out of 3000000
+ 22291 multiletter control sequences out of 15000+200000
  66240 words of font info for 127 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,18n,77p,2003b,558s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1967,9 +1967,9 @@ e1/public/amsfonts/cm/cmsy10.pfb><D:/Programmas/fonts/type1/urw/helvetic/uhvb8a
 pe1/urw/helvetic/uhvro8a.pfb><D:/Programmas/fonts/type1/urw/symbol/usyr.pfb><D:
 /Programmas/fonts/type1/urw/times/utmr8a.pfb><D:/Programmas/fonts/type1/urw/tim
 es/utmri8a.pfb>
-Output written on thesis_ArnoPlaetinck.pdf (50 pages, 1726506 bytes).
+Output written on thesis_ArnoPlaetinck.pdf (50 pages, 1729826 bytes).
 PDF statistics:
- 659 PDF objects out of 1000 (max. 8388607)
- 149 named destinations out of 1000 (max. 500000)
+ 671 PDF objects out of 1000 (max. 8388607)
+ 153 named destinations out of 1000 (max. 500000)
  242 words of extra memory for PDF output out of 10000 (max. 10000000)
 
