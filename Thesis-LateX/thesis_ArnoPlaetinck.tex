@@ -28,6 +28,7 @@
 \usepackage{xcolor}						% om todo's aan te maken
 \newcommand\todo[1]{\textcolor{red}{#1}}
 					% andere lettertype's dan de standaard types
+\usepackage{hyphenat}					% afkappen woorden op einde lijn via hyphenated\hyp{}word
 
 \usepackage[acronym]{glossaries}        % voor afkortingen
 \makeglossaries
@@ -84,7 +85,7 @@
 \usepackage{float}                      % De optie H voor de plaatsing van figuren op de plaats waar je ze invoegt. bvb. \begin{figure}[H]
 \usepackage{longtable}					% tabellen die over meerdere pagina's gespreid worden
 %\usepackage[times]{quotchap}           % indien je fancy hoofdstuktitels wil
-\usepackage[none]{hyphenat}
+
 \usepackage{latexsym}
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -133,8 +134,9 @@
 
 \preface
 
+\input{inleiding}
 \input{Literatuurstudie}
-\input{hfdst1}
+
 \input{hfdst2}
 \input{hfdst3}
 % Bibliografie: referenties. De items zitten in bibliografie.bib

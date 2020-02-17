@@ -1,14 +1,15 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: thesis_ArnoPlaetinck.aux
 The style file: IEEEtranN.bst
-Illegal, another \bibstyle command---line 131 of file thesis_ArnoPlaetinck.aux
+Illegal, another \bibstyle command---line 155 of file thesis_ArnoPlaetinck.aux
  : \bibstyle
  :          {apalike}
 I'm skipping whatever remains of this command
 Database file #1: bibliografie.bib
-Repeated entry---line 24 of file bibliografie.bib
+Repeated entry---line 72 of file bibliografie.bib
  : @misc{bron:supportvectormachines
  :                                 ,
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for ""
 Warning--I didn't find a database entry for "Castleman98"
 Warning--I didn't find a database entry for "Granlund95"
 Warning--I didn't find a database entry for "Holmes95"
@@ -17,6 +18,9 @@ Warning--I didn't find a database entry for "Holmes95"
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 ** Natbib version - not for normal IEEE work.
 Warning--empty journal in Minar18
+Warning--empty journal in sun2018kernel
+Warning--empty journal in libuttibenchmarking
+Warning--empty year in libuttibenchmarking
 
 Done.
 (There were 2 error messages)

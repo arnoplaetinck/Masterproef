@@ -2,21 +2,12 @@ To Do Masterproef:
 
 Literatuurstudie:
 
-( 1) situering cloud tov edge verhaal (niet lokaal))
-2) bespreken ML algemeen
-3) kadering NN binnen ML: sterktes, zwaktes van alle verschillende ML-technieken en waarom wij voor NN kiezen
-	-> nood aan low latency ( zie zelfrijdende auto's)
-4) SBC's beschrijven + hoe lang nog ondersteund?
-5) evolutie SBC (CPU-RAM-kostprijs, algemene performantie, eventuele overzichtspaper)
-6) benchmarking mbt machinelearning
-7) mogelijke use-case uitwerken
-8) state of the art
-9) korte vermelding van deep learning
-10) toep per MML techniek
-Praktijk:
+1) Wat zijn de randvoorwaarden voor het algoritme van plaatsbepaling	-
+2) Waarom gebruiken we AI  						-toegevoegd
+3) Waarom gebruiken we het op een edge-device?				-toegevoegd (eventueel veranderen naar een apart puntje?)
+4) Referenties								-toegevoegd
+5) State of the Art 
+	- Wat is er al gebeurd van benchmarking?
+	- Welke info hiervan is relevant voor binnen het kader van thesis en casu
 
-1) python runnen met pyrenn, numpy, matplotlib
-
-datafiles op pc omzetten naar .csv file en op BB implementeren
-
-2) opzoekwerk scikit learn
+Opmerkingen uit feedback:
