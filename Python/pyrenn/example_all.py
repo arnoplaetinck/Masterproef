@@ -50,6 +50,12 @@ net = prn.CreateNN([3, 5, 5, 2], dIn=[0], dIntern=[], dOut=[1])
 # Set termination condition for Error E_stop to 1e-5
 # The Training will stop after 500 iterations or when the Error <=E_stop
 net = prn.train_LM(P, Y, net, verbose=True, k_max=500, E_stop=1e-5)
+
+###
+# Save outputs to certain file
+prn.saveNN(net, "D:/School/Masterproef/Python/pyrenn/SavedNN/compair.csv")
+print("savegelukt")
+
 ###
 # Calculate outputs of the trained NN for train and test data
 y = prn.NNOut(P, net)

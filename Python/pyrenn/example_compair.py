@@ -33,6 +33,9 @@ net = prn.train_LM(P, Y, net, verbose=True, k_max=500, E_stop=1e-5)
 y = prn.NNOut(P, net)
 ytest = prn.NNOut(Ptest, net)
 
+
+
+
 ###
 # Plot results
 fig = plt.figure(figsize=(15, 10))
@@ -45,40 +48,5 @@ fs = 18
 t = np.arange(0, 11.0)/4  # 11??? (480 vorige timesteps in 15 Minute resolution
 # Train Data
 ax0.set_title('Train Data', fontsize=fs)
-#print("t: ", t)
-#print("y: ", Y[0])
 
-ax0.plot(t, y[0], color='b', lw=2, label='NN Output')
-ax0.plot(t, Y[0], color='r', marker='None', linestyle=':', lw=3, markersize=8, label='Data')
-ax0.tick_params(labelsize=fs-2)
-ax0.legend(fontsize=fs-2, loc='upper left')
-ax0.grid()
-ax0.set_ylabel('Storage Pressure [bar]', fontsize=fs)
-plt.setp(ax0.get_xticklabels(), visible=False)
 
-ax2.plot(t, y[1], color='b', lw=2, label='NN Output')
-ax2.plot(t, Y[1], color='r', marker='None', linestyle=':', lw=3, markersize=8, label='Train Data')
-ax2.tick_params(labelsize=fs-2)
-ax2.grid()
-ax2.set_xlabel('Time [h]', fontsize=fs)
-ax2.set_ylabel('el. Power [kW]', fontsize=fs)
-
-# Test Data
-ax1.set_title('Test Data', fontsize=fs)
-ax1.plot(t, ytest[0], color='b', lw=2, label='NN Output')
-ax1.plot(t, Ytest[0], color='r', marker='None', linestyle=':', lw=3, markersize=8, label='Test Data')
-ax1.tick_params(labelsize=fs-2)
-# ax1.legend(fontsize=fs-2,loc='upper left')
-ax1.grid()
-plt.setp(ax1.get_xticklabels(), visible=False)
-plt.setp(ax1.get_yticklabels(), visible=False)
-
-ax3.plot(t, ytest[1], color='b', lw=2, label='NN Output')
-ax3.plot(t, Ytest[1], color='r', marker='None', linestyle=':', lw=3, markersize=8, label='Test Data')
-ax3.tick_params(labelsize=fs-2)
-ax3.grid()
-ax3.set_xlabel('Time [h]', fontsize=fs)
-plt.setp(ax3.get_yticklabels(), visible=False)
-
-fig.tight_layout()
-plt.show()

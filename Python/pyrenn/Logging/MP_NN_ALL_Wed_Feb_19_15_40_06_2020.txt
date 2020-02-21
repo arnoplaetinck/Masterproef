@@ -1,0 +1,8 @@
+example_compair.py: 43.2 time: 2.749096393585205  svmem(total=8476856320, available=2449727488, percent=71.1, used=6027128832, free=2449727488)
+example_friction.py: 50.0 time: 0.029919147491455078  svmem(total=8476856320, available=2447728640, percent=71.1, used=6029127680, free=2447728640)
+example_narendra4.py: 25.0 time: 0.030355453491210938  svmem(total=8476856320, available=2447675392, percent=71.1, used=6029180928, free=2447675392)
+example_pt2.py: 25.0 time: 0.0358891487121582  svmem(total=8476856320, available=2447679488, percent=71.1, used=6029176832, free=2447679488)
+example_using_P0Y0_narendra4.py: 25.0 time: 0.017940282821655273  svmem(total=8476856320, available=2447679488, percent=71.1, used=6029176832, free=2447679488)
+example_using_P0Y0_compair.py: 35.8 time: 2.1499781608581543  svmem(total=8476856320, available=2461519872, percent=71.0, used=6015336448, free=2461519872)
+example_gradient.py: 25.0 time: 0.012965202331542969  svmem(total=8476856320, available=2461474816, percent=71.0, used=6015381504, free=2461474816)
+Total time: 5.027141094207764 cpu aan begin :0.0 vm aan begin :svmem(total=8476856320, available=2501988352, percent=70.5, used=5974867968, free=2501988352)

@@ -10,7 +10,6 @@
 \glossaryentry{ML?\glossentry{ml}|setentrycounter[]{page}\glsnumberformat}{4}
 \glossaryentry{ML?\glossentry{ml}|setentrycounter[]{page}\glsnumberformat}{4}
 \glossaryentry{AI?\glossentry{ai}|setentrycounter[]{page}\glsnumberformat}{4}
-\glossaryentry{AI?\glossentry{ai}|setentrycounter[]{page}\glsnumberformat}{4}
 \glossaryentry{AI?\glossentry{ai}|setentrycounter[]{page}\glsnumberformat}{5}
 \glossaryentry{AI?\glossentry{ai}|setentrycounter[]{page}\glsnumberformat}{5}
 \glossaryentry{AI?\glossentry{ai}|setentrycounter[]{page}\glsnumberformat}{5}
@@ -40,6 +39,7 @@
 \glossaryentry{SVMs?\glossentry{svm}|setentrycounter[]{page}\glsnumberformat}{12}
 \glossaryentry{SVMs?\glossentry{svm}|setentrycounter[]{page}\glsnumberformat}{12}
 \glossaryentry{SVMs?\glossentry{svm}|setentrycounter[]{page}\glsnumberformat}{12}
+\glossaryentry{NN?\glossentry{nn}|setentrycounter[]{page}\glsnumberformat}{13}
 \glossaryentry{NN?\glossentry{nn}|setentrycounter[]{page}\glsnumberformat}{13}
 \glossaryentry{NN?\glossentry{nn}|setentrycounter[]{page}\glsnumberformat}{13}
 \glossaryentry{NN?\glossentry{nn}|setentrycounter[]{page}\glsnumberformat}{13}
@@ -83,3 +83,13 @@
 \glossaryentry{SBC?\glossentry{sbc}|setentrycounter[]{page}\glsnumberformat}{19}
 \glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}\glsnumberformat}{19}
 \glossaryentry{ML?\glossentry{ml}|setentrycounter[]{page}\glsnumberformat}{20}
+\glossaryentry{DLIB?\glossentry{dlib}|setentrycounter[]{page}\glsnumberformat}{20}
+\glossaryentry{DL?\glossentry{dl}|setentrycounter[]{page}\glsnumberformat}{20}
+\glossaryentry{ML?\glossentry{ml}|setentrycounter[]{page}\glsnumberformat}{20}
+\glossaryentry{FPS?\glossentry{fps}|setentrycounter[]{page}\glsnumberformat}{20}
+\glossaryentry{GPU?\glossentry{gpu}|setentrycounter[]{page}\glsnumberformat}{20}
+\glossaryentry{GPU?\glossentry{gpu}|setentrycounter[]{page}\glsnumberformat}{20}
+\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}\glsnumberformat}{20}
+\glossaryentry{SBC?\glossentry{sbc}|setentrycounter[]{page}\glsnumberformat}{20}
+\glossaryentry{DL?\glossentry{dl}|setentrycounter[]{page}\glsnumberformat}{20}
+\glossaryentry{CNN?\glossentry{cnn}|setentrycounter[]{page}\glsnumberformat}{20}

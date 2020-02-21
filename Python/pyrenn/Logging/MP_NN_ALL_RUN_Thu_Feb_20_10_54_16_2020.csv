@@ -1,0 +1,9 @@
+Naam,CPU Percentage,timediff,virtual mem
+example_compair.py,22.6,0.4904012680053711,"svmem(total=8476856320, available=3072606208, percent=63.8, used=5404250112, free=3072606208)"
+example_friction.py,0.0,0.0,"svmem(total=8476856320, available=3072565248, percent=63.8, used=5404291072, free=3072565248)"
+example_narendra4.py,25.0,0.009908914566040039,"svmem(total=8476856320, available=3072532480, percent=63.8, used=5404323840, free=3072532480)"
+example_pt2.py,0.0,0.010042190551757812,"svmem(total=8476856320, available=3073589248, percent=63.7, used=5403267072, free=3073589248)"
+example_using_P0Y0_narendra4.py,50.0,0.007109642028808594,"svmem(total=8476856320, available=3079172096, percent=63.7, used=5397684224, free=3079172096)"
+example_using_P0Y0_compair.py,25.0,0.012685060501098633,"svmem(total=8476856320, available=3081416704, percent=63.6, used=5395439616, free=3081416704)"
+example_gradient.py,100.0,0.015091657638549805,"svmem(total=8476856320, available=3081347072, percent=63.6, used=5395509248, free=3081347072)"
+Totaal,0.0,0.545238733291626,"svmem(total=8476856320, available=3092709376, percent=63.5, used=5384146944, free=3092709376)"

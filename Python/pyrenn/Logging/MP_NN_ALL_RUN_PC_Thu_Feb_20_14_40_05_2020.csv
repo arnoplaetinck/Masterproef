@@ -1,0 +1,9 @@
+Naam,CPU Percentage,timediff,virtual mem
+compair,26.0,0.38552188873291016,"svmem(total=8476856320, available=2933608448, percent=65.4, used=5543247872, free=2933608448)"
+friction,0.0,0.0,"svmem(total=8476856320, available=2933596160, percent=65.4, used=5543260160, free=2933596160)"
+narendra4,25.0,0.015622377395629883,"svmem(total=8476856320, available=2933284864, percent=65.4, used=5543571456, free=2933284864)"
+pt2,0.0,0.0,"svmem(total=8476856320, available=2933280768, percent=65.4, used=5543575552, free=2933280768)"
+P0Y0_narendra4,0.0,0.0,"svmem(total=8476856320, available=2933276672, percent=65.4, used=5543579648, free=2933276672)"
+P0Y0_compair,25.0,0.022179365158081055,"svmem(total=8476856320, available=2933178368, percent=65.4, used=5543677952, free=2933178368)"
+gradient,25.0,0.015654325485229492,"svmem(total=8476856320, available=2933100544, percent=65.4, used=5543755776, free=2933100544)"
+Totaal,0.0,0.4389779567718506,"svmem(total=8476856320, available=2957139968, percent=65.1, used=5519716352, free=2957139968)"

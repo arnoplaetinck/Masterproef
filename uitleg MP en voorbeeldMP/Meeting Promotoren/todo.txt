@@ -2,11 +2,11 @@ To Do Masterproef:
 
 Literatuurstudie:
 
-1) Wat zijn de randvoorwaarden voor het algoritme van plaatsbepaling	-
+1) Wat zijn de randvoorwaarden voor het algoritme van plaatsbepaling	-toegevoegd
 2) Waarom gebruiken we AI  						-toegevoegd
 3) Waarom gebruiken we het op een edge-device?				-toegevoegd (eventueel veranderen naar een apart puntje?)
 4) Referenties								-toegevoegd
-5) State of the Art 
+5) State of the Art 							-toegevoegd (eventueel nog een benchmark van coral dev? )
 	- Wat is er al gebeurd van benchmarking?
 	- Welke info hiervan is relevant voor binnen het kader van thesis en casu
 

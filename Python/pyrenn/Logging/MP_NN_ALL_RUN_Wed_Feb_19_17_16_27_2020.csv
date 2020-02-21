@@ -1,0 +1,8 @@
+example_compair.py,42.2,0.4487628936767578,"svmem(total=8476856320, available=1961140224, percent=76.9, used=6515716096, free=1961140224)"
+example_friction.py,0.0,0.004986286163330078,"svmem(total=8476856320, available=1961132032, percent=76.9, used=6515724288, free=1961132032)"
+example_narendra4.py,75.0,0.006982326507568359,"svmem(total=8476856320, available=1961099264, percent=76.9, used=6515757056, free=1961099264)"
+example_pt2.py,0.0,0.004986286163330078,"svmem(total=8476856320, available=1961095168, percent=76.9, used=6515761152, free=1961095168)"
+example_using_P0Y0_narendra4.py,0.0,0.005984067916870117,"svmem(total=8476856320, available=1961091072, percent=76.9, used=6515765248, free=1961091072)"
+example_using_P0Y0_compair.py,25.0,0.01894974708557129,"svmem(total=8476856320, available=1961082880, percent=76.9, used=6515773440, free=1961082880)"
+example_gradient.py,25.0,0.014467000961303711,"svmem(total=8476856320, available=1961005056, percent=76.9, used=6515851264, free=1961005056)"
+Totaal,0.0,0.5051186084747314,"svmem(total=8476856320, available=1993515008, percent=76.5, used=6483341312, free=1993515008)"
