@@ -9,9 +9,9 @@ In dit hoofdstuk zal er eerst een afgrenzing gegeven worden waarbinnen de thesis
 
 \section{Kadering}
 
-Een branche in de \gls{ml} die steeds meer in de schijnwerpers staat, is in de logistieke sector\cite{barreto2017industry}. Door de steeds verder doorgedreven automatisatie van bedrijven, wordt er ook in bijvoorbeeld magazijnen geopteerd voor het optimaliseren van onder meer het leveren van de verschillende onderdelen en de veiligheid in het magazijn. Gebruik maken van zelfrijdende vorkheftrucks is een mogelijke optie in het verbeteren van de effici\"entie. Niet alleen in het magazijn maar ook op de weg is er een groeiende belangstelling naar zelfrijdende voertuigen, die ontwikkeld worden door grote bedrijven zoals Tesla en Uber. In beide cases zal er een zekere vorm van positiebepaling nodig zijn. Het is van groot belang dat deze bepaling zo accuraat mogelijk plaats vindt, met niet alleen een juiste locatie, maar ook een resultaat dat op zo kort mogelijke tijdsperiode geproduceerd wordt. 
+Een branche in de \gls{ml} die steeds meer in de schijnwerpers staat, is de logistieke sector\cite{barreto2017industry}. Door de steeds verder doorgedreven automatisatie van bedrijven, wordt er ook in bijvoorbeeld magazijnen geopteerd voor het optimaliseren van onder meer het leveren van de verschillende onderdelen en de veiligheid in het magazijn. Gebruik maken van zelfrijdende vorkheftrucks is een mogelijke optie in het verbeteren van de effici\"entie. Niet alleen in het magazijn maar ook op de weg is er een groeiende belangstelling naar zelfrijdende voertuigen, die ontwikkeld worden door grote bedrijven zoals Tesla en Uber. In beide cases zal er een zekere vorm van positiebepaling nodig zijn. Het is van groot belang dat deze bepaling zo accuraat mogelijk plaats vindt, met niet alleen een juiste locatie, maar ook een resultaat dat op zo kort mogelijke tijdsperiode geproduceerd wordt. 
 
-Deze nood aan \textit{low latency} kan het verschil betekenen tussen een voertuig die beslist dat hij moet vertragen of beslist dat hij veilig kan doorrijden maar toch een botsing veroorzaakt. De berekening van die cruciale locatiebepaling kan zowel in de \textit{cloud}, als in de \textit{edge}\cite{edgecomputingLi} gebeuren en gebeurt vooral met behulp van \gls{ml}. Hierbij wordt met cloud verwezen naar het verwerken van data op een locatie ver weg van het voertuig zoals serverzalen. Met edge wordt dan weer een locatie dichtbij het voertuig bedoeld. Dit kan zowel op, als vlakbij het voertuig zijn. Doordat \textit{cloud computing} een toegevoegde latency teweeg brengt van meerdere tientallen milliseconden, door de nodige tijd om via het internet de server te bereiken, zal de keuze voor \textit{edge computing} vallen. Indien de berekeningen in de edge plaats vinden zal de afstand tussen re\"ele en virtuele locatie kleiner zijn, wat leidt tot een betere positiebepaling. Deze heeft dan weer tot gevolg dat inschattingen accurater plaats vinden en ongevallen vermeden kunnen worden. Welke hardware men gebruikt kan vari\"eren van applicatie tot applicatie. De berekening zelf wordt uitgevoerd met behulp van \gls{ai} doordat dit verschillende baten heeft. Deze voordelen worden besproken in de volgende paragrafen.
+Deze nood aan \textit{low latency} kan het verschil betekenen tussen een voertuig dat beslist dat hij moet vertragen of beslist dat hij veilig kan doorrijden maar toch een botsing veroorzaakt. De berekening van die cruciale locatiebepaling kan zowel in de \textit{cloud}, als in de \textit{edge}\cite{edgecomputingLi} gebeuren en gebeurt vooral met behulp van \gls{ml}. Hierbij wordt met cloud verwezen naar het verwerken van data op een locatie ver weg van het voertuig zoals serverzalen. Met edge wordt dan weer een locatie dichtbij het voertuig bedoeld. Dit kan zowel op, als vlakbij het voertuig zijn. Doordat \textit{cloud computing} een toegevoegde latency teweeg brengt van meerdere tientallen milliseconden, de nodige tijd om via het internet de server te bereiken, zal de keuze voor \textit{edge computing} vallen. Indien de berekeningen in de edge plaats vinden zal de afstand tussen re\"ele en virtuele locatie kleiner zijn, wat leidt tot een betere positiebepaling. Deze heeft dan weer tot gevolg dat inschattingen accurater plaats vinden en ongevallen vermeden kunnen worden. Welke hardware men gebruikt kan vari\"eren van applicatie tot applicatie. De berekening zelf wordt uitgevoerd met behulp van \gls{ai} doordat dit verschillende baten heeft. Deze voordelen worden besproken in de volgende paragrafen.
 
 
 
@@ -24,7 +24,7 @@ Deze nood aan \textit{low latency} kan het verschil betekenen tussen een voertui
 	\item \textbf{Sterke \gls{ai}:} Deze vorm van \gls{ai} houdt zich bezig met onderzoek dat als doel heeft om software te cre\"eren die zelfstandig kan redeneren en problemen aanpakken.
 \end{itemize}
 
-Het gebruiken van \gls{ai} kan vele voordelen hebben\cite{frankwatching}\cite{SAS}. Zo is het mogelijk om data beter en sneller te gebruiken dan de mens kan. Data kan gelezen en verwerkt worden in geautomatiseerde processen zonder de tussenkomst van een persoon en in een fractie van een seconde. Verder zal er ook, indien er meer beschikbare data is, een nog nauwkeuriger responsie gegeven worden. \gls{ai} wordt als zwakke \gls{ai} veel toegepast om repetitieve taken met relatief lage complexiteit over te nemen. Een belangrijk onderdeel is Machine Learning dat verder uitgelegd zal worden in volgende paragraaf.
+Het gebruiken van \gls{ai} kan vele voordelen hebben\cite{frankwatching}\cite{SAS}. Zo is het mogelijk om data beter en sneller te gebruiken dan de mens kan. Data kan gelezen en verwerkt worden in geautomatiseerde processen zonder de tussenkomst van een persoon en in een fractie van een seconde. Verder zal er ook, indien er meer beschikbare data zijn, een nog nauwkeuriger responsie gegeven worden. \gls{ai} wordt als zwakke \gls{ai} veel toegepast om repetitieve taken met relatief lage complexiteit over te nemen. Een belangrijk onderdeel is Machine Learning dat verder uitgelegd zal worden in volgende paragraaf.
 
 
 
@@ -32,16 +32,16 @@ Het gebruiken van \gls{ai} kan vele voordelen hebben\cite{frankwatching}\cite{SA
 \newpage
 
 \section{Machine Learning}
-\gls{ml} is een onderdeel van \gls{ai} en is de studie en modellering van de verschillende leerprocessen dat gebruikt kan worden door verschillende computersystemen\cite{carbonell1983overview}. Deze systemen zijn hierdoor in staat om specifieke taken te voltooien zonder rechtstreekse instructies of regels mee gekregen te hebben. Ze steunen in de plek op onder meer patroonherkenning om de kans op het succesvol uit te voeren van taken te maximaliseren. Hiervoor wordt er een wiskundig model gebouwd op basis van training-data. Deze mathematische modellen en \textit{datahandling} kan op verscheidene manieren gebeuren. Hieronder worden een aantal gebruikelijke modellen besproken. Er wordt bovendien een afweging gemaakt over welk model het interessantst is voor onze toepassing. 
+\gls{ml} is een onderdeel van \gls{ai} en is de studie en modellering van de verschillende leerprocessen dat gebruikt kan worden door verschillende computersystemen\cite{carbonell1983overview}. Deze systemen zijn hierdoor in staat om specifieke taken te voltooien zonder rechtstreekse instructies of regels mee te krijgen van de operator. Ze steunen in de plaats op onder meer patroonherkenning om de kans op het succesvol uit te voeren van taken te maximaliseren. Hiervoor wordt er een wiskundig model gebouwd op basis van training-data. Deze mathematische modellen en \textit{datahandling} kan op verscheidene manieren gebeuren. Hieronder worden een aantal gebruikelijke modellen besproken. Er wordt bovendien een afweging gemaakt over welk model het interessantst is voor onze toepassing. 
 
 	\subsection{Leeralgoritmes en -technieken}
-	Om \gls{ml} technieken toe te passen moet men gebruik maken van een bepaald model dat is toegepast op trainingsdata en nieuwe data kan verwerken om voorspellingen te maken. Er bestaat een hele waaier aan mogelijke modellen. In de volgende paragrafen worden een aantal opties besproken waarna er de verschillende modellen vergeleken worden tegen over elkaar.
+	Om \gls{ml} technieken toe te passen moet men gebruik maken van een bepaald model dat is toegepast op trainingsdata en hierdoor nieuwe data kan verwerken om voorspellingen te maken van de te verwachte resultaten. Er bestaat een hele waaier aan mogelijke modellen. In de volgende paragrafen worden een aantal opties besproken waarna er de verschillende modellen met elkaar vergeleken worden.
 	
 		\subsubsection{Artifici\"ele Neurale Netwerken}
-		\gls{ann} zijn een term dat gebruikt wordt om een algoritmes te omschrijven die structurele gelijkenissen hebben met het interconnectiepatroon van hersenen. Het zijn algoritmes die in staat zijn om een bepaalde taak te leren, en zichzelf te verbeteren. In de meeste gevallen worden er amper richtlijnen of omschrijving meegegeven. Het systeem ontdekt zelf hoe deze regels in elkaar zitten. Hierbij blijft de interpretatie van de input wel nog een belangrijk gegeven dat wordt ingesteld door de programmeur. Een bekend voorbeeld is het herkennen van de cijfers 0 tot 9. Hierin wordt er niet aan het systeem verteld dat het cijfer 8 uit twee cirkels bestaat die verticaal tegen elkaar aansluiten. Het algoritme zal dit gaandeweg ontdekken met behulp van de vele voorbeelden waar het gebruik van kan maken. Met behulp van veel data kan een algoritme zichzelf verfijnen en nauwkeuriger bepaalde cijfers herkennen.
+		\gls{ann} zijn een term dat gebruikt wordt om algoritmes te omschrijven die structurele gelijkenissen hebben met het interconnectiepatroon van hersenen. Het zijn algoritmes die in staat zijn om een bepaalde taak te leren, en zichzelf te verbeteren. In de meeste gevallen worden er amper richtlijnen of een omschrijving meegegeven. Het systeem ontdekt zelf hoe deze regels in elkaar zitten\cite{carbonell1983overviewd}. Hierbij blijft de interpretatie van de input wel nog een belangrijk gegeven dat wordt ingesteld door de programmeur. Een bekend voorbeeld is het herkennen van de cijfers 0 tot 9. Hierin wordt er niet aan het systeem verteld dat het cijfer 8 uit twee cirkels bestaat die verticaal tegen elkaar aansluiten. Het algoritme zal dit gaandeweg ontdekken, met behulp van de vele voorbeelden waar het gebruik van kan maken. Met behulp van veel data kan een algoritme zichzelf verfijnen en zo nauwkeuriger bepaalde cijfers herkennen.
 		
 			\paragraph{Structuur van Neurale Netwerken}
-			Een \gls{ann} is een verzameling van nodes die met elkaar verbonden zijn zoals neuronen in de hersens van een mens. Hierbij kan elke neuron een signaal doorgeven naar de volgende neuron waar het signaal verwerkt kan worden en weer doorgegeven kan worden. Hetzelfde principe geldt ook bij \gls{nn} met het verschil dat er meerdere lagen van nodes te onderscheiden zijn. 
+			Een \gls{ann} is een verzameling van nodes die met elkaar verbonden zijn zoals neuronen in de hersens van een mens. Hierbij kan elke neuron een signaal doorgeven naar het volgende neuron waar het signaal verwerkt kan worden en weer doorgegeven kan worden. Hetzelfde principe geldt ook bij \gls{nn} met het verschil dat er meerdere lagen van nodes te onderscheiden zijn. 
 	
 		\begin{figure}
 			\centering
@@ -51,16 +51,16 @@ Het gebruiken van \gls{ai} kan vele voordelen hebben\cite{frankwatching}\cite{SA
 		\end{figure}
 		
 			\subparagraph{Lagen}
-			Er zijn drie soorten lagen te onderscheiden: een Input Layer, Hidden Layers en een Output Layer. Elke laag is verbonden met de volgende laag door middel van connecties tussen de verschillende nodes. In figuur ~\ref{fig:neuralNetworkStructuur} is de algemene vorm te vinden van een \gls{nn}.
+			Er zijn drie soorten lagen te onderscheiden: een Input Layer, Hidden Layers en een Output Layer. Elke laag is verbonden met de volgende laag door middel van connecties tussen de verschillende nodes. In figuur ~\ref{fig:neuralNetworkStructuur} is de algemene vorm van een \gls{nn} te vinden.
 		
 				\begin{itemize}
-					\item \textbf{Input Layer:} De eerste laag van elk \gls{nn} is de Input Layer. Deze bestaat uit een aantal inputnodes. Elke inputnode krijgt de ruwe data binnen waar er een operatie op uitgevoerd wordt en vervolgens bepaalde parameters doorgeeft aan de volgende laag. De wijze waarop data ge\"interpreteerd wordt, vormt een belangrijk vertrekpunt voor het \gls{nn}.
+					\item \textbf{Input Layer:} De eerste laag van elke \gls{nn} is de Input Layer. Deze bestaat uit een aantal inputnodes. Elke inputnode krijgt de ruwe data binnen waar er een operatie op uitgevoerd wordt en vervolgens bepaalde parameters doorgeeft aan de volgende laag. De wijze waarop data ge\"interpreteerd worden, vormt een belangrijk vertrekpunt voor het \gls{nn}.
 					\item \textbf{Hidden Layers:}  Na de inputlaag komen een aantal Hidden Layers. Het aantal Hidden Layers en de hoeveelheid nodes binnen \'e\'en Hidden Layer kan vari\"eren van applicatie tot applicatie en is sterk gerelateerd aan de complexiteit van de toepassing.
 					\item \textbf{Output Layer:} Na de Hidden Layers is de laatste laag de Output Layer. Hier worden de laatste operaties uitgevoerd en worden de eindwaarden verkregen waar het resultaat uit afgeleid kan worden.
 				\end{itemize}
 			
 			\subparagraph{Nodes}
-			Een node is gebaseerd op zijn biologisch tegenbeeld. Het krijgt een bepaald aantal inputs, verwerkt deze en geeft een bepaald aantal outputs. Deze inputs en outputs worden van node naar node doorgegeven via verbindingen. Elke node heeft met elke node in de volgende laag een connectie.  Elke verbinding draagt een bepaald gewicht. Via dit gewicht kan men de invloed van de  huidige node versterken of verzwakken in de volgende node.
+			Een node is gelijkaardig aan zijn biologisch tegenbeeld. Het krijgt een bepaald aantal inputs, verwerkt deze en geeft een bepaald aantal outputs. Deze inputs en outputs worden van node naar node doorgegeven via verbindingen. Elke node heeft met elke node in de volgende laag een connectie. Elke verbinding draagt een bepaald gewicht. Via dit gewicht kan men de invloed van de huidige node versterken of verzwakken in de volgende node.
 	
 			\subparagraph{Activatie functie}
 			De mathematische functie die een node gebruikt voor het verwerken van inputs naar outputs heet de activatie functie. In figuur~\ref{fig:artificial_neuron} wordt de algemene vorm van een neuron besproken. Deze neuron heeft $m+1$ inputs $\left(  x_0 ~t.e.m.~  x_m\right) $ en bijhorende gewichten $\left(  w_0~  t.e.m. ~ w_m \right) $.
@@ -93,7 +93,7 @@ Het gebruiken van \gls{ai} kan vele voordelen hebben\cite{frankwatching}\cite{SA
 					f(x)={\frac {1}{1+e^{-x}}}
 				\end{equation}
 				\item \textbf{Lineare Combinaties:} In dit geval is de output niets minder dan de gewogen som vermenigvuldigd met een constante waarbij zoals in formule~\ref{eq:gewogensomu} waar er nog een tweede constante wordt opgeteld.
-				\item \textbf{Sigmoid:} De Sigmoid functie\cite{han1995influence} is een mathematische functie zoals te zien is in figuur~\ref{eq:sigmoidfunctie}. Het heeft de karakteristieke 'S'-vorm zoals te zien is in ~\ref{fig:sigmoid}. Door deze activatiefunctie worden inputs omgezet in een waarde tussen 0 en 1 (of -1 en 1, afhankelijk van de conventie).
+				\item \textbf{Sigmoid:} De Sigmoid functie\cite{han1995influence} is een mathematische functie zoals te zien is in figuur~\ref{eq:sigmoidfunctie}. Het heeft de karakteristieke 'S'-vorm zoals te zien is in figuur~\ref{fig:sigmoid}. Door deze activatiefunctie worden inputs omgezet in een waarde tussen 0 en 1 (of -1 en 1, afhankelijk van de conventie).
 				\item \textbf{Rectifier:} De rectifier als activatiefunctie\cite{nair2010rectified} is een functie die enkel het positieve deel van zijn argument doorlaat. In vergelijking ~\ref{eq:rectifier} vind je de functie weer waar x de input is van de neuron. Deze is een vector aan waarden die zowel positief als negatief kunnen zijn. Deze functie is ook gekend onder de naam \textit{\gls{relu}}.
 				\begin{equation}\label{eq:rectifier}
 				f(x) = x^+ = max(0,x)
@@ -113,12 +113,10 @@ Het gebruiken van \gls{ai} kan vele voordelen hebben\cite{frankwatching}\cite{SA
 	
 
 	
-		\paragraph{Structuur van een beslissingsboom}
-		
-		
+		\paragraph{Structuur van een beslissingsboom}			
 		Net zoals bij de \gls{nn} bestaat een beslissingsboom uit ver\hyp{}schillende lagen en nodes. Zoals te zien is in figuur ~\ref{fig:beslissingsBoom} wordt er in elke laag een onderscheid gemaakt op basis van een statement of parameter. Deze parameter kan een enkele inputwaarde zijn of een lineaire combinatie van meerdere inputwaarden. 
 		
-		Bij de nodes kan er onderscheid gemaakt worden tussen een gewone node en een eindnode. Bij elke gewone node wordt een bepaalde statement geverifieerd en wordt er naar een node overgegaan in de volgende laag op basis van dit statement. Bij een eindnode is het niet meer mogelijk om door te gaan naar een volgende laag, maar wordt er een outputwaarde gegeven.
+		Bij de nodes kan er onderscheid gemaakt worden tussen een gewone node en een eindnode. Bij elke gewone node wordt een bepaald statement geverifieerd en wordt er naar een node overgegaan in de volgende laag op basis van dit statement. Bij een eindnode is het niet meer mogelijk om door te gaan naar een volgende laag, maar wordt er een outputwaarde gegeven.
 		
 		\begin{figure}
 			\centering
@@ -132,13 +130,13 @@ Het gebruiken van \gls{ai} kan vele voordelen hebben\cite{frankwatching}\cite{SA
 	
 	
 	\subsubsection{Support Vector Machines}
-	\gls{svm} of ook wel gekend als support vector networks is een model dat veelvuldig gebruikt wordt in classificatie en regressie-analyse. \gls{svm} verdelen objecten onder in twee verschillende klassen op basis van een aantal kenmerken. Het is dus een binaire classificeerder. Om aan de hand van kenmerken een onderverdeling te maken moeten deze kenmerken eerst omgezet worden in een vectorruimte. In de trainingsfase wordt er getracht een zo optimaal mogelijke scheiding tussen beide klassen te vinden. Deze optimale scheiding wordt ook wel een \textit{hypervlak} genoemd en ligt op een zo groot mogelijke afstand tussen de dichtstbijgelegen objecten van beide klasses of support vectors. in figuur ~\ref{fig:supportVectorMachines} kan u een twee dimensionaal voorbeeld vinden. Hierin is scheidingslijn H1 geen acceptabele scheiding omdat er objecten van de zwarte klasse fout geclassificeerd worden. H2 is acceptabel maar is nog niet optimaal aangezien er weinig foutmarge is voor een nieuw object. H3 is het hypervlak omdat de foutenmarge tussen de twee klassen zo groot mogelijk is. Deze methode is niet alleen bruikbaar in toepassingen met een lineaire scheiding. Ook in niet-lineaire gevallen kan men een transformatie uitvoeren om toch een lineaire scheiding te bekomen. Deze hervorming wordt ook wel de \textit{kernel trick}\cite{sun2018kernel} genoemd. 
+	\gls{svm} of ook wel gekend als support vector networks is een model dat veelvuldig gebruikt wordt in classificatie en regressie-analyse. \gls{svm} verdelen objecten onder in twee verschillende klassen op basis van een aantal kenmerken. Het is dus een binaire classificeerder. Om aan de hand van kenmerken een onderverdeling te maken moeten deze kenmerken eerst omgezet worden in een vectorruimte. In de trainingsfase wordt er getracht een zo optimaal mogelijke scheiding tussen beide klassen te vinden. Deze optimale scheiding wordt ook wel een \textit{hypervlak} genoemd en ligt op een zo groot mogelijke afstand tussen de dichtstbijgelegen objecten van beide klasses of support vectors. in figuur ~\ref{fig:supportVectorMachines} kan u een tweedimensionaal voorbeeld vinden. Hierin is scheidingslijn H1 geen acceptabele scheiding omdat er objecten van de zwarte klasse fout geclassificeerd worden. H2 is acceptabel maar is nog niet optimaal aangezien er weinig foutmarge is voor een nieuw object. H3 is het hypervlak omdat de foutenmarge tussen de twee klassen zo groot mogelijk is. Deze methode is niet alleen bruikbaar in toepassingen met een lineaire scheiding. Ook in niet-lineaire gevallen kan men een transformatie uitvoeren om toch een lineaire scheiding te bekomen. Deze hervorming wordt ook wel de \textit{kernel trick}\cite{sun2018kernel} genoemd. 
 	
 	
 	\begin{figure}
 		\centering
 		\includegraphics[width=80mm]{afbeeldingen/supportVectorMachines.PNG}
-		\caption{Twee dimensionale Support Vector Machine.\citep{bron:supportvectormachines}}
+		\caption{Tweedimensionale Support Vector Machine.\citep{bron:supportvectormachines}}
 		\label{fig:supportVectorMachines}
 		%bron: https://subscription.packtpub.com/book/big_data_and_business_intelligence/9781788994170/5/ch05lvl1sec36/support-vector-machines
 	\end{figure}
@@ -157,7 +155,7 @@ Het gebruiken van \gls{ai} kan vele voordelen hebben\cite{frankwatching}\cite{SA
 	
 	
 	\subsubsection{Bayesian Netwerken}
-	Bayesian Netwerken, ook wel probabilistische netwerken genoemd, zijn structuren waarin data op probabilistische wijze geanalyseerd kan worden. Dit wil zeggen dat men als output niet enkel de outputs maar ook de onzekerheid hierop krijgt. Men maakt gebruik van gerichte grafen. Hierin bestaan de knopen uit variabelen en de arcs beschrijven de conditionele afhankelijkheden tussen de verschillende knopen. Bayesian Netwerken worden vooral gebruikt om te analyseren wat de bepalende oorzaak is voor een zekere gebeurtenis. 
+	Bayesian Netwerken, ook wel probabilistische netwerken genoemd, zijn structuren waarin data op probabilistische wijze geanalyseerd kunnen worden. Dit wil zeggen dat men als output niet enkel de outputs maar ook de onzekerheid hierop krijgt. Men maakt gebruik van gerichte grafen. Hierin bestaan de knopen uit variabelen en de arcs beschrijven de conditionele afhankelijkheden tussen de verschillende knopen. Bayesian Netwerken worden vooral gebruikt om te analyseren wat de bepalende oorzaak is voor een zekere gebeurtenis. 
 	
 	\subsubsection{Genetische Algoritmes}
 	Genetische Algoritmes zijn een heuristiek ge\"inspireerd op het principe van natuurlijke selectie en zijn een klasse binnen evolutionaire algoritmes. Dit type algoritme kan gebruikt worden om oplossingen te vinden in optimalisatie- en zoekproblemen. Door te steunen op biologische principes zoals mutatie, selectie en kruisbestuiving worden er nieuwe \textit{chromosomen} gegenereerd die mogelijks een betere oplossing geven voor een bepaald probleem.
@@ -226,7 +224,7 @@ Om de keuze voor een bepaalde \gls{ml}-techniek te verantwoorden, zal dit hoofds
 Er zijn verschillende mogelijkheden om een neuraal netwerk te laten leren. De drie belangrijkste methodes om een mathematische functie te verkrijgen worden hieronder opgesomd\cite{russell2016artificial}.
 
 
-	\subsubsection{Supervised Learning} Deze techniek maakt gebruik van gepaarde datasets van inputobjecten en de te verwachten outputobjecten. Het doel is om een mathematische functie te cre\"eren waarbij de gegenereerde outputs zo nauw mogelijk overeenkomen met de gelabelde outputs uit de datasets. Men optimaliseert deze mathematische functie door iteratief te trainen. De bijgeschaafde functie kan dan ook gebruikt worden voor nieuwe datasets zonder gelabelde output. Een toepassing van Supervised Learning is bijvoorbeeld het detecteren van spam met een trainingset van al gelabelde e-mails.
+	\subsubsection{Supervised Learning} Deze techniek maakt gebruik van gepaarde datasets van inputobjecten en de te verwachten outputobjecten. Het doel is om een mathematische functie te cre\"eren waarbij de gegenereerde outputs zo nauw mogelijk overeenkomen met de gelabelde outputs uit de datasets. Men optimaliseert deze mathematische functie door iteratief te trainen. De bijgeschaafde functie kan dan ook gebruikt worden voor nieuwe datasets zonder gelabelde output. Hierbij zal hij zelf outputwaardes genereren. Een toepassing van Supervised Learning is bijvoorbeeld het detecteren van spam met een trainingset van al gelabelde e-mails.
 	
 	\subsubsection{Unsupervised Learning} Unsupervised learning is een techniek die gebruik maakt van Hebbian Learning om onbekende patronen te herkennen in datasets. De twee meest gebruikte methodes onder Unsupervised Learning zijn principal component en cluster analysis. Principal component maakt gebruik van orthogonale transformaties om een set van mogelijke afhankelijke variabelen om te zetten in een set van lineaire onafhankelijke variabelen. In cluster analyse wordt er getracht om een groep objecten te identificeren en te verdelen in een cluster van gelijkaardige objecten. 
 	Een belangrijke toepassing van Unsupervised Learning is het clusteren van gelijkaardige documenten op basis van de inhoud van de tekst.
@@ -249,7 +247,7 @@ Er zijn verschillende mogelijkheden om een neuraal netwerk te laten leren. De dr
 \section{Evolutie \gls{sbc}}
 Een \gls{sbc} is een volledige computer gemaakt op 1 enkele printplaat. Het bevat onderdelen zoals een microprocessor, geheugen, inputs en outputs. De eerste \gls{sbc} werd ontwikkeld als een voorstel-hulpmiddel bij educatieve doelstellingen of het gebruik als een embedded computer controller. Tegenwoordig zijn ook vele (draagbare) computers ge\"integreerd op \'e\'en printplaat. Het grote verschil met (draagbare) computers is dat er geen nood is aan expansion slots zoals bijvoorbeeld voor RAM-geheugen of een \gls{gpu}.
 	\subsection{Geschiedenis}
-	De eerste echte SBC was de zogenaamde "dyna-micro"\space uit figuur ~\ref{fig:eersteSBC} die later de naam "MMD-1" (Mini-Micro Designer 1) kreeg. Dit toestel werd uitgegeven in 1976 en werd populair doordat het werd gepresenteerd in het destijds 'BugBook'. Een andere vroege \gls{sbc} was de KIM-1 (Keyboard Input Monitor 1) uit hetzelfde jaar. Beide machines werden voor ingenieurs geproduceerd en ontworpen maar vonden een breed publiek onder de hobbyisten waar het heel populair was. Later kwamen nog andere namen zoals de Ferguson Big Board en de Nascom.
+	De eerste echte SBC was de zogenaamde "dyna-micro"\space uit figuur ~\ref{fig:eersteSBC} die later de naam "MMD-1" (Mini-Micro Designer 1) kreeg. Dit toestel werd uitgegeven in 1976 en werd populair doordat het werd gepresenteerd in het destijds 'BugBook'. Een andere vroege \gls{sbc} was de KIM-1 (Keyboard Input Monitor 1) uit hetzelfde jaar. Beide machines werden voor ingenieurs geproduceerd en ontworpen maar vonden een breed publiek onder de hobbyisten waar het heel populair werd. Later kwamen nog andere namen zoals de Ferguson Big Board en de Nascom.
 
 	\begin{figure}
 		\centering
@@ -264,7 +262,7 @@ Een \gls{sbc} is een volledige computer gemaakt op 1 enkele printplaat. Het beva
 	In het jaar 2004 werd er in Itali\"e een nieuwe microcontroller uitgebracht onder de naam "Arduino". Dit ontwerp had, naast het voordeel van compact en goedkoop te zijn, ook nog eenvoudigheid mee. Door de eenvoud werd het Arduino-platform snel populair onder techneuten van alle soorten. 
 	Twee jaar later bracht de Universiteit van Cambridge een nieuwe goedkope \gls{sbc} uit. De bekende Raspberry Pi werd gelanceerd voor de prijs van \$35. Het hoofddoel van dit project was een nieuw leermiddel om te programmeren maar werd door het grote aantal applicaties ook zeer populair. \label{raspberry}
 	
-	De laatste jaren kende een grote explosie aan nieuwe \gls{sbc}s. Een hele reeks nieuwe namen verscheen. Banana Pi, Beaglebone, Intel Galileo, Google Coral Dev en Asus Tinker Board zijn maar enkele van de vele voorbeelden. Deze toestellen hebben vaak een processor gebaseerd op de x86- of ARM-series en maken gebruik van een Linux besturingssysteem zoals Debian.
+	De laatste jaren kende een grote explosie aan nieuwe \gls{sbc}s. Een hele reeks nieuwe namen verschenen. Banana Pi, Beaglebone, Intel Galileo, Google Coral Dev en Asus Tinker Board zijn maar enkele van de vele voorbeelden. Deze toestellen hebben vaak een processor gebaseerd op de x86- of ARM-series en maken gebruik van een Linux besturingssysteem zoals Debian.
 	
 
 % https://nl.wikipedia.org/wiki/Singleboardcomputer
@@ -274,7 +272,7 @@ Een \gls{sbc} is een volledige computer gemaakt op 1 enkele printplaat. Het beva
 
 %------------------------------------------------------------------------------
 \section{Assortiment aan 'off the shelf' toestellen}
-
+In deze sectie wordt er een kort overzicht gegeven van de te gebruiken \gls{sbc}s. Er werd gekozen om met vijf verschillende toestellen te werken die verspreid liggen over het spectrum. Zo zijn er zowel goedkope als kostelijke apparaten, populaire boards als minder gekende \gls{sbc}s. De specificaties van de verscheidene toestellen wordt ook meegegeven.
 	\subsection{Beaglebone AI}
 	\gls{bbai} is een \gls{sbc} dat verder bouwt op de succesvolle  BeagleBoard-series\citep{bron:bbai}. Het is een open source project met een op Linux gebaseerd aanpak. De \gls{bbai} probeert het gat tussen kleinere \gls{sbc} en krachtigere industri\"ele computers te overbruggen. Met dank aan de krachtige Texas Instruments AM5729 CPU kunnen ontwikkelaars de krachtige \gls{soc} gebruiken van een hele brede waaier aan toepassingen op het \gls{ai} terrein. De \gls{bbai} maakt het makkelijk om dat terrein te ontdekken en verkennen. Door gebruik te maken van onder andere \gls{eve} cores die steunen op een geoptimaliseerde TIDL machine learning OpenCL API met gebruiksklare hulpmiddelen kan je terecht in alledaagse automatisatie in industri\"ele, commerci\"ele en thuisapplicaties.
 	
@@ -290,7 +288,7 @@ Een \gls{sbc} is een volledige computer gemaakt op 1 enkele printplaat. Het beva
 		\end{itemize}
 	
 	% https://beagleboard.org/ai
-	
+	\newpage
 	\subsection{Coral Dev Board}
 	De Coral Dev Board is een development board gemaakt door het Amerikaanse technologiebedrijf Google\citep{bron:coraldev}. Het board is ontworpen om het ontwikkelen van on-device ML producten te vergemakkelijken. Hiervoor heeft het een aantal belangrijke voordelen gekregen door zijn designers. Het is vooral de aangepaste \gls{tpu} \gls{ai} chip die hier opvalt. De \gls{tpu} is een \gls{asic} speciaal ontworpen voor \gls{nn} \gls{ml}, en is in staat om video in hoge resolutie te analyseren aan 30 frames per second. Deze \gls{som} is geoptimaliseerd om Tensorflow Lite te kunnen draaien aan meerdere \gls{tops}.
 	
@@ -355,7 +353,7 @@ Een \gls{sbc} is een volledige computer gemaakt op 1 enkele printplaat. Het beva
 \section{Benchmarking van \gls{ml} algoritmes}
 \label{benchmark}
 
-Om een betekenisvolle resultaten te verkrijgen is het nodig om een goed bruikbare en representatieve benchmark op te stellen. Een benchmark is een onderzoek waarbij de prestaties van programma's met elkaar vergeleken worden. Dit komt tot stand als elk programma op identieke wijze wordt onderzocht. Hoe de benchmark exact in elkaar zit is gebonden aan de kwaliteitscriteria die onderzocht worden. Om ervoor te zorgen dat de benchmark onafhankelijk is van zowel het specifiek veld als toepassing, is het nodig dat er aan een aantal karakteristieken wordt voldaan\cite{libuttibenchmarking}.
+Om betekenisvolle resultaten te verkrijgen is het nodig om een goed bruikbare en representatieve benchmark op te stellen. Een benchmark is een onderzoek waarbij de prestaties van programma's met elkaar vergeleken worden. Dit komt tot stand als elk programma op identieke wijze wordt onderzocht. Hoe de benchmark exact in elkaar zit is gebonden aan de kwaliteitscriteria die onderzocht worden. Om ervoor te zorgen dat de benchmark onafhankelijk is van zowel het specifiek veld als toepassing, is het nodig dat er aan een aantal karakteristieken wordt voldaan\cite{libuttibenchmarking}.
 
 \begin{itemize}
 	\item \textbf{Vergelijkbaarheid:} Benchmarks moeten zodanig opgesteld zijn, dat het evident is wat ze vergelijken en de conclusie ondubbelzinnig is.
@@ -375,7 +373,7 @@ Om een betekenisvolle resultaten te verkrijgen is het nodig om een goed bruikbar
 		\label{fig:nanobenchmark}
 	\end{figure}
 
-	Ook voor de Jetson TX2 bestaat er een benchmark zoals voorgesteld in \cite{bordignonbenchmarking}. Het gaat over een general-purpose benchmark die een aantal parameters controleert. Het gaat over variabelen zoals \gls{fps}, \textit{inference time}, \gls{gpu} temperatuur en geheugen verbruik. Met inference time wordt de tijd bedoeld om een berekening te doen in \gls{gpu} en \gls{cpu} m.a.w. de latency veroorzaakt door de \gls{sbc}. Deze gegevens worden uit de data gehaald door middel van verschillende \gls{dl} modellen toe te passen op \gls{cnn}. Deze modellen passen ze toe op twee verschillende datasets: Microsoft COCO dataset voor objectdetectie, een foto bank met een grote verscheidenheid aan categorie\"en, en de KITTI Stereo Vision databank. De KITTI bestaat uit 400 foto's specifiek bedoeld als benchmark fotoset.
+	Ook voor de Jetson TX2 bestaat er een benchmark zoals voorgesteld in \cite{bordignonbenchmarking}. Het gaat over een general-purpose benchmark die een aantal parameters controleert. Het gaat over variabelen zoals \gls{fps}, \textit{inference time}, \gls{gpu} temperatuur en geheugen verbruik. Met inference time wordt de tijd bedoeld om een berekening te doen in \gls{gpu} en \gls{cpu} m.a.w. de latency veroorzaakt door de \gls{sbc}. Deze gegevens worden uit de data gehaald door middel van verschillende \gls{dl} modellen toe te passen op \gls{cnn}. Deze modellen passen ze toe op twee verschillende datasets: Microsoft COCO dataset voor objectdetectie, een foto bank met een grote verscheidenheid aan categorie\"en, en de KITTI Stereo Vision databank. De KITTI-databank bestaat uit 400 foto's specifiek bedoeld als benchmark fotoset.
 	
 
 % ==============================================> Benchmark instructies https://devtalk.nvidia.com/default/topic/1050377/jetson-nano/deep-learning-inference-benchmarking-instructions/

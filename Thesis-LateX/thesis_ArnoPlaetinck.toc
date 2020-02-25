@@ -31,19 +31,20 @@
 \contentsline {section}{\numberline {2.5}Assortiment aan 'off the shelf' toestellen}{17}{section.2.5}
 \contentsline {subsection}{\numberline {2.5.1}Beaglebone AI}{17}{subsection.2.5.1}
 \contentsline {subsubsection}{Specificaties}{17}{section*.35}
-\contentsline {subsection}{\numberline {2.5.2}Coral Dev Board}{17}{subsection.2.5.2}
-\contentsline {subsubsection}{Specificaties}{17}{section*.36}
+\contentsline {subsection}{\numberline {2.5.2}Coral Dev Board}{18}{subsection.2.5.2}
+\contentsline {subsubsection}{Specificaties}{18}{section*.36}
 \contentsline {subsection}{\numberline {2.5.3}Nvidia Jetson Nano}{18}{subsection.2.5.3}
 \contentsline {subsubsection}{Specificaties}{18}{section*.37}
-\contentsline {subsection}{\numberline {2.5.4}Nvidia Jetson TX2}{18}{subsection.2.5.4}
-\contentsline {subsubsection}{Specificaties}{18}{section*.38}
+\contentsline {subsection}{\numberline {2.5.4}Nvidia Jetson TX2}{19}{subsection.2.5.4}
+\contentsline {subsubsection}{Specificaties}{19}{section*.38}
 \contentsline {subsection}{\numberline {2.5.5}Raspberry Pi}{19}{subsection.2.5.5}
 \contentsline {subsubsection}{Specificaties}{19}{section*.39}
 \contentsline {section}{\numberline {2.6}Benchmarking van \gls {ml} algoritmes}{20}{section.2.6}
 \contentsline {subsection}{\numberline {2.6.1}Bestaande benchmarks}{20}{subsection.2.6.1}
-\contentsline {chapter}{\numberline {3}Bespreking}{23}{chapter.3}
-\contentsline {chapter}{\numberline {4}This is the another Chapter}{25}{chapter.4}
-\contentsline {section}{\numberline {4.1}This is a Section Heading}{25}{section.4.1}
-\contentsline {chapter}{\numberline {A}Een aanhangsel}{29}{appendix.A}
-\contentsline {chapter}{\numberline {B}Beschrijving van deze masterproef in de vorm van een wetenschappelijk artikel}{31}{appendix.B}
-\contentsline {chapter}{\numberline {C}Poster}{33}{appendix.C}
+\contentsline {chapter}{\numberline {3}Data verwerving}{23}{chapter.3}
+\contentsline {chapter}{\numberline {4}Opbouw code}{25}{chapter.4}
+\contentsline {chapter}{\numberline {5}Resultaten}{27}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusie}{29}{chapter.6}
+\contentsline {chapter}{\numberline {A}Een aanhangsel}{33}{appendix.A}
+\contentsline {chapter}{\numberline {B}Beschrijving van deze masterproef in de vorm van een wetenschappelijk artikel}{35}{appendix.B}
+\contentsline {chapter}{\numberline {C}Poster}{37}{appendix.C}
