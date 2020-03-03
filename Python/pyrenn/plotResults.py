@@ -3,18 +3,19 @@ from statistics import mean
 
 import matplotlib.pyplot as plt
 
-name_train = "MP_NN_ALL_TRAIN_PC_Mon_Feb_24_15_14_23_2020"
-name_run = "MP_NN_ALL_RUN_PC_Mon_Feb_24_15_18_52_2020"
+name_train = "MP_NN_ALL_TRAIN_PC_Tue_Mar_3_10_42_54_2020"
+name_run = "MP_NN_ALL_RUN_PC_Tue_Mar_3_10_45_46_2020"
+iterations = 20
 
 temp, temp1, temp2, temp3 = [], [], [], []
 cpu_percent = []
 virtual_mem = []
 time_diff = []
 programs = ["compair", "friction", "narendra4", "pt2",
-          "P0Y0_narendra4", "P0Y0_compair", "gradient"]
+            "P0Y0_narendra4", "P0Y0_compair", "gradient"]
 labels = ["compair", "friction", "narendra4", "pt2",
           "P0Y0_narendra4", "P0Y0_compair", "gradient", "Totaal"]
-iterations = 2
+
 label_i = 0
 iteration_j = 0
 
@@ -32,45 +33,48 @@ with open('D:/School/Masterproef/Python/pyrenn/Logging/' + name_train + ".csv", 
 
 for label in programs:
     for iteration in range(iterations):
-        index = label_i*iterations + iteration_j
+        index = label_i * iterations + iteration_j
         temp.append(temp1[index])
         iteration_j += 1
     iteration_j = 0
-    cpu_percent.append(round(mean(temp),5))
+    cpu_percent.append(round(mean(temp), 5))
     temp = []
 
     for iteration in range(iterations):
         temp.append(temp2[label_i * iterations + iteration_j])
         iteration_j += 1
     iteration_j = 0
-    time_diff.append(round(mean(temp),5))
+    time_diff.append(round(mean(temp), 5))
     temp = []
 
     for iteration in range(iterations):
         temp += temp3[label_i * iterations + iteration_j]
         iteration_j += 1
     iteration_j = 0
-    #virtual_mem.append(mean(temp))
+    # virtual_mem.append(mean(temp))
     temp = []
     label_i += 1
 
 cpu_percent.append(temp1[-1])
-time_diff.append(temp2[-1])
+time_diff.append(temp2[-1]/iterations)
 virtual_mem.append(temp3[-1])
 
 # Plotting the results
-plt.subplot(141)
+plt.subplot(121)
 plt.bar(labels, time_diff)
 plt.ylabel('Time Difference')
-plt.xlabel('Programma')
+plt.xlabel('Program')
 plt.xticks(rotation=90)
 
-plt.subplot(142)
+plt.subplot(122)
 plt.bar(labels, cpu_percent)
 plt.ylabel('CPU Percentage')
-plt.xlabel('Programma')
+plt.xlabel('Program')
 plt.xticks(rotation=90)
-plt.suptitle('Resultaten')
+plt.suptitle('Results training')
+mng = plt.get_current_fig_manager()
+mng.window.state('zoomed')
+plt.show()
 
 #############################
 # plotting run data
@@ -90,48 +94,48 @@ with open('D:/School/Masterproef/Python/pyrenn/Logging/' + name_run + ".csv", mo
         temp2.append(round(float(row['timediff']), 5))
         temp3.append(row['virtual mem'])
 
-
 for label in programs:
     for iteration in range(iterations):
-        index = label_i*iterations + iteration_j
+        index = label_i * iterations + iteration_j
         temp.append(temp1[index])
         iteration_j += 1
     iteration_j = 0
-    cpu_percent.append(round(mean(temp),5))
+    cpu_percent.append(round(mean(temp), 5))
     temp = []
 
     for iteration in range(iterations):
         temp.append(temp2[label_i * iterations + iteration_j])
         iteration_j += 1
     iteration_j = 0
-    time_diff.append(round(mean(temp),5))
+    time_diff.append(round(mean(temp), 5))
     temp = []
 
     for iteration in range(iterations):
         temp += temp3[label_i * iterations + iteration_j]
         iteration_j += 1
     iteration_j = 0
-    #virtual_mem.append(mean(temp))
+    # virtual_mem.append(mean(temp))
     temp = []
     label_i += 1
 
-cpu_percent.append(temp1[-1])
-time_diff.append(temp2[-1])
+cpu_percent.append((temp1[-1]))
+time_diff.append((temp2[-1]/iterations))
 virtual_mem.append(temp3[-1])
-
 
 ###
 # Plotting the results
-plt.subplot(143)
+plt.subplot(121)
 plt.bar(labels, time_diff)
 plt.ylabel('Time Difference')
-plt.xlabel('Programma')
+plt.xlabel('Program')
 plt.xticks(rotation=90)
 
-plt.subplot(144)
+plt.subplot(122)
 plt.bar(labels, cpu_percent)
 plt.ylabel('CPU Percentage')
-plt.xlabel('Programma')
+plt.xlabel('Program')
 plt.xticks(rotation=90)
-plt.suptitle('Resultaten')
+plt.suptitle('Results running')
+mng = plt.get_current_fig_manager()
+mng.window.state('zoomed')
 plt.show()

@@ -3,11 +3,10 @@ import csv
 import numpy as np
 import psutil
 import pyrenn as prn
+from statistics import mean
 from numpy import genfromtxt
 
-
 cores = []
-cpu_percent_test = []
 cpu_percent = []
 virtual_mem = []
 time_start = []
@@ -15,7 +14,7 @@ time_stop = []
 time_diff = []
 time_total_start = []
 time_total_end = []
-iterations = 2
+iterations = 20
 labels = ["compair", "friction", "narendra4", "pt2",
           "P0Y0_narendra4", "P0Y0_compair", "gradient", "Totaal"]
 
@@ -29,15 +28,17 @@ for i in range(len(naam2)):
     naam += "_" + naam2[i]
 naam = naam.replace(':', '_')
 
-# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-cores.append(psutil.cpu_percent(interval=None, percpu=True))
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+# first time calling cpu percent to get rid of 0,0
+psutil.cpu_percent(interval=None, percpu=True)
 time_total_start = time.time()
+
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # example_compair.py
 for i in range(iterations):
-    time_start.append(time.time())
+
 
     # Read Example Data
     df = genfromtxt('example_data_compressed_air.csv', delimiter=',')
@@ -46,14 +47,15 @@ for i in range(iterations):
     Ptest = np.array([df[6], df[7], df[8]])
     Ytest = np.array([df[9], df[10]])
 
+    psutil.cpu_percent(interval=None, percpu=True)
+    time_start.append(time.time())
+
     # Create and train NN
     net = prn.CreateNN([3, 5, 5, 2], dIn=[0], dIntern=[], dOut=[1])
     net = prn.train_LM(P, Y, net, verbose=True, k_max=500, E_stop=1e-5)
 
-    cores.append(psutil.cpu_percent(interval=None, percpu=True))
-
     time_stop.append(time.time())
-    cpu_percent.append(psutil.cpu_percent())
+    cores.append(psutil.cpu_percent(interval=None, percpu=True))
     virtual_mem.append(psutil.virtual_memory())
 
 ###
@@ -73,14 +75,14 @@ for i in range(iterations):
     Ptest = df[3]
     Ytest = df[4]
 
+    psutil.cpu_percent(interval=None, percpu=True)
+
     # Create and train NN
     net = prn.CreateNN([1, 3, 3, 1])
     net = prn.train_LM(P, Y, net, verbose=True, k_max=100, E_stop=9e-4)
 
-    cores.append(psutil.cpu_percent(interval=None, percpu=True))
-
     time_stop.append(time.time())
-    cpu_percent.append(psutil.cpu_percent())
+    cores.append(psutil.cpu_percent(interval=None, percpu=True))
     virtual_mem.append(psutil.virtual_memory())
 
 # Save outputs to certain file
@@ -99,14 +101,14 @@ for i in range(iterations):
     Ptest = df[3]
     Ytest = df[4]
 
+    psutil.cpu_percent(interval=None, percpu=True)
+
     # Create and train NN
     net = prn.CreateNN([1, 3, 3, 1], dIn=[1, 2], dIntern=[], dOut=[1, 2, 3])
     net = prn.train_LM(P, Y, net, verbose=True, k_max=200, E_stop=1e-3)
 
-    cores.append(psutil.cpu_percent(interval=None, percpu=True))
-
     time_stop.append(time.time())
-    cpu_percent.append(psutil.cpu_percent())
+    cores.append(psutil.cpu_percent(interval=None, percpu=True))
     virtual_mem.append(psutil.virtual_memory())
 ###
 # Save outputs to certain file
@@ -124,14 +126,14 @@ for i in range(iterations):
     Ptest = df[3]
     Ytest = df[4]
 
+    psutil.cpu_percent(interval=None, percpu=True)
+
     # Create and train NN
     net = prn.CreateNN([1, 2, 2, 1], dIn=[0], dIntern=[1], dOut=[1, 2])
     net = prn.train_LM(P, Y, net, verbose=True, k_max=100, E_stop=1e-3)
 
-    cores.append(psutil.cpu_percent(interval=None, percpu=True))
-
     time_stop.append(time.time())
-    cpu_percent.append(psutil.cpu_percent())
+    cores.append(psutil.cpu_percent(interval=None, percpu=True))
     virtual_mem.append(psutil.virtual_memory())
 
 ###
@@ -156,14 +158,14 @@ for i in range(iterations):
     Ptest = Ptest_[3:100]
     Ytest = Ytest_[3:100]
 
+    psutil.cpu_percent(interval=None, percpu=True)
+
     # Create and train NN
     net = prn.CreateNN([1, 3, 3, 1], dIn=[1, 2], dIntern=[], dOut=[1, 2, 3])
     net = prn.train_LM(P, Y, net, verbose=True, k_max=200, E_stop=1e-3)
 
-    cores.append(psutil.cpu_percent(interval=None, percpu=True))
-
     time_stop.append(time.time())
-    cpu_percent.append(psutil.cpu_percent())
+    cores.append(psutil.cpu_percent(interval=None, percpu=True))
     virtual_mem.append(psutil.virtual_memory())
 
 ###
@@ -189,15 +191,14 @@ for i in range(iterations):
     Ptest = Ptest_[:, 1:100]
     Ytest = Ytest_[:, 1:100]
 
+    psutil.cpu_percent(interval=None, percpu=True)
+
     # Create and train NN
     net = prn.CreateNN([3, 5, 5, 2], dIn=[0], dIntern=[], dOut=[1])
     prn.train_LM(P, Y, net, verbose=True, k_max=500, E_stop=1e-5)
 
-    cpu_percent_test.append(psutil.cpu_percent(interval=None))
-    cores.append(psutil.cpu_percent(interval=None, percpu=True))
-
     time_stop.append(time.time())
-    cpu_percent.append(psutil.cpu_percent())
+    cores.append(psutil.cpu_percent(interval=None, percpu=True))
     virtual_mem.append(psutil.virtual_memory())
 
 ###
@@ -212,7 +213,8 @@ for i in range(iterations):
     P = df[1]
     Y = df[2]
 
-    ###
+    psutil.cpu_percent(interval=None, percpu=True)
+
     # Create and train NN
     net = prn.CreateNN([1, 2, 2, 1], dIn=[0], dIntern=[1], dOut=[1, 2])
 
@@ -239,10 +241,8 @@ for i in range(iterations):
     #    print('\nBoth methods showing the same result!')
     #    print('g_rtrl/g_bptt = ', g_rtrl / g_bptt)
 
-    cores.append(psutil.cpu_percent(interval=None, percpu=True))
-
     time_stop.append(time.time())
-    cpu_percent.append(psutil.cpu_percent())
+    cores.append(psutil.cpu_percent(interval=None, percpu=True))
     virtual_mem.append(psutil.virtual_memory())
 
 ###
@@ -250,7 +250,7 @@ for i in range(iterations):
 prn.saveNN(net, "D:/School/Masterproef/Python/pyrenn/SavedNN/gradient.csv")
 
 time_total_end = time.time()
-cpu_percent.append(psutil.cpu_percent())
+cores.append(psutil.cpu_percent(interval=None, percpu=True))
 virtual_mem.append(psutil.virtual_memory())
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -258,14 +258,19 @@ virtual_mem.append(psutil.virtual_memory())
 for i in range(iterations*7):
     time_diff.append(time_stop[i] - time_start[i])
 time_diff.append(time_total_end - time_total_start)
+i = 0
+for core in cores:
+    cpu_percent.append(mean(cores[i]))
+    i += 1
+i = 0
 
+print(cpu_percent)
 with open('D:/School/Masterproef/Python/pyrenn/Logging/' + naam + ".csv", mode='w') as results_file:
     fieldnames = ['Naam', 'CPU Percentage', 'timediff', 'virtual mem']
     file_writer = csv.DictWriter(results_file, fieldnames=fieldnames)
     file_writer.writeheader()
-    for i in range(iterations*8-1):
+    for i in range(iterations*7+1):
         j = int(i/iterations)
         file_writer.writerow({'Naam': labels[j], 'CPU Percentage':  str(cpu_percent[i]), 'timediff': str(time_diff[i]),
                               'virtual mem': str(virtual_mem[i])})
-
 print(cores)

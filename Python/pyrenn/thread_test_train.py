@@ -9,7 +9,10 @@ from numpy import genfromtxt
 
 
 def cpu_meas():
-    cores.append(psutil.cpu_percent(interval=None, percpu=True))
+    global cores
+    cpu = psutil.cpu_percent(interval=None, percpu=True)
+    print(cpu)
+    cores.append(cpu)
 
     print(cores)
 
@@ -46,11 +49,12 @@ naam = naam.replace(':', '_')
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+thread1.join()
 time_total_start = time.time()
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # example_compair.py
 for i in range(iterations):
+    thread1.start()
     time_start.append(time.time())
 
     # Read Example Data
@@ -77,6 +81,7 @@ prn.saveNN(net, "D:/School/Masterproef/Python/pyrenn/SavedNN/compair.csv")
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # example_friction.py
 for i in range(iterations):
+    thread1.start()
     time_start.append(time.time())
 
     # Read Example Data
@@ -102,6 +107,7 @@ prn.saveNN(net, "D:/School/Masterproef/Python/pyrenn/SavedNN/friction.csv")
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # example_narendra4.py
 for i in range(iterations):
+    thread1.start()
     time_start.append(time.time())
 
     # Read Example Data
@@ -127,6 +133,7 @@ prn.saveNN(net, "D:/School/Masterproef/Python/pyrenn/SavedNN/narendra4.csv")
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # example_pt2.py
 for i in range(iterations):
+    thread1.start()
     time_start.append(time.time())
 
     # Read Example Data
@@ -152,6 +159,7 @@ prn.saveNN(net, "D:/School/Masterproef/Python/pyrenn/SavedNN/pt2.csv")
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # example_using_P0Y0_narendra4.py
 for i in range(iterations):
+    thread1.start()
     time_start.append(time.time())
 
     # Read Example Data
@@ -185,6 +193,7 @@ prn.saveNN(net, "D:/School/Masterproef/Python/pyrenn/SavedNN/using_P0Y0_narendra
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # example__using_P0Y0_compair.py
 for i in range(iterations):
+    thread1.start()
     time_start.append(time.time())
 
     # Read Example Data
