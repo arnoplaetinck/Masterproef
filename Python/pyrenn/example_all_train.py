@@ -14,6 +14,7 @@ time_stop = []
 time_diff = []
 time_total_start = []
 time_total_end = []
+time_total = 0
 iterations = 20
 labels = ["compair", "friction", "narendra4", "pt2",
           "P0Y0_narendra4", "P0Y0_compair", "gradient", "Totaal"]
@@ -257,14 +258,14 @@ virtual_mem.append(psutil.virtual_memory())
 # Logging data
 for i in range(iterations*7):
     time_diff.append(time_stop[i] - time_start[i])
-time_diff.append(time_total_end - time_total_start)
+    time_total += time_stop[i] - time_start[i]
+time_diff.append((time_total_end - time_total_start)/iterations)
 i = 0
 for core in cores:
     cpu_percent.append(mean(cores[i]))
     i += 1
 i = 0
 
-print(cpu_percent)
 with open('D:/School/Masterproef/Python/pyrenn/Logging/' + naam + ".csv", mode='w') as results_file:
     fieldnames = ['Naam', 'CPU Percentage', 'timediff', 'virtual mem']
     file_writer = csv.DictWriter(results_file, fieldnames=fieldnames)

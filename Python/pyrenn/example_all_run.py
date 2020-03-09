@@ -14,6 +14,7 @@ time_stop = []
 time_diff = []
 time_total_start = []
 time_total_end = []
+time_total = 0
 iterations = 20
 labels = ["compair", "friction", "narendra4", "pt2",
           "P0Y0_narendra4", "P0Y0_compair", "gradient", "Totaal"]
@@ -60,6 +61,7 @@ for i in range(iterations):
 
     time_stop.append(time.time())
     cores.append(psutil.cpu_percent(interval=None, percpu=True))
+    print(cores)
     virtual_mem.append(psutil.virtual_memory())
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -84,6 +86,7 @@ for i in range(iterations):
 
     time_stop.append(time.time())
     cores.append(psutil.cpu_percent(interval=None, percpu=True))
+    print(cores)
     virtual_mem.append(psutil.virtual_memory())
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -108,6 +111,7 @@ for i in range(iterations):
 
     time_stop.append(time.time())
     cores.append(psutil.cpu_percent(interval=None, percpu=True))
+    print(cores)
     virtual_mem.append(psutil.virtual_memory())
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -132,6 +136,7 @@ for i in range(iterations):
 
     time_stop.append(time.time())
     cores.append(psutil.cpu_percent(interval=None, percpu=True))
+    print(cores)
     virtual_mem.append(psutil.virtual_memory())
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -163,6 +168,7 @@ for i in range(iterations):
 
     time_stop.append(time.time())
     cores.append(psutil.cpu_percent(interval=None, percpu=True))
+    print(cores)
     virtual_mem.append(psutil.virtual_memory())
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -195,6 +201,7 @@ for i in range(iterations):
 
     time_stop.append(time.time())
     cores.append(psutil.cpu_percent(interval=None, percpu=True))
+    print(cores)
     virtual_mem.append(psutil.virtual_memory())
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -223,7 +230,6 @@ for i in range(iterations):
     # Back Propagation Through Time
     g_bptt, E = prn.BPTT(net, data)
 
-
     # Compare
     # print('\n\n\nComparing Methods:')
     # print('Time RTRL: ', (t1_rtrl - t0_rtrl), 's')
@@ -234,17 +240,20 @@ for i in range(iterations):
 
     time_stop.append(time.time())
     cores.append(psutil.cpu_percent(interval=None, percpu=True))
+    print(cores)
     virtual_mem.append(psutil.virtual_memory())
 
 time_total_end = time.time()
 cores.append(psutil.cpu_percent(interval=None, percpu=True))
+print(cores)
 virtual_mem.append(psutil.virtual_memory())
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # Logging data
 for i in range(iterations*7):
     time_diff.append(time_stop[i] - time_start[i])
-time_diff.append(time_total_end - time_total_start)
+    time_total += time_stop[i] - time_start[i]
+time_diff.append(time_total/iterations)
 i = 0
 for core in cores:
     cpu_percent.append(mean(cores[i]))
@@ -259,3 +268,5 @@ with open('D:/School/Masterproef/Python/pyrenn/Logging/' + naam + ".csv", mode='
         j = int(i/iterations)
         file_writer.writerow({'Naam': labels[j], 'CPU Percentage':  str(cpu_percent[i]), 'timediff': str(time_diff[i]),
                               'virtual mem': str(virtual_mem[i])})
+
+print(cores)
