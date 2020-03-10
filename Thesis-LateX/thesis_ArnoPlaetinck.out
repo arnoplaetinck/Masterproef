@@ -4,9 +4,9 @@
 \BOOKMARK [1][-]{section.2.2}{Artifici\353le Intelligentie}{chapter.2}% 4
 \BOOKMARK [1][-]{section.2.3}{Machine Learning}{chapter.2}% 5
 \BOOKMARK [2][-]{subsection.2.3.1}{Leeralgoritmes en -technieken}{section.2.3}% 6
-\BOOKMARK [2][-]{subsection.2.3.2}{Keuze voor een ml-methode }{section.2.3}% 7
+\BOOKMARK [2][-]{subsection.2.3.2}{Keuze voor een Machine Learning-methode }{section.2.3}% 7
 \BOOKMARK [2][-]{subsection.2.3.3}{Leertechnieken}{section.2.3}% 8
-\BOOKMARK [1][-]{section.2.4}{Evolutie sbc}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.4}{Evolutie Single Board Computers}{chapter.2}% 9
 \BOOKMARK [2][-]{subsection.2.4.1}{Geschiedenis}{section.2.4}% 10
 \BOOKMARK [1][-]{section.2.5}{Assortiment aan 'off the shelf' toestellen}{chapter.2}% 11
 \BOOKMARK [2][-]{subsection.2.5.1}{Beaglebone AI}{section.2.5}% 12
@@ -14,7 +14,7 @@
 \BOOKMARK [2][-]{subsection.2.5.3}{Nvidia Jetson Nano}{section.2.5}% 14
 \BOOKMARK [2][-]{subsection.2.5.4}{Nvidia Jetson TX2}{section.2.5}% 15
 \BOOKMARK [2][-]{subsection.2.5.5}{Raspberry Pi}{section.2.5}% 16
-\BOOKMARK [1][-]{section.2.6}{Benchmarking van ml algoritmes}{chapter.2}% 17
+\BOOKMARK [1][-]{section.2.6}{Benchmarking van Machine Learning algoritmes}{chapter.2}% 17
 \BOOKMARK [2][-]{subsection.2.6.1}{Bestaande benchmarks}{section.2.6}% 18
 \BOOKMARK [0][-]{chapter.3}{Data verwerving}{}% 19
 \BOOKMARK [0][-]{chapter.4}{Opbouw code}{}% 20

@@ -3,25 +3,25 @@ from statistics import mean
 import matplotlib.pyplot as plt
 import numpy as np
 
-iterations = 20
+iterations = 2
 
-name_train_PC = "MP_NN_ALL_TRAIN_PC_Mon_Mar_9_11_28_43_2020"
-name_run_PC = "MP_NN_ALL_RUN_PC_Mon_Mar_9_11_31_28_2020"
+name_train_PC = "MP_NN_ALL_TRAIN_PC_Tue_Mar_10_12_57_42_2020"
+name_run_PC = "MP_NN_ALL_RUN_PC_Tue_Mar_10_12_58_04_2020"
 
-name_train_BB = "MP_NN_ALL_TRAIN_PC_Mon_Mar_9_11_28_43_2020"
-name_run_BB = "MP_NN_ALL_RUN_PC_Mon_Mar_9_11_31_28_2020"
+name_train_BB = "MP_NN_ALL_TRAIN_PC_Tue_Mar_10_12_57_42_2020"
+name_run_BB = "MP_NN_ALL_RUN_PC_Tue_Mar_10_12_58_04_2020"
 
-name_train_PI = "MP_NN_ALL_TRAIN_PC_Mon_Mar_9_11_28_43_2020"
-name_run_PI = "MP_NN_ALL_RUN_PC_Mon_Mar_9_11_31_28_2020"
+name_train_PI = "MP_NN_ALL_TRAIN_PC_Tue_Mar_10_12_57_42_2020"
+name_run_PI = "MP_NN_ALL_RUN_PC_Tue_Mar_10_12_58_04_2020"
 
-name_train_TX2 = "MP_NN_ALL_TRAIN_PC_Mon_Mar_9_11_28_43_2020"
-name_run_TX2 = "MP_NN_ALL_RUN_PC_Mon_Mar_9_11_31_28_2020"
+name_train_TX2 = "MP_NN_ALL_TRAIN_PC_Tue_Mar_10_12_57_42_2020"
+name_run_TX2 = "MP_NN_ALL_RUN_PC_Tue_Mar_10_12_58_04_2020"
 
-name_train_NANO = "MP_NN_ALL_TRAIN_NANO_Mon_Mar_9_11_01_32_2020"
-name_run_NANO = "MP_NN_ALL_RUN_NANO_Mon_Mar_9_11_10_04_2020"
+name_train_NANO = "MP_NN_ALL_TRAIN_PC_Tue_Mar_10_12_57_42_2020"
+name_run_NANO = "MP_NN_ALL_RUN_PC_Tue_Mar_10_12_58_04_2020"
 
-name_train_CORAL = "MP_NN_ALL_TRAIN_CORAL_Mon_Mar_9_13_03_08_2020"
-name_run_CORAL = "MP_NN_ALL_RUN_CORAL_Mon_Mar_9_13_20_52_2020"
+name_train_CORAL = "MP_NN_ALL_TRAIN_PC_Tue_Mar_10_12_57_42_2020"
+name_run_CORAL = "MP_NN_ALL_RUN_PC_Tue_Mar_10_12_58_04_2020"
 
 devices_run = [name_run_PC, name_run_BB, name_run_PI, name_run_TX2, name_run_NANO, name_run_CORAL]
 devices_train = [name_train_PC, name_train_BB, name_train_PI, name_train_TX2, name_train_NANO, name_train_CORAL]

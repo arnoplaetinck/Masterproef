@@ -15,7 +15,7 @@ time_diff = []
 time_total_start = []
 time_total_end = []
 time_total = 0
-iterations = 20
+iterations = 2
 labels = ["compair", "friction", "narendra4", "pt2",
           "P0Y0_narendra4", "P0Y0_compair", "gradient", "Totaal"]
 

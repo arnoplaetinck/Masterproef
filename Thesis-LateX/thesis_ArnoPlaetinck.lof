@@ -2,15 +2,15 @@
 \babel@toc {dutch}{}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Structuur van een Neuraal Netwerk\cite {bron:machinelearningnetwork3}.\relax }}{7}{figure.caption.11}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Algemene structuur van een node\cite {bron:nnnode2}.\relax }}{8}{figure.caption.15}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces De Sigmoid activatiefunctie\citep {bron:sigmoidfoto2}.\relax }}{9}{figure.caption.17}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Algemene structuur van een beslissingsboom.\citep {bron:beslissingsboom}\relax }}{10}{figure.caption.20}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Tweedimensionale Support Vector Machine.\citep {bron:supportvectormachines}\relax }}{10}{figure.caption.22}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Voorbeeld van Lineaire Regressie.\citep {bron:regressieanalyse} \relax }}{11}{figure.caption.24}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Routine bij Reinforcement Learning\cite {bron:reinforcementlearning}.\relax }}{15}{figure.caption.33}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Eerste \gls {sbc}: MMD-1 \cite {bron:fotoeerstesbc}\relax }}{16}{figure.caption.34}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Modellen en resultaten van de benchmark op de Jetson Nano\cite {bron:nanobenchmark}.\relax }}{21}{figure.caption.40}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Structuur van een Neuraal Netwerk. Afbeelding te vinden op https://github.com/drewnoff/spark-notebook-ml-labs/tree/master/labs/DLFramework. Website werd geraadpleegd op 24/12/2019 \relax }}{7}{figure.caption.11}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Algemene structuur van een node. Afbeelding te vinden op https://pathmind.com/wiki/neural-network. Website werd geraadpleegd op 23/12/2019. \relax }}{8}{figure.caption.15}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces De Sigmoid activatiefunctie. Afbeelding te vinden op https://towardsdatascience.com/activation-functions-neural-networks-1cbd9f8d91d6. Website werd geraadpleegd op 24/12/2019.\relax }}{9}{figure.caption.17}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Algemene structuur van een beslissingsboom. Afbeelding te vinden op https://medium.com/machine-learning-bites/machine-learning-decision-tree-classifier-9eb67cad263e. Website werd geraadpleegd op 24/12/2019.\relax }}{10}{figure.caption.20}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Tweedimensionale Support Vector Machine. Afbeelding te vinden op https://subscription.packtpub.com/book/big-data-and-business-intelligence/9781788994170/5/ch05lvl1sec36/support-vector-machines. Website werd geraadpleegd op 20/12/2019.\relax }}{11}{figure.caption.22}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Voorbeeld van Lineaire Regressie. Afbeelding te vinden op https://en.wikipedia.org/wiki/Regression-analysis. Website werd geraadpleegd op 19/12/2019.\relax }}{12}{figure.caption.24}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Routine bij Reinforcement Learning. Afbeelding te vinden op http://webindream.com/reinforcement-learning/. Website werd geraadpleegd op 23/12/2019.\relax }}{16}{figure.caption.33}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Eerste \gls {sbc}: MMD-1. Afbeelding te vinden op https://nl.wikipedia.org/wiki/Singleboardcomputer. Website werd geraadpleegd op 23/12/2019.\relax }}{17}{figure.caption.34}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Modellen en resultaten van de benchmark op de Jetson Nano. Afbeelding te vinden op https://devblogs.nvidia.com/jetson-nano-ai-computing/. Website werd geraadpleegd op 17/02/2020.\relax }}{22}{figure.caption.40}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
