@@ -7,6 +7,8 @@ import functools
 import pandas as pd
 import numpy as np
 import tensorflow as tf
+import os
+from tensorflow import keras
 
 TRAIN_DATA_URL = "https://storage.googleapis.com/tf-datasets/titanic/train.csv"
 TEST_DATA_URL = "https://storage.googleapis.com/tf-datasets/titanic/eval.csv"
@@ -68,9 +70,7 @@ raw_test_data = get_dataset(test_file_path)
 
 SELECT_COLUMNS = ['survived', 'age', 'n_siblings_spouses', 'parch', 'fare']
 DEFAULTS = [0, 0.0, 0.0, 0.0, 0.0]
-temp_dataset = get_dataset(train_file_path,
-                           select_columns=SELECT_COLUMNS,
-                           column_defaults=DEFAULTS)
+temp_dataset = get_dataset(train_file_path, select_columns=SELECT_COLUMNS, column_defaults=DEFAULTS)
 
 example_batch, labels_batch = next(iter(temp_dataset))
 packed_dataset = temp_dataset.map(pack)
@@ -114,21 +114,24 @@ categorical_layer = tf.keras.layers.DenseFeatures(categorical_columns)
 preprocessing_layer = tf.keras.layers.DenseFeatures(categorical_columns + numeric_columns)
 
 # Building the model
-model = tf.keras.Sequential([
-    preprocessing_layer,
-    tf.keras.layers.Dense(128, activation='relu'),
-    tf.keras.layers.Dense(128, activation='relu'),
-    tf.keras.layers.Dense(1),
-])
+model = tf.keras.Sequential(
+    [preprocessing_layer, tf.keras.layers.Dense(128, activation='relu'), tf.keras.layers.Dense(128, activation='relu'),
+     tf.keras.layers.Dense(1), ])
+new_model = tf.keras.Sequential(
+    [preprocessing_layer, tf.keras.layers.Dense(128, activation='relu'), tf.keras.layers.Dense(128, activation='relu'),
+     tf.keras.layers.Dense(1), ])
 model.compile(loss=tf.keras.losses.BinaryCrossentropy(from_logits=True), optimizer='adam', metrics=['accuracy'])
 
 train_data = packed_train_data.shuffle(500)
 test_data = packed_test_data
+
 model.fit(train_data, epochs=5)
 
-# predicting: putting labels on a batch
+model.save_weights('./SavedNN/titanic/saved_weights')
 
-predictions = model.predict(test_data)
+new_model.load_weights('./SavedNN/titanic/saved_weights')
+# predicting: putting labels on a batch
+predictions = new_model.predict(test_data)
 
 # Show some results
 for prediction, survived in zip(predictions[:10], list(test_data)[0][1][:10]):

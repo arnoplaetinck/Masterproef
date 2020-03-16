@@ -3,25 +3,25 @@ from statistics import mean
 import matplotlib.pyplot as plt
 import numpy as np
 
-iterations = 2
+iterations = 20
 
-name_train_PC = "MP_NN_ALL_TRAIN_PC_Tue_Mar_10_12_57_42_2020"
-name_run_PC = "MP_NN_ALL_RUN_PC_Tue_Mar_10_12_58_04_2020"
+name_train_PC = "MP_NN_ALL_TRAIN_PC_Thu_Mar_12_13_39_53_2020"
+name_run_PC = "MP_NN_ALL_RUN_PC_Thu_Mar_12_15_11_03_2020"
 
-name_train_BB = "MP_NN_ALL_TRAIN_PC_Tue_Mar_10_12_57_42_2020"
-name_run_BB = "MP_NN_ALL_RUN_PC_Tue_Mar_10_12_58_04_2020"
+name_train_BB = "MP_NN_ALL_TRAIN_PC_Thu_Mar_12_13_39_53_2020"
+name_run_BB = "MP_NN_ALL_RUN_PC_Thu_Mar_12_15_11_03_2020"
 
-name_train_PI = "MP_NN_ALL_TRAIN_PC_Tue_Mar_10_12_57_42_2020"
-name_run_PI = "MP_NN_ALL_RUN_PC_Tue_Mar_10_12_58_04_2020"
+name_train_PI = "MP_NN_ALL_TRAIN_PC_Thu_Mar_12_13_39_53_2020"
+name_run_PI = "MP_NN_ALL_RUN_PC_Thu_Mar_12_15_11_03_2020"
 
-name_train_TX2 = "MP_NN_ALL_TRAIN_PC_Tue_Mar_10_12_57_42_2020"
-name_run_TX2 = "MP_NN_ALL_RUN_PC_Tue_Mar_10_12_58_04_2020"
+name_train_TX2 = "MP_NN_ALL_TRAIN_PC_Thu_Mar_12_13_39_53_2020"
+name_run_TX2 = "MP_NN_ALL_RUN_PC_Thu_Mar_12_15_11_03_2020"
 
-name_train_NANO = "MP_NN_ALL_TRAIN_PC_Tue_Mar_10_12_57_42_2020"
-name_run_NANO = "MP_NN_ALL_RUN_PC_Tue_Mar_10_12_58_04_2020"
+name_train_NANO = "MP_NN_ALL_TRAIN_PC_Thu_Mar_12_13_39_53_2020"
+name_run_NANO = "MP_NN_ALL_RUN_PC_Thu_Mar_12_15_11_03_2020"
 
-name_train_CORAL = "MP_NN_ALL_TRAIN_PC_Tue_Mar_10_12_57_42_2020"
-name_run_CORAL = "MP_NN_ALL_RUN_PC_Tue_Mar_10_12_58_04_2020"
+name_train_CORAL = "MP_NN_ALL_TRAIN_PC_Thu_Mar_12_13_39_53_2020"
+name_run_CORAL = "MP_NN_ALL_RUN_PC_Thu_Mar_12_15_11_03_2020"
 
 devices_run = [name_run_PC, name_run_BB, name_run_PI, name_run_TX2, name_run_NANO, name_run_CORAL]
 devices_train = [name_train_PC, name_train_BB, name_train_PI, name_train_TX2, name_train_NANO, name_train_CORAL]
@@ -40,11 +40,11 @@ virtual_mem = []
 time_diff = []
 
 programs = ["compair", "friction", "narendra4", "pt2",
-            "P0Y0_narendra4", "P0Y0_compair", "gradient"]
+            "P0Y0_narendra4", "P0Y0_compair", "gradient", "titanic"]
 labels_cpu = ["compair", "friction", "narendra4", "pt2",
-              "P0Y0_narendra4", "P0Y0_compair", "gradient", "no operations"]
+              "P0Y0_narendra4", "P0Y0_compair", "gradient", "titanic", "no operations"]
 labels_time = ["compair", "friction", "narendra4", "pt2",
-               "P0Y0_narendra4", "P0Y0_compair", "gradient", "Totaal"]
+               "P0Y0_narendra4", "P0Y0_compair", "gradient", "titanic", "Totaal"]
 
 program_i = 0
 device_i = 0
@@ -92,6 +92,8 @@ rects3 = ax.bar(x - width / 2, data_train_time[2], width, label='PI')
 rects4 = ax.bar(x + width / 2, data_train_time[3], width, label='TX2')
 rects5 = ax.bar(x + 3*width / 2, data_train_time[4], width, label='NANO')
 rects6 = ax.bar(x + 5*width / 2, data_train_time[5], width, label='CORAL')
+rects = [rects1, rects2, rects3, rects4, rects5, rects6]
+
 
 # Add some text for labels, title and custom x-axis tick labels, etc.
 ax.set_ylabel('Time program execution during training')
@@ -100,12 +102,8 @@ ax.set_xticks(x)
 ax.set_xticklabels(labels_time)
 ax.legend()
 
-autolabel(rects1)
-autolabel(rects2)
-autolabel(rects3)
-autolabel(rects4)
-autolabel(rects5)
-autolabel(rects6)
+for rect in rects:
+    autolabel(rect)
 
 fig.tight_layout()
 mng = plt.get_current_fig_manager()
@@ -124,6 +122,8 @@ rects3 = ax.bar(x - width / 2, data_train_CPU[2], width, label='PI')
 rects4 = ax.bar(x + width / 2, data_train_CPU[3], width, label='TX2')
 rects5 = ax.bar(x + 3*width / 2, data_train_CPU[4], width, label='NANO')
 rects6 = ax.bar(x + 5*width / 2, data_train_CPU[5], width, label='CORAL')
+rects = [rects1, rects2, rects3, rects4, rects5, rects6]
+
 
 # Add some text for labels, title and custom x-axis tick labels, etc.
 ax.set_ylabel('CPU usage during training')
@@ -132,12 +132,8 @@ ax.set_xticks(x)
 ax.set_xticklabels(labels_time)
 ax.legend()
 
-autolabel(rects1)
-autolabel(rects2)
-autolabel(rects3)
-autolabel(rects4)
-autolabel(rects5)
-autolabel(rects6)
+for rect in rects:
+    autolabel(rect)
 
 fig.tight_layout()
 mng = plt.get_current_fig_manager()
@@ -186,6 +182,8 @@ rects3 = ax.bar(x - width / 2, data_run_time[2], width, label='PI')
 rects4 = ax.bar(x + width / 2, data_run_time[3], width, label='TX2')
 rects5 = ax.bar(x + 3*width / 2, data_run_time[4], width, label='NANO')
 rects6 = ax.bar(x + 5*width / 2, data_run_time[5], width, label='CORAL')
+rects = [rects1, rects2, rects3, rects4, rects5, rects6]
+
 
 # Add some text for labels, title and custom x-axis tick labels, etc.
 ax.set_ylabel('Time program execution during running')
@@ -195,12 +193,8 @@ ax.set_xticklabels(labels_time)
 ax.legend()
 
 
-autolabel(rects1)
-autolabel(rects2)
-autolabel(rects3)
-autolabel(rects4)
-autolabel(rects5)
-autolabel(rects6)
+for rect in rects:
+    autolabel(rect)
 
 fig.tight_layout()
 mng = plt.get_current_fig_manager()
@@ -219,20 +213,18 @@ rects3 = ax.bar(x - width / 2, data_run_CPU[2], width, label='PI')
 rects4 = ax.bar(x + width / 2, data_run_CPU[3], width, label='TX2')
 rects5 = ax.bar(x + 3*width / 2, data_run_CPU[4], width, label='NANO')
 rects6 = ax.bar(x + 5*width / 2, data_run_CPU[5], width, label='CORAL')
+rects = [rects1, rects2, rects3, rects4, rects5, rects6]
+
 
 # Add some text for labels, title and custom x-axis tick labels, etc.
 ax.set_ylabel('CPU usage during running')
 ax.set_title('CPU usage for each device during running')
 ax.set_xticks(x)
-ax.set_xticklabels(labels_time)
+ax.set_xticklabels(labels_cpu)
 ax.legend()
 
-autolabel(rects1)
-autolabel(rects2)
-autolabel(rects3)
-autolabel(rects4)
-autolabel(rects5)
-autolabel(rects6)
+for rect in rects:
+    autolabel(rect)
 
 fig.tight_layout()
 mng = plt.get_current_fig_manager()
