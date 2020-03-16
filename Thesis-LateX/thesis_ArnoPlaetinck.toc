@@ -9,38 +9,38 @@
 \contentsline {subsubsection}{Artifici\"ele Neurale Netwerken}{6}{section*.9}
 \contentsline {paragraph}{Structuur van Neurale Netwerken}{6}{section*.10}
 \contentsline {subparagraph}{Lagen}{6}{section*.12}
-\contentsline {subparagraph}{Nodes}{8}{section*.13}
-\contentsline {subparagraph}{Activatie functie}{8}{section*.14}
+\contentsline {subparagraph}{Nodes}{7}{section*.13}
+\contentsline {subparagraph}{Activatie functie}{7}{section*.14}
 \contentsline {subparagraph}{Types activatiefuncties}{8}{section*.16}
-\contentsline {subsubsection}{Beslissingsboom}{10}{section*.18}
-\contentsline {paragraph}{Structuur van een beslissingsboom}{10}{section*.19}
-\contentsline {subsubsection}{Support Vector Machines}{10}{section*.21}
-\contentsline {subsubsection}{Regressie Analyse}{11}{section*.23}
+\contentsline {subsubsection}{Beslissingsboom}{8}{section*.18}
+\contentsline {paragraph}{Structuur van een beslissingsboom}{9}{section*.19}
+\contentsline {subsubsection}{Support Vector Machines}{9}{section*.21}
+\contentsline {subsubsection}{Regressie Analyse}{10}{section*.23}
 \contentsline {subsubsection}{Bayesian Netwerken}{11}{section*.25}
-\contentsline {subsubsection}{Genetische Algoritmes}{12}{section*.26}
-\contentsline {subsection}{\numberline {2.3.2}Keuze voor een Machine Learning-methode }{12}{subsection.2.3.2}
-\contentsline {subsubsection}{Regressie}{12}{section*.27}
-\contentsline {subsubsection}{Classificatie}{13}{section*.28}
-\contentsline {subsubsection}{Besluit}{14}{section*.29}
-\contentsline {subsection}{\numberline {2.3.3}Leertechnieken}{15}{subsection.2.3.3}
-\contentsline {subsubsection}{Supervised Learning}{15}{section*.30}
-\contentsline {subsubsection}{Unsupervised Learning}{15}{section*.31}
-\contentsline {subsubsection}{Reinforcement Learning}{15}{section*.32}
-\contentsline {section}{\numberline {2.4}Evolutie Single Board Computers}{16}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Geschiedenis}{16}{subsection.2.4.1}
-\contentsline {section}{\numberline {2.5}Assortiment aan 'off the shelf' toestellen}{18}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Beaglebone AI}{18}{subsection.2.5.1}
-\contentsline {subsubsection}{Specificaties}{18}{section*.35}
-\contentsline {subsection}{\numberline {2.5.2}Coral Dev Board}{19}{subsection.2.5.2}
-\contentsline {subsubsection}{Specificaties}{19}{section*.36}
-\contentsline {subsection}{\numberline {2.5.3}Nvidia Jetson Nano}{19}{subsection.2.5.3}
-\contentsline {subsubsection}{Specificaties}{19}{section*.37}
-\contentsline {subsection}{\numberline {2.5.4}Nvidia Jetson TX2}{20}{subsection.2.5.4}
-\contentsline {subsubsection}{Specificaties}{20}{section*.38}
-\contentsline {subsection}{\numberline {2.5.5}Raspberry Pi}{20}{subsection.2.5.5}
-\contentsline {subsubsection}{Specificaties}{20}{section*.39}
-\contentsline {section}{\numberline {2.6}Benchmarking van Machine Learning algoritmes}{21}{section.2.6}
-\contentsline {subsection}{\numberline {2.6.1}Bestaande benchmarks}{21}{subsection.2.6.1}
+\contentsline {subsubsection}{Genetische Algoritmes}{11}{section*.26}
+\contentsline {subsection}{\numberline {2.3.2}Keuze voor een \gls {ml}-methode }{11}{subsection.2.3.2}
+\contentsline {subsubsection}{Regressie}{11}{section*.27}
+\contentsline {subsubsection}{Classificatie}{12}{section*.28}
+\contentsline {subsubsection}{Besluit}{13}{section*.29}
+\contentsline {subsection}{\numberline {2.3.3}Leertechnieken}{14}{subsection.2.3.3}
+\contentsline {subsubsection}{Supervised Learning}{14}{section*.30}
+\contentsline {subsubsection}{Unsupervised Learning}{14}{section*.31}
+\contentsline {subsubsection}{Reinforcement Learning}{14}{section*.32}
+\contentsline {section}{\numberline {2.4}Evolutie \gls {sbc}}{15}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Geschiedenis}{15}{subsection.2.4.1}
+\contentsline {section}{\numberline {2.5}Assortiment aan 'off the shelf' toestellen}{17}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Beaglebone AI}{17}{subsection.2.5.1}
+\contentsline {subsubsection}{Specificaties}{17}{section*.35}
+\contentsline {subsection}{\numberline {2.5.2}Coral Dev Board}{18}{subsection.2.5.2}
+\contentsline {subsubsection}{Specificaties}{18}{section*.36}
+\contentsline {subsection}{\numberline {2.5.3}Nvidia Jetson Nano}{18}{subsection.2.5.3}
+\contentsline {subsubsection}{Specificaties}{18}{section*.37}
+\contentsline {subsection}{\numberline {2.5.4}Nvidia Jetson TX2}{19}{subsection.2.5.4}
+\contentsline {subsubsection}{Specificaties}{19}{section*.38}
+\contentsline {subsection}{\numberline {2.5.5}Raspberry Pi}{19}{subsection.2.5.5}
+\contentsline {subsubsection}{Specificaties}{19}{section*.39}
+\contentsline {section}{\numberline {2.6}Benchmarking van \gls {ml} algoritmes}{20}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Bestaande benchmarks}{20}{subsection.2.6.1}
 \contentsline {chapter}{\numberline {3}Data verwerving}{23}{chapter.3}
 \contentsline {chapter}{\numberline {4}Opbouw code}{25}{chapter.4}
 \contentsline {chapter}{\numberline {5}Resultaten}{27}{chapter.5}
