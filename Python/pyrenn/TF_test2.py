@@ -22,6 +22,7 @@ np.set_printoptions(precision=3, suppress=True)
 LABEL_COLUMN = 'survived'
 LABELS = [0, 1]
 
+tf.enable_eager_execution()
 
 def get_dataset(file_path, **kwargs):
     dataset = tf.data.experimental.make_csv_dataset(
@@ -72,7 +73,6 @@ temp_dataset = get_dataset(train_file_path,
                            select_columns=SELECT_COLUMNS,
                            column_defaults=DEFAULTS)
 
-example_batch, labels_batch = next(iter(temp_dataset))
 packed_dataset = temp_dataset.map(pack)
 
 NUMERIC_FEATURES = ['age', 'n_siblings_spouses', 'parch', 'fare']
@@ -127,6 +127,9 @@ test_data = packed_test_data
 model.fit(train_data, epochs=5)
 
 # predicting: putting labels on a batch
+converter = tf.lite.TFLiteConverter.from_keras_model(model)
+new_model = converter.convert()
+
 
 predictions = model.predict(test_data)
 
