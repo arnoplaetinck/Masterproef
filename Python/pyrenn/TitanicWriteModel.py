@@ -7,6 +7,8 @@ import functools
 import pandas as pd
 import numpy as np
 import tensorflow as tf
+import os
+from tensorflow import keras
 
 TRAIN_DATA_URL = "https://storage.googleapis.com/tf-datasets/titanic/train.csv"
 TEST_DATA_URL = "https://storage.googleapis.com/tf-datasets/titanic/eval.csv"
@@ -22,7 +24,6 @@ np.set_printoptions(precision=3, suppress=True)
 LABEL_COLUMN = 'survived'
 LABELS = [0, 1]
 
-tf.enable_eager_execution()
 
 def get_dataset(file_path, **kwargs):
     dataset = tf.data.experimental.make_csv_dataset(
@@ -69,10 +70,9 @@ raw_test_data = get_dataset(test_file_path)
 
 SELECT_COLUMNS = ['survived', 'age', 'n_siblings_spouses', 'parch', 'fare']
 DEFAULTS = [0, 0.0, 0.0, 0.0, 0.0]
-temp_dataset = get_dataset(train_file_path,
-                           select_columns=SELECT_COLUMNS,
-                           column_defaults=DEFAULTS)
+temp_dataset = get_dataset(train_file_path, select_columns=SELECT_COLUMNS, column_defaults=DEFAULTS)
 
+example_batch, labels_batch = next(iter(temp_dataset))
 packed_dataset = temp_dataset.map(pack)
 
 NUMERIC_FEATURES = ['age', 'n_siblings_spouses', 'parch', 'fare']
@@ -114,27 +114,24 @@ categorical_layer = tf.keras.layers.DenseFeatures(categorical_columns)
 preprocessing_layer = tf.keras.layers.DenseFeatures(categorical_columns + numeric_columns)
 
 # Building the model
-model = tf.keras.Sequential([
-    preprocessing_layer,
-    tf.keras.layers.Dense(128, activation='relu'),
-    tf.keras.layers.Dense(128, activation='relu'),
-    tf.keras.layers.Dense(1),
-])
+model = tf.keras.Sequential(
+    [preprocessing_layer, tf.keras.layers.Dense(128, activation='relu'), tf.keras.layers.Dense(128, activation='relu'),
+     tf.keras.layers.Dense(1), ])
+
 model.compile(loss=tf.keras.losses.BinaryCrossentropy(from_logits=True), optimizer='adam', metrics=['accuracy'])
 
 train_data = packed_train_data.shuffle(500)
 test_data = packed_test_data
+
 model.fit(train_data, epochs=5)
 
-# predicting: putting labels on a batch
-converter = tf.lite.TFLiteConverter.from_keras_model(model)
-new_model = converter.convert()
+model.save_weights('./SavedNN/titanic/saved_weights')
 
 
 predictions = model.predict(test_data)
 
 # Show some results
 for prediction, survived in zip(predictions[:10], list(test_data)[0][1][:10]):
-    print("Predicted survival: {:.2%}".format(prediction[0]),
+    print("Predicted survival: ", prediction[0],
           " | Actual outcome: ",
           ("SURVIVED" if bool(survived) else "DIED"))
