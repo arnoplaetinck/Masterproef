@@ -6,10 +6,7 @@ data = keras.datasets.imdb
 
 (train_data, train_labels), (test_data, test_labels) = data.load_data(num_words=10000)
 
-print(train_data[0])
-
 word_index = data.get_word_index()
-
 word_index = {k: (v + 3) for k, v in word_index.items()}
 word_index["<PAD>"] = 0
 word_index["<START>"] = 1
@@ -28,17 +25,17 @@ x = [-1, 0, 1, 2, 3, 4]
 y = [-3, -1, 1, 3, 5, 7]
 
 model = tf.keras.models.Sequential(
-    [tf.keras.layers.Dense(units=1, input_shape=[1])])
+    [tf.keras.layers.Dense(units=1, input_shape=(1000,))])
+
+
+# model = keras.Sequential()
+model.add(keras.layers.Embedding(10000, 16))
+# model.add(keras.layers.GlobalAveragePooling1D(data_format='channels_first'))
+model.add(keras.layers.Dense(16, activation="relu"))
+model.add(keras.layers.Dense(1, activation="sigmoid"))
 
 model.compile(optimizer='sgd', loss='mean_squared_error')
 model.fit(x, y, epochs=50)
-
-# model = keras.Sequential()
-# model.add(keras.layers.Embedding(10000, 16))
-# model.add(keras.layers.GlobalAveragePooling1D(10000, 16))
-# model.add(keras.layers.Dense(16, activation="relu"))
-# model.add(keras.layers.Dense(1, activation="sigmoid"))
-
 
 # model.compile(optimizer="adam", loss="binary_crossentropy", metrics=["accuracy"])
 

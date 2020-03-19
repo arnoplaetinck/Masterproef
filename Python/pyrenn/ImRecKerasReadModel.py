@@ -1,44 +1,48 @@
 from __future__ import absolute_import, division, print_function, unicode_literals
 import tensorflow as tf
-from matplotlib import pyplot as plt
 import numpy as np
+from PIL import Image
+
+# 124 images from COCO val2017 dataset
+path_image = "./images/KerasRead/"
+extention = ".jpg"
+
+imagenet_labels = np.array(open(path_image+"ImageNetLabels.txt").read().splitlines())
+
+# Load TFLite model and allocate tensors.
+interpreter = tf.lite.Interpreter(model_path="./SavedNN/ImRecKerasModel/ImRecKerasModel.tflite")
+interpreter.allocate_tensors()
+
+# Get input and output tensors.
+input_details = interpreter.get_input_details()
+output_details = interpreter.get_output_details()
+
+# Test model on  input data.
+input_shape = input_details[0]['shape']
+
+floating_model = input_details[0]['dtype'] == np.float32
+height = input_details[0]['shape'][1]
+width = input_details[0]['shape'][2]
+
+img_set = []
+input_data2 = []
+with open("./images/KerasRead/labels.txt", mode='r') as label_file:
+    for label in label_file:
+        path = path_image + label.rstrip() + extention
+        img = Image.open(path).resize((width, height))
+        input_data = np.expand_dims(img, axis=0)
+        if floating_model:
+            input_data = (np.float32(input_data) - 127.5) / 127.5
+
+        interpreter.set_tensor(input_details[0]['index'], input_data)
+
+        interpreter.invoke()
+        output_data = interpreter.get_tensor(output_details[0]['index'])
+
+        # decoded = imagenet_labels[np.argsort(output_data)[0, ::-1][:5] + 1]
+        # print("Result AFTER saving: ", decoded)
 
 
-physical_devices = tf.config.experimental.list_physical_devices('GPU')
-if physical_devices:
-    tf.config.experimental.set_memory_growth(physical_devices[0], True)
 
-file = tf.keras.utils.get_file(
-  "grace_hopper.jpg",
-  "https://storage.googleapis.com/download.tensorflow.org/example_images/grace_hopper.jpg")
-img = tf.keras.preprocessing.image.load_img(file, target_size=[224, 224])
-plt.imshow(img)
-plt.axis('off')
-x = tf.keras.preprocessing.image.img_to_array(img)
-x = tf.keras.applications.mobilenet.preprocess_input(
-  x[tf.newaxis, ...])
-
-labels_path = tf.keras.utils.get_file(
-    'ImageNetLabels.txt',
-    'https://storage.googleapis.com/download.tensorflow.org/data/ImageNetLabels.txt')
-imagenet_labels = np.array(open(labels_path).read().splitlines())
-pretrained_model = tf.keras.applications.MobileNet()
-
-
-converter = tf.lite.TFLiteConverter.from_saved_model("./tmp/mobilenet/1/")
-converter.optimizations = [tf.lite.Optimize.DEFAULT]
-tflite_model = converter.convert()
-
-print(list(tflite_model.signatures.keys()))  # ["serving_default"]
-
-infer = tflite_model.signatures["serving_default"]
-print(infer.structured_outputs)
-
-
-labeling = infer(tf.constant(x))[pretrained_model.output_names[0]]
-
-decoded = imagenet_labels[np.argsort(labeling)[0,::-1][:5]+1]
-
-print("Result after saving and loading:\n", decoded)
 
 

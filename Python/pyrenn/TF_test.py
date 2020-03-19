@@ -85,8 +85,8 @@ model.compile(optimizer=tf.keras.optimizers.RMSprop(lr=base_learning_rate),
               metrics=['accuracy'])
 
 model.summary()
+print("lenght model: ", len(model.trainable_variables))
 
-len(model.trainable_variables)
 
 initial_epochs = 10
 validation_steps = 20
@@ -95,7 +95,7 @@ loss0, accuracy0 = model.evaluate(validation_batches, steps=validation_steps)
 
 print("initial loss: {:.2f}".format(loss0))
 print("initial accuracy: {:.2f}".format(accuracy0))
-
+'''
 history = model.fit(train_batches,
                     epochs=initial_epochs,
                     validation_data=validation_batches)
@@ -124,4 +124,4 @@ plt.ylim([0, 1.0])
 plt.title('Training and Validation Loss')
 plt.xlabel('epoch')
 plt.show()
-
+'''
