@@ -29,6 +29,7 @@ decoded = imagenet_labels[np.argsort(result_before_save)[0,::-1][:5]+1]
 
 print("Result before saving:\n", decoded)
 
+# Saving model
 tf.saved_model.save(pretrained_model, "./tmp/mobilenet/1/")
 
 # Load model back in to python using TFLite
