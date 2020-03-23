@@ -198,7 +198,7 @@ rects4 = ax.bar(x + 3 * width / 2, data_run_CPU[3], width, label='CORAL')
 ax.set_ylabel('CPU usage during running')
 ax.set_title('CPU usage for each device during running')
 ax.set_xticks(x)
-ax.set_xticklabels(labels_time)
+ax.set_xticklabels(labels_cpu)
 ax.legend()
 
 autolabel(rects1)

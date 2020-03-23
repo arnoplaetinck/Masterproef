@@ -9,32 +9,51 @@ data = keras.datasets.fashion_mnist
 
 class_names = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'coat',
                'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
+path_model = "./SavedNN/FashionMNIST/fashionMNISTmodel.tflite"
 
 # Data Preprocessing
-train_images = train_images / 255
 test_images = test_images / 255
+print("test_images: ", test_images.shape)
+print("test_images: ", test_images[125].shape)
+print("test_images: ", np.argmax(test_images))
 
-# Building the model
-model = keras.Sequential([
-    keras.layers.Flatten(input_shape=(28, 28)),
-    keras.layers.Dense(128, activation="relu"),
-    keras.layers.Dense(10, activation="softmax") # for last layer to have probability for each given class (total =1)
-])
+# Load TFLite model and allocate tensors.
+interpreter = tf.lite.Interpreter(model_path=path_model)
+interpreter.allocate_tensors()
 
-# Compile the model
-model.compile(optimizer="adam",
-              loss="sparse_categorical_crossentropy",
-              metrics=["accuracy"])
+# Get input and output tensors.
+input_details = interpreter.get_input_details()
+output_details = interpreter.get_output_details()
+print("input_details: ", input_details)
+# print("output_details: ", output_details)
 
-# training the model
-model.fit(train_images, train_labels, epochs=5)
 
-# evaluating the model
-test_loss, test_acc = model.evaluate(test_images, test_labels, verbose=1)
+# Get input and output shapes
+floating_model = input_details[0]['dtype'] == np.float32
+height = input_details[0]['shape'][1]
+width = input_details[0]['shape'][2]
 
-# Making predictions
-predictions = model.predict(test_images)
-print("predictions image 1: ", predictions[0])
-print("Highest value predictions image 1: ", np.argmax(predictions[0]))
-print("Corresponding label prediction image 1: ", class_names[test_labels[0]])
+# Test model on  input data.
+input_shape = input_details[0]['shape']
 
+# Preprocessing data 2
+index = 0
+input_data_array = []
+for image in test_images:
+    input_data = np.expand_dims(test_images[index], axis=0)
+    index += 1
+    if floating_model:
+        input_data = np.float32(input_data)
+    input_data_array.append(input_data)
+
+output_data_array = []
+for index in range(10000):
+    interpreter.set_tensor(input_details[0]['index'], input_data_array[index])
+    interpreter.invoke()
+    output_data = interpreter.get_tensor(output_details[0]['index'])
+    output_data_array.append(output_data)
+
+index = 536
+print("predictions image 1: ", output_data_array[index][0])
+print("Highest value predictions image 1: ", np.argmax(output_data_array[index][0]))
+print("Corresponding label prediction image 1: ", class_names[test_labels[index]])
