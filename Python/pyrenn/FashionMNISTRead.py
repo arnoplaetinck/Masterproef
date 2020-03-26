@@ -1,21 +1,31 @@
 import tensorflow as tf
-from tensorflow import keras
 import numpy as np
+import gzip
 
+f = gzip.open('./datasets/fashionMNIST/t10k-images-idx3-ubyte.gz', 'r')
+image_size = 28
+num_images = 10_000
+f.read(16)
+buf = f.read(image_size * image_size * num_images)
+data = np.frombuffer(buf, dtype=np.uint8).astype(np.float32)
+data = data.reshape(num_images, image_size, image_size)
+f.close()
 
-data = keras.datasets.fashion_mnist
-
-(train_images, train_labels), (test_images, test_labels) = data.load_data()
+f = gzip.open('./datasets/fashionMNIST/t10k-labels-idx1-ubyte.gz', 'r')
+f.read(8)
+test_labels = []
+for i in range(0, 10_000):
+    buf = f.read(1)
+    labels = np.frombuffer(buf, dtype=np.uint8).astype(np.int64)
+    test_labels.append(labels)
+f.close()
 
 class_names = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'coat',
                'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
 path_model = "./SavedNN/FashionMNIST/fashionMNISTmodel.tflite"
 
 # Data Preprocessing
-test_images = test_images / 255
-print("test_images: ", test_images.shape)
-print("test_images: ", test_images[125].shape)
-print("test_images: ", np.argmax(test_images))
+test_images = data / 255
 
 # Load TFLite model and allocate tensors.
 interpreter = tf.lite.Interpreter(model_path=path_model)
@@ -24,9 +34,6 @@ interpreter.allocate_tensors()
 # Get input and output tensors.
 input_details = interpreter.get_input_details()
 output_details = interpreter.get_output_details()
-print("input_details: ", input_details)
-# print("output_details: ", output_details)
-
 
 # Get input and output shapes
 floating_model = input_details[0]['dtype'] == np.float32
@@ -47,13 +54,8 @@ for image in test_images:
     input_data_array.append(input_data)
 
 output_data_array = []
-for index in range(10000):
+for index in range(10_000):
     interpreter.set_tensor(input_details[0]['index'], input_data_array[index])
     interpreter.invoke()
     output_data = interpreter.get_tensor(output_details[0]['index'])
     output_data_array.append(output_data)
-
-index = 536
-print("predictions image 1: ", output_data_array[index][0])
-print("Highest value predictions image 1: ", np.argmax(output_data_array[index][0]))
-print("Corresponding label prediction image 1: ", class_names[test_labels[index]])

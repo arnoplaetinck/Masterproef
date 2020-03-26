@@ -38,7 +38,7 @@ Het gebruiken van \gls{ai} kan vele voordelen hebben\cite{frankwatching}\cite{SA
 	Om \gls{ml} technieken toe te passen moet men gebruik maken van een bepaald model dat is toegepast op trainingsdata en hierdoor nieuwe data kan verwerken om voorspellingen te maken van de te verwachte resultaten. Er bestaat een hele waaier aan mogelijke modellen. In de volgende paragrafen worden een aantal opties besproken waarna er de verschillende modellen met elkaar vergeleken worden.
 	
 		\subsubsection{Artifici\"ele Neurale Netwerken}
-		\gls{ann} zijn een term dat gebruikt wordt om algoritmes te omschrijven. Het zijn algoritmes die in staat zijn om een bepaalde taak te leren, en zichzelf te verbeteren. In de meeste gevallen worden er amper richtlijnen of een omschrijving meegegeven. Het systeem ontdekt zelf hoe deze regels in elkaar zitten\cite{carbonell1983overview}. Hierbij blijft de interpretatie van de input wel nog een belangrijk gegeven dat wordt ingesteld door de programmeur. Een bekend voorbeeld is het herkennen van de cijfers 0 tot 9. Hierin wordt er niet aan het systeem verteld dat het cijfer 8 uit twee cirkels bestaat die verticaal tegen elkaar aansluiten. Het algoritme zal dit gaandeweg ontdekken, met behulp van de vele voorbeelden waar het gebruik van kan maken. Met behulp van veel data kan een algoritme zichzelf verfijnen en zo nauwkeuriger bepaalde cijfers herkennen.
+		\gls{ann} zijn een term dat gebruikt wordt om algoritmes te omschrijven. Het zijn algoritmes die in staat zijn om een bepaalde taak te leren, en zichzelf te verbeteren. In de meeste gevallen worden er amper richtlijnen of een omschrijving meegegeven. Het systeem ontdekt zelf hoe deze regels in elkaar zitten\cite{carbonell1983overview}. Hierbij blijft de interpretatie van de input wel nog belangrijk. Een bekend voorbeeld is het herkennen van de cijfers 0 tot 9. Hier wordt er niet aan het systeem verteld hoe de vorm van een getal er uit ziet. Het algoritme zal dit gaandeweg ontdekken, met behulp van vele voorbeelden waar het gebruik van kan maken. Met behulp van veel data kan een algoritme zichzelf verfijnen en zo nauwkeuriger bepaalde cijfers herkennen.
 		
 			\paragraph{Structuur van Neurale Netwerken}
 			Een \gls{ann} is een verzameling van nodes die met elkaar verbonden zijn zoals neuronen in de hersens van een mens. Hierbij kan elke neuron een signaal doorgeven naar het volgende neuron waar het signaal verwerkt kan worden en weer doorgegeven kan worden. Hetzelfde principe geldt ook bij \gls{nn} met het verschil dat er meerdere lagen van nodes te onderscheiden zijn. 
@@ -64,10 +64,11 @@ Het gebruiken van \gls{ai} kan vele voordelen hebben\cite{frankwatching}\cite{SA
 	
 			\subparagraph{Activatie functie}
 			De mathematische functie die een node gebruikt voor het verwerken van inputs naar outputs heet de activatie functie. In figuur~\ref{fig:artificial_neuron} wordt de algemene vorm van een neuron besproken. Deze neuron heeft $m+1$ inputs $\left(  x_0 ~t.e.m.~  x_m\right) $ en bijhorende gewichten $\left(  w_0~  t.e.m. ~ w_m \right) $.
-			Gebruikelijk wordt $x_0 = +1$ genomen. Hierdoor blijven er maar $m$ echte inputs over waardoor er voor een bepaalde output volgende functie opgesteld kan worden. Hierbij is $\phi$ een van de mogelijke transferfuncties die verder besproken zal worden.
+			Gebruikelijk wordt $x_0 = +1$ genomen. Hierdoor blijven er maar $m$ echte inputs over waardoor er voor een bepaalde output de functie \ref{eq:outputnode} opgesteld kan worden. Hierbij is $\phi$ een van de mogelijke transferfuncties die verder besproken zal worden.
 
 			\begin{equation}
-				y_k = \phi \left( \sum_{j=0}^{m}w_{kj}x_j\right) 
+				y = \phi \left( \sum_{j=0}^{m}w_{j}x_j\right) 
+				\label{eq:outputnode}
 			\end{equation}
 			
 			\begin{figure}
@@ -78,9 +79,10 @@ Het gebruiken van \gls{ai} kan vele voordelen hebben\cite{frankwatching}\cite{SA
 			\end{figure}
 			
 			\subparagraph{Types activatiefuncties}
-			De transfer functie of activatiefunctie van een neuron bevat bepaalde eigenschappen die het volledige netwerk kan verbeteren of vereenvoudigen. Hieronder zullen enkele transferfuncties besproken worden.
+			De transfer functie of activatiefunctie is een belangrijk onderdeel van een laag in een \gls{ann}. De activatiefunctie transformeert inputs uit een vorige laag en transformeert deze naar een output. Deze output zal voor een volgende laag weer als input gebruikt worden. Door gebruik te maken van de juiste activatiefuncties kunnen er niet-lineaire eigenschappen aan het netwerk toegevoegd worden. Hieronder zullen enkele transferfuncties besproken worden.
 			
 			\begin{itemize}
+				\item \textbf{Lineare Combinaties:} In dit geval is de output niets minder dan de gewogen som vermenigvuldigd met een constante waarbij zoals in formule~\ref{eq:gewogensomu} waar er nog een tweede constante wordt opgeteld.
 				\item \textbf{Stapfunctie:} Hier wordt er gekeken naar de verkregen waarde van de gewogen som $u$ van $m+1$ inputs. Bedraagt deze waarde minder dan een bepaalde drempel $\theta$, dan wordt de output gelijkgesteld aan nul, bij een hogere waarde dan weer aan 1. Dit is te zien in formule ~\ref{eq:stapfunctie}. Dit type wordt vooral gebruikt om binaire inputs te verzorgen bij de volgende laag. 
 				\begin{equation}\label{eq:gewogensomu}
 					u =  \sum_{j=0}^{m}w_{kj}x_j
@@ -90,9 +92,9 @@ Het gebruiken van \gls{ai} kan vele voordelen hebben\cite{frankwatching}\cite{SA
 					\\0&{\text{als }}u<\theta \end{cases}}
 				\end{equation}
 				\begin{equation}\label{eq:sigmoidfunctie}
-					f(x)={\frac {1}{1+e^{-x}}}
+					y={\frac {1}{1+e^{-u}}}
 				\end{equation}
-				\item \textbf{Lineare Combinaties:} In dit geval is de output niets minder dan de gewogen som vermenigvuldigd met een constante waarbij zoals in formule~\ref{eq:gewogensomu} waar er nog een tweede constante wordt opgeteld.
+				
 				\item \textbf{Sigmoid:} De Sigmoid functie\cite{han1995influence} is een mathematische functie zoals te zien is in figuur~\ref{eq:sigmoidfunctie}. Het heeft de karakteristieke 'S'-vorm zoals te zien is in figuur~\ref{fig:sigmoid}. Door deze activatiefunctie worden inputs omgezet in een waarde tussen 0 en 1 (of -1 en 1, afhankelijk van de conventie).
 				\item \textbf{Rectifier:} De rectifier als activatiefunctie\cite{nair2010rectified} is een functie die enkel het positieve deel van zijn argument doorlaat. In vergelijking ~\ref{eq:rectifier} vind je de functie weer waar x de input is van de neuron. Deze is een vector aan waarden die zowel positief als negatief kunnen zijn. Deze functie is ook gekend onder de naam \textit{\gls{relu}}.
 				\begin{equation}\label{eq:rectifier}
@@ -130,7 +132,7 @@ Het gebruiken van \gls{ai} kan vele voordelen hebben\cite{frankwatching}\cite{SA
 	
 	
 	\subsubsection{Support Vector Machines}
-	\gls{svm} of ook wel gekend als support vector networks is een model dat veelvuldig gebruikt wordt in classificatie en regressie-analyse. \gls{svm} verdelen objecten onder in twee verschillende klassen op basis van een aantal kenmerken. Het is dus een binaire classificeerder. Om aan de hand van kenmerken een onderverdeling te maken moeten deze kenmerken eerst omgezet worden in een vectorruimte. In de trainingsfase wordt er getracht een zo optimaal mogelijke scheiding tussen beide klassen te vinden. Deze optimale scheiding wordt ook wel een \textit{hypervlak} genoemd en ligt op een zo groot mogelijke afstand tussen de dichtstbijgelegen objecten van beide klasses of support vectors. in figuur ~\ref{fig:supportVectorMachines} kan u een tweedimensionaal voorbeeld vinden. Hierin is scheidingslijn H1 geen acceptabele scheiding omdat er objecten van de zwarte klasse fout geclassificeerd worden. H2 is acceptabel maar is nog niet optimaal aangezien er weinig foutmarge is voor een nieuw object. H3 is het hypervlak omdat de foutenmarge tussen de twee klassen zo groot mogelijk is. Deze methode is niet alleen bruikbaar in toepassingen met een lineaire scheiding. Ook in niet-lineaire gevallen kan men een transformatie uitvoeren om toch een lineaire scheiding te bekomen. Deze hervorming wordt ook wel de \textit{kernel trick}\cite{sun2018kernel} genoemd. 
+	\gls{svm} of ook wel gekend als support vector networks is een model dat veelvuldig gebruikt wordt in classificatie en regressie-analyse. Een belangrijke toepassing van \gls{svm} is het verdelen van objecten in twee verschillende klassen op basis van een aantal kenmerken. Het is dus onder meer een binaire classificeerder. Om aan de hand van kenmerken een onderverdeling te maken moeten deze kenmerken eerst omgezet worden in een vectorruimte. In de trainingsfase wordt er getracht een zo optimaal mogelijke scheiding tussen beide klassen te vinden. Deze optimale scheiding wordt ook wel een \textit{hypervlak} genoemd en ligt op een zo groot mogelijke afstand tussen de dichtstbijgelegen objecten van beide klasses of support vectors. in figuur ~\ref{fig:supportVectorMachines} kan u een tweedimensionaal voorbeeld vinden. Hierin is scheidingslijn H1 geen acceptabele scheiding omdat er objecten van de zwarte klasse fout geclassificeerd worden. H2 is acceptabel maar is nog niet optimaal aangezien er weinig foutmarge is voor een nieuw object. H3 is het hypervlak omdat de foutenmarge tussen de twee klassen zo groot mogelijk is. Deze methode is niet alleen bruikbaar in toepassingen met een lineaire scheiding. Ook in niet-lineaire gevallen kan men een transformatie uitvoeren om toch een lineaire scheiding te bekomen. Deze hervorming wordt ook wel de \textit{kernel trick}\cite{sun2018kernel} genoemd. 
 	
 	
 	\begin{figure}
@@ -247,7 +249,7 @@ Er zijn verschillende mogelijkheden om een neuraal netwerk te laten leren. De dr
 \section{Evolutie Single Board Computers}
 Een \gls{sbc} is een volledige computer gemaakt op 1 enkele printplaat. Het bevat onderdelen zoals een microprocessor, geheugen, inputs en outputs. De eerste \gls{sbc} werd ontwikkeld als een voorstel-hulpmiddel bij educatieve doelstellingen of het gebruik als een embedded computer controller. Tegenwoordig zijn ook vele (draagbare) computers ge\"integreerd op \'e\'en printplaat. Het grote verschil met (draagbare) computers is dat er geen nood is aan expansion slots zoals bijvoorbeeld voor RAM-geheugen of een \gls{gpu}.
 	\subsection{Geschiedenis}
-	De eerste echte SBC was de zogenaamde "dyna-micro"\space uit figuur ~\ref{fig:eersteSBC} die later de naam "MMD-1" (Mini-Micro Designer 1) kreeg. Dit toestel werd uitgegeven in 1976 en werd populair doordat het werd gepresenteerd in het destijds 'BugBook'. Een andere vroege \gls{sbc} was de KIM-1 (Keyboard Input Monitor 1) uit hetzelfde jaar. Beide machines werden voor ingenieurs geproduceerd en ontworpen maar vonden een breed publiek onder de hobbyisten waar het heel populair werd. Later kwamen nog andere namen zoals de Ferguson Big Board en de Nascom.
+	De eerste echte SBC was de zogenaamde "dyna-micro"\space uit figuur ~\ref{fig:eersteSBC} die later de naam "MMD-1" (Mini-Micro Designer 1) kreeg\cite{bron:fotoeerstesbc}. Dit toestel werd uitgegeven in 1976 en werd populair doordat het werd gepresenteerd in het destijds 'BugBook'. Een andere vroege \gls{sbc} was de KIM-1 (Keyboard Input Monitor 1) uit hetzelfde jaar. Beide machines werden voor ingenieurs geproduceerd en ontworpen maar vonden een breed publiek onder de hobbyisten waar het heel populair werd. Later kwamen nog andere namen zoals de Ferguson Big Board en de Nascom.
 
 	\begin{figure}
 		\centering
@@ -272,7 +274,7 @@ Een \gls{sbc} is een volledige computer gemaakt op 1 enkele printplaat. Het beva
 
 %------------------------------------------------------------------------------
 \section{Assortiment aan 'off the shelf' toestellen}
-In deze sectie wordt er een kort overzicht gegeven van de te gebruiken \gls{sbc}s. Er werd gekozen om met vijf verschillende toestellen te werken die verspreid liggen over het spectrum. Zo zijn er zowel goedkope als kostelijke apparaten, populaire boards als minder gekende \gls{sbc}s. De specificaties van de verscheidene toestellen wordt ook meegegeven.
+In deze sectie wordt er een kort overzicht gegeven van de te gebruiken \gls{sbc}s binnen deze thesis. Er werd gekozen om met vijf verschillende toestellen te werken die verschillen in verscheidene aspecten. Zo zijn er zowel goedkope als kostelijkere apparaten, populaire boards als minder gekende \gls{sbc}s. Er zijn toestellen met hele geavanceerde processoren die specifiek voor \gls{ml} zijn ontworpen, maar ook processoren die ontwikkeld zijn voor meer algemenere toepassingen. De specificaties van de verscheidene toestellen worden ook meegegeven.
 	\subsection{Beaglebone AI}
 	\gls{bbai} is een \gls{sbc} dat verder bouwt op de succesvolle  BeagleBoard-series\citep{bron:bbai}. Het is een open source project met een op Linux gebaseerd aanpak. De \gls{bbai} probeert het gat tussen kleinere \gls{sbc} en krachtigere industri\"ele computers te overbruggen. Met dank aan de krachtige Texas Instruments AM5729 CPU kunnen ontwikkelaars de krachtige \gls{soc} gebruiken van een hele brede waaier aan toepassingen op het \gls{ai} terrein. De \gls{bbai} maakt het makkelijk om dat terrein te ontdekken en verkennen. Door gebruik te maken van onder andere \gls{eve} cores die steunen op een geoptimaliseerde TIDL machine learning OpenCL API met gebruiksklare hulpmiddelen kan je terecht in alledaagse automatisatie in industri\"ele, commerci\"ele en thuisapplicaties.
 	
@@ -335,7 +337,7 @@ In deze sectie wordt er een kort overzicht gegeven van de te gebruiken \gls{sbc}
 	% https://developer.nvidia.com/embedded/jetson-tx2
 	
 	\subsection{Raspberry Pi}
-	De laatste \gls{sbc} die hier besproken is de Raspberry Pi 4\citep{bron:rpi4}. Dit is een heel goedkoop en eenvoudig device. Het komt uit de heel gekende Raspberry-reeks zoals al besproken in paragraaf \ref{raspberry}. Ondanks de enorm lage prijs heeft de vierde editie nog mooie specificaties. Het heeft een behoorlijke Cortex Quad core-\gls{cpu}, degelijk geheugen met de mogelijkheid om uit te breiden m.b.v. een SD-kaart en een verrassend laag verbruik. 
+	De laatste \gls{sbc} die hier besproken is de Raspberry Pi 4\citep{bron:rpi4}. Dit is een heel goedkoop en eenvoudig device. Het komt uit de heel gekende Raspberry-reeks zoals al besproken in paragraaf \ref{raspberry}. Ondanks de enorm lage prijs heeft de vierde editie nog mooie specificaties. Het heeft een behoorlijke Cortex Quad core-\gls{cpu} met degelijk geheugen die uitgebreid wordt door een SD-kaart. 
 	
 		\subsubsection{Specificaties}
 		\begin{itemize}
@@ -353,7 +355,7 @@ In deze sectie wordt er een kort overzicht gegeven van de te gebruiken \gls{sbc}
 \section{Benchmarking van Machine Learning algoritmes}
 \label{benchmark}
 
-Om betekenisvolle resultaten te verkrijgen is het nodig om een goed bruikbare en representatieve benchmark op te stellen. Een benchmark is een onderzoek waarbij de prestaties van programma's met elkaar vergeleken worden. Dit komt tot stand als elk programma op identieke wijze wordt onderzocht. Hoe de benchmark exact in elkaar zit is gebonden aan de kwaliteitscriteria die onderzocht worden. Om ervoor te zorgen dat de benchmark onafhankelijk is van zowel het specifiek veld als toepassing, is het nodig dat er aan een aantal karakteristieken wordt voldaan\cite{libuttibenchmarking}.
+Om betekenisvolle resultaten te verkrijgen is het nodig om een goed bruikbare en representatieve benchmark op te stellen. Een benchmark is een onderzoek waarbij de prestaties van programma's met elkaar vergeleken worden. Dit komt tot stand als elk programma op identieke wijze wordt onderzocht. Door de prestaties van programma's met elkaar te vergelijken is het mogelijk de performantie van de verscheidene \gls{sbc} in kaart te brengen. Hoe de benchmark exact in elkaar zit is gebonden aan de kwaliteitscriteria die onderzocht worden. Om ervoor te zorgen dat de benchmark onafhankelijk is van zowel het specifiek veld als toepassing, is het nodig dat er aan een aantal karakteristieken wordt voldaan\cite{libuttibenchmarking}.
 
 \begin{itemize}
 	\item \textbf{Vergelijkbaarheid:} Benchmarks moeten zodanig opgesteld zijn, dat het evident is wat ze vergelijken en de conclusie ondubbelzinnig is.

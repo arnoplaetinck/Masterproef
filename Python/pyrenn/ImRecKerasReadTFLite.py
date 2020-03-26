@@ -24,7 +24,6 @@ floating_model = input_details[0]['dtype'] == np.float32
 height = input_details[0]['shape'][1]
 width = input_details[0]['shape'][2]
 
-img_set = []
 input_data2 = []
 with open("./images/KerasRead/labels.txt", mode='r') as label_file:
     for label in label_file:
@@ -33,14 +32,18 @@ with open("./images/KerasRead/labels.txt", mode='r') as label_file:
         input_data = np.expand_dims(img, axis=0)
         if floating_model:
             input_data = (np.float32(input_data) - 127.5) / 127.5
+        input_data2.append(input_data)
 
-        interpreter.set_tensor(input_details[0]['index'], input_data)
+for data in input_data2:
+    interpreter.set_tensor(input_details[0]['index'], data)
 
-        interpreter.invoke()
-        output_data = interpreter.get_tensor(output_details[0]['index'])
+    interpreter.invoke()
+    output_data = interpreter.get_tensor(output_details[0]['index'])
 
-        # decoded = imagenet_labels[np.argsort(output_data)[0, ::-1][:5] + 1]
-        # print("Result AFTER saving: ", decoded)
+    decoded = imagenet_labels[np.argsort(output_data)[0, ::-1][:5] + 1]
+    print("Result AFTER saving: ", decoded)
+
+
 
 
 

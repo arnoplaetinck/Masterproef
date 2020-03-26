@@ -5,6 +5,11 @@ import csv
 import time
 from statistics import mean
 import psutil
+from PIL import Image
+import numpy as np
+import gzip
+import tflite_runtime.interpreter as tflite
+
 
 cores = []
 cpu_percent = []
@@ -15,9 +20,9 @@ time_diff = []
 time_total_start = []
 time_total_end = []
 time_total = 0
-iterations = 20
+iterations = 2
 labels = ["compair", "friction", "narendra4", "pt2",
-          "P0Y0_narendra4", "P0Y0_compair", "gradient", "Totaal"]
+          "P0Y0_narendra4", "P0Y0_compair", "gradient", "Im Rec", "FashionMNIST", "Totaal"]
 
 ###
 # Creating a filename
@@ -60,7 +65,6 @@ for i in range(iterations):
 
     time_stop.append(time.time())
     cores.append(psutil.cpu_percent(interval=None, percpu=True))
-    virtual_mem.append(psutil.virtual_memory())
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # example_friction.py
@@ -84,7 +88,6 @@ for i in range(iterations):
 
     time_stop.append(time.time())
     cores.append(psutil.cpu_percent(interval=None, percpu=True))
-    virtual_mem.append(psutil.virtual_memory())
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # example_narendra4.py
@@ -108,7 +111,6 @@ for i in range(iterations):
 
     time_stop.append(time.time())
     cores.append(psutil.cpu_percent(interval=None, percpu=True))
-    virtual_mem.append(psutil.virtual_memory())
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # example_pt2.py
@@ -132,7 +134,6 @@ for i in range(iterations):
 
     time_stop.append(time.time())
     cores.append(psutil.cpu_percent(interval=None, percpu=True))
-    virtual_mem.append(psutil.virtual_memory())
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # example_using_P0Y0_narendra4.py
@@ -163,7 +164,6 @@ for i in range(iterations):
 
     time_stop.append(time.time())
     cores.append(psutil.cpu_percent(interval=None, percpu=True))
-    virtual_mem.append(psutil.virtual_memory())
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # example__using_P0Y0_compair.py
@@ -195,13 +195,12 @@ for i in range(iterations):
 
     time_stop.append(time.time())
     cores.append(psutil.cpu_percent(interval=None, percpu=True))
-    virtual_mem.append(psutil.virtual_memory())
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # example_gradient.py
-for i in range(iterations):
-    time_start.append(time.time())
+print("example_gradient")
 
+for i in range(iterations):
     df = genfromtxt('example_data_pt2.csv', delimiter=',')
 
     P = df[1]
@@ -233,11 +232,131 @@ for i in range(iterations):
 
     time_stop.append(time.time())
     cores.append(psutil.cpu_percent(interval=None, percpu=True))
-    virtual_mem.append(psutil.virtual_memory())
+
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+# ImRecKerasRead.py
+# 124 images from COCO val2017 dataset
+print("ImRecKerasRead")
+
+path_image = "./images/KerasRead/"
+extention = ".jpg"
+
+imagenet_labels = np.array(open(path_image+"ImageNetLabels.txt").read().splitlines())
+
+# Load TFLite model and allocate tensors.
+interpreter = tflite.Interpreter(model_path="./SavedNN/ImRecKerasModel/ImRecKerasModel.tflite")
+interpreter.allocate_tensors()
+
+# Get input and output tensors.
+input_details = interpreter.get_input_details()
+output_details = interpreter.get_output_details()
+
+floating_model = input_details[0]['dtype'] == np.float32
+height = input_details[0]['shape'][1]
+width = input_details[0]['shape'][2]
+
+input_data2 = []
+with open("./images/KerasRead/labels.txt", mode='r') as label_file:
+    for label in label_file:
+        path = path_image + label.rstrip() + extention
+        img = Image.open(path).resize((width, height))
+        input_data = np.expand_dims(img, axis=0)
+        if floating_model:
+            input_data = (np.float32(input_data) - 127.5) / 127.5
+        input_data2.append(input_data)
+
+for i in range(iterations):
+    print("iterations: ", i)
+    psutil.cpu_percent(interval=None, percpu=True)
+    time_start.append(time.time())
+
+    for data in input_data2:
+        interpreter.set_tensor(input_details[0]['index'], data)
+
+        interpreter.invoke()
+        output_data = interpreter.get_tensor(output_details[0]['index'])
+
+        # decoded = imagenet_labels[np.argsort(output_data)[0, ::-1][:5] + 1]
+        # print("Result AFTER saving: ", decoded)
+
+    time_stop.append(time.time())
+    cores.append(psutil.cpu_percent(interval=None, percpu=True))
+
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+# FashionMNISTREAD.py
+print("Fashion MNISTREAD")
+
+f = gzip.open('./datasets/fashionMNIST/t10k-images-idx3-ubyte.gz', 'r')
+image_size = 28
+num_images = 10_000
+f.read(16)
+buf = f.read(image_size * image_size * num_images)
+data = np.frombuffer(buf, dtype=np.uint8).astype(np.float32)
+data = data.reshape(num_images, image_size, image_size)
+f.close()
+
+f = gzip.open('./datasets/fashionMNIST/t10k-labels-idx1-ubyte.gz', 'r')
+f.read(8)
+test_labels = []
+for i in range(0, 10_000):
+    buf = f.read(1)
+    inhoud = np.frombuffer(buf, dtype=np.uint8).astype(np.int64)
+    test_labels.append(inhoud)
+f.close()
+
+class_names = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'coat',
+               'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
+path_model = "./SavedNN/FashionMNIST/fashionMNISTmodel.tflite"
+
+# Data Preprocessing
+test_images = data / 255
+
+# Load TFLite model and allocate tensors.
+interpreter = tflite.Interpreter(model_path=path_model)
+interpreter.allocate_tensors()
+
+# Get input and output tensors.
+input_details = interpreter.get_input_details()
+output_details = interpreter.get_output_details()
+
+# Get input and output shapes
+floating_model = input_details[0]['dtype'] == np.float32
+height = input_details[0]['shape'][1]
+width = input_details[0]['shape'][2]
+
+# Test model on  input data.
+input_shape = input_details[0]['shape']
+
+# Preprocessing data 2
+index = 0
+input_data_array = []
+
+for image in test_images:
+    input_data = np.expand_dims(test_images[index], axis=0)
+    index += 1
+    if floating_model:
+        input_data = np.float32(input_data)
+    input_data_array.append(input_data)
+
+for i in range(iterations):
+    print("iterations: ", i)
+
+    output_data_array = []
+
+    psutil.cpu_percent(interval=None, percpu=True)
+    time_start.append(time.time())
+
+    for index in range(10000):
+        interpreter.set_tensor(input_details[0]['index'], input_data_array[index])
+        interpreter.invoke()
+        output_data = interpreter.get_tensor(output_details[0]['index'])
+        output_data_array.append(output_data)
+
+    time_stop.append(time.time())
+    cores.append(psutil.cpu_percent(interval=None, percpu=True))
 
 time_total_end = time.time()
-cores.append(psutil.cpu_percent(interval=None, percpu=True))
-virtual_mem.append(psutil.virtual_memory())
+cores.append(psutil.cpu_percent(interval=2, percpu=True))
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # Logging data
@@ -257,6 +376,6 @@ with open('./logging/' + naam + ".csv", mode='w') as results_file:
     file_writer.writeheader()
     for i in range(iterations*(len(labels)-1)+1):
         j = int(i/iterations)
-        file_writer.writerow({'Naam': labels[j], 'CPU Percentage':  str(cpu_percent[i]), 'timediff': str(time_diff[i]),
-                              'virtual mem': str(virtual_mem[i])})
+        file_writer.writerow({'Naam': labels[j], 'CPU Percentage':  str(cpu_percent[i]), 'timediff': str(time_diff[i])
+                              })
 
