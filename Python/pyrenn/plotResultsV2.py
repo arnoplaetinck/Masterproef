@@ -10,10 +10,11 @@ name_train_PI = "MP_NN_ALL_TRAIN_PI3B_Mon_Mar_16_15_55_25_2020"
 name_train_NANO = "MP_NN_ALL_TRAIN_NANO_Mon_Mar_16_12_28_53_2020"
 name_train_CORAL = "MP_NN_ALL_TRAIN_CORAL_Mon_Mar_16_13_30_00_2020"
 
-name_run_PC = "MP_NN_ALL_RUN_PC_Thu_Mar_26_13_37_29_2020"
-name_run_PI = "MP_NN_ALL_RUN_PC_Thu_Mar_26_13_37_29_2020"
-name_run_NANO = "MP_NN_ALL_RUN_NANO_Wed_Mar_25_11_02_33_2020"
-name_run_CORAL = "MP_NN_ALL_RUN_PC_Thu_Mar_26_13_37_29_2020"
+name_run_PC = "MP_NN_ALL_RUN_PC_Thu_Mar_26_22_33_18_2020" # 0.1
+name_run_PI = "MP_NN_ALL_RUN_PC_Fri_Mar_27_04_00_55_2020" # none
+name_run_NANO = "MP_NN_ALL_RUN_NANO_Fri_Mar_27_02_43_08_2020" # thread
+name_run_CORAL = "MP_NN_ALL_RUN_CORAL_Fri_Mar_27_02_20_15_2020" # gpu enabled?
+
 
 devices_run = [name_run_PC, name_run_PI, name_run_NANO, name_run_CORAL]
 devices_train = [name_train_PC, name_train_PI, name_train_NANO, name_train_CORAL]
@@ -179,7 +180,7 @@ autolabel(rects4)
 
 fig.tight_layout()
 mng = plt.get_current_fig_manager()
-# mng.window.state('zoomed')
+mng.window.state('zoomed')
 plt.yscale("log")
 plt.show()
 
@@ -206,5 +207,5 @@ autolabel(rects4)
 
 fig.tight_layout()
 mng = plt.get_current_fig_manager()
-# mng.window.state('zoomed')
+mng.window.state('zoomed')
 plt.show()

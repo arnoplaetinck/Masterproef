@@ -8,11 +8,9 @@ import psutil
 from PIL import Image
 import tensorflow as tf
 import numpy as np
-# from tensorflow import Session
 import gzip
 
-# Check if gpu is being used
-# sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))
+sess = tf.compat.v1.Session(config=tf.compat.v1.ConfigProto(log_device_placement=True))
 
 cores = []
 cpu_percent = []
@@ -41,25 +39,27 @@ naam = naam.replace(':', '_')
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # first time calling cpu percent to get rid of 0,0
-psutil.cpu_percent(interval=0.1, percpu=True)
+psutil.cpu_percent(interval=None, percpu=True)
 time_total_start = time.time()
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # example_compair.py
 # This is an example of a dynamic system with 2 outputs and 3 inputs
+print("compair")
 for i in range(iterations):
     # Read Example Data
     df = genfromtxt('example_data_compressed_air.csv', delimiter=',')
+    df = df.transpose()
 
-    P = np.array([df[1], df[2], df[3]])
-    Y = np.array([df[4], df[5]])
-    Ptest = np.array([df[6], df[7], df[8]])
-    Ytest = np.array([df[9], df[10]])
+    P = np.array([df[1][1:-1], df[2][1:-1], df[3][1:-1]])
+    Y = np.array([df[4][1:-1], df[5][1:-1]])
+    Ptest = np.array([df[6][1:-1], df[7][1:-1], df[8][1:-1]])
+    Ytest = np.array([df[9][1:-1], df[10][1:-1]])
 
     # Load saved NN from file
     net = prn.loadNN("./SavedNN/compair.csv")
 
-    psutil.cpu_percent(interval=0.1, percpu=True)
+    psutil.cpu_percent(interval=None, percpu=True)
     time_start.append(time.time())
 
     # Calculate outputs of the trained NN for train and test data
@@ -71,18 +71,21 @@ for i in range(iterations):
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # example_friction.py
+print("friction")
 for i in range(iterations):
     # Read Example Data
     df = genfromtxt('example_data_friction.csv', delimiter=',')
-    P = df[1]
-    Y = df[2]
-    Ptest = df[3]
-    Ytest = df[4]
+    df = df.transpose()
+
+    P = df[1][1:-1]
+    Y = df[2][1:-1]
+    Ptest = df[3][1:-1]
+    Ytest = df[4][1:-1]
 
     # Load saved NN from file
     net = prn.loadNN("./SavedNN/friction.csv")
 
-    psutil.cpu_percent(interval=0.1, percpu=True)
+    psutil.cpu_percent(interval=None, percpu=True)
     time_start.append(time.time())
 
     # Calculate outputs of the trained NN for train and test data
@@ -94,18 +97,21 @@ for i in range(iterations):
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # example_narendra4.py
+print("narendra4")
 for i in range(iterations):
     # Read Example Data
     df = genfromtxt('example_data_narendra4.csv', delimiter=',')
-    P = df[1]
-    Y = df[2]
-    Ptest = df[3]
-    Ytest = df[4]
+    df = df.transpose()
+
+    P = df[1][1:-1]
+    Y = df[2][1:-1]
+    Ptest = df[3][1:-1]
+    Ytest = df[4][1:-1]
 
     # Load saved NN from file
     net = prn.loadNN("./SavedNN/narendra4.csv")
 
-    psutil.cpu_percent(interval=0.1, percpu=True)
+    psutil.cpu_percent(interval=None, percpu=True)
     time_start.append(time.time())
 
     # Calculate outputs of the trained NN for train and test data
@@ -117,18 +123,21 @@ for i in range(iterations):
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # example_pt2.py
+print("pt2")
 for i in range(iterations):
     # Read Example Data
     df = genfromtxt('example_data_friction.csv', delimiter=',')
-    P = df[1]
-    Y = df[2]
-    Ptest = df[3]
-    Ytest = df[4]
+    df = df.transpose()
+
+    P = df[1][1:-1]
+    Y = df[2][1:-1]
+    Ptest = df[3][1:-1]
+    Ytest = df[4][1:-1]
 
     # Load saved NN from file
     net = prn.loadNN("./SavedNN/pt2.csv")
 
-    psutil.cpu_percent(interval=0.1, percpu=True)
+    psutil.cpu_percent(interval=None, percpu=True)
     time_start.append(time.time())
 
     # Calculate outputs of the trained NN for train and test data
@@ -140,25 +149,28 @@ for i in range(iterations):
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # example_using_P0Y0_narendra4.py
+print("using_P0Y0_narendra4")
 for i in range(iterations):
     # Read Example Data
     df = genfromtxt('example_data_narendra4.csv', delimiter=',')
-    P = df[1]
-    Y = df[2]
-    Ptest_ = df[3]
-    Ytest_ = df[4]
+    df = df.transpose()
+
+    P = df[1][1:-1]
+    Y = df[2][1:-1]
+    Ptest = df[3][1:-1]
+    Ytest = df[4][1:-1]
 
     # define the first 3 timesteps t=[0,1,2] of Test Data as previous (known) data P0test and Y0test
-    P0test = Ptest_[0:3]
-    Y0test = Ytest_[0:3]
+    P0test = Ptest[0:3]
+    Y0test = Ytest[0:3]
     # Use the timesteps t = [3..99] as Test Data
-    Ptest = Ptest_[3:100]
-    Ytest = Ytest_[3:100]
+    Ptest = Ptest[3:100]
+    Ytest = Ytest[3:100]
 
     # Load saved NN from file
     net = prn.loadNN("./SavedNN/using_P0Y0_narendra4.csv")
 
-    psutil.cpu_percent(interval=0.1, percpu=True)
+    psutil.cpu_percent(interval=None, percpu=True)
     time_start.append(time.time())
 
     # Calculate outputs of the trained NN for test data with and without previous input P0 and output Y0
@@ -169,27 +181,29 @@ for i in range(iterations):
     cores.append(psutil.cpu_percent(interval=None, percpu=True))
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-# example__using_P0Y0_compair.py
+# example_using_P0Y0_compair.py
+print("using_P0Y0_compair")
 for i in range(iterations):
     # Read Example Data
     df = genfromtxt('example_data_compressed_air.csv', delimiter=',')
+    df = df.transpose()
 
-    P = np.array([df[1], df[2], df[3]])
-    Y = np.array([df[4], df[5]])
-    Ptest_ = np.array([df[6], df[7], df[8]])
-    Ytest_ = np.array([df[9], df[10]])
+    P = np.array([df[1][1:-1], df[2][1:-1], df[3][1:-1]])
+    Y = np.array([df[4][1:-1], df[5][1:-1]])
+    Ptest = np.array([df[6][1:-1], df[7][1:-1], df[8][1:-1]])
+    Ytest = np.array([df[9][1:-1], df[10][1:-1]])
 
     # define the first timestep t=0 of Test Data as previous (known) data P0test and Y0test
-    P0test = Ptest_[:, 0:1]
-    Y0test = Ytest_[:, 0:1]
+    P0test = Ptest[:, 0:1]
+    Y0test = Ytest[:, 0:1]
     # Use the timesteps t = [1..99] as Test Data
-    Ptest = Ptest_[:, 1:100]
-    Ytest = Ytest_[:, 1:100]
+    Ptest = Ptest[:, 1:100]
+    Ytest = Ytest[:, 1:100]
 
     # Load saved NN from file
     net = prn.loadNN("./SavedNN/using_P0Y0_compair.csv")
 
-    psutil.cpu_percent(interval=0.1, percpu=True)
+    psutil.cpu_percent(interval=None, percpu=True)
     time_start.append(time.time())
 
     # Calculate outputs of the trained NN for test data with and without previous input P0 and output Y0
@@ -201,18 +215,19 @@ for i in range(iterations):
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # example_gradient.py
-print("example_gradient")
+print("gradient")
 
 for i in range(iterations):
     df = genfromtxt('example_data_pt2.csv', delimiter=',')
+    df = df.transpose()
 
-    P = df[1]
-    Y = df[2]
+    P = df[1][1:-1]
+    Y = df[2][1:-1]
 
     # Load saved NN from file
     net = prn.loadNN("./SavedNN/gradient.csv")
 
-    psutil.cpu_percent(interval=0.1, percpu=True)
+    psutil.cpu_percent(interval=None, percpu=True)
     time_start.append(time.time())
 
     # Prepare input Data for gradient calculation
@@ -257,6 +272,7 @@ output_details = interpreter.get_output_details()
 floating_model = input_details[0]['dtype'] == np.float32
 height = input_details[0]['shape'][1]
 width = input_details[0]['shape'][2]
+print("height: ", height, " width", width)
 
 input_data2 = []
 with open("./images/KerasRead/labels.txt", mode='r') as label_file:
@@ -269,7 +285,7 @@ with open("./images/KerasRead/labels.txt", mode='r') as label_file:
         input_data2.append(input_data)
 
 for i in range(iterations):
-    psutil.cpu_percent(interval=0.1, percpu=True)
+    psutil.cpu_percent(interval=None, percpu=True)
     time_start.append(time.time())
 
     for data in input_data2:
@@ -332,16 +348,20 @@ input_shape = input_details[0]['shape']
 # Preprocessing data 2
 index = 0
 input_data_array = []
+
 for image in test_images:
     input_data = np.expand_dims(test_images[index], axis=0)
     index += 1
     if floating_model:
         input_data = np.float32(input_data)
     input_data_array.append(input_data)
+
 for i in range(iterations):
     output_data_array = []
-    psutil.cpu_percent(interval=0.1, percpu=True)
+
+    psutil.cpu_percent(interval=None, percpu=True)
     time_start.append(time.time())
+
     for index in range(10000):
         interpreter.set_tensor(input_details[0]['index'], input_data_array[index])
         interpreter.invoke()
@@ -365,7 +385,7 @@ for core in cores:
     cpu_percent.append(mean(cores[i]))
     i += 1
 i = 0
-
+print(cores)
 with open('./logging/' + naam + ".csv", mode='w') as results_file:
     fieldnames = ['Naam', 'CPU Percentage', 'timediff', 'virtual mem']
     file_writer = csv.DictWriter(results_file, fieldnames=fieldnames)

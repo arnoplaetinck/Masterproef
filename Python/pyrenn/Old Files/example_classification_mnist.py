@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 import pickle
 import numpy as np
 import pyrenn as prn
-from tensorflow import keras
 from numpy import genfromtxt
 from keras.datasets import mnist
 ###

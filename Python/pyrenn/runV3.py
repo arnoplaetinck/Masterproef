@@ -21,7 +21,7 @@ time_diff = []
 time_total_start = []
 time_total_end = []
 time_total = 0
-iterations = 1
+iterations = 20
 labels = ["compair", "friction", "narendra4", "pt2",
           "P0Y0_narendra4", "P0Y0_compair", "gradient", "Im Rec", "FashionMNIST", "Totaal"]
 
@@ -43,14 +43,22 @@ class myThread(threading.Thread):
         self.name = name
 
     def run(self):
-        cores.append(psutil.cpu_percent(interval=1, percpu=True))
+        cores.append(psutil.cpu_percent(interval=0.05, percpu=True))
+
+    def run2(self):
+        cores.append(psutil.cpu_percent(interval=6, percpu=True))
+
+    def run3(self):
+        cores.append(psutil.cpu_percent(interval=0.7, percpu=True))
 
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # first time calling cpu percent to get rid of 0,0
-thread1
-psutil.cpu_percent(interval=None, percpu=True)
+thread1 = myThread("Thread-1")
+thread1.start()
+
+psutil.cpu_percent(interval=0.1, percpu=True)
 time_total_start = time.time()
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -59,16 +67,17 @@ time_total_start = time.time()
 for i in range(iterations):
     # Read Example Data
     df = genfromtxt('example_data_compressed_air.csv', delimiter=',')
+    df = df.transpose()
 
-    P = np.array([df[1], df[2], df[3]])
-    Y = np.array([df[4], df[5]])
-    Ptest = np.array([df[6], df[7], df[8]])
-    Ytest = np.array([df[9], df[10]])
+    P = np.array([df[1][1:-1], df[2][1:-1], df[3][1:-1]])
+    Y = np.array([df[4][1:-1], df[5][1:-1]])
+    Ptest = np.array([df[6][1:-1], df[7][1:-1], df[8][1:-1]])
+    Ytest = np.array([df[9][1:-1], df[10][1:-1]])
 
     # Load saved NN from file
     net = prn.loadNN("./SavedNN/compair.csv")
 
-    psutil.cpu_percent(interval=None, percpu=True)
+    thread1.run()
     time_start.append(time.time())
 
     # Calculate outputs of the trained NN for train and test data
@@ -77,21 +86,25 @@ for i in range(iterations):
 
     time_stop.append(time.time())
 
+    thread1.join()
+print(cores)
 print("Done")
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # example_friction.py
 for i in range(iterations):
     # Read Example Data
     df = genfromtxt('example_data_friction.csv', delimiter=',')
-    P = df[1]
-    Y = df[2]
-    Ptest = df[3]
-    Ytest = df[4]
+    df = df.transpose()
+
+    P = df[1][1:-1]
+    Y = df[2][1:-1]
+    Ptest = df[3][1:-1]
+    Ytest = df[4][1:-1]
 
     # Load saved NN from file
     net = prn.loadNN("./SavedNN/friction.csv")
 
-    psutil.cpu_percent(interval=None, percpu=True)
+    thread1.run()
     time_start.append(time.time())
 
     # Calculate outputs of the trained NN for train and test data
@@ -99,22 +112,24 @@ for i in range(iterations):
     ytest = prn.NNOut(Ptest, net)
 
     time_stop.append(time.time())
-    cores.append(psutil.cpu_percent(interval=None, percpu=True))
+    thread1.join()
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # example_narendra4.py
 for i in range(iterations):
     # Read Example Data
     df = genfromtxt('example_data_narendra4.csv', delimiter=',')
-    P = df[1]
-    Y = df[2]
-    Ptest = df[3]
-    Ytest = df[4]
+    df = df.transpose()
+
+    P = df[1][1:-1]
+    Y = df[2][1:-1]
+    Ptest = df[3][1:-1]
+    Ytest = df[4][1:-1]
 
     # Load saved NN from file
     net = prn.loadNN("./SavedNN/narendra4.csv")
 
-    psutil.cpu_percent(interval=None, percpu=True)
+    thread1.run()
     time_start.append(time.time())
 
     # Calculate outputs of the trained NN for train and test data
@@ -122,22 +137,24 @@ for i in range(iterations):
     ytest = prn.NNOut(Ptest, net)
 
     time_stop.append(time.time())
-    cores.append(psutil.cpu_percent(interval=None, percpu=True))
+    thread1.join()
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # example_pt2.py
 for i in range(iterations):
     # Read Example Data
     df = genfromtxt('example_data_friction.csv', delimiter=',')
-    P = df[1]
-    Y = df[2]
-    Ptest = df[3]
-    Ytest = df[4]
+    df = df.transpose()
+
+    P = df[1][1:-1]
+    Y = df[2][1:-1]
+    Ptest = df[3][1:-1]
+    Ytest = df[4][1:-1]
 
     # Load saved NN from file
     net = prn.loadNN("./SavedNN/pt2.csv")
 
-    psutil.cpu_percent(interval=None, percpu=True)
+    thread1.run()
     time_start.append(time.time())
 
     # Calculate outputs of the trained NN for train and test data
@@ -145,29 +162,31 @@ for i in range(iterations):
     ytest = prn.NNOut(Ptest, net)
 
     time_stop.append(time.time())
-    cores.append(psutil.cpu_percent(interval=None, percpu=True))
+    thread1.join()
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # example_using_P0Y0_narendra4.py
 for i in range(iterations):
     # Read Example Data
     df = genfromtxt('example_data_narendra4.csv', delimiter=',')
-    P = df[1]
-    Y = df[2]
-    Ptest_ = df[3]
-    Ytest_ = df[4]
+    df = df.transpose()
 
-    # define the first 3 timesteps t=[0,1,2] of Test Data as previous (known) data P0test and Y0test
-    P0test = Ptest_[0:3]
-    Y0test = Ytest_[0:3]
-    # Use the timesteps t = [3..99] as Test Data
-    Ptest = Ptest_[3:100]
-    Ytest = Ytest_[3:100]
+    P = df[1][1:-1]
+    Y = df[2][1:-1]
+    Ptest = df[3][1:-1]
+    Ytest = df[4][1:-1]
+
+    # define the first 3 time steps t=[0,1,2] of Test Data as previous (known) data P0test and Y0test
+    P0test = Ptest[0:3]
+    Y0test = Ytest[0:3]
+    # Use the time steps t = [3..99] as Test Data
+    Ptest = Ptest[3:100]
+    Ytest = Ytest[3:100]
 
     # Load saved NN from file
     net = prn.loadNN("./SavedNN/using_P0Y0_narendra4.csv")
 
-    psutil.cpu_percent(interval=None, percpu=True)
+    thread1.run()
     time_start.append(time.time())
 
     # Calculate outputs of the trained NN for test data with and without previous input P0 and output Y0
@@ -175,30 +194,31 @@ for i in range(iterations):
     y0test = prn.NNOut(Ptest, net, P0=P0test, Y0=Y0test)
 
     time_stop.append(time.time())
-    cores.append(psutil.cpu_percent(interval=None, percpu=True))
+    thread1.join()
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # example__using_P0Y0_compair.py
 for i in range(iterations):
     # Read Example Data
     df = genfromtxt('example_data_compressed_air.csv', delimiter=',')
+    df = df.transpose()
 
-    P = np.array([df[1], df[2], df[3]])
-    Y = np.array([df[4], df[5]])
-    Ptest_ = np.array([df[6], df[7], df[8]])
-    Ytest_ = np.array([df[9], df[10]])
+    P = np.array([df[1][1:-1], df[2][1:-1], df[3][1:-1]])
+    Y = np.array([df[4][1:-1], df[5][1:-1]])
+    Ptest = np.array([df[6][1:-1], df[7][1:-1], df[8][1:-1]])
+    Ytest = np.array([df[9][1:-1], df[10][1:-1]])
 
     # define the first timestep t=0 of Test Data as previous (known) data P0test and Y0test
-    P0test = Ptest_[:, 0:1]
-    Y0test = Ytest_[:, 0:1]
+    P0test = Ptest[:, 0:1]
+    Y0test = Ytest[:, 0:1]
     # Use the timesteps t = [1..99] as Test Data
-    Ptest = Ptest_[:, 1:100]
-    Ytest = Ytest_[:, 1:100]
+    Ptest = Ptest[:, 1:100]
+    Ytest = Ytest[:, 1:100]
 
     # Load saved NN from file
     net = prn.loadNN("./SavedNN/using_P0Y0_compair.csv")
 
-    psutil.cpu_percent(interval=None, percpu=True)
+    thread1.run()
     time_start.append(time.time())
 
     # Calculate outputs of the trained NN for test data with and without previous input P0 and output Y0
@@ -206,7 +226,7 @@ for i in range(iterations):
     y0test = prn.NNOut(Ptest, net, P0=P0test, Y0=Y0test)
 
     time_stop.append(time.time())
-    cores.append(psutil.cpu_percent(interval=None, percpu=True))
+    thread1.join()
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # example_gradient.py
@@ -221,7 +241,7 @@ for i in range(iterations):
     # Load saved NN from file
     net = prn.loadNN("./SavedNN/gradient.csv")
 
-    psutil.cpu_percent(interval=None, percpu=True)
+    thread1.run()
     time_start.append(time.time())
 
     # Prepare input Data for gradient calculation
@@ -243,7 +263,7 @@ for i in range(iterations):
     #    print('g_rtrl/g_bptt = ', g_rtrl / g_bptt)
 
     time_stop.append(time.time())
-    cores.append(psutil.cpu_percent(interval=None, percpu=True))
+    thread1.join()
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # ImRecKerasRead.py
@@ -278,7 +298,7 @@ with open("./images/KerasRead/labels.txt", mode='r') as label_file:
         input_data2.append(input_data)
 
 for i in range(iterations):
-    psutil.cpu_percent(interval=None, percpu=True)
+    thread1.run2()
     time_start.append(time.time())
 
     for data in input_data2:
@@ -291,7 +311,7 @@ for i in range(iterations):
         # print("Result AFTER saving: ", decoded)
 
     time_stop.append(time.time())
-    cores.append(psutil.cpu_percent(interval=None, percpu=True))
+    thread1.join()
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # FashionMNISTREAD.py
@@ -349,8 +369,10 @@ for image in test_images:
     input_data_array.append(input_data)
 for i in range(iterations):
     output_data_array = []
-    psutil.cpu_percent(interval=None, percpu=True)
+
+    thread1.run3()
     time_start.append(time.time())
+
     for index in range(10000):
         interpreter.set_tensor(input_details[0]['index'], input_data_array[index])
         interpreter.invoke()
@@ -358,7 +380,7 @@ for i in range(iterations):
         output_data_array.append(output_data)
 
     time_stop.append(time.time())
-    cores.append(psutil.cpu_percent(interval=None, percpu=True))
+    thread1.join()
 
 time_total_end = time.time()
 cores.append(psutil.cpu_percent(interval=2, percpu=True))

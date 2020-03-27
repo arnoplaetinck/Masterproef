@@ -20,7 +20,7 @@ time_diff = []
 time_total_start = []
 time_total_end = []
 time_total = 0
-iterations = 2
+iterations = 20
 labels = ["compair", "friction", "narendra4", "pt2",
           "P0Y0_narendra4", "P0Y0_compair", "gradient", "Im Rec", "FashionMNIST", "Totaal"]
 
@@ -30,7 +30,7 @@ labels = ["compair", "friction", "narendra4", "pt2",
 seconds = time.time()
 local_time = time.ctime(seconds)
 naam2 = local_time.split()
-naam = "MP_NN_ALL_RUN_PC"
+naam = "MP_NN_ALL_RUN_CORAL"
 for i in range(len(naam2)):
     naam += "_" + naam2[i]
 naam = naam.replace(':', '_')
@@ -44,14 +44,16 @@ time_total_start = time.time()
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # example_compair.py
 # This is an example of a dynamic system with 2 outputs and 3 inputs
+print("compair")
 for i in range(iterations):
     # Read Example Data
     df = genfromtxt('example_data_compressed_air.csv', delimiter=',')
+    df = df.transpose()
 
-    P = np.array([df[1], df[2], df[3]])
-    Y = np.array([df[4], df[5]])
-    Ptest = np.array([df[6], df[7], df[8]])
-    Ytest = np.array([df[9], df[10]])
+    P = np.array([df[1][1:-1], df[2][1:-1], df[3][1:-1]])
+    Y = np.array([df[4][1:-1], df[5][1:-1]])
+    Ptest = np.array([df[6][1:-1], df[7][1:-1], df[8][1:-1]])
+    Ytest = np.array([df[9][1:-1], df[10][1:-1]])
 
     # Load saved NN from file
     net = prn.loadNN("./SavedNN/compair.csv")
@@ -68,13 +70,16 @@ for i in range(iterations):
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # example_friction.py
+print("friction")
 for i in range(iterations):
     # Read Example Data
     df = genfromtxt('example_data_friction.csv', delimiter=',')
-    P = df[1]
-    Y = df[2]
-    Ptest = df[3]
-    Ytest = df[4]
+    df = df.transpose()
+
+    P = df[1][1:-1]
+    Y = df[2][1:-1]
+    Ptest = df[3][1:-1]
+    Ytest = df[4][1:-1]
 
     # Load saved NN from file
     net = prn.loadNN("./SavedNN/friction.csv")
@@ -91,13 +96,16 @@ for i in range(iterations):
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # example_narendra4.py
+print("narendra4")
 for i in range(iterations):
     # Read Example Data
     df = genfromtxt('example_data_narendra4.csv', delimiter=',')
-    P = df[1]
-    Y = df[2]
-    Ptest = df[3]
-    Ytest = df[4]
+    df = df.transpose()
+
+    P = df[1][1:-1]
+    Y = df[2][1:-1]
+    Ptest = df[3][1:-1]
+    Ytest = df[4][1:-1]
 
     # Load saved NN from file
     net = prn.loadNN("./SavedNN/narendra4.csv")
@@ -114,13 +122,16 @@ for i in range(iterations):
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # example_pt2.py
+print("pt2")
 for i in range(iterations):
     # Read Example Data
     df = genfromtxt('example_data_friction.csv', delimiter=',')
-    P = df[1]
-    Y = df[2]
-    Ptest = df[3]
-    Ytest = df[4]
+    df = df.transpose()
+
+    P = df[1][1:-1]
+    Y = df[2][1:-1]
+    Ptest = df[3][1:-1]
+    Ytest = df[4][1:-1]
 
     # Load saved NN from file
     net = prn.loadNN("./SavedNN/pt2.csv")
@@ -137,20 +148,23 @@ for i in range(iterations):
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # example_using_P0Y0_narendra4.py
+print("using_P0Y0_narendra4")
 for i in range(iterations):
     # Read Example Data
     df = genfromtxt('example_data_narendra4.csv', delimiter=',')
-    P = df[1]
-    Y = df[2]
-    Ptest_ = df[3]
-    Ytest_ = df[4]
+    df = df.transpose()
+
+    P = df[1][1:-1]
+    Y = df[2][1:-1]
+    Ptest = df[3][1:-1]
+    Ytest = df[4][1:-1]
 
     # define the first 3 timesteps t=[0,1,2] of Test Data as previous (known) data P0test and Y0test
-    P0test = Ptest_[0:3]
-    Y0test = Ytest_[0:3]
+    P0test = Ptest[0:3]
+    Y0test = Ytest[0:3]
     # Use the timesteps t = [3..99] as Test Data
-    Ptest = Ptest_[3:100]
-    Ytest = Ytest_[3:100]
+    Ptest = Ptest[3:100]
+    Ytest = Ytest[3:100]
 
     # Load saved NN from file
     net = prn.loadNN("./SavedNN/using_P0Y0_narendra4.csv")
@@ -170,18 +184,19 @@ for i in range(iterations):
 for i in range(iterations):
     # Read Example Data
     df = genfromtxt('example_data_compressed_air.csv', delimiter=',')
+    df = df.transpose()
 
-    P = np.array([df[1], df[2], df[3]])
-    Y = np.array([df[4], df[5]])
-    Ptest_ = np.array([df[6], df[7], df[8]])
-    Ytest_ = np.array([df[9], df[10]])
+    P = np.array([df[1][1:-1], df[2][1:-1], df[3][1:-1]])
+    Y = np.array([df[4][1:-1], df[5][1:-1]])
+    Ptest = np.array([df[6][1:-1], df[7][1:-1], df[8][1:-1]])
+    Ytest = np.array([df[9][1:-1], df[10][1:-1]])
 
     # define the first timestep t=0 of Test Data as previous (known) data P0test and Y0test
-    P0test = Ptest_[:, 0:1]
-    Y0test = Ytest_[:, 0:1]
+    P0test = Ptest[:, 0:1]
+    Y0test = Ytest[:, 0:1]
     # Use the timesteps t = [1..99] as Test Data
-    Ptest = Ptest_[:, 1:100]
-    Ytest = Ytest_[:, 1:100]
+    Ptest = Ptest[:, 1:100]
+    Ytest = Ytest[:, 1:100]
 
     # Load saved NN from file
     net = prn.loadNN("./SavedNN/using_P0Y0_compair.csv")
@@ -198,13 +213,14 @@ for i in range(iterations):
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # example_gradient.py
-print("example_gradient")
+print("gradient")
 
 for i in range(iterations):
     df = genfromtxt('example_data_pt2.csv', delimiter=',')
+    df = df.transpose()
 
-    P = df[1]
-    Y = df[2]
+    P = df[1][1:-1]
+    Y = df[2][1:-1]
 
     # Load saved NN from file
     net = prn.loadNN("./SavedNN/gradient.csv")
@@ -244,7 +260,8 @@ extention = ".jpg"
 imagenet_labels = np.array(open(path_image+"ImageNetLabels.txt").read().splitlines())
 
 # Load TFLite model and allocate tensors.
-interpreter = tflite.Interpreter(model_path="./SavedNN/ImRecKerasModel/ImRecKerasModel.tflite")
+interpreter = tflite.Interpreter(model_path="./SavedNN/ImRecKerasModel/ImRecKerasModel.tflite",
+                                 experimental_delegates=[tflite.load_delegate('libedgetpu.so.1')])
 interpreter.allocate_tensors()
 
 # Get input and output tensors.
@@ -312,7 +329,8 @@ path_model = "./SavedNN/FashionMNIST/fashionMNISTmodel.tflite"
 test_images = data / 255
 
 # Load TFLite model and allocate tensors.
-interpreter = tflite.Interpreter(model_path=path_model)
+interpreter = tflite.Interpreter(model_path=path_model,
+                                 experimental_delegates=[tflite.load_delegate('libedgetpu.so.1')])
 interpreter.allocate_tensors()
 
 # Get input and output tensors.
