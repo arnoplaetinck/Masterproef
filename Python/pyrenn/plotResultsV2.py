@@ -10,8 +10,8 @@ name_train_PI = "MP_NN_ALL_TRAIN_PI3B_Mon_Mar_16_15_55_25_2020"
 name_train_NANO = "MP_NN_ALL_TRAIN_NANO_Mon_Mar_16_12_28_53_2020"
 name_train_CORAL = "MP_NN_ALL_TRAIN_CORAL_Mon_Mar_16_13_30_00_2020"
 
-name_run_PC = "MP_NN_ALL_RUN_PC_Thu_Mar_26_22_33_18_2020" # 0.1
-name_run_PI = "MP_NN_ALL_RUN_PC_Fri_Mar_27_04_00_55_2020" # none
+name_run_PC = "MP_NN_ALL_RUN_PC_Fri_Mar_27_04_30_17_2020" # 0.1
+name_run_PI = "MP_NN_ALL_RUN_PC_Fri_Mar_27_04_35_03_2020" # none
 name_run_NANO = "MP_NN_ALL_RUN_NANO_Fri_Mar_27_02_43_08_2020" # thread
 name_run_CORAL = "MP_NN_ALL_RUN_CORAL_Fri_Mar_27_02_20_15_2020" # gpu enabled?
 
