@@ -8,18 +8,16 @@ import psutil
 from PIL import Image
 import tensorflow as tf
 import numpy as np
-import threading
-# from tensorflow import Session
 import gzip
+
+sess = tf.compat.v1.Session(config=tf.compat.v1.ConfigProto(log_device_placement=True))
 
 cores = []
 cpu_percent = []
 virtual_mem = []
 time_start = []
 time_stop = []
-time_diff = []
-time_total_start = []
-time_total_end = []
+
 time_total = 0
 iterations = 20
 labels = ["compair", "friction", "narendra4", "pt2",
@@ -36,35 +34,38 @@ for i in range(len(naam2)):
     naam += "_" + naam2[i]
 naam = naam.replace(':', '_')
 
+with open('./logging/' + naam + ".csv", mode='w') as results_file:
+    fieldnames = ['Naam', 'CPU Percentage', 'timediff']
+    file_writer = csv.DictWriter(results_file, fieldnames=fieldnames)
+    file_writer.writeheader()
 
-class myThread(threading.Thread):
-    def __init__(self, name):
-        threading.Thread.__init__(self)
-        self.name = name
 
-    def run(self):
-        cores.append(psutil.cpu_percent(interval=0.05, percpu=True))
+def logging_data(program_index, stop, start, cpu):
+    # Logging data
+    cores_avg = mean(cpu)
+    time_diff = stop-start
 
-    def run2(self):
-        cores.append(psutil.cpu_percent(interval=6, percpu=True))
+    with open('./logging/' + naam + ".csv", mode='a+') as data_file:
+        data_writer = csv.DictWriter(data_file, fieldnames=fieldnames)
 
-    def run3(self):
-        cores.append(psutil.cpu_percent(interval=0.7, percpu=True))
+        data_writer.writerow(
+            {'Naam': labels[program_index],
+             'CPU Percentage': str(cores_avg),
+             'timediff': str(time_diff)
+             })
 
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # first time calling cpu percent to get rid of 0,0
-thread1 = myThread("Thread-1")
-thread1.start()
-
-psutil.cpu_percent(interval=0.1, percpu=True)
-time_total_start = time.time()
+psutil.cpu_percent(interval=None, percpu=True)
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # example_compair.py
 # This is an example of a dynamic system with 2 outputs and 3 inputs
-for i in range(iterations):
+print("compair")
+iteration = 0
+while iteration < iterations:
     # Read Example Data
     df = genfromtxt('example_data_compressed_air.csv', delimiter=',')
     df = df.transpose()
@@ -77,22 +78,26 @@ for i in range(iterations):
     # Load saved NN from file
     net = prn.loadNN("./SavedNN/compair.csv")
 
-    thread1.run()
-    time_start.append(time.time())
+    psutil.cpu_percent(interval=None, percpu=True)
+    time_start = time.time()
 
     # Calculate outputs of the trained NN for train and test data
     y = prn.NNOut(P, net)
     ytest = prn.NNOut(Ptest, net)
 
-    time_stop.append(time.time())
+    time_stop = (time.time())
+    cores = psutil.cpu_percent(interval=None, percpu=True)
+    if (mean(cores) != 0.0) and (time_stop-time_start != 0):
+        logging_data(0, time_stop, time_start, cores)
+        iteration += 1
+        time_total += time_stop - time_start
+    print("iteration: ", iteration, " mean cores: ", mean(cores), " time_stop-time_start: ", time_stop-time_start)
 
-    thread1.join()
-print(cores)
-print("Done")
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # example_friction.py
-for i in range(iterations):
-    # Read Example Data
+print("friction")
+iteration = 0
+while iteration < iterations:    # Read Example Data
     df = genfromtxt('example_data_friction.csv', delimiter=',')
     df = df.transpose()
 
@@ -104,19 +109,25 @@ for i in range(iterations):
     # Load saved NN from file
     net = prn.loadNN("./SavedNN/friction.csv")
 
-    thread1.run()
-    time_start.append(time.time())
+    psutil.cpu_percent(interval=None, percpu=True)
+    time_start = time.time()
 
     # Calculate outputs of the trained NN for train and test data
     y = prn.NNOut(P, net)
     ytest = prn.NNOut(Ptest, net)
 
-    time_stop.append(time.time())
-    thread1.join()
-
+    time_stop = (time.time())
+    cores = psutil.cpu_percent(interval=None, percpu=True)
+    if (mean(cores) != 0.0) and (time_stop-time_start != 0):
+        logging_data(1, time_stop, time_start, cores)
+        iteration += 1
+        time_total += time_stop - time_start
+    print("iteration: ", iteration, " mean cores: ", mean(cores), " time_stop-time_start: ", time_stop-time_start)
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # example_narendra4.py
-for i in range(iterations):
+print("narendra4")
+iteration = 0
+while iteration < iterations:
     # Read Example Data
     df = genfromtxt('example_data_narendra4.csv', delimiter=',')
     df = df.transpose()
@@ -129,19 +140,25 @@ for i in range(iterations):
     # Load saved NN from file
     net = prn.loadNN("./SavedNN/narendra4.csv")
 
-    thread1.run()
-    time_start.append(time.time())
+    psutil.cpu_percent(interval=None, percpu=True)
+    time_start = time.time()
 
     # Calculate outputs of the trained NN for train and test data
     y = prn.NNOut(P, net)
     ytest = prn.NNOut(Ptest, net)
 
-    time_stop.append(time.time())
-    thread1.join()
-
+    time_stop = (time.time())
+    cores = psutil.cpu_percent(interval=None, percpu=True)
+    if (mean(cores) != 0.0) and (time_stop-time_start != 0):
+        logging_data(2, time_stop, time_start, cores)
+        iteration += 1
+        time_total += time_stop - time_start
+    print("iteration: ", iteration, " mean cores: ", mean(cores), " time_stop-time_start: ", time_stop-time_start)
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # example_pt2.py
-for i in range(iterations):
+print("pt2")
+iteration = 0
+while iteration < iterations:
     # Read Example Data
     df = genfromtxt('example_data_friction.csv', delimiter=',')
     df = df.transpose()
@@ -154,19 +171,25 @@ for i in range(iterations):
     # Load saved NN from file
     net = prn.loadNN("./SavedNN/pt2.csv")
 
-    thread1.run()
-    time_start.append(time.time())
+    psutil.cpu_percent(interval=None, percpu=True)
+    time_start = time.time()
 
     # Calculate outputs of the trained NN for train and test data
     y = prn.NNOut(P, net)
     ytest = prn.NNOut(Ptest, net)
 
-    time_stop.append(time.time())
-    thread1.join()
-
+    time_stop = (time.time())
+    cores = psutil.cpu_percent(interval=None, percpu=True)
+    if (mean(cores) != 0.0) and (time_stop-time_start != 0):
+        logging_data(3, time_stop, time_start, cores)
+        iteration += 1
+        time_total += time_stop - time_start
+    print("iteration: ", iteration, " mean cores: ", mean(cores), " time_stop-time_start: ", time_stop-time_start)
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # example_using_P0Y0_narendra4.py
-for i in range(iterations):
+print("using_P0Y0_narendra4")
+iteration = 0
+while iteration < iterations:
     # Read Example Data
     df = genfromtxt('example_data_narendra4.csv', delimiter=',')
     df = df.transpose()
@@ -176,29 +199,35 @@ for i in range(iterations):
     Ptest = df[3][1:-1]
     Ytest = df[4][1:-1]
 
-    # define the first 3 time steps t=[0,1,2] of Test Data as previous (known) data P0test and Y0test
+    # define the first 3 timesteps t=[0,1,2] of Test Data as previous (known) data P0test and Y0test
     P0test = Ptest[0:3]
     Y0test = Ytest[0:3]
-    # Use the time steps t = [3..99] as Test Data
+    # Use the timesteps t = [3..99] as Test Data
     Ptest = Ptest[3:100]
     Ytest = Ytest[3:100]
 
     # Load saved NN from file
     net = prn.loadNN("./SavedNN/using_P0Y0_narendra4.csv")
 
-    thread1.run()
-    time_start.append(time.time())
+    psutil.cpu_percent(interval=None, percpu=True)
+    time_start = time.time()
 
     # Calculate outputs of the trained NN for test data with and without previous input P0 and output Y0
     ytest = prn.NNOut(Ptest, net)
     y0test = prn.NNOut(Ptest, net, P0=P0test, Y0=Y0test)
 
-    time_stop.append(time.time())
-    thread1.join()
-
+    time_stop = (time.time())
+    cores = psutil.cpu_percent(interval=None, percpu=True)
+    if (mean(cores) != 0.0) and (time_stop-time_start != 0):
+        logging_data(4, time_stop, time_start, cores)
+        iteration += 1
+        time_total += time_stop - time_start
+    print("iteration: ", iteration, " mean cores: ", mean(cores), " time_stop-time_start: ", time_stop-time_start)
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-# example__using_P0Y0_compair.py
-for i in range(iterations):
+# example_using_P0Y0_compair.py
+print("using_P0Y0_compair")
+iteration = 0
+while iteration < iterations:
     # Read Example Data
     df = genfromtxt('example_data_compressed_air.csv', delimiter=',')
     df = df.transpose()
@@ -218,31 +247,37 @@ for i in range(iterations):
     # Load saved NN from file
     net = prn.loadNN("./SavedNN/using_P0Y0_compair.csv")
 
-    thread1.run()
-    time_start.append(time.time())
+    psutil.cpu_percent(interval=None, percpu=True)
+    time_start = time.time()
 
     # Calculate outputs of the trained NN for test data with and without previous input P0 and output Y0
     ytest = prn.NNOut(Ptest, net)
     y0test = prn.NNOut(Ptest, net, P0=P0test, Y0=Y0test)
 
-    time_stop.append(time.time())
-    thread1.join()
-
+    time_stop = (time.time())
+    cores = psutil.cpu_percent(interval=None, percpu=True)
+    if (mean(cores) != 0.0) and (time_stop-time_start != 0):
+        logging_data(5, time_stop, time_start, cores)
+        iteration += 1
+        time_total += time_stop - time_start
+    print("iteration: ", iteration, " mean cores: ", mean(cores), " time_stop-time_start: ", time_stop-time_start)
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # example_gradient.py
-print("example_gradient")
+print("gradient")
 
-for i in range(iterations):
+iteration = 0
+while iteration < iterations:
     df = genfromtxt('example_data_pt2.csv', delimiter=',')
+    df = df.transpose()
 
-    P = df[1]
-    Y = df[2]
+    P = df[1][1:-1]
+    Y = df[2][1:-1]
 
     # Load saved NN from file
     net = prn.loadNN("./SavedNN/gradient.csv")
 
-    thread1.run()
-    time_start.append(time.time())
+    psutil.cpu_percent(interval=None, percpu=True)
+    time_start = time.time()
 
     # Prepare input Data for gradient calculation
     data, net = prn.prepare_data(P, Y, net)
@@ -252,7 +287,7 @@ for i in range(iterations):
     g_rtrl = 2 * np.dot(J.transpose(), e)  # calculate g from Jacobian and error vector
 
     # Back Propagation Through Time
-    g_bptt, E = prn.BPTT(net, data)
+    # g_bptt, E = prn.BPTT(net, data)
 
     # Compare
     # print('\n\n\nComparing Methods:')
@@ -262,9 +297,13 @@ for i in range(iterations):
     #    print('\nBoth methods showing the same result!')
     #    print('g_rtrl/g_bptt = ', g_rtrl / g_bptt)
 
-    time_stop.append(time.time())
-    thread1.join()
-
+    time_stop = (time.time())
+    cores = psutil.cpu_percent(interval=None, percpu=True)
+    if (mean(cores) != 0.0) and (time_stop-time_start != 0):
+        logging_data(6, time_stop, time_start, cores)
+        iteration += 1
+        time_total += time_stop - time_start
+    print("iteration: ", iteration, " mean cores: ", mean(cores), " time_stop-time_start: ", time_stop-time_start)
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # ImRecKerasRead.py
 # 124 images from COCO val2017 dataset
@@ -273,7 +312,7 @@ print("ImRecKerasRead")
 path_image = "./images/KerasRead/"
 extention = ".jpg"
 
-imagenet_labels = np.array(open(path_image + "ImageNetLabels.txt").read().splitlines())
+imagenet_labels = np.array(open(path_image+"ImageNetLabels.txt").read().splitlines())
 
 # Load TFLite model and allocate tensors.
 interpreter = tf.lite.Interpreter(model_path="./SavedNN/ImRecKerasModel/ImRecKerasModel.tflite")
@@ -286,6 +325,7 @@ output_details = interpreter.get_output_details()
 floating_model = input_details[0]['dtype'] == np.float32
 height = input_details[0]['shape'][1]
 width = input_details[0]['shape'][2]
+print("height: ", height, " width", width)
 
 input_data2 = []
 with open("./images/KerasRead/labels.txt", mode='r') as label_file:
@@ -297,9 +337,10 @@ with open("./images/KerasRead/labels.txt", mode='r') as label_file:
             input_data = (np.float32(input_data) - 127.5) / 127.5
         input_data2.append(input_data)
 
-for i in range(iterations):
-    thread1.run2()
-    time_start.append(time.time())
+iteration = 0
+while iteration < iterations:
+    psutil.cpu_percent(interval=None, percpu=True)
+    time_start = time.time()
 
     for data in input_data2:
         interpreter.set_tensor(input_details[0]['index'], data)
@@ -310,9 +351,13 @@ for i in range(iterations):
         # decoded = imagenet_labels[np.argsort(output_data)[0, ::-1][:5] + 1]
         # print("Result AFTER saving: ", decoded)
 
-    time_stop.append(time.time())
-    thread1.join()
-
+    time_stop = (time.time())
+    cores = psutil.cpu_percent(interval=None, percpu=True)
+    if (mean(cores) != 0.0) and (time_stop-time_start != 0):
+        logging_data(7, time_stop, time_start, cores)
+        iteration += 1
+        time_total += time_stop - time_start
+    print("iteration: ", iteration, " mean cores: ", mean(cores), " time_stop-time_start: ", time_stop-time_start)
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # FashionMNISTREAD.py
 print("Fashion MNISTREAD")
@@ -361,17 +406,20 @@ input_shape = input_details[0]['shape']
 # Preprocessing data 2
 index = 0
 input_data_array = []
+
 for image in test_images:
     input_data = np.expand_dims(test_images[index], axis=0)
     index += 1
     if floating_model:
         input_data = np.float32(input_data)
     input_data_array.append(input_data)
-for i in range(iterations):
+
+iteration = 0
+while iteration < iterations:
     output_data_array = []
 
-    thread1.run3()
-    time_start.append(time.time())
+    psutil.cpu_percent(interval=None, percpu=True)
+    time_start = time.time()
 
     for index in range(10000):
         interpreter.set_tensor(input_details[0]['index'], input_data_array[index])
@@ -379,29 +427,20 @@ for i in range(iterations):
         output_data = interpreter.get_tensor(output_details[0]['index'])
         output_data_array.append(output_data)
 
-    time_stop.append(time.time())
-    thread1.join()
+    time_stop = (time.time())
+    cores = psutil.cpu_percent(interval=None, percpu=True)
+    if (mean(cores) != 0.0) and (time_stop-time_start != 0):
+        logging_data(8, time_stop, time_start, cores)
+        iteration += 1
+        time_total += time_stop - time_start
+    print("iteration: ", iteration, " mean cores: ", mean(cores), " time_stop-time_start: ", time_stop-time_start)
 
-time_total_end = time.time()
-cores.append(psutil.cpu_percent(interval=2, percpu=True))
+cores = psutil.cpu_percent(interval=2, percpu=True)
+with open('./logging/' + naam + ".csv", mode='a+') as data_file:
+    data_writer = csv.DictWriter(data_file, fieldnames=fieldnames)
 
-# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-# Logging data
-for i in range(iterations * (len(labels) - 1)):
-    time_diff.append(time_stop[i] - time_start[i])
-    time_total += time_stop[i] - time_start[i]
-time_diff.append(time_total / iterations)
-i = 0
-for core in cores:
-    cpu_percent.append(mean(cores[i]))
-    i += 1
-i = 0
-
-with open('./logging/' + naam + ".csv", mode='w') as results_file:
-    fieldnames = ['Naam', 'CPU Percentage', 'timediff', 'virtual mem']
-    file_writer = csv.DictWriter(results_file, fieldnames=fieldnames)
-    file_writer.writeheader()
-    for i in range(iterations * (len(labels) - 1) + 1):
-        j = int(i / iterations)
-        file_writer.writerow({'Naam': labels[j], 'CPU Percentage': str(cpu_percent[i]), 'timediff': str(time_diff[i])
-                              })
+    data_writer.writerow(
+        {'Naam': labels[9],
+         'CPU Percentage': str(mean(cores)),
+         'timediff': str(time_total/iterations)
+         })

@@ -1,17 +1,16 @@
 import matplotlib.pyplot as plt
 import tensorflow as tf
-
-# Importing the required Keras modules containing model and layers
-from keras.models import Sequential
-from keras.layers import Dense, Conv2D, Dropout, Flatten, MaxPooling2D
+import keras
+#
 
 (x_train, y_train), (x_test, y_test) = tf.keras.datasets.mnist.load_data()
 
-image_index = 7777  # You may select anything up to 60,000
+image_index = 7897  # You may select anything up to 60,000
 print(y_train[image_index])  # The label is 8
 plt.imshow(x_train[image_index], cmap='Greys')
+# plt.show()
 
-x_train.shape
+print("x_train.shape: ", x_train.shape)
 
 # Reshaping the array to 4-dims so that it can work with the Keras API
 x_train = x_train.reshape(x_train.shape[0], 28, 28, 1)
@@ -28,13 +27,22 @@ print('Number of images in x_train', x_train.shape[0])
 print('Number of images in x_test', x_test.shape[0])
 
 # Creating a Sequential Model and adding the layers
-model = Sequential()
-model.add(Conv2D(28, kernel_size=(3, 3), input_shape=input_shape))
-model.add(MaxPooling2D(pool_size=(2, 2)))
-model.add(Flatten())  # Flattening the 2D arrays for fully connected layers
-model.add(Dense(128, activation=tf.nn.relu))
-model.add(Dropout(0.2))
-model.add(Dense(10, activation=tf.nn.softmax))
+model = keras.models.Sequential()
+model.add(keras.layers.Conv2D(28, kernel_size=(3, 3), input_shape=input_shape))
+model.add(keras.layers.MaxPooling2D(pool_size=(2, 2)))
+model.add(keras.layers.Flatten())  # Flattening the 2D arrays for fully connected layers
+model.add(keras.layers.Dense(128, activation=tf.nn.relu))
+model.add(keras.layers.Dropout(0.2))
+model.add(keras.layers.Dense(10, activation=tf.nn.softmax))
+'''model = keras.models.Sequential([
+    keras.layers.Flatten(input_shape=(28, 28)),
+    keras.layers.Dense(512, activation=tf.nn.relu),
+    keras.layers.Dropout(0.2),
+    keras.layers.Dense(512, activation=tf.nn.relu),
+    keras.layers.Dropout(0.2),
+    keras.layers.Dense(10, activation=tf.nn.softmax)
+])
+'''
 
 # Compiling and fitting the model
 model.compile(optimizer='adam',
@@ -46,9 +54,24 @@ model.fit(x=x_train, y=y_train, epochs=1)
 model.evaluate(x_test, y_test)
 
 # Individual prediction
-image_index = 4444
+image_index = 4337
 img_rows = 28
 img_cols = 28
 plt.imshow(x_test[image_index].reshape(28, 28), cmap='Greys')
+# plt.show()
 pred = model.predict(x_test[image_index].reshape(1, img_rows, img_cols, 1))
 print(pred.argmax())
+
+path_model = "./SavedNN/NumberMNIST/"
+model.save(path_model + "NumberMNIST.h5")
+
+
+new_model = keras.models.load_model(path_model + "NumberMNIST.h5")
+
+# Converting to tflite model
+converter = tf.lite.TFLiteConverter.from_keras_model(new_model)
+converter.optimizations = [tf.lite.Optimize.DEFAULT]
+tflite_model = converter.convert()
+
+# Saving tflite model
+open(path_model + "NumberMNIST.tflite", "wb").write(tflite_model)

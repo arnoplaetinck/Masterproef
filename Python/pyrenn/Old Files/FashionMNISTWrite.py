@@ -4,8 +4,10 @@ import numpy as np
 
 data = keras.datasets.fashion_mnist
 
+path_model = "./SavedNN/FashionMNIST/"
+path_data = "./datasets/fashionMNIST/"
 (train_images, train_labels), (test_images, test_labels) = data.load_data()
-with open("./datasets/fashionMNIST/test_images.txt", mode='w') as test_images_file:
+with open(path_data+"test_images.txt", mode='w') as test_images_file:
     for image in test_images:
         for row in image:
             test_images_file.write(image[row])
@@ -16,7 +18,6 @@ with open("./datasets/fashionMNIST/test_labels.txt", mode='w') as test_labels_fi
 
 class_names = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'coat',
                'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
-path_model = "./SavedNN/FashionMNIST/"
 
 # Data Preprocessing
 train_images = train_images / 255

@@ -28,7 +28,8 @@ path_model = "./SavedNN/FashionMNIST/fashionMNISTmodel.tflite"
 test_images = data / 255
 
 # Load TFLite model and allocate tensors.
-interpreter = tflite.Interpreter(model_path=path_model)
+interpreter = tflite.Interpreter(model_path=path_model,
+                                 experimental_delegates=[tflite.load_delegate('libedgetpu.so.1')])
 interpreter.allocate_tensors()
 
 # Get input and output tensors.

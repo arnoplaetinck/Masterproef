@@ -115,10 +115,14 @@ preprocessing_layer = tf.keras.layers.DenseFeatures(categorical_columns + numeri
 
 # Building the model
 model = tf.keras.Sequential(
-    [preprocessing_layer, tf.keras.layers.Dense(128, activation='relu'), tf.keras.layers.Dense(128, activation='relu'),
+    [preprocessing_layer,
+     tf.keras.layers.Dense(128, activation='relu'),
+     tf.keras.layers.Dense(128, activation='relu'),
      tf.keras.layers.Dense(1), ])
 
-model.compile(loss=tf.keras.losses.BinaryCrossentropy(from_logits=True), optimizer='adam', metrics=['accuracy'])
+model.compile(loss=tf.keras.losses.BinaryCrossentropy(from_logits=True),
+              optimizer='adam',
+              metrics=['accuracy'])
 
 train_data = packed_train_data.shuffle(500)
 test_data = packed_test_data

@@ -10,7 +10,8 @@ extention = ".jpg"
 imagenet_labels = np.array(open(path_image+"ImageNetLabels.txt").read().splitlines())
 
 # Load TFLite model and allocate tensors.
-interpreter = tflite.Interpreter(model_path="./SavedNN/ImRecKerasModel/ImRecKerasModel.tflite")
+interpreter = tflite.Interpreter(model_path="./SavedNN/ImRecKerasModel/ImRecKerasModel.tflite",
+                                 experimental_delegates=[tflite.load_delegate('libedgetpu.so.1')])
 interpreter.allocate_tensors()
 
 # Get input and output tensors.

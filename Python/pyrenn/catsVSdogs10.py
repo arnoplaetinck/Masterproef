@@ -2,6 +2,8 @@ import tensorflow as tf
 from tensorflow.keras import datasets, layers, models
 import matplotlib.pyplot as plt
 
+# https://colab.research.google.com/drive/1ZZXnCjFEOkp_KdNcNabd14yok0BAIuwS#forceEdit=true&sandboxMode=true&scrollTo=tcoKn1VUieqx
+
 #  LOAD AND SPLIT DATASET
 (train_images, train_labels), (test_images, test_labels) = datasets.cifar10.load_data()
 
@@ -27,7 +29,7 @@ model.add(layers.Conv2D(64, (3, 3), activation='relu'))
 
 model.add(layers.Flatten())
 model.add(layers.Dense(64, activation='relu'))
-model.add(layers.Dense(10))
+model.add(layers.Dense(10, activation="softmax"))
 
 model.summary()
 
@@ -40,3 +42,16 @@ history = model.fit(train_images, train_labels, epochs=4,
 
 test_loss, test_acc = model.evaluate(test_images,  test_labels, verbose=2)
 print(test_acc)
+
+# Saving model
+path_model = "./SavedNN/catsVSdogs/"
+tf.saved_model.save(model, path_model)
+
+
+# Convert the model
+converter = tf.lite.TFLiteConverter.from_keras_model(model)
+converter.optimizations = [tf.lite.Optimize.DEFAULT]
+tflite_quant_model = converter.convert()
+
+# Saving tflite model
+open(path_model + "catsVSdogsmodel.tflite", "wb").write(tflite_quant_model)
