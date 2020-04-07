@@ -41,10 +41,10 @@
 \contentsline {subsubsection}{Specificaties}{20}{section*.39}
 \contentsline {section}{\numberline {2.6}Benchmarking van Machine Learning algoritmes}{21}{section.2.6}
 \contentsline {subsection}{\numberline {2.6.1}Bestaande benchmarks}{21}{subsection.2.6.1}
-\contentsline {chapter}{\numberline {3}Data verwerving}{23}{chapter.3}
-\contentsline {chapter}{\numberline {4}Opbouw code}{25}{chapter.4}
-\contentsline {chapter}{\numberline {5}Resultaten}{27}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusie}{29}{chapter.6}
-\contentsline {chapter}{\numberline {A}Een aanhangsel}{33}{appendix.A}
-\contentsline {chapter}{\numberline {B}Beschrijving van deze masterproef in de vorm van een wetenschappelijk artikel}{35}{appendix.B}
-\contentsline {chapter}{\numberline {C}Poster}{37}{appendix.C}
+\contentsline {chapter}{\numberline {3}Data verwerving}{25}{chapter.3}
+\contentsline {chapter}{\numberline {4}Opbouw code}{27}{chapter.4}
+\contentsline {chapter}{\numberline {5}Resultaten}{29}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusie}{31}{chapter.6}
+\contentsline {chapter}{\numberline {A}Een aanhangsel}{35}{appendix.A}
+\contentsline {chapter}{\numberline {B}Beschrijving van deze masterproef in de vorm van een wetenschappelijk artikel}{37}{appendix.B}
+\contentsline {chapter}{\numberline {C}Poster}{39}{appendix.C}
