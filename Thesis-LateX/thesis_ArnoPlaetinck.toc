@@ -42,9 +42,28 @@
 \contentsline {section}{\numberline {2.6}Benchmarking van Machine Learning algoritmes}{21}{section.2.6}
 \contentsline {subsection}{\numberline {2.6.1}Bestaande benchmarks}{21}{subsection.2.6.1}
 \contentsline {chapter}{\numberline {3}Data verwerving}{25}{chapter.3}
-\contentsline {chapter}{\numberline {4}Opbouw code}{27}{chapter.4}
-\contentsline {chapter}{\numberline {5}Resultaten}{29}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusie}{31}{chapter.6}
-\contentsline {chapter}{\numberline {A}Een aanhangsel}{35}{appendix.A}
-\contentsline {chapter}{\numberline {B}Beschrijving van deze masterproef in de vorm van een wetenschappelijk artikel}{37}{appendix.B}
-\contentsline {chapter}{\numberline {C}Poster}{39}{appendix.C}
+\contentsline {section}{\numberline {3.1}Verkennen van software}{25}{section.3.1}
+\contentsline {section}{\numberline {3.2}Verkennen edge-devices}{25}{section.3.2}
+\contentsline {section}{\numberline {3.3}Structuur programma}{25}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Regressie subprogramma's}{25}{subsection.3.3.1}
+\contentsline {subsubsection}{Programma 1: compair}{26}{section*.41}
+\contentsline {paragraph}{Aanmaken en trainen model}{26}{section*.43}
+\contentsline {subsubsection}{Programma 2: friction}{27}{section*.45}
+\contentsline {subsubsection}{Programma 3: narendra4}{27}{section*.46}
+\contentsline {subsubsection}{Programma 4: pt2}{27}{section*.47}
+\contentsline {subsubsection}{Programma 5: P0Y0-narendra4}{27}{section*.48}
+\contentsline {subsubsection}{Programma 6: gradient}{27}{section*.49}
+\contentsline {subsection}{\numberline {3.3.2}Classificatie subprogramma's}{27}{subsection.3.3.2}
+\contentsline {subsubsection}{Programma 7: FashionMNIST}{27}{section*.50}
+\contentsline {subsubsection}{Programma 8: NumberMNIST}{27}{section*.51}
+\contentsline {subsubsection}{Programma 9: catsVSdogs}{27}{section*.52}
+\contentsline {subsubsection}{Programma 10: Image Recognition}{27}{section*.53}
+\contentsline {subsection}{\numberline {3.3.3}Conversie naar TFLite}{27}{subsection.3.3.3}
+\contentsline {section}{\numberline {3.4}Uitvoeren metingen}{27}{section.3.4}
+\contentsline {section}{\numberline {3.5}Opslaan van data}{27}{section.3.5}
+\contentsline {chapter}{\numberline {4}Data verwerking}{29}{chapter.4}
+\contentsline {chapter}{\numberline {5}Resultaten}{31}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusie}{33}{chapter.6}
+\contentsline {chapter}{\numberline {A}Een aanhangsel}{37}{appendix.A}
+\contentsline {chapter}{\numberline {B}Beschrijving van deze masterproef in de vorm van een wetenschappelijk artikel}{39}{appendix.B}
+\contentsline {chapter}{\numberline {C}Poster}{41}{appendix.C}

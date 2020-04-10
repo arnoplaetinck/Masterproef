@@ -1,4 +1,3 @@
-import numpy as np
 from numpy import genfromtxt
 import pyrenn as prn
 import csv
@@ -19,7 +18,7 @@ time_start = []
 time_stop = []
 
 time_total = 0
-iterations = 20
+iterations = 2
 labels = ["compair", "friction", "narendra4", "pt2", "P0Y0_narendra4", "P0Y0_compair", "gradient",
           "FashionMNIST", "NumberMNIST", "catsVSdogs", "Im Rec", "Totaal"]
 

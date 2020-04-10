@@ -31,6 +31,12 @@
 \usepackage{hyphenat}					% afkappen woorden op einde lijn via hyphenated\hyp{}word
 \usepackage{graphicx}
 \graphicspath{ {./afbeeldingen/} }
+\usepackage{booktabs}					% gebruikt bij invoeren tabllen
+%\usepackage{numberedblock}				% gebruikt om code toe te voegen aan de text
+%\parindent 0.8in
+%\setlength\maxblocklabelsize{-.4in}
+%\setlength\blockindent{1.0in}
+
 
 \usepackage[acronym]{glossaries}        % voor afkortingen
 \makeglossaries
@@ -55,6 +61,8 @@
 \newacronym{fps}{FPS}{Frames per Second}
 \newacronym{cnn}{CNN}{Convolutional Neural Networks}
 \newacronym{iot}{IOT}{Internet-Of-Things}
+\newacronym{tf}{TF}{Tensorflow}
+\newacronym{tfl}{TFLite}{Tensorflow Lite}
 
 \usepackage{sectsty}					% aanpassen van de fonts van sections en chapters
 \allsectionsfont{\sffamily}
@@ -97,7 +105,7 @@
 
 %\campus{gent}
 
-\title{Accelerated edge computing\\ with Neural Networks}
+\title{Accelerated edge computing\\ for Neural Networks}
 
 % \author{naam student}
 \forename{Arno}
@@ -114,16 +122,13 @@
 
 \input{inleiding}
 \input{Literatuurstudie}
-
 \input{Dataverwerving}
-\input{Opbouw_code}
+\input{Data_verwerking}
 \input{Resultaten}
 \input{Conclusie}
 
 % Bibliografie: referenties. De items zitten in bibliografie.bib
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Indien je ook de niet geciteerde werken in je bibliografie wil opnemen, commentarieer dan onderstaande regel uit!
-%\nocite{*}
 \bibliographystyle{apalike}
 \bibliography{bibliografie}
 
@@ -140,7 +145,7 @@
 % Bijlage met daarin de poster
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Poster}
-%\includepdf{poster.pdf}
+\includepdf{Poster-ArnoPlaetinck.pdf}
 
 \includepdf{back_fiiw_gent.pdf}
 

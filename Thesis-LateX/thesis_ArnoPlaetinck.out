@@ -17,9 +17,17 @@
 \BOOKMARK [1][-]{section.2.6}{Benchmarking van Machine Learning algoritmes}{chapter.2}% 17
 \BOOKMARK [2][-]{subsection.2.6.1}{Bestaande benchmarks}{section.2.6}% 18
 \BOOKMARK [0][-]{chapter.3}{Data verwerving}{}% 19
-\BOOKMARK [0][-]{chapter.4}{Opbouw code}{}% 20
-\BOOKMARK [0][-]{chapter.5}{Resultaten}{}% 21
-\BOOKMARK [0][-]{chapter.6}{Conclusie}{}% 22
-\BOOKMARK [0][-]{appendix.A}{Een aanhangsel}{}% 23
-\BOOKMARK [0][-]{appendix.B}{Beschrijving van deze masterproef in de vorm van een wetenschappelijk artikel}{}% 24
-\BOOKMARK [0][-]{appendix.C}{Poster}{}% 25
+\BOOKMARK [1][-]{section.3.1}{Verkennen van software}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.2}{Verkennen edge-devices}{chapter.3}% 21
+\BOOKMARK [1][-]{section.3.3}{Structuur programma}{chapter.3}% 22
+\BOOKMARK [2][-]{subsection.3.3.1}{Regressie subprogramma's}{section.3.3}% 23
+\BOOKMARK [2][-]{subsection.3.3.2}{Classificatie subprogramma's}{section.3.3}% 24
+\BOOKMARK [2][-]{subsection.3.3.3}{Conversie naar TFLite}{section.3.3}% 25
+\BOOKMARK [1][-]{section.3.4}{Uitvoeren metingen}{chapter.3}% 26
+\BOOKMARK [1][-]{section.3.5}{Opslaan van data}{chapter.3}% 27
+\BOOKMARK [0][-]{chapter.4}{Data verwerking}{}% 28
+\BOOKMARK [0][-]{chapter.5}{Resultaten}{}% 29
+\BOOKMARK [0][-]{chapter.6}{Conclusie}{}% 30
+\BOOKMARK [0][-]{appendix.A}{Een aanhangsel}{}% 31
+\BOOKMARK [0][-]{appendix.B}{Beschrijving van deze masterproef in de vorm van een wetenschappelijk artikel}{}% 32
+\BOOKMARK [0][-]{appendix.C}{Poster}{}% 33
