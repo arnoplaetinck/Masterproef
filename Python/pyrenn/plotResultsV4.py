@@ -92,9 +92,9 @@ def show_plot(data, ylabel, titel, labels, log, show, boxplot, normalise):
         rects2 = ax.bar(x - width, data_bar[1], width, label='PI', color='darkgreen')
         rects3 = ax.bar(x, data_bar[2], width, label='NANO', color='lightgreen')
         rects4 = ax.bar(x + width, data_bar[3], width, label='CORAL', color='green')
-        autolabel(rects2)
-        autolabel(rects3)
-        autolabel(rects4)
+        #autolabel(rects2)
+        #autolabel(rects3)
+        #autolabel(rects4)
         ax.hlines(y=1,
                   xmin=xmin[0],
                   xmax=xmax[-1],

@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2019.10.1)  6 APR 2020 19:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2020.4.7)  10 APR 2020 23:58
 entering extended mode
 **./symbolen.tex
 (symbolen.tex
 LaTeX2e <2017-04-15>
-Babel <3.18> and hyphenation patterns for 75 language(s) loaded.
+Babel <3.18> and hyphenation patterns for 1 language(s) loaded.
 ! Undefined control sequence.
 l.1 \chapter
             *{Lijst van symbolen en acroniemen}
@@ -970,6 +970,246 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no k in font nullfont!
 Missing character: There is no s in font nullfont!
+! Misplaced alignment tab character &.
+l.36 \textsc{tf}	&
+                   Tensorflow\\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no T in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+! Misplaced alignment tab character &.
+l.37 \textsc{tfl}	&
+                    Tensorflow Lite\\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no T in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+! Misplaced alignment tab character &.
+l.38 \textsc{rnn}	&
+                    Recurrent Neural Network\\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no R in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no N in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no N in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no k in font nullfont!
+! Misplaced alignment tab character &.
+l.39 \textsc{csv}	&
+                    Comma Seperated Value\\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no C in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no V in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 16--40
+[]
+ []
+
+
+Overfull \hbox (14.48878pt too wide) in paragraph at lines 16--40
+\OT1/cmr/m/sc/10 lp-
+ []
+
+
+Overfull \hbox (19.73328pt too wide) in paragraph at lines 16--40
+\OT1/cmr/m/sc/10 wan
+ []
+
+
+Overfull \hbox (15.2888pt too wide) in paragraph at lines 16--40
+\OT1/cmr/m/sc/10 iot
+ []
+
+
+Overfull \hbox (10.62216pt too wide) in paragraph at lines 16--40
+\OT1/cmr/m/sc/10 isi
+ []
+
+
+Overfull \hbox (16.28882pt too wide) in paragraph at lines 16--40
+\OT1/cmr/m/sc/10 sbc
+ []
+
+
+Overfull \hbox (18.39995pt too wide) in paragraph at lines 16--40
+\OT1/cmr/m/sc/10 ann
+ []
+
+
+Overfull \hbox (9.44446pt too wide) in paragraph at lines 16--40
+\/cmr/m/n/10 e
+ []
+
+
+Overfull \hbox (12.59993pt too wide) in paragraph at lines 16--40
+\OT1/cmr/m/sc/10 ml
+ []
+
+
+Overfull \hbox (12.26663pt too wide) in paragraph at lines 16--40
+\OT1/cmr/m/sc/10 nn
+ []
+
+
+Overfull \hbox (16.84436pt too wide) in paragraph at lines 16--40
+\OT1/cmr/m/sc/10 soc
+ []
+
+
+Overfull \hbox (9.15552pt too wide) in paragraph at lines 16--40
+\OT1/cmr/m/sc/10 ai
+ []
+
+
+Overfull \hbox (4.44444pt too wide) in paragraph at lines 16--40
+\/cmr/m/n/10 e 
+ []
+
+
+Overfull \hbox (17.2888pt too wide) in paragraph at lines 16--40
+\OT1/cmr/m/sc/10 eve
+ []
+
+
+Overfull \hbox (18.1777pt too wide) in paragraph at lines 16--40
+\OT1/cmr/m/sc/10 svm
+ []
+
+
+Overfull \hbox (17.62213pt too wide) in paragraph at lines 16--40
+\OT1/cmr/m/sc/10 tpu
+ []
+
+
+Overfull \hbox (19.64435pt too wide) in paragraph at lines 16--40
+\OT1/cmr/m/sc/10 asic
+ []
+
+
+Overfull \hbox (22.4221pt too wide) in paragraph at lines 16--40
+\OT1/cmr/m/sc/10 tops
+ []
+
+
+Overfull \hbox (17.62213pt too wide) in paragraph at lines 16--40
+\OT1/cmr/m/sc/10 cpu
+ []
+
+
+Overfull \hbox (22.86656pt too wide) in paragraph at lines 16--40
+\OT1/cmr/m/sc/10 relu
+ []
+
+
+Overfull \hbox (20.19992pt too wide) in paragraph at lines 16--40
+\OT1/cmr/m/sc/10 dlib
+ []
+
+
+Overfull \hbox (11.37773pt too wide) in paragraph at lines 16--40
+\OT1/cmr/m/sc/10 dl
+ []
+
+
+Overfull \hbox (18.1777pt too wide) in paragraph at lines 16--40
+\OT1/cmr/m/sc/10 cnn
+ []
+
+
+Overfull \hbox (11.26662pt too wide) in paragraph at lines 16--40
+\OT1/cmr/m/sc/10 tf
+ []
+
+
+Overfull \hbox (16.39992pt too wide) in paragraph at lines 16--40
+\OT1/cmr/m/sc/10 tfl
+ []
+
+
+Overfull \hbox (18.28883pt too wide) in paragraph at lines 16--40
+\OT1/cmr/m/sc/10 rnn
+ []
+
+
+Overfull \hbox (16.62215pt too wide) in paragraph at lines 16--40
+\OT1/cmr/m/sc/10 csv
+ []
+
 
 ! LaTeX Error: \begin{document} ended by \end{longtable}.
 
@@ -977,126 +1217,11 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.36 \end{longtable}
+l.41 \end{longtable}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
-
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 16--37
-[]
- []
-
-
-Overfull \hbox (14.48878pt too wide) in paragraph at lines 16--37
-\OT1/cmr/m/sc/10 lp-
- []
-
-
-Overfull \hbox (19.73328pt too wide) in paragraph at lines 16--37
-\OT1/cmr/m/sc/10 wan
- []
-
-
-Overfull \hbox (15.2888pt too wide) in paragraph at lines 16--37
-\OT1/cmr/m/sc/10 iot
- []
-
-
-Overfull \hbox (10.62216pt too wide) in paragraph at lines 16--37
-\OT1/cmr/m/sc/10 isi
- []
-
-
-Overfull \hbox (16.28882pt too wide) in paragraph at lines 16--37
-\OT1/cmr/m/sc/10 sbc
- []
-
-
-Overfull \hbox (18.39995pt too wide) in paragraph at lines 16--37
-\OT1/cmr/m/sc/10 ann
- []
-
-
-Overfull \hbox (9.44446pt too wide) in paragraph at lines 16--37
-\/cmr/m/n/10 e
- []
-
-
-Overfull \hbox (12.59993pt too wide) in paragraph at lines 16--37
-\OT1/cmr/m/sc/10 ml
- []
-
-
-Overfull \hbox (12.26663pt too wide) in paragraph at lines 16--37
-\OT1/cmr/m/sc/10 nn
- []
-
-
-Overfull \hbox (16.84436pt too wide) in paragraph at lines 16--37
-\OT1/cmr/m/sc/10 soc
- []
-
-
-Overfull \hbox (9.15552pt too wide) in paragraph at lines 16--37
-\OT1/cmr/m/sc/10 ai
- []
-
-
-Overfull \hbox (4.44444pt too wide) in paragraph at lines 16--37
-\/cmr/m/n/10 e 
- []
-
-
-Overfull \hbox (17.2888pt too wide) in paragraph at lines 16--37
-\OT1/cmr/m/sc/10 eve
- []
-
-
-Overfull \hbox (18.1777pt too wide) in paragraph at lines 16--37
-\OT1/cmr/m/sc/10 svm
- []
-
-
-Overfull \hbox (17.62213pt too wide) in paragraph at lines 16--37
-\OT1/cmr/m/sc/10 tpu
- []
-
-
-Overfull \hbox (19.64435pt too wide) in paragraph at lines 16--37
-\OT1/cmr/m/sc/10 asic
- []
-
-
-Overfull \hbox (22.4221pt too wide) in paragraph at lines 16--37
-\OT1/cmr/m/sc/10 tops
- []
-
-
-Overfull \hbox (17.62213pt too wide) in paragraph at lines 16--37
-\OT1/cmr/m/sc/10 cpu
- []
-
-
-Overfull \hbox (22.86656pt too wide) in paragraph at lines 16--37
-\OT1/cmr/m/sc/10 relu
- []
-
-
-Overfull \hbox (20.19992pt too wide) in paragraph at lines 16--37
-\OT1/cmr/m/sc/10 dlib
- []
-
-
-Overfull \hbox (11.37773pt too wide) in paragraph at lines 16--37
-\OT1/cmr/m/sc/10 dl
- []
-
-
-Overfull \hbox (18.1777pt too wide) in paragraph at lines 16--37
-\OT1/cmr/m/sc/10 cnn
- []
 
 )
 ! Emergency stop.
@@ -1106,11 +1231,11 @@ Overfull \hbox (18.1777pt too wide) in paragraph at lines 16--37
 
  
 Here is how much of TeX's memory you used:
- 22 strings out of 493305
- 295 string characters out of 3144950
- 55825 words of memory out of 3000000
- 3671 multiletter control sequences out of 15000+200000
+ 22 strings out of 495204
+ 295 string characters out of 3182360
+ 47726 words of memory out of 3000000
+ 3426 multiletter control sequences out of 15000+200000
  3941 words of font info for 15 fonts, out of 3000000 for 9000
- 1141 hyphenation exceptions out of 8191
+ 14 hyphenation exceptions out of 8191
  18i,2n,16p,92b,107s stack positions out of 5000i,500n,10000p,200000b,50000s
 !  ==> Fatal error occurred, no output PDF file produced!
