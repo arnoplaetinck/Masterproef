@@ -1,6 +1,6 @@
 % !TeX spellcheck = nl_NL
 %second chapter of your thesis
-\chapter{Literatuurstudie}
+\chapter{Literatuurstudie} \label{ch:literatuurstudie}
 
 In dit hoofdstuk zal er eerst een afgrenzing gegeven worden waarbinnen de thesis gekozen is. Vervolgens zal een korte introductie gegeven worden tot Artifici\"ele Intelligentie en Machine Learning waarin verschillende vormen en mogelijke toepassingsdomeinen behandeld worden. De verschillende leermodellen worden bekeken en er wordt nagegaan hoe de onderdelen een werkend geheel vormen. Vervolgens wordt er een overzicht van de voor- en nadelen van de verschillende technieken gegeven. Er wordt een best bruikbare methode voor de toepassing in deze thesis gekozen. Bij deze keuze zullen de voor- en nadelen gewikt en gewogen worden. Verder wordt er ook de geschiedenis van Single Board Computers aangehaald. Hoe zijn deze toestellen ontstaan, hoe zijn ze ge\"evolueerd en in welke staat zijn de hedendaagse SBCs. Verder worden ook verschillende voorbeelden van SBCs besproken die in staat zijn om Machine Learning-technieken toe te passen. Deze zullen onderworpen worden aan een benchmark die in paragraaf ~\ref{benchmark} besproken zal worden.
 
@@ -366,14 +366,14 @@ Om betekenisvolle resultaten te verkrijgen is het nodig om een goed bruikbare en
 
 
 	\subsection{Bestaande benchmarks}
-	De ontwikkelaars van de Jetson Nano vermelden op de Nvidia-website\cite{bron:nanobenchmark} verschillende \gls{dlib} waarbij de auteur verscheidene op voorhand getrainde \gls{dl} modellen toepassen op het Nano bord. Deze modellen zijn gebaseerd op een brede waaier aan populaire \gls{ml} frameworks zoals Tensorflow, Caffe, PyTorch en Keras. Bovendien zijn de applicaties ook gespreid over meerdere toepassingen zoals beeldherkenning, objectdetectie, positiebepaling en anderen. De modellen en resultaten zijn te vinden in figuur \ref{fig:nanobenchmark}.
+	De ontwikkelaars van de Jetson Nano vermelden op de Nvidia-website\cite{bron:nanobenchmark} verschillende \gls{dlib} waarbij de auteur verscheidene op voorhand getrainde \gls{dl} modellen toepassen op het Nano bord. Deze modellen zijn gebaseerd op een brede waaier aan populaire \gls{ml} frameworks zoals Tensorflow, Caffe, PyTorch en Keras. Bovendien zijn de applicaties ook gespreid over meerdere toepassingen zoals beeldherkenning, objectdetectie, positiebepaling en anderen. %De modellen en resultaten zijn te vinden in figuur \ref{fig:nanobenchmark}.
 
-	\begin{figure}
-		\centering
-		\includegraphics{afbeeldingen/NanoBenchmark.png}
-		\caption{Modellen en resultaten van de benchmark op de Jetson Nano. \\Afbeelding te vinden op https://devblogs.nvidia.com/jetson-nano-ai-computing/.\\ Website werd geraadpleegd op 17/02/2020.}
-		\label{fig:nanobenchmark}
-	\end{figure}
+%	\begin{figure}
+%		\centering
+%		\includegraphics{afbeeldingen/NanoBenchmark.png}
+%		\caption{Modellen en resultaten van de benchmark op de Jetson Nano. \\Afbeelding te vinden op https://devblogs.nvidia.com/jetson-nano-ai-computing/.\\ Website werd geraadpleegd op 17/02/2020.}
+%		\label{fig:nanobenchmark}
+%	\end{figure}
 
 	Ook voor de Jetson TX2 bestaat er een benchmark zoals voorgesteld in \cite{bordignonbenchmarking}. Het gaat over een general-purpose benchmark die een aantal parameters controleert. Het gaat over variabelen zoals \gls{fps}, \textit{inference time}, \gls{gpu} temperatuur en geheugen verbruik. Met inference time wordt de tijd bedoeld om een berekening te doen in \gls{gpu} en \gls{cpu} m.a.w. de latency veroorzaakt door de \gls{sbc}. Deze gegevens worden uit de data gehaald door middel van verschillende \gls{dl} modellen toe te passen op \gls{cnn}. Deze modellen passen ze toe op twee verschillende datasets: Microsoft COCO dataset voor objectdetectie, een foto bank met een grote verscheidenheid aan categorie\"en, en de KITTI Stereo Vision databank. De KITTI-databank bestaat uit 400 foto's specifiek bedoeld als benchmark fotoset.
 	

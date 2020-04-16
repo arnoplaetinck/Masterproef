@@ -1,4 +1,3 @@
-import numpy as np
 from numpy import genfromtxt
 import pyrenn as prn
 import csv
@@ -26,7 +25,7 @@ labels = ["compair", "friction", "narendra4", "pt2", "P0Y0_narendra4", "P0Y0_com
 seconds = time.time()
 local_time = time.ctime(seconds)
 naam2 = local_time.split()
-naam = "MP_NN_ALL_RUN_PC"
+naam = "Benchmark_PC"
 for i in range(len(naam2)):
     naam += "_" + naam2[i]
 naam = naam.replace(':', '_')
@@ -216,44 +215,6 @@ while iteration < iterations:
     cores = psutil.cpu_percent(interval=None, percpu=True)
     if (mean(cores) != 0.0) and (time_stop-time_start != 0):
         logging_data(4, time_stop, time_start, cores)
-        iteration += 1
-        time_total += time_stop - time_start
-    print("iteration: ", iteration, " mean cores: ", mean(cores), " time_stop-time_start: ", time_stop-time_start)
-# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-# example_using_P0Y0_compair.py
-print("using_P0Y0_compair")
-iteration = 0
-while iteration < iterations:
-    # Read Example Data
-    df = genfromtxt('example_data_compressed_air.csv', delimiter=',')
-    df = df.transpose()
-
-    P = np.array([df[1][1:-1], df[2][1:-1], df[3][1:-1]])
-    Y = np.array([df[4][1:-1], df[5][1:-1]])
-    Ptest = np.array([df[6][1:-1], df[7][1:-1], df[8][1:-1]])
-    Ytest = np.array([df[9][1:-1], df[10][1:-1]])
-
-    # define the first timestep t=0 of Test Data as previous (known) data P0test and Y0test
-    P0test = Ptest[:, 0:1]
-    Y0test = Ytest[:, 0:1]
-    # Use the timesteps t = [1..99] as Test Data
-    Ptest = Ptest[:, 1:100]
-    Ytest = Ytest[:, 1:100]
-
-    # Load saved NN from file
-    net = prn.loadNN("./SavedNN/using_P0Y0_compair.csv")
-
-    psutil.cpu_percent(interval=None, percpu=True)
-    time_start = time.time()
-
-    # Calculate outputs of the trained NN for test data with and without previous input P0 and output Y0
-    ytest = prn.NNOut(Ptest, net)
-    y0test = prn.NNOut(Ptest, net, P0=P0test, Y0=Y0test)
-
-    time_stop = (time.time())
-    cores = psutil.cpu_percent(interval=None, percpu=True)
-    if (mean(cores) != 0.0) and (time_stop-time_start != 0):
-        logging_data(5, time_stop, time_start, cores)
         iteration += 1
         time_total += time_stop - time_start
     print("iteration: ", iteration, " mean cores: ", mean(cores), " time_stop-time_start: ", time_stop-time_start)

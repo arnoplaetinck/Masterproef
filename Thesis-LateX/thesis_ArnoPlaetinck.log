@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2020.4.7)  13 APR 2020 15:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2020.4.7)  16 APR 2020 17:21
 entering extended mode
 **./thesis_ArnoPlaetinck.tex
 (thesis_ArnoPlaetinck.tex
@@ -720,27 +720,27 @@ LaTeX Warning: Label `lst:narendra4' multiply defined.
 )
 \openout1 = `thesis_ArnoPlaetinck.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 141.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 142.
+LaTeX Font Info:    ... okay on input line 142.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 142.
+LaTeX Font Info:    ... okay on input line 142.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 142.
+LaTeX Font Info:    ... okay on input line 142.
+LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 142.
 LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 14
-1.
+2.
  (D:\Programmas\tex\latex\psnfss\omspzccm.fd
 File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
 )
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    ... okay on input line 142.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 142.
+LaTeX Font Info:    ... okay on input line 142.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 142.
+LaTeX Font Info:    ... okay on input line 142.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 142.
+LaTeX Font Info:    ... okay on input line 142.
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 9.85492pt on input line 141.
+(Font)              scaled to size 9.85492pt on input line 142.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -804,7 +804,7 @@ G,.JBIG2,.JB2,.eps]
 )
 \c@lstlisting=\count178
 \AtBeginShipoutBox=\box46
-Package hyperref Info: Link coloring OFF on input line 141.
+Package hyperref Info: Link coloring OFF on input line 142.
 
 (D:\Programmas\tex\latex\hyperref\nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -814,9 +814,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count179
 )
-LaTeX Info: Redefining \ref on input line 141.
-LaTeX Info: Redefining \pageref on input line 141.
-LaTeX Info: Redefining \nameref on input line 141.
+LaTeX Info: Redefining \ref on input line 142.
+LaTeX Info: Redefining \pageref on input line 142.
+LaTeX Info: Redefining \nameref on input line 142.
 
 (thesis_ArnoPlaetinck.out) (thesis_ArnoPlaetinck.out)
 \@outlinefile=\write6
@@ -843,36 +843,36 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 <cover_fiiw_gent.pdf, id=135, 597.432pt x 845.07718pt>
 File: cover_fiiw_gent.pdf Graphic file (type pdf)
 <use cover_fiiw_gent.pdf>
-Package pdftex.def Info: cover_fiiw_gent.pdf  used on input line 144.
+Package pdftex.def Info: cover_fiiw_gent.pdf  used on input line 145.
 (pdftex.def)             Requested size: 597.50787pt x 845.25565pt.
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 35.99976pt on input line 144.
+(Font)              scaled to size 35.99976pt on input line 145.
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 15.55188pt on input line 144.
+(Font)              scaled to size 15.55188pt on input line 145.
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--144
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--144
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
 
  []
 
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 144.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 145.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 15.55188pt on input line 144.
+(Font)              scaled to size 15.55188pt on input line 145.
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 10.79993pt on input line 144.
+(Font)              scaled to size 10.79993pt on input line 145.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 [1
 
 \openout3 = `thesis_ArnoPlaetinck.ist'.
@@ -880,85 +880,85 @@ Package babel Info: Redefining dutch shorthand "~
 {C:/Users/arnop/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./cover_fii
 w_gent.pdf>]
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
  [2
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+phv on input line 144.
+LaTeX Font Info:    Try loading font information for OMS+phv on input line 145.
 
  (D:\Programmas\tex\latex\psnfss\omsphv.fd
 File: omsphv.fd 
 )
 LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 144.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 145.
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--144
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--144
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
 
  []
 
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 [3]
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
  [4
 
 ]
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 22.39185pt on input line 144.
+(Font)              scaled to size 22.39185pt on input line 145.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 144.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 145.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 22.39185pt on input line 144.
+(Font)              scaled to size 22.39185pt on input line 145.
  (voorwoord.tex)
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 7.19995pt on input line 144.
+(Font)              scaled to size 7.19995pt on input line 145.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <8> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 144.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 145.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 7.19995pt on input line 144.
+(Font)              scaled to size 7.19995pt on input line 145.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
  [5
 
 ]
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
  [6
 
 ] (abstract.tex
@@ -966,86 +966,86 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
 (Font)              scaled to size 9.85492pt on input line 1.
-LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 24
+LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 14
 .
 
 (D:\Programmas\tex\latex\psnfss\ot1ptmcm.fd
 File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
 )
-LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 24
+LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 14
 .
 
 (D:\Programmas\tex\latex\psnfss\omlptmcm.fd
 File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
 )
-LaTeX Font Info:    Try loading font information for OMX+psycm on input line 24
+LaTeX Font Info:    Try loading font information for OMX+psycm on input line 14
 .
 
 (D:\Programmas\tex\latex\psnfss\omxpsycm.fd
 File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 24.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 14.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 24.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 14.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 24.
-LaTeX Font Info:    Try loading font information for U+lasy on input line 24.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 14.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 14.
 
 (D:\Programmas\tex\latex\base\ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 24.
+LaTeX Font Info:    Try loading font information for U+msa on input line 14.
 
 (D:\Programmas\tex\latex\amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 24.
+LaTeX Font Info:    Try loading font information for U+msb on input line 14.
 
 (D:\Programmas\tex\latex\amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
  [7]
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
  [8
 
 ] (thesis_ArnoPlaetinck.toc
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 68.
+(babel)             in language  on input line 70.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 68.
+(babel)             in language  on input line 70.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 68.
+(babel)             in language  on input line 70.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 68.
+(babel)             in language  on input line 70.
 
 [9])
 \tf@toc=\write7
 \openout7 = `thesis_ArnoPlaetinck.toc'.
 
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
  [10] (thesis_ArnoPlaetinck.lof
 Overfull \hbox (43.97249pt too wide) in paragraph at lines 5--5
  [][] [][]\OT1/phv/m/n/10.95 Structuur van een Neu-raal Netwerk. Af-beeld-ing t
@@ -1108,14 +1108,14 @@ Overfull \hbox (162.78207pt too wide) in paragraph at lines 12--12
  []
 
 
-Overfull \hbox (207.25711pt too wide) in paragraph at lines 15--15
+Overfull \hbox (207.25711pt too wide) in paragraph at lines 14--14
  [][] [][]\OT1/phv/m/n/10.95 Praktische beteke-nis van het compair-subprogramma
 . Af-beeld-ing te vin-den op https://pyrenn.readthedocs.io/en/latest/examples.h
 tml 
  []
 
 
-Overfull \hbox (94.69556pt too wide) in paragraph at lines 16--16
+Overfull \hbox (94.69556pt too wide) in paragraph at lines 15--15
  [][] [][]\OT1/phv/m/n/10.95 Enkele voor-beelden uit de FashionMNIST-dataset. A
 f-beeld-ing te vin-den op https://becominghuman.ai/how- 
  []
@@ -1125,24 +1125,24 @@ f-beeld-ing te vin-den op https://becominghuman.ai/how-
 \openout8 = `thesis_ArnoPlaetinck.lof'.
 
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
  [11
 
 ]
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
  [12
 
 ] (thesis_ArnoPlaetinck.lot)
@@ -1179,27 +1179,29 @@ LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
 LaTeX Font Info:    Font shape `OT1/phv/m/sc' will be
 (Font)              scaled to size 9.85492pt on input line 10.
 )
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
  [15]
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 144.
- [16
+(babel)             in language  on input line 145.
 
-]
-(inleiding.tex
+[16
+
+] (inleiding.tex
 Hoofdstuk 1.
 Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 2.
@@ -1290,7 +1292,7 @@ Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 37.
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 37.
-<afbeeldingen/neuralNetwork3.PNG, id=378, 656.4525pt x 441.65pt>
+<afbeeldingen/neuralNetwork3.PNG, id=382, 656.4525pt x 441.65pt>
 File: afbeeldingen/neuralNetwork3.PNG Graphic file (type png)
 <use afbeeldingen/neuralNetwork3.PNG>
 Package pdftex.def Info: afbeeldingen/neuralNetwork3.PNG  used on input line 48
@@ -1326,7 +1328,7 @@ Package babel Info: Redefining dutch shorthand "|
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 59.
  [7 <./afbeeldingen/neuralNetwork3.PNG>]
-<afbeeldingen/Artificial_neuron2.PNG, id=401, 657.45625pt x 319.1925pt>
+<afbeeldingen/Artificial_neuron2.PNG, id=405, 657.45625pt x 319.1925pt>
 File: afbeeldingen/Artificial_neuron2.PNG Graphic file (type png)
 <use afbeeldingen/Artificial_neuron2.PNG>
 Package pdftex.def Info: afbeeldingen/Artificial_neuron2.PNG  used on input lin
@@ -1343,7 +1345,7 @@ Package babel Info: Redefining dutch shorthand "~
  [8 <./afbeeldingen/Artificial_neuron2.PNG>]
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
 (Font)              scaled to size 5.39996pt on input line 91.
-<afbeeldingen/sigmoid2.PNG, id=422, 642.4pt x 481.8pt>
+<afbeeldingen/sigmoid2.PNG, id=426, 642.4pt x 481.8pt>
 File: afbeeldingen/sigmoid2.PNG Graphic file (type png)
 <use afbeeldingen/sigmoid2.PNG>
 Package pdftex.def Info: afbeeldingen/sigmoid2.PNG  used on input line 109.
@@ -1357,7 +1359,7 @@ Package babel Info: Redefining dutch shorthand "|
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 115.
  [9 <./afbeeldingen/sigmoid2.PNG (PNG copy)>]
-<afbeeldingen/beslissingsBoom.PNG, id=436, 665.48625pt x 529.98pt>
+<afbeeldingen/beslissingsBoom.PNG, id=440, 665.48625pt x 529.98pt>
 File: afbeeldingen/beslissingsBoom.PNG Graphic file (type png)
 <use afbeeldingen/beslissingsBoom.PNG>
 Package pdftex.def Info: afbeeldingen/beslissingsBoom.PNG  used on input line 1
@@ -1372,7 +1374,7 @@ Package babel Info: Redefining dutch shorthand "|
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 136.
  [10 <./afbeeldingen/beslissingsBoom.PNG (PNG copy)>]
-<afbeeldingen/supportVectorMachines.PNG, id=449, 391.4625pt x 338.26375pt>
+<afbeeldingen/supportVectorMachines.PNG, id=453, 391.4625pt x 338.26375pt>
 File: afbeeldingen/supportVectorMachines.PNG Graphic file (type png)
 <use afbeeldingen/supportVectorMachines.PNG>
 Package pdftex.def Info: afbeeldingen/supportVectorMachines.PNG  used on input 
@@ -1384,7 +1386,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 141--141
 /big-data-and-business-
  []
 
-<afbeeldingen/regressieAnalyse.PNG, id=452, 1204.5pt x 796.9775pt>
+<afbeeldingen/regressieAnalyse.PNG, id=456, 1204.5pt x 796.9775pt>
 File: afbeeldingen/regressieAnalyse.PNG Graphic file (type png)
 <use afbeeldingen/regressieAnalyse.PNG>
 Package pdftex.def Info: afbeeldingen/regressieAnalyse.PNG  used on input line 
@@ -1451,7 +1453,7 @@ Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 225.
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 225.
-<afbeeldingen/Reinforcement_learning_diagram.PNG, id=493, 376.40625pt x 364.361
+<afbeeldingen/Reinforcement_learning_diagram.PNG, id=497, 376.40625pt x 364.361
 25pt>
 File: afbeeldingen/Reinforcement_learning_diagram.PNG Graphic file (type png)
 <use afbeeldingen/Reinforcement_learning_diagram.PNG>
@@ -1481,7 +1483,7 @@ Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 251.
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 251.
-<afbeeldingen/Early_1976_MMD1_Prototype_most_chips_removed.PNG, id=508, 1798.72
+<afbeeldingen/Early_1976_MMD1_Prototype_most_chips_removed.PNG, id=512, 1798.72
 pt x 1204.5pt>
 File: afbeeldingen/Early_1976_MMD1_Prototype_most_chips_removed.PNG Graphic fil
 e (type png)
@@ -1572,17 +1574,6 @@ Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 368.
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 368.
-<afbeeldingen/NanoBenchmark.png, id=606, 1027.84pt x 511.9125pt>
-File: afbeeldingen/NanoBenchmark.png Graphic file (type png)
-<use afbeeldingen/NanoBenchmark.png>
-Package pdftex.def Info: afbeeldingen/NanoBenchmark.png  used on input line 373
-.
-(pdftex.def)             Requested size: 1027.8375pt x 511.91125pt.
-
-Overfull \hbox (601.04614pt too wide) in paragraph at lines 373--374
- [][] 
- []
-
 ) (Dataverwerving.tex
 Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 2.
@@ -1601,28 +1592,7 @@ Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 2.
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 2.
- [22 <./afbeeldingen/NanoBenchmark.png>]
-Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 2.
-Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 2.
-Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 2.
-Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 2.
- [23]
-Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 2.
-Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 2.
-Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 2.
-Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 2.
-
-[24
-
-]
+ [22]
 Hoofdstuk 3.
 Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 2.
@@ -1633,123 +1603,211 @@ Package babel Info: Redefining dutch shorthand "|
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 8.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 14.
+(babel)             in language  on input line 17.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 14.
+(babel)             in language  on input line 17.
+
+Overfull \hbox (21.52368pt too wide) in paragraph at lines 21--26
+\OT1/phv/m/n/10.95 ingsvoorzien-ing uit datasheets beschouwd wor-den. Deze waar
+-den houden echter ook stroomvoorzienin-
+ []
+
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 19.
+(babel)             in language  on input line 26.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 19.
+(babel)             in language  on input line 26.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 23.
+(babel)             in language  on input line 26.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 23.
+(babel)             in language  on input line 26.
+[23
+
+]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 29.
+
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 47.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 47.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 51.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 51.
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 8.09995pt on input line 24.
+(Font)              scaled to size 8.09995pt on input line 52.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 24.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 52.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 24.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 52.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 24.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 52.
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 6.29996pt on input line 24.
+(Font)              scaled to size 6.29996pt on input line 52.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 26.
+(babel)             in language  on input line 53.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 26.
+(babel)             in language  on input line 53.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 26.
+(babel)             in language  on input line 53.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 26.
-[25]
-<afbeeldingen/compairPraktijk.PNG, id=659, 483.2454pt x 200.1879pt>
+(babel)             in language  on input line 53.
+[24]
+<afbeeldingen/compairPraktijk.PNG, id=669, 483.2454pt x 200.1879pt>
 File: afbeeldingen/compairPraktijk.PNG Graphic file (type png)
 <use afbeeldingen/compairPraktijk.PNG>
-Package pdftex.def Info: afbeeldingen/compairPraktijk.PNG  used on input line 3
-1.
+Package pdftex.def Info: afbeeldingen/compairPraktijk.PNG  used on input line 5
+9.
 (pdftex.def)             Requested size: 341.43306pt x 141.4471pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 37.
+               Default added (so using `tbp') on input line 65.
 
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 54.
+(babel)             in language  on input line 82.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 54.
+(babel)             in language  on input line 82.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 54.
+(babel)             in language  on input line 82.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 54.
-[26 <./afbeeldingen/compairPraktijk.PNG>]
+(babel)             in language  on input line 82.
+[25 <./afbeeldingen/compairPraktijk.PNG>]
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 81.
+(babel)             in language  on input line 109.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 81.
+(babel)             in language  on input line 109.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 81.
+(babel)             in language  on input line 109.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 81.
+(babel)             in language  on input line 109.
+ [26]
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 132.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 132.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 132.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 132.
  [27]
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 104.
+(babel)             in language  on input line 144.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 104.
-Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 104.
-Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 104.
- [28]
-Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 116.
-Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 116.
+(babel)             in language  on input line 144.
 
-Overfull \hbox (7.27359pt too wide) in paragraph at lines 122--123
+Overfull \hbox (7.27359pt too wide) in paragraph at lines 150--151
 \OT1/phv/m/n/10.95 Het FashionMNIST-subprogramma is samen met Num-berMNIST een 
 van de klassiek-ers voor starters
  []
 
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 129.
+(babel)             in language  on input line 154.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 129.
+(babel)             in language  on input line 154.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 129.
+(babel)             in language  on input line 154.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 129.
-[29]
-<afbeeldingen/FashionMNIST_kledij.PNG, id=753, 1606.0pt x 1606.0pt>
+(babel)             in language  on input line 154.
+[28]
+<afbeeldingen/FashionMNIST_kledij.PNG, id=767, 1606.0pt x 1606.0pt>
 File: afbeeldingen/FashionMNIST_kledij.PNG Graphic file (type png)
 <use afbeeldingen/FashionMNIST_kledij.PNG>
 Package pdftex.def Info: afbeeldingen/FashionMNIST_kledij.PNG  used on input li
-ne 133.
+ne 158.
 (pdftex.def)             Requested size: 227.62204pt x 227.60759pt.
-Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 180.
-Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 180.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 182.
+(babel)             in language  on input line 180.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 182.
+(babel)             in language  on input line 180.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 182.
+(babel)             in language  on input line 180.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 182.
- [30 <./afbeeldingen/FashionMNIST_kledij.PNG>]
+(babel)             in language  on input line 180.
+ [29 <./afbeeldingen/FashionMNIST_kledij.PNG>]
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 191.
+(babel)             in language  on input line 206.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 191.
+(babel)             in language  on input line 206.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 195.
+(babel)             in language  on input line 206.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 195.
+(babel)             in language  on input line 206.
+ [30]
+<afbeeldingen/NumberMNIST.PNG, id=820, 462.528pt x 346.896pt>
+File: afbeeldingen/NumberMNIST.PNG Graphic file (type png)
+<use afbeeldingen/NumberMNIST.PNG>
+Package pdftex.def Info: afbeeldingen/NumberMNIST.PNG  used on input line 210.
+(pdftex.def)             Requested size: 227.62204pt x 170.71628pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--222
+
+ []
+
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 238.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 238.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 238.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 238.
+[31 <./afbeeldingen/NumberMNIST.PNG>]
+<afbeeldingen/catsVSdogs1.PNG, id=847, 462.528pt x 346.896pt>
+File: afbeeldingen/catsVSdogs1.PNG Graphic file (type png)
+<use afbeeldingen/catsVSdogs1.PNG>
+Package pdftex.def Info: afbeeldingen/catsVSdogs1.PNG  used on input line 242.
+(pdftex.def)             Requested size: 227.62204pt x 170.71628pt.
+<afbeeldingen/ImRec1.jpg, id=850, 642.4pt x 481.8pt>
+File: afbeeldingen/ImRec1.jpg Graphic file (type jpg)
+<use afbeeldingen/ImRec1.jpg>
+Package pdftex.def Info: afbeeldingen/ImRec1.jpg  used on input line 254.
+(pdftex.def)             Requested size: 227.62204pt x 170.71304pt.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 259.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 259.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 262.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 262.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 262.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 262.
+ [32 <./afbeeldingen/catsVSdogs1.PNG>]
+Underfull \hbox (badness 10000) in paragraph at lines 271--272
+
+ []
+
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 280.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 280.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 280.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 280.
+[33 <./afbeeldingen/ImRec1.jpg>]
+Overfull \hbox (48.70609pt too wide) in paragraph at lines 282--283
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 292.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 292.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 296.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 296.
 ) (Data_verwerking.tex
 Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 1.
@@ -1759,18 +1817,7 @@ Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 1.
- [31]
-Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 1.
-Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 1.
- [32
-
-]
+ [34]
 Hoofdstuk 4.
 Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 1.
@@ -1785,7 +1832,9 @@ Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 1.
- [33]
+ [35
+
+]
 Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining dutch shorthand "~
@@ -1794,7 +1843,7 @@ Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 1.
- [34
+ [36
 
 ]
 Hoofdstuk 5.
@@ -1811,7 +1860,7 @@ Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 1.
- [35]
+ [37]
 Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining dutch shorthand "~
@@ -1820,7 +1869,7 @@ Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 1.
- [36
+ [38
 
 ]
 Hoofdstuk 6.
@@ -1837,7 +1886,7 @@ Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 4.
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 4.
- [37]
+ [39]
 Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 4.
 Package babel Info: Redefining dutch shorthand "~
@@ -1846,7 +1895,7 @@ Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 4.
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 4.
- [38
+ [40
 
 ]
 Overfull \hbox (106.7583pt too wide) in paragraph at lines 60--61
@@ -1869,7 +1918,7 @@ Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 105.
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 105.
-[39]) (bijlage1.tex
+[41]) (bijlage1.tex
 Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining dutch shorthand "~
@@ -1878,7 +1927,7 @@ Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 1.
- [40]
+ [42]
 B"ylage A.
 Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 1.
@@ -1886,93 +1935,32 @@ Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 1.
 )
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 165.
+(babel)             in language  on input line 166.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 165.
+(babel)             in language  on input line 166.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 165.
+(babel)             in language  on input line 166.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 165.
- [41
+(babel)             in language  on input line 166.
+ [43
 
 ]
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 165.
+(babel)             in language  on input line 166.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 165.
+(babel)             in language  on input line 166.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 165.
+(babel)             in language  on input line 166.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 165.
- [42
+(babel)             in language  on input line 166.
+ [44
 
 ]
 B"ylage B.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 165.
+(babel)             in language  on input line 166.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 165.
-Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 170.
-Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 170.
-Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 170.
-Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 170.
-[43]
-Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 170.
-Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 170.
-Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 170.
-Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 170.
- [44
-
-]
-B"ylage C.
-Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 170.
-Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 170.
-
-
-pdfTeX warning: pdflatex.exe (file ./Poster-ArnoPlaetinck.pdf): PDF inclusion: 
-found PDF version <1.7>, but at most version <1.5> allowed
-<Poster-ArnoPlaetinck.pdf, id=860, 758.835pt x 1011.78pt>
-File: Poster-ArnoPlaetinck.pdf Graphic file (type pdf)
-<use Poster-ArnoPlaetinck.pdf>
-Package pdftex.def Info: Poster-ArnoPlaetinck.pdf  used on input line 171.
-(pdftex.def)             Requested size: 758.83316pt x 1011.77753pt.
-
-
-pdfTeX warning: pdflatex.exe (file ./Poster-ArnoPlaetinck.pdf): PDF inclusion: 
-found PDF version <1.7>, but at most version <1.5> allowed
-File: Poster-ArnoPlaetinck.pdf Graphic file (type pdf)
-<use Poster-ArnoPlaetinck.pdf>
-Package pdftex.def Info: Poster-ArnoPlaetinck.pdf  used on input line 171.
-(pdftex.def)             Requested size: 758.83316pt x 1011.77753pt.
-
-
-pdfTeX warning: pdflatex.exe (file ./Poster-ArnoPlaetinck.pdf): PDF inclusion: 
-found PDF version <1.7>, but at most version <1.5> allowed
-
-
-pdfTeX warning: pdflatex.exe (file ./Poster-ArnoPlaetinck.pdf): PDF inclusion: 
-found PDF version <1.7>, but at most version <1.5> allowed
-<Poster-ArnoPlaetinck.pdf, id=863, page=1, 758.835pt x 1011.78pt>
-File: Poster-ArnoPlaetinck.pdf Graphic file (type pdf)
-<use Poster-ArnoPlaetinck.pdf, page 1>
-Package pdftex.def Info: Poster-ArnoPlaetinck.pdf , page1 used on input line 17
-1.
-(pdftex.def)             Requested size: 758.83316pt x 1011.77753pt.
-File: Poster-ArnoPlaetinck.pdf Graphic file (type pdf)
-<use Poster-ArnoPlaetinck.pdf, page 1>
-Package pdftex.def Info: Poster-ArnoPlaetinck.pdf , page1 used on input line 17
-1.
-(pdftex.def)             Requested size: 598.1531pt x 797.53746pt.
+(babel)             in language  on input line 166.
 Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 171.
 Package babel Info: Redefining dutch shorthand "~
@@ -1982,16 +1970,6 @@ Package babel Info: Redefining dutch shorthand "|
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 171.
 [45]
-File: Poster-ArnoPlaetinck.pdf Graphic file (type pdf)
-<use Poster-ArnoPlaetinck.pdf, page 1>
-Package pdftex.def Info: Poster-ArnoPlaetinck.pdf , page1 used on input line 17
-1.
-(pdftex.def)             Requested size: 598.1531pt x 797.53746pt.
-File: Poster-ArnoPlaetinck.pdf Graphic file (type pdf)
-<use Poster-ArnoPlaetinck.pdf, page 1>
-Package pdftex.def Info: Poster-ArnoPlaetinck.pdf , page1 used on input line 17
-1.
-(pdftex.def)             Requested size: 598.1531pt x 797.53746pt.
 Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 171.
 Package babel Info: Redefining dutch shorthand "~
@@ -2000,79 +1978,150 @@ Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 171.
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 171.
+ [46
+
+]
+B"ylage C.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 171.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 171.
+
+
+pdfTeX warning: pdflatex.exe (file ./Poster-ArnoPlaetinck.pdf): PDF inclusion: 
+found PDF version <1.7>, but at most version <1.5> allowed
+<Poster-ArnoPlaetinck.pdf, id=962, 758.835pt x 1011.78pt>
+File: Poster-ArnoPlaetinck.pdf Graphic file (type pdf)
+<use Poster-ArnoPlaetinck.pdf>
+Package pdftex.def Info: Poster-ArnoPlaetinck.pdf  used on input line 172.
+(pdftex.def)             Requested size: 758.83316pt x 1011.77753pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./Poster-ArnoPlaetinck.pdf): PDF inclusion: 
+found PDF version <1.7>, but at most version <1.5> allowed
+File: Poster-ArnoPlaetinck.pdf Graphic file (type pdf)
+<use Poster-ArnoPlaetinck.pdf>
+Package pdftex.def Info: Poster-ArnoPlaetinck.pdf  used on input line 172.
+(pdftex.def)             Requested size: 758.83316pt x 1011.77753pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./Poster-ArnoPlaetinck.pdf): PDF inclusion: 
+found PDF version <1.7>, but at most version <1.5> allowed
+
+
+pdfTeX warning: pdflatex.exe (file ./Poster-ArnoPlaetinck.pdf): PDF inclusion: 
+found PDF version <1.7>, but at most version <1.5> allowed
+<Poster-ArnoPlaetinck.pdf, id=965, page=1, 758.835pt x 1011.78pt>
 File: Poster-ArnoPlaetinck.pdf Graphic file (type pdf)
 <use Poster-ArnoPlaetinck.pdf, page 1>
 Package pdftex.def Info: Poster-ArnoPlaetinck.pdf , page1 used on input line 17
-1.
+2.
+(pdftex.def)             Requested size: 758.83316pt x 1011.77753pt.
+File: Poster-ArnoPlaetinck.pdf Graphic file (type pdf)
+<use Poster-ArnoPlaetinck.pdf, page 1>
+Package pdftex.def Info: Poster-ArnoPlaetinck.pdf , page1 used on input line 17
+2.
 (pdftex.def)             Requested size: 598.1531pt x 797.53746pt.
- [46 <./Poster-ArnoPlaetinck.pdf>]
-<back_fiiw_gent.pdf, id=936, 597.432pt x 845.07718pt>
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 172.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 172.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 172.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 172.
+[47]
+File: Poster-ArnoPlaetinck.pdf Graphic file (type pdf)
+<use Poster-ArnoPlaetinck.pdf, page 1>
+Package pdftex.def Info: Poster-ArnoPlaetinck.pdf , page1 used on input line 17
+2.
+(pdftex.def)             Requested size: 598.1531pt x 797.53746pt.
+File: Poster-ArnoPlaetinck.pdf Graphic file (type pdf)
+<use Poster-ArnoPlaetinck.pdf, page 1>
+Package pdftex.def Info: Poster-ArnoPlaetinck.pdf , page1 used on input line 17
+2.
+(pdftex.def)             Requested size: 598.1531pt x 797.53746pt.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 172.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 172.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 172.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 172.
+File: Poster-ArnoPlaetinck.pdf Graphic file (type pdf)
+<use Poster-ArnoPlaetinck.pdf, page 1>
+Package pdftex.def Info: Poster-ArnoPlaetinck.pdf , page1 used on input line 17
+2.
+(pdftex.def)             Requested size: 598.1531pt x 797.53746pt.
+ [48 <./Poster-ArnoPlaetinck.pdf>]
+<back_fiiw_gent.pdf, id=1037, 597.432pt x 845.07718pt>
 File: back_fiiw_gent.pdf Graphic file (type pdf)
 <use back_fiiw_gent.pdf>
-Package pdftex.def Info: back_fiiw_gent.pdf  used on input line 173.
+Package pdftex.def Info: back_fiiw_gent.pdf  used on input line 174.
 (pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
 File: back_fiiw_gent.pdf Graphic file (type pdf)
 <use back_fiiw_gent.pdf>
-Package pdftex.def Info: back_fiiw_gent.pdf  used on input line 173.
+Package pdftex.def Info: back_fiiw_gent.pdf  used on input line 174.
 (pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
-<back_fiiw_gent.pdf, id=939, page=1, 597.432pt x 845.07718pt>
+<back_fiiw_gent.pdf, id=1040, page=1, 597.432pt x 845.07718pt>
 File: back_fiiw_gent.pdf Graphic file (type pdf)
 <use back_fiiw_gent.pdf, page 1>
-Package pdftex.def Info: back_fiiw_gent.pdf , page1 used on input line 173.
+Package pdftex.def Info: back_fiiw_gent.pdf , page1 used on input line 174.
 (pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
 File: back_fiiw_gent.pdf Graphic file (type pdf)
 <use back_fiiw_gent.pdf, page 1>
-Package pdftex.def Info: back_fiiw_gent.pdf , page1 used on input line 173.
+Package pdftex.def Info: back_fiiw_gent.pdf , page1 used on input line 174.
 (pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
 File: back_fiiw_gent.pdf Graphic file (type pdf)
 <use back_fiiw_gent.pdf, page 1>
-Package pdftex.def Info: back_fiiw_gent.pdf , page1 used on input line 173.
+Package pdftex.def Info: back_fiiw_gent.pdf , page1 used on input line 174.
 (pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
 File: back_fiiw_gent.pdf Graphic file (type pdf)
 <use back_fiiw_gent.pdf, page 1>
-Package pdftex.def Info: back_fiiw_gent.pdf , page1 used on input line 173.
+Package pdftex.def Info: back_fiiw_gent.pdf , page1 used on input line 174.
 (pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 173.
+(babel)             in language  on input line 174.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 173.
+(babel)             in language  on input line 174.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 173.
+(babel)             in language  on input line 174.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 173.
+(babel)             in language  on input line 174.
 File: back_fiiw_gent.pdf Graphic file (type pdf)
 <use back_fiiw_gent.pdf, page 1>
-Package pdftex.def Info: back_fiiw_gent.pdf , page1 used on input line 173.
+Package pdftex.def Info: back_fiiw_gent.pdf , page1 used on input line 174.
 (pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
- [47 <./back_fiiw_gent.pdf>]
+ [49 <./back_fiiw_gent.pdf>]
 
 Package glossaries Warning: No \printglossary or \printglossaries found. 
 (Remove \makeglossaries if you don't want any glossaries.) 
 This document will not have a glossary.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 175.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 175.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 176.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 176.
 (thesis_ArnoPlaetinck.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 175.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 175.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 176.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 176.
 Package rerunfilecheck Info: File `thesis_ArnoPlaetinck.out' has not changed.
 (rerunfilecheck)             Checksum: 85F4757EB3BCD860CD7AC241EDB4451C;2270.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 175.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 176.
  ) 
 Here is how much of TeX's memory you used:
- 19593 strings out of 495204
- 305792 string characters out of 3182360
- 468565 words of memory out of 3000000
- 22214 multiletter control sequences out of 15000+200000
+ 19722 strings out of 495204
+ 307829 string characters out of 3182360
+ 468416 words of memory out of 3000000
+ 22292 multiletter control sequences out of 15000+200000
  65911 words of font info for 129 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 45i,18n,78p,2003b,1329s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{glo:tfl} has been referenced but does not exist, 
-replaced by a fixed one
+ 45i,18n,78p,2494b,1948s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{glo:tf} has been referenced but does not exist, r
+eplaced by a fixed one
 
 pdfTeX warning (dest): name{glo:bptt} has been referenced but does not exist, r
 eplaced by a fixed one
@@ -2084,6 +2133,12 @@ pdfTeX warning (dest): name{glo:csv} has been referenced but does not exist, re
 placed by a fixed one
 
 pdfTeX warning (dest): name{glo:rnn} has been referenced but does not exist, re
+placed by a fixed one
+
+pdfTeX warning (dest): name{glo:topw} has been referenced but does not exist, r
+eplaced by a fixed one
+
+pdfTeX warning (dest): name{glo:tfl} has been referenced but does not exist, re
 placed by a fixed one
 
 pdfTeX warning (dest): name{glo:cnn} has been referenced but does not exist, re
@@ -2157,9 +2212,9 @@ pfb><D:/Programmas/fonts/type1/urw/helvetic/uhvb8a.pfb><D:/Programmas/fonts/typ
 e1/urw/helvetic/uhvr8a.pfb><D:/Programmas/fonts/type1/urw/helvetic/uhvro8a.pfb>
 <D:/Programmas/fonts/type1/urw/symbol/usyr.pfb><D:/Programmas/fonts/type1/urw/t
 imes/utmr8a.pfb><D:/Programmas/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis_ArnoPlaetinck.pdf (63 pages, 2408822 bytes).
+Output written on thesis_ArnoPlaetinck.pdf (65 pages, 2581513 bytes).
 PDF statistics:
- 1052 PDF objects out of 1200 (max. 8388607)
- 262 named destinations out of 1000 (max. 500000)
- 365 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1162 PDF objects out of 1200 (max. 8388607)
+ 311 named destinations out of 1000 (max. 500000)
+ 375 words of extra memory for PDF output out of 10000 (max. 10000000)
 

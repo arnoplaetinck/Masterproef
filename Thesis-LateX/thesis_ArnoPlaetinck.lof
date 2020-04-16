@@ -10,10 +10,12 @@
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Voorbeeld van Lineaire Regressie. Afbeelding te vinden op https://en.wikipedia.org/wiki/Regression-analysis. Website werd geraadpleegd op 19/12/2019.\relax }}{12}{figure.caption.24}
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Routine bij Reinforcement Learning. Afbeelding te vinden op http://webindream.com/reinforcement-learning/. Website werd geraadpleegd op 23/12/2019.\relax }}{16}{figure.caption.33}
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Eerste \gls {sbc}: MMD-1. Afbeelding te vinden op https://nl.wikipedia.org/wiki/Singleboardcomputer. Website werd geraadpleegd op 23/12/2019.\relax }}{17}{figure.caption.34}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Modellen en resultaten van de benchmark op de Jetson Nano. Afbeelding te vinden op https://devblogs.nvidia.com/jetson-nano-ai-computing/. Website werd geraadpleegd op 17/02/2020.\relax }}{22}{figure.caption.40}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Praktische betekenis van het compair-subprogramma. Afbeelding te vinden op https://pyrenn.readthedocs.io/en/latest/examples.html Website werd geraadpleegd op 10/04/2020.\relax }}{26}{figure.caption.42}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Enkele voorbeelden uit de FashionMNIST-dataset. Afbeelding te vinden op https://becominghuman.ai/how-to-create-a-clothing-classifier-fashion-mnist-program-on-google-colab-99f620c24fcd Website werd geraadpleegd op 13/04/2020.\relax }}{30}{figure.caption.53}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Praktische betekenis van het compair-subprogramma. Afbeelding te vinden op https://pyrenn.readthedocs.io/en/latest/examples.html Website werd geraadpleegd op 10/04/2020.\relax }}{25}{figure.caption.42}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Enkele voorbeelden uit de FashionMNIST-dataset. Afbeelding te vinden op https://becominghuman.ai/how-to-create-a-clothing-classifier-fashion-mnist-program-on-google-colab-99f620c24fcd Website werd geraadpleegd op 13/04/2020.\relax }}{29}{figure.caption.53}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Een voorbeeld uit de NumberMNIST-dataset.\relax }}{31}{figure.caption.57}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Een voorbeeld van een kat uit de catsVSdogs-dataset.\relax }}{32}{figure.caption.60}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Een voorbeeld uit de Image Recognition-dataset.\relax }}{33}{figure.caption.62}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

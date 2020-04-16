@@ -7,10 +7,10 @@ from tabulate import tabulate
 iterations = 20
 boxplot_bool = False
 
-name_run_PC = "MP_NN_ALL_RUN_PC_Thu_Apr_2_22_05_01_2020"
-name_run_PI = "MP_NN_ALL_RUN_PI_Fri_Apr_3_02_32_27_2020"
-name_run_NANO = "MP_NN_ALL_RUN_NANO_Fri_Apr_3_02_11_17_2020"
-name_run_CORAL = "MP_NN_ALL_RUN_CORAL_Wed_Apr_3_20_08_16_2020"
+name_run_PC = "Benchmark_PC_Thu_Apr_2_22_05_01_2020"
+name_run_PI = "Benchmark_PI_Fri_Apr_3_02_32_27_2020"
+name_run_NANO = "Benchmark_NANO_Fri_Apr_3_02_11_17_2020"
+name_run_CORAL = "Benchmark_CORAL_Wed_Apr_3_20_08_16_2020"
 
 devices_run = [name_run_PC, name_run_PI, name_run_NANO, name_run_CORAL]
 
@@ -24,7 +24,7 @@ virtual_mem = []
 time_diff = []
 
 programs = ["compair", "friction", "narendra4", "pt2", "P0Y0_narendra4",
-            "P0Y0_compair", "gradient", "FashionMNIST", "NumberMNIST", "catsVSdogs", "Im Rec"]
+            "gradient", "FashionMNIST", "NumberMNIST", "catsVSdogs", "Im Rec"]
 labels_cpu = programs + ["no operations"]
 labels_time = programs + ["Total*"]
 
@@ -34,13 +34,15 @@ title_time = 'Time program execution for each device during running'
 title_cpu = 'CPU usage for each device during running'
 
 devices = ["PC", "PI", "NANO", "CORAL"]
-clockspeed = [3.25, 1.2, 1.43, 1.7]
+clockspeed = [3.25, 1.2, 1.479, 1.5]
 device_price = [981, 41.5, 99, 149.99]
+power = [79.9, 3.7, 10, 2.65]
 
 width = 0.22
+image_path = "./images/figures/"
 
 
-def show_plot(data, ylabel, titel, labels, log, show, boxplot, normalise):
+def show_plot(data, ylabel, titel, labels, log, show, index, boxplot, normalise):
     if not show:
         return
 
@@ -57,10 +59,6 @@ def show_plot(data, ylabel, titel, labels, log, show, boxplot, normalise):
     data_bar = [[], [], [], []]
     for device in range(len(devices)):
         for program in range(len(labels)):
-            print("program", program)
-            print("len(labels)", len(labels))
-
-            print("len data[device][program]", len(data[device][program]))
             data_bar[device].append(float(round(mean(data[device][program]), 3)))
             for iteration in range(iterations):
                 data[device][program][iteration] = round(data[device][program][iteration], 3)
@@ -92,6 +90,7 @@ def show_plot(data, ylabel, titel, labels, log, show, boxplot, normalise):
         rects2 = ax.bar(x - width, data_bar[1], width, label='PI', color='darkgreen')
         rects3 = ax.bar(x, data_bar[2], width, label='NANO', color='lightgreen')
         rects4 = ax.bar(x + width, data_bar[3], width, label='CORAL', color='green')
+
         #autolabel(rects2)
         #autolabel(rects3)
         #autolabel(rects4)
@@ -109,6 +108,7 @@ def show_plot(data, ylabel, titel, labels, log, show, boxplot, normalise):
     ax.set_title(titel, fontsize=15)
     ax.set_xticks(x)
     ax.set_xticklabels(labels)
+    plt.xticks(rotation=45)
     ax.legend(prop={'size': 20})
 
     fig.tight_layout()
@@ -118,7 +118,7 @@ def show_plot(data, ylabel, titel, labels, log, show, boxplot, normalise):
     mng.window.state('zoomed')
     if log:
         plt.yscale("log")
-
+    plt.savefig(image_path + "Figure_{}".format(index))
     plt.show()
 
 
@@ -173,12 +173,14 @@ for iteration in range(iterations):
 
 # Plotting figures
 show_plot(data_run_time, ylabel_time, title_time, labels_time,
-          log=True, show=True, boxplot=boxplot_bool, normalise=False)
+          log=True, show=True, index=0, boxplot=boxplot_bool, normalise=False)
 show_plot(data_run_CPU, ylabel_cpu, title_cpu, labels_cpu,
-          log=False, show=True, boxplot=boxplot_bool, normalise=False)
+          log=False, show=True, index=1, boxplot=boxplot_bool, normalise=False)
 
 # making sure variables have right shape, content of data_run_time will be ignored
 data_run_time_norm = []
+data_run_time_power = []
+data_run_time_power_norm = []
 data_run_time_MHzCPU = []
 data_run_time_MHzCPU_norm = []
 data_run_time_MHzCPUprice = []
@@ -186,6 +188,8 @@ data_run_time_MHzCPUprice_norm = []
 
 for device in range(len(devices)):
     data_run_time_norm.append([])
+    data_run_time_power.append([])
+    data_run_time_power_norm.append([])
     data_run_time_MHzCPU.append([])
     data_run_time_MHzCPU_norm.append([])
     data_run_time_MHzCPUprice.append([])
@@ -193,6 +197,8 @@ for device in range(len(devices)):
 
     for program in range(len(labels_time)):
         data_run_time_norm[device].append([])
+        data_run_time_power[device].append([])
+        data_run_time_power_norm[device].append([])
         data_run_time_MHzCPU[device].append([])
         data_run_time_MHzCPU_norm[device].append([])
         data_run_time_MHzCPUprice[device].append([])
@@ -200,6 +206,8 @@ for device in range(len(devices)):
 
         for iteration in range(iterations):
             data_run_time_norm[device][program].append([])
+            data_run_time_power[device][program].append([])
+            data_run_time_power_norm[device][program].append([])
             data_run_time_MHzCPU[device][program].append([])
             data_run_time_MHzCPU_norm[device][program].append([])
             data_run_time_MHzCPUprice[device][program].append([])
@@ -220,7 +228,7 @@ show_plot(data=data_run_time_norm,
           ylabel=ylabel_time,
           titel=title_time + ", Normalised",
           labels=labels_time,
-          log=True, show=True,
+          log=True, show=True, index=2,
           boxplot=boxplot_bool, normalise=True)
 
 # plotting time/MHz/cpu%
@@ -232,10 +240,10 @@ for device in range(len(devices)):
 
 
 show_plot(data=data_run_time_MHzCPU,
-          ylabel="Time compensated for each CPU% and MHz.",
-          titel="Time compensated for each CPU% and MHz clockspeed for each device.",
+          ylabel="Time / CPU% / MHz.",
+          titel="Time / CPU% / MHz for each device.",
           labels=labels_time,
-          log=True, show=True,
+          log=True, show=True, index=3,
           boxplot=boxplot_bool, normalise=False)
 
 # plotting normalised time/MHz/cpu%
@@ -252,10 +260,45 @@ for device in range(len(devices)):
             data_run_time_MHzCPU_norm[device][program][iteration] = data_run_time_MHzCPU[device][program][iteration] \
                                                                     / minimum[program]
 show_plot(data_run_time_MHzCPU_norm,
-          ylabel="Time compensated for each CPU% and MHz.",
-          titel="Time compensated for each CPU% and MHz, Normalised.",
+          ylabel="Time / CPU% / MHz.",
+          titel="Time / CPU% / MHz for each device, Normalised.",
           labels=labels_time,
-          log=True, show=True,
+          log=True, show=True, index=4,
+          boxplot=boxplot_bool, normalise=True)
+
+# plotting time/watt
+for device in range(len(devices)):
+    for program in range(len(labels_time)):
+        for iteration in range(iterations):
+            data_run_time_power[device][program][iteration] = \
+                data_run_time[device][program][iteration] / power[device] * 1000
+
+
+show_plot(data=data_run_time_power,
+          ylabel="Time / Watt. (*1000)",
+          titel="Time / Watt for each device. (* 1000)",
+          labels=labels_time,
+          log=True, show=True, index=5,
+          boxplot=boxplot_bool, normalise=False)
+
+# plotting normalised time/watt
+minimum = []
+for label in range(len(labels_time)):
+    program_values = []
+    for device in range(len(devices)):
+        program_values.append(mean(data_run_time_power[device][label]))
+    minimum.append(np.nanmin(program_values))
+
+for device in range(len(devices)):
+    for program in range(len(labels_time)):
+        for iteration in range(iterations):
+            data_run_time_power_norm[device][program][iteration] = data_run_time_power[device][program][iteration] \
+                                                                    / minimum[program]
+show_plot(data_run_time_power_norm,
+          ylabel="Time / Watt. (*1000)",
+          titel="Time / Watt, Normalised. (*1000)",
+          labels=labels_time,
+          log=True, show=True, index=6,
           boxplot=boxplot_bool, normalise=True)
 
 # plotting time/MHz/cpu%/$
@@ -266,10 +309,10 @@ for device in range(len(devices)):
                 data_run_time_MHzCPU[device][program][iteration] / device_price[device] * 1000
 
 show_plot(data=data_run_time_MHzCPUprice,
-          ylabel="Time compensated for each CPU%, MHz and dollar. (*1000)",
-          titel="Time compensated for each CPU%, MHz and dollar for each device.(*1000)",
+          ylabel="Time / CPU% / MHz / dollar. (*1000)",
+          titel="Time / CPU% / MHz / dollar for each device. (*1000)",
           labels=labels_time,
-          log=True, show=True,
+          log=True, show=True, index=7,
           boxplot=boxplot_bool, normalise=False)
 
 # plotting normalised time/MHz/cpu%/$
@@ -287,10 +330,10 @@ for device in range(len(devices)):
                                                                              iteration] \
                                                                          / minimum[program]
 show_plot(data=data_run_time_MHzCPUprice_norm,
-          ylabel="Time compensated for each CPU%, MHz and dollar.",
-          titel="Time compensated for each CPU%, MHz and dollar for each device, Normalised.",
+          ylabel="Time / CPU% / MHz / dollar. (*1000)",
+          titel="Time / CPU% / MHz / dollar for each device, Normalised. (*1000)",
           labels=labels_time,
-          log=True, show=True,
+          log=True, show=True, index=8,
           boxplot=boxplot_bool, normalise=True)
 
 '''

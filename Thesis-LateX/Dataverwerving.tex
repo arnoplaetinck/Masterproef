@@ -10,11 +10,39 @@ In dit hoofdstuk wordt de verwerving van de data toegelicht. Er wordt eerst enke
 % uitleggen wat tensorflow is en hoe ik het gebruik. = tensorflowlite
 % wat is er nodig om tf te laten runnen op gpu / of te controleren
 
+
+
+
 % Verkennen devices
 \section{Verkennen edge-devices}
 	% welke benodigdheden zijn er om programma's te runnen; coral dev: tflite
 	% aanvullende data zoals cpu% kost,...
+
+In deze thesis wordt er gebruik gemaakt van drie verschillende edge-devices en een Personal Computer. De drie edge-toestellen zijn: Google Coral Dev Board, Nvidia Jetson Nano en de Raspberry Pi 3. Het zijn alle drie capabele toestellen die heel veelzijdig zijn op vlak van programma's die ze kunnen uitvoeren en randapparatuur die kan aangesloten worden. In deze sectie worden verschillende eigenschappen van deze toestellen besproken. \\
+De Coral Dev Board is een development board dat \gls{ml} kan toepassen op de on-board Edge \gls{tpu}-coprocessor. Om modellen op dit toestel te runnen is er wel nood aan \gls{tfl}-compatibele modellen. In paragraaf \ref{prg:ConversieTFL} wordt er uitgelegd hoe een model naar \gls{tfl} omgezet kan worden. \\
+Alle devices die onderworpen worden aan de benchmark maken gebruik van \textit{dynamic frequency scaling}. Dit is het dynamisch veranderen van de frequentie naargelang de processor veel instructies te verwerken krijgt of niet. Op momenten dat de processor zich in een idle toestand bevindt kan het gebruik maken van een lagere frequentie om minder vermogen te gebruiken. Door gebruik te maken van het commando $lscpu~|~grep~ MHz$ in een linux-terminal, is het mogelijk om de kloksnelheid weer te geven van het toestel in kwestie. Voor en tijdens het runnen van de benchmark werd dit toegepast om in kaart te brengen welke kloksnelheid werd toegepast op het moment van de benchmark. De Coral Dev gebruikt tijdens de benchmark de 1500 MHz frequentie, in idle-toestand is dit 500 MHz. De Nano gebruikt een gelijkaardige kloksnelheid tijdens de benchmark: 1479 MHz. Voor de benchmark bedroeg deze frequentie 102 MHz. De Pi gebruikt dan weer 600 MHz in ruststand en 1200 MHz gedurende de benchmark. De gebruikte Personal Computer benut een klokfrequentie van 2500 MHz in rust en 3250 MHz tijdens de benchmark. \\
+Het verbruik van energie is een belangrijke parameter in het verkrijgen van inzicht in de resultaten. Het verbruikte vermogen voor elk toestel wordt in kaart gebracht. Er kan hiervoor de voedingsvoorziening uit datasheets beschouwd worden. Deze waarden houden echter ook stroomvoorzieningen voor randapparatuur zoals bijvoorbeeld een camera in. In deze thesis zal men vermogenswaarden gebruiken die representatiever zijn. Voor de Coral Dev betekent dit dat het board een vermogen van 2,65 Watt verbruikt. 2 Watt komt van de \gls{tpu} die 4 \gls{tops} aan 2 \gls{topw}. De resterende 0,65 W wordt door de on-board ventilator gebruikt. Voor de Nano kan er wel de datasheet voedingswaarde gebruikt worden. Dit komt neer op een verbruik van 10 Watt. De datasheet-waarde heeft hier wel al de randapparatuur in rekening gebracht. Indien er wel randapparatuur aangebracht wordt zal er op een andere manier voeding aan het board geleverd moeten worden. De Pi 3 verbruikt een 3,7 W bij het uitvoeren van programma's zonder randapparatuur. Tot slot verbruikt de Personal Computer 79.9 W bij actief gebruik. Deze waarde is inclusief peripherals zoals scherm, Wi-Fi, muis en toetsenbord aangezien deze niet los te koppelen zijn van de Personal Computer.\\
+Een laatste belangrijke parameter is de kostprijs. Deze werd voor de verschillende toestellen al aangehaald in hoofdstuk \ref{ch:literatuurstudie}.
 	
+In tabel \ref{tab:datadevices} kan de samenvatting van deze extra data worden teruggevonden. 
+	
+	\begin{table}[]
+		\centering
+		\begin{tabular}{cccc}
+			\hline
+			Toestel                    & Clockspeed {[}Mhz{]} & Price {[}\${]} & Power {[}W{]} \\ \hline
+			\multicolumn{1}{c|}{PC}    & 3250                 & 981            & 79,9          \\
+			\multicolumn{1}{c|}{Pi}    & 1200                 & 41,5           & 3,7           \\
+			\multicolumn{1}{c|}{Nano}  & 1479                 & 99             & 10            \\
+			\multicolumn{1}{c|}{Coral} & 1500                 & 149, 99        & 2,65          \\ \hline
+		\end{tabular}
+		\caption{Gegevens voor verscheidene toestellen.}
+		\label{tab:datadevices}
+	\end{table}
+
+
+
+
 % subsectie: structuur runV4
 \section{Structuur programma}
 In deze sectie wordt de structuur van het hoofdprogramma besproken. De belangrijkste onderdelen van de programma's worden toegelicht. Zo wordt er weergegeven hoe de verschillende \gls{nn}-modellen opgebouwd zijn en op welke data ze worden toegepast voor zowel het trainen als het uitvoeren. De benchmark bevat in totaal 10 verschillende subprogramma's. Elk van deze is een neuraal netwerk met een zekere complexiteit bedoeld voor weide variatie aan applicaties. Van de 10 subprogramma's kunnen er zes van gecategoriseerd worden als regressie en vier als classificatie. Voor elk subprogramma wordt er uitgelegd hoe het model wordt opgesteld, hoe het getraind wordt en hoe het uiteindelijk uitgevoerd wordt. Voor de benchmark is vooral het uitvoeren van de modellen van belang. Het opstellen en trainen van een \gls{nn} is een eenmalige taak en hoeft bijgevolg niet op edge-devices gebeuren.
@@ -118,14 +146,11 @@ In deze sectie wordt de structuur van het hoofdprogramma besproken. De belangrij
 		% uitleg elk programma
 		% uitleg tensorflow en keras
 		
-		\subsubsection{Programma 7: FashionMNIST}
+		\subsubsection{Programma 7: FashionMNIST} \label{prg:FashionMNIST}
 		Het FashionMNIST-subprogramma is samen met NumberMNIST een van de klassiekers voor starters die kennis met \gls{ml} en \gls{nn} willen maken. Bovendien worden beide programma's ook regelmatig in andere benchmarks gebruikt wat vergelijkbaarheid bevordert. Voor deze redenen zullen we beiden ook in de benchmark opnemen. FashionMNIST is een \gls{nn} dat foto's van kledij-stukken probeert te classificeren volgens tien mogelijke labels. 
 		
 			\paragraph{Aanmaken en trainen model}
-			
-			% gebruik tensorflow en keras toevoegen
-			
-			Voor we het model beschrijven wordt er eerst de te gebruiken data verkent. De dataset\footnote{Datasets te vinden op: https://www.kaggle.com/zalando-research/fashionmnist, website geraadpleegd op 13/04/20.} van foto's en labels die voor het trainen gebruikt wordt, bestaat uit 60.000 instanties. Elke instantie uit de foto-dataset omvat een foto van 28 bij 28 pixels. Elke pixel bestaat hier uit 1 waarde en is dus geen RGB-pixel met drie waardes. In figuur \ref{fig:FashionMNIST-kledij} zijn er enkele voorbeelden van instanties terug te vinden. Voor het model opgesteld kan worden moet de data eerst nog verwerkt worden naar een schaal die voor de compiler van het model beter te verwerken is. De waarde van 1 pixel varieert tussen nul en 255. De waarden worden door het maximum, 255, gedeeld zodat deze tussen 0 en 1 komen te liggen. Vervolgens kan het model gedeclareerd worden. In listing \ref{lst:FashionMNISTtrain} wordt de declaratie, compilatie en het trainen van het model getoond. Het model bestaat uit drie lagen. Aan de inputlaag wordt de verwerkte data ingegeven in matrixvorm. Vervolgens worden de 784 waarden omgezet via een hidden layer met 128 nodes en een relu-activatiefunctie naar de output. In de outputlaag wordt er de $softmax$-activatiefunctie toegepast. Deze functie zorgt voor probabilistische uitkomst voor elke outputnode. Elke node zal hierdoor een waarde krijgen die overeenstemt met de kans dat het model de input acht overeen te komen met een bepaald label. De som van de waarden in alle outputnodes moet gelijk zijn aan 1. Na het declareren, wordt het model gecompileerd. In het $compile()$-commando worden verschillende parameters zoals optimizer en loss-functie meegedeeld aan de compiler. Deze bepalen de wijze waarop het model gecompileerd wordt. Tot slot wordt met het $fit()$-commando het trainen gestart. Hier worden de verwerkte inputdata en bijhorende labels aan toegevoegd.  
+			Voor we het model beschrijven wordt er eerst de te gebruiken data verkent. De dataset\footnote{Datasets te vinden op: https://www.kaggle.com/zalando-research/fashionmnist, website geraadpleegd op 13/04/20.} van foto's en labels die voor het trainen gebruikt wordt, bestaat uit 60.000 instanties. Elke instantie uit de foto-dataset omvat een foto van 28 bij 28 pixels. Elke pixel bestaat hier uit \'e\'en waarde en is dus geen RGB-pixel met drie waardes. In figuur \ref{fig:FashionMNIST-kledij} zijn er enkele voorbeelden van instanties terug te vinden. Voor het model opgesteld kan worden moet de data eerst nog verwerkt worden naar een schaal die voor de compiler van het model beter te verwerken is. De waarde van \'e\'en pixel varieert tussen nul en 255. De waarden worden door het maximum, 255, gedeeld zodat deze tussen nul en \'e\'en komen te liggen. Vervolgens kan het model gedeclareerd worden. In listing \ref{lst:FashionMNISTtrain} wordt de declaratie, compilatie en het trainen van het model getoond. Om het model op te bouwen, werd er gebruik gemaakt van Keras. Dit is een \textit{high level interface} die meerdere deep learning libraries kan aanspreken. In deze thesis wordt er gebruik gemaakt van de \gls{tf}-deep learning library. Het model bestaat uit drie lagen. Aan de inputlaag wordt de verwerkte data ingegeven in matrixvorm. Vervolgens worden de 784 waarden omgezet via een hidden layer met 128 nodes en een relu-activatiefunctie naar de output. In de outputlaag wordt er de $softmax$-activatiefunctie toegepast. Deze functie zorgt voor probabilistische uitkomst voor elke outputnode. Elke node zal hierdoor een waarde krijgen die overeenstemt met de kans dat het model de input acht overeen te komen met een bepaald label. De som van de waarden in alle outputnodes moet gelijk zijn aan \'e\'en. Na het declareren, wordt het model gecompileerd. In het $compile()$-commando worden verschillende parameters zoals optimizer en loss-functie meegedeeld aan de compiler. Deze bepalen de wijze waarop het model gecompileerd wordt. Tot slot wordt met het $fit()$-commando het trainen gestart. Hier worden de verwerkte inputdata en bijhorende labels aan toegevoegd. Vervolgens wordt het getrainde model omgezet naar een \gls{tfl}-model omgezet. Deze omzetting wordt in paragraaf \ref{prg:ConversieTFL} in detail uitgelegd. Na de conversie kan het model gebruikt worden om op data toegepast te worden. 
 			
 			
 			\begin{figure}
@@ -149,45 +174,121 @@ In deze sectie wordt de structuur van het hoofdprogramma besproken. De belangrij
 	# training the model
 	model.fit(train_images, train_labels, epochs=5)
 	\end{lstlisting}			
-			
-		
-			
+						
 			\paragraph{Uitvoeren model}
-			
-			
+			Het uitvoeren van een \gls{tfl}-model gebeurt op een andere wijze dan een standaard \gls{tf}-model. Bij een gewoon model wordt de $predict()$-methode toegepast. Bij een \gls{tfl}-model wordt er eerst een \textit{interpreter} gedeclareerd waar de verschillende tensors aan gealloceerd worden. Vervolgens kan de ingangstensor gedeclareerd worden met de $set\_tensor()$-methode. Daarna kan het model gerund worden op de ingangstensor, waarna de output naar de outputtensor wordt gestuurd. Met de $get\_tensor()$ kan de output opgehaald en verwerkt worden. Dit is terug te vinden in listing \ref{lst:FashionMNISTrun}.
+	
+	\begin{lstlisting}[caption={Runnen van sequentieel model voor FashionMNIST.}, captionpos=b,label={lst:FashionMNISTrun}]
+# Load TFLite model and allocate tensors.
+interpreter = tf.lite.Interpreter(model_path=path_model)
+interpreter.allocate_tensors()
+# Run TFLite model
+interpreter.set_tensor(input_details[0]['index'], input_data_array[index])
+interpreter.invoke()
+output_data = interpreter.get_tensor(output_details[0]['index'])
+	\end{lstlisting}				
 
 		\subsubsection{Programma 8: NumberMNIST}
-		% waar gaat het programma in se over?
-		% formule?
-		% Data-structuut? grootte
-		% aanmaken van model,
-		% trainen van model
-		% runnen van model
+		NumberMNIST is net zoals FashionMNIST een gekend voorbeeld in de \gls{ml}-wereld. In dit programma wordt er een model opgesteld met als doel handgeschreven getallen van nul t.e.m. negen te herkennen. Door de eenvoud is het mogelijk om dit programma op een volledig analoge wijze te verwezenlijken zoals in FashionMNIST. Om te vermijden dat dit een exacte kopie wordt, is er voor gekozen om gebruik te maken van een ander type model dan in FashionMNIST.
+				
+			\paragraph{Aanmaken en trainen model}
+			De te gebruiken dataset\footnote{Datasets te vinden op: https://www.kaggle.com/c/digit-recognizer/data, website geraadpleegd op 13/04/20.} voor dit model vertoont vele gelijkenissen met de dataset van FashionMNIST. Elk datapunt bestaat uit een foto van 28 bij 28 pixels. Elke pixel bestaat uit slechts \'e\'en waarde i.p.v. drie. De train-dataset bestaat 60.000 afbeeldingen, de test-dataset uit 10.000. Een voorbeeld van een afbeelding is te vinden in figuur \ref{fig:NumberMNIST}. De data wordt voor dit programma op dezelfde manier voor verwerkt als in FashionMNIST. De grootte van de pixels wordt door de waarde 255 gedeeld zodat de waarde van de pixels tussen nul en \'e\'en liggen. Voor het opstellen van het model werd er een andere richting uit gegaan. Voor dit model wordt er een \gls{cnn} opgebouwd. De structuur ervan kan in listing X teruggevonden worden. De $Conv2D()$-methode zorgt voor de herkenning van bepaalde vormen in de afbeelding ongeacht de plaats. De opeenvolgende lagen brengen de vorm op een bepaalde plaats in verband met het juiste getal. De outputlaag is een laag met 10 nodes, \'e\'en voor elk getal, waar opnieuw een $softmax$-functie op toegepast wordt. Het compilen en het trainen van het model gebuurt analoog aan FashionMNIST zoals in listing \ref{lst:FashionMNISTtrain}.
+
+	\begin{lstlisting}[caption={Structuur van het \gls{cnn} NumberMNIST.}, captionpos=b,label={lst:NumberMNISTmodel}]
+# Creating a Sequential Model and adding the layers
+model = keras.models.Sequential()
+model.add(keras.layers.Conv2D(28, kernel_size=(3, 3), input_shape=input_shape))
+model.add(keras.layers.MaxPooling2D(pool_size=(2, 2)))
+model.add(keras.layers.Flatten())  # Flattening the 2D arrays
+model.add(keras.layers.Dense(128, activation=tf.nn.relu))
+model.add(keras.layers.Dropout(0.2))
+model.add(keras.layers.Dense(10, activation=tf.nn.softmax))
+\end{lstlisting}	
+
+			\begin{figure}
+				\centering
+				\includegraphics[width=80mm]{afbeeldingen/NumberMNIST.PNG}
+				\caption{Een voorbeeld uit de NumberMNIST-dataset.}
+				\label{fig:NumberMNIST}
+			\end{figure}
+
+
+		
+			\paragraph{Uitvoeren model}
+			Ook het uitvoeren van het model gebeurt op gelijkaardige wijze aan de methode in FashionMNIST. Er wordt een interpreter aangemaakt vanuit een opgeslagen model. Aan deze interpreter worden tensors toegekend die vervolgens worden ingevuld met testdata. Deze worden door het $invoke()$ commando uitgevoerd en resulteren in een tensor met de outputresultaten.
+			
 		\subsubsection{Programma 9: catsVSdogs}
-		% waar gaat het programma in se over?
-		% formule?
-		% Data-structuut? grootte
-		% aanmaken van model,
-		% trainen van model
-		% runnen van model
+		CatsVSdogs is het derde programma dat berust op classificatie. Het is een programma dat de inhoud van een afbeelding kan herkennen en onderverdelen volgens twee klassen: \textit{cat} of \textit{dog}. Dit programma is een verderzetting van een algoritme dat in staat is om tien verschillende voorwerpen te herkennen. Door de toevoeging van de laatste laag $Dense(2, activation="softmax")$, te zien in listing \ref{lst:catsVSdogsmodel}, en een aanpassing van de datalabels is het mogelijk het model te vereenvoudigen naar herkennen van enkel katten en honden. \\
+		
+\begin{lstlisting}[caption={Structuur van het \gls{cnn} catsVSdogs.}, captionpos=b,label={lst:catsVSdogsmodel}]
+# Creating a Sequential Model and adding the layers
+model = models.Sequential()
+model.add(layers.Conv2D(32, (3, 3), activation='relu', input_shape=(32, 32, 3)))
+model.add(layers.MaxPooling2D((2, 2)))
+model.add(layers.Conv2D(64, (3, 3), activation='relu'))
+model.add(layers.MaxPooling2D((2, 2)))
+model.add(layers.Conv2D(64, (3, 3), activation='relu'))
+model.add(layers.Flatten())
+model.add(layers.Dense(64, activation='relu'))
+model.add(layers.Dense(10, activation='relu'))
+model.add(layers.Dense(2, activation="softmax"))
+\end{lstlisting}	
+		
+		
+		De dataset die hier werd toegepast is de cifar10-dataset\footnote{Datasets te vinden op: https://www.cs.toronto.edu/~kriz/cifar.html, website geraadpleegd op 15/04/20.}. Deze bevat 60.000 afbeeldingen van 32 bij 32 pixels. Hiervan worden er standaard 50.000 afbeeldingen gebruikt worden voor het trainen van het convolutioneel model en de overige voor het testen hiervan. In deze thesis wordt er echter voor gekozen om het aantal testafbeeldingen te verlagen naar 80 afbeeldingen van katten en honden. Dit wordt gedaan om sterk uiteenlopende looptijden in de resultaten te vermijden. In figuur \ref{fig:catsVSdogs1} is er een afbeelding opgenomen. Hier is te zien dat een pixel, een RGB-pixel is met een waarde voor elke kleur. De vorm van de input is hier dus een list van $[32, 32, 3]$. Ook in dit subprogramma wordt de data voor verwerkt door de grootte van de pixelwaarden te reduceren tot een getal tussen nul en \'e\'en. Dit wordt gerealiseerd door alle waardes te delen door 255. De volgende stappen, zoals compileren, trainen en runnen van het model, kan nu op analoge wijze gebeuren zoals aangegeven in paragraaf \ref{prg:FashionMNIST}.
+
+		\begin{figure}
+			\centering
+			\includegraphics[width=80mm]{afbeeldingen/catsVSdogs1.PNG}
+			\caption{Een voorbeeld van een kat uit de catsVSdogs-dataset.}
+			\label{fig:catsVSdogs1}
+		\end{figure}
+		
+
 		\subsubsection{Programma 10: Image Recognition}
-	% waar gaat het programma in se over?
-		% formule?
-		% Data-structuut? grootte
-		% aanmaken van model,
-		% trainen van model
-		% runnen van model
-	\subsection{Conversie naar TFLite}
-		Doordat er in deze thesis gebruik gemaakt wordt van devices die met enkel \gls{tfl} werken worden de modellen omgezet naar een \gls{tfl}-model. Dit gebeurt door een convertor-object te cre\"eren van het bestaande keras-model. Op deze convertor worden optimalisatietechnieken uitgevoerd waarna het model wordt omgezet naar een \gls{tfl}-equivalent model. Dit model wordt vervolgens met het commando $write()$ uitgeschreven naar het gewenste bestand. Dit nieuwe model kan vervolgens opgeroepen worden voor uitvoering op gewenste momenten. In listing \ref{lst:TFLconversie} kan de gebruikte code terug gevonden worden.
-	\begin{lstlisting}[caption={Converteren naar een \gls{tfl}-model.}, captionpos=b,label={lst:TFLconversie}]
-	# Convert the model
-	converter = tf.lite.TFLiteConverter.from_keras_model(model)
-	converter.optimizations = [tf.lite.Optimize.DEFAULT]
-	tflite_quant_model = converter.convert()
-	# Saving tflite model
-	open(path_model + "fashionMNISTmodel.tflite", "wb").write(tflite_quant_model)
-	\end{lstlisting}	
-% uitleggen ophalen data zoals cpu% en tijddata
+		Het laatste subprogramma dat valt onder classificatie is het Image Recognition programma. Dit programma is in staat om 1001 verschillende voorwerpen te herkennen op een alledaagse foto's. In figuur \ref{fig:ImRec1} is een voorbeeld van zo'n afbeelding te vinden. Deze grote taak wordt verwezenlijkt door te steunen op een model dat door Google werd ontwikkeld: Mobilenet\footnote{Datasets te vinden op: https://ai.googleblog.com/2017/06/mobilenets-open-source-models-for.html, website geraadpleegd op 15/04/20.}. Dit is een model getraind op enkele miljoenen afbeeldingen, bestaand meer dan 80 lagen en 3,2 miljoen trainbare parameters. 
+		Door gebruik te maken van dit uitgebreide model zal er geen nood zijn aan het zelf compilen of trainen van een model. De data die op dit model toegepast word zijn afbeeldingen van 224 bij 224 pixels. Deze data wordt verwerkt maar deze keer niet tussen nul en \'e\'en. De range van de data wordt herleid tot het bereik $[-1, 1]$. Voor het uitvoeren van het model worden er 124 afbeeldingen voorzien. 
+		
+		\begin{figure}
+			\centering
+			\includegraphics[width=80mm]{afbeeldingen/ImRec1.jpg}
+			\caption{Een voorbeeld uit de Image Recognition-dataset.}
+			\label{fig:ImRec1}
+		\end{figure}
+
+	\subsection{Conversie naar TFLite} \label{prg:ConversieTFL}
+	% hoe wordt een programma omgezet naar TFLite
+		Doordat er in deze thesis gebruik gemaakt wordt van devices die met enkel \gls{tfl} werken worden de modellen omgezet naar een \gls{tfl}-model. Dit gebeurt door een convertor-object te cre\"eren van het bestaande keras-model. Op deze convertor worden optimalisatietechnieken uitgevoerd waarna het model wordt omgezet naar een \gls{tfl}-equivalent model. Dit model wordt vervolgens met het commando $write()$ uitgeschreven naar het gewenste bestand. Dit nieuwe model kan vervolgens opgeroepen worden voor uitvoering op gewenste momenten. In listing \ref{lst:TFLconversiemodel} kan de gebruikte code terug gevonden worden.
+	\begin{lstlisting}[caption={Converteren naar een \gls{tfl}-model.}, captionpos=b,label={lst:TFLconversiemodel}]
+# Convert the model
+converter = tf.lite.TFLiteConverter.from_keras_model(model)
+converter.optimizations = [tf.lite.Optimize.DEFAULT]
+tflite_quant_model = converter.convert()
+# Saving tflite model
+open(path_model + "fashionMNISTmodel.tflite", "wb").write(tflite_quant_model)
+\end{lstlisting}	
+	
+		Als het model gebruiksklaar is voor \gls{tfl}, wordt er van het programma ook een kopie gemaakt die op de \gls{tfl}-devices zoals de Coral Dev Board uitgevoerd kan worden. Er wordt dus gewerkt met twee programma's die heel weinig van elkaar verschillen. Ze voeren dezelfde programma's uit op dezelfde wijze. De originele versie werkt voor de classificatieprogramma's met de standaard tensorflow-libraries waar \gls{tfl} een onderdeel van is. De aangepaste versie werkt op een stand-alone versie van de \gls{tfl}-module. Deze bibliotheek werkt enkel op speciaal ontwikkelde hardware zoals de Coral Dev Board. De aan te brengen veranderingen zijn terug te vinden in listing \ref{lst:TFLconversieprogram}. \\
+		
+		Het betreft twee belangrijke aanpassingen. De verandering van module en toevoeging van het $libedgetpu.so.1$-bestand. Dit bestand is de Edge \gls{tpu} runtime library. Deze bibliotheek helpt bij het verdelen van instructies over de \gls{cpu} en \gls{tpu}. 
+
+	\begin{lstlisting}[caption={Converteren naar een \gls{tfl}-programma.}, captionpos=b,label={lst:TFLconversieprogram}]
+# Lines in original File:
+import tensorflow as tf
+interpreter = tf.lite.Interpreter(model_path=path_model)
+# Lines in \gls{tfl}-compatible File:
+import tflite_runtime.interpreter as tflite
+interpreter = tflite.Interpreter(model_path=path_model,
+				experimental_delegates=[tflite.load_delegate('libedgetpu.so.1')])
+\end{lstlisting}	
+
+
+
+
+
+
+		
+		% uitleggen ophalen data zoals cpu% en tijddata
 \section{Uitvoeren metingen}
 
 

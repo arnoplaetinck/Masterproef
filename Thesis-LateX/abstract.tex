@@ -1,24 +1,14 @@
 \textbf{Benchmark voor latency bij edge-devices.}
 
-Er is een hele grote verscheidenheid aan onderwerpen waar de tijdsduur van executie van groot belang is. Hiervoor wordt vaak een afweging gemaakt tussen cloud en edge computing. In de cloud kan er met krachtige en snelle hardware worden gewerkt, maar is er wel een significante vertraging veroorzaakt door het verzenden van data over het internet. Uitvoeren van programma's in de edge hebben geen last van deze vertraging. Dit kan voordelig zijn bij latency-gevoelige applicaties zoals het zelfstandig rijden van voertuigen. 
+Er is een hele grote verscheidenheid aan onderwerpen waar de tijdsduur van executie van groot belang is. Hiervoor wordt vaak een afweging gemaakt tussen cloud en edge computing. In de cloud kan er met krachtige en snelle hardware worden gewerkt. Echter treedt er een significante vertraging op, veroorzaakt door het verzenden van data over het internet. Uitvoeren van programma's in de edge hebben geen last van deze vertraging. Dit kan voordelig zijn bij latency-gevoelige applicaties zoals het zelfstandig rijden van voertuigen. 
 
 % Eerste paragraaf: waarover gaat de scriptie, geef een eenvoudige beschrijving van de doelen en methodes
-Deze scriptie bespreekt een benchmark van drie verschillende edge-toestellen en reguliere computer. Deze benchmark biedt informatie over de latency en processor-performantie van elk device. Deze zal men meer inzicht geven bij een kosten-baten analyse te maken. De onderzochte devices binnen deze thesis zijn dedicated toestellen zoals CPU-gebaseerde Google Coral Dev en Raspberry Pi en GPU-gebaseerde toestellen zoals Nvidia Jetson Nano en een Personal Computer.
+Deze scriptie bespreekt een benchmark van drie verschillende edge-toestellen en een reguliere computer. Deze benchmark biedt informatie over de latency en processor-performantie van elk device. Deze zal meer inzicht bieden wanneer men een kosten-baten analyse maakt. De onderzochte devices binnen deze thesis zijn dedicated toestellen zoals CPU-gebaseerde Google Coral Dev en Raspberry Pi en GPU-gebaseerde toestellen zoals Nvidia Jetson Nano en een Personal Computer.
 
 % Tweede paragraaf: geef uitleg over de scriptiestructuur en vertel iets over de inhoud
-Om een representatieve benchmark te bekomen is het nodig om verschillende programma's op een identieke wijze te testen. De te beproeven programma's zullen verdeeld worden over de categorie\"en regressie en classificatie. De data die uit de benchmark afgeleid wordt bestaat uit de latency en het processor-gebruik van het runnen van elk programma. Deze worden dan herwerkt en genormaliseerd om de resultaten eenvoudiger te analyseren. Zo worden factoren zoals prijs, kloksnelheid en energieverbruik in rekening gebracht.
+Om een representatieve benchmark te bekomen is het nodig om verschillende programma's op een identieke wijze te testen. De te beproeven programma's zullen verdeeld worden over de categorie\"en regressie en classificatie. De data die uit de benchmark afgeleid wordt bestaat uit de latency en het processor-gebruik van het runnen van elk programma. Deze worden dan herwerkt en genormaliseerd om de resultaten eenvoudiger te analyseren. Hierbij worden ook factoren zoals prijs, kloksnelheid en energieverbruik in rekening gebracht.
 
 % Derde paragraaf: het besluit, met een kort overzicht van de resultaten
 Uit de resultaten kan er een duidelijk verschil afgeleid worden tussen de verschillende edge-toestellen. Hierbij komt de Nvidia Jetson Nano het best naar voor, ondanks de hogere kostprijs en een hoger energieverbruik. Wel kan er nog een argument gegeven worden voor de Google Coral Dev die in specifieke programma's met geoptimaliseerde Tensorflow Lite modellen een voordeel kan halen.
-
-
-
-
-
-
-
-
-
-
 
 \underline{Trefwoorden:} benchmark, edge-devices, latency, Jetson Nano, Coral Dev, Raspberry Pi

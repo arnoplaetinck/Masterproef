@@ -5,7 +5,7 @@ import keras
 
 (x_train, y_train), (x_test, y_test) = tf.keras.datasets.mnist.load_data()
 
-image_index = 7897  # You may select anything up to 60,000
+image_index = 5747  # You may select anything up to 60,000
 print(y_train[image_index])  # The label is 8
 plt.imshow(x_train[image_index], cmap='Greys')
 # plt.show()
@@ -25,7 +25,8 @@ x_test /= 255
 print('x_train shape:', x_train.shape)
 print('Number of images in x_train', x_train.shape[0])
 print('Number of images in x_test', x_test.shape[0])
-
+plt.imshow(x_test[image_index].reshape(28, 28), cmap='Greys')
+plt.show()
 # Creating a Sequential Model and adding the layers
 model = keras.models.Sequential()
 model.add(keras.layers.Conv2D(28, kernel_size=(3, 3), input_shape=input_shape))
