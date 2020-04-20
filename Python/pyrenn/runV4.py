@@ -408,7 +408,7 @@ while iteration < iterations:
         output_data = interpreter.get_tensor(output_details[0]['index'])
         output_data_array.append(output_data)
 
-    time_stop = (time.time())
+    time_stop = time.time()
     cores = psutil.cpu_percent(interval=None, percpu=True)
     if (mean(cores) != 0.0) and (time_stop-time_start != 0):
         logging_data(8, time_stop, time_start, cores)

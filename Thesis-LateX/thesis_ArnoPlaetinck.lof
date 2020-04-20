@@ -2,20 +2,20 @@
 \babel@toc {dutch}{}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Structuur van een Neuraal Netwerk. Afbeelding te vinden op https://github.com/drewnoff/spark-notebook-ml-labs/tree/master/labs/DLFramework. Website werd geraadpleegd op 24/12/2019 \relax }}{7}{figure.caption.11}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Algemene structuur van een node. Afbeelding te vinden op https://pathmind.com/wiki/neural-network. Website werd geraadpleegd op 23/12/2019. \relax }}{8}{figure.caption.15}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces De Sigmoid activatiefunctie. Afbeelding te vinden op https://towardsdatascience.com/activation-functions-neural-networks-1cbd9f8d91d6. Website werd geraadpleegd op 24/12/2019.\relax }}{9}{figure.caption.17}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Algemene structuur van een beslissingsboom. Afbeelding te vinden op https://medium.com/machine-learning-bites/machine-learning-decision-tree-classifier-9eb67cad263e. Website werd geraadpleegd op 24/12/2019.\relax }}{10}{figure.caption.20}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Tweedimensionale Support Vector Machine. Afbeelding te vinden op https://subscription.packtpub.com/book/big-data-and-business-intelligence/9781788994170/5/ch05lvl1sec36/support-vector-machines. Website werd geraadpleegd op 20/12/2019.\relax }}{11}{figure.caption.22}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Voorbeeld van Lineaire Regressie. Afbeelding te vinden op https://en.wikipedia.org/wiki/Regression-analysis. Website werd geraadpleegd op 19/12/2019.\relax }}{12}{figure.caption.24}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Routine bij Reinforcement Learning. Afbeelding te vinden op http://webindream.com/reinforcement-learning/. Website werd geraadpleegd op 23/12/2019.\relax }}{16}{figure.caption.33}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Eerste \gls {sbc}: MMD-1. Afbeelding te vinden op https://nl.wikipedia.org/wiki/Singleboardcomputer. Website werd geraadpleegd op 23/12/2019.\relax }}{17}{figure.caption.34}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Structuur van een Neuraal Netwerk. Afbeelding te vinden op https://github.com/drewnoff/spark-notebook-ml-labs/tree/master/labs/DLFramework. Website werd geraadpleegd op 24/12/2019 \relax }}{9}{figure.caption.12}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Algemene structuur van een node. Afbeelding te vinden op https://pathmind.com/wiki/neural-network. Website werd geraadpleegd op 23/12/2019. \relax }}{10}{figure.caption.16}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces De Sigmoid activatiefunctie. Afbeelding te vinden op https://towardsdatascience.com/activation-functions-neural-networks-1cbd9f8d91d6. Website werd geraadpleegd op 24/12/2019.\relax }}{11}{figure.caption.18}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Algemene structuur van een beslissingsboom. Afbeelding te vinden op https://medium.com/ machine-learning-bites/machine-learning-decision-tree-classifier-9eb67cad263e. Website werd geraadpleegd op 24/12/2019.\relax }}{12}{figure.caption.21}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Tweedimensionale Support Vector Machine. Afbeelding te vinden op https://subscription.packtpub.com/book/big-data-and-business-intelligence/9781788994170/5/ch05lvl1sec36/support-vector-machines. Website werd geraadpleegd op 20/12/2019.\relax }}{13}{figure.caption.23}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Voorbeeld van Lineaire Regressie. Afbeelding te vinden op https://en.wikipedia.org/wiki/Regression-analysis. Website werd geraadpleegd op 19/12/2019.\relax }}{14}{figure.caption.25}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Routine bij Reinforcement Learning. Afbeelding te vinden op http://webindream.com/reinforcement-learning/. Website werd geraadpleegd op 23/12/2019.\relax }}{18}{figure.caption.34}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Eerste \gls {sbc}: MMD-1. Afbeelding te vinden op https://nl.wikipedia.org/wiki/Singleboardcomputer. Website werd geraadpleegd op 23/12/2019.\relax }}{19}{figure.caption.35}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Praktische betekenis van het compair-subprogramma. Afbeelding te vinden op https://pyrenn.readthedocs.io/en/latest/examples.html Website werd geraadpleegd op 10/04/2020.\relax }}{25}{figure.caption.42}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Enkele voorbeelden uit de FashionMNIST-dataset. Afbeelding te vinden op https://becominghuman.ai/how-to-create-a-clothing-classifier-fashion-mnist-program-on-google-colab-99f620c24fcd Website werd geraadpleegd op 13/04/2020.\relax }}{29}{figure.caption.53}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Een voorbeeld uit de NumberMNIST-dataset.\relax }}{31}{figure.caption.57}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Een voorbeeld van een kat uit de catsVSdogs-dataset.\relax }}{32}{figure.caption.60}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Een voorbeeld uit de Image Recognition-dataset.\relax }}{33}{figure.caption.62}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Praktische betekenis van het compair-subprogramma. Afbeelding te vinden op https://pyrenn.readthedocs.io/en/latest/examples.html. Website werd geraadpleegd op 10/04/2020.\relax }}{27}{figure.caption.43}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Enkele voorbeelden uit de FashionMNIST-dataset. Afbeelding te vinden op https://becominghuman.ai/how-to-create-a-clothing-classifier-fashion-mnist-program-on-google-colab-99f620c24fcd Website werd geraadpleegd op 13/04/2020.\relax }}{32}{figure.caption.54}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Een voorbeeld uit de NumberMNIST-dataset.\relax }}{34}{figure.caption.58}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Een voorbeeld van een kat uit de catsVSdogs-dataset.\relax }}{35}{figure.caption.61}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Een voorbeeld uit de Image Recognition-dataset.\relax }}{36}{figure.caption.63}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
