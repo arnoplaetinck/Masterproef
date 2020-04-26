@@ -1,10 +1,14 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: thesis_ArnoPlaetinck.aux
 The style file: IEEEtranN.bst
-Illegal, another \bibstyle command---line 212 of file thesis_ArnoPlaetinck.aux
+Illegal, another \bibstyle command---line 239 of file thesis_ArnoPlaetinck.aux
  : \bibstyle
  :          {apalike}
 I'm skipping whatever remains of this command
 Database file #1: bibliografie.bib
+Repeated entry---line 85 of file bibliografie.bib
+ : @misc{bron:supportvectormachines
+ :                                 ,
+I'm skipping whatever remains of this entry
 -- IEEEtranN.bst version 1.13 (2008/09/30) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
@@ -17,4 +21,4 @@ Warning--empty journal in bordignonbenchmarking
 Warning--empty year in bordignonbenchmarking
 
 Done.
-(There was 1 error message)
+(There were 2 error messages)

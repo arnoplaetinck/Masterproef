@@ -18,7 +18,7 @@
 \usepackage{color}
 \usepackage{parallel}
 \usepackage{textpos}
-
+\usepackage{listings}             		% voor het weergeven van broncode
 % \usepackage[scaled]{uarial}
 \renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
 
@@ -87,11 +87,14 @@
 \newif\iflistoffigurespage
 \newif\iflistoftablespage
 \newif\iflistofsymbolspage
+%\newif\iflistfoflistingspage
 \newif\ifacknowledgementspage
 \newif\ifabstractpage
+\newif\ifabstractengpage
 
 \listoffigurespagefalse
 \listoftablespagefalse
+%\listoflistingsfalse
 
 \listofsymbolspagefalse
 \def\listofsymbols#1{\gdef\@listofsymbolsfile{\input{#1}}}
@@ -101,6 +104,10 @@
 
 \abstractpagefalse
 \def\abstracts#1{\gdef\@abstractfile{\input{#1}}}
+
+\abstractengpagefalse
+\def\abstractseng#1{\gdef\@abstractengfile{\input{#1}}}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	This function formats the titlepage using the	%
 %	variables set before.                		%
@@ -187,26 +194,40 @@
 
 	\ifacknowledgementspage 
 		\chapter*{Dankwoord} \@acknowledgementsfile
+		\addcontentsline{toc}{chapter}{Dankwoord}
 	\fi
 
 	\ifabstractpage 
 		\chapter*{Abstract} \@abstractfile
+		\addcontentsline{toc}{chapter}{Abstract}
 	\fi
+	
+	\ifabstractengpage 
+		\chapter*{Abstract English} \@abstractengfile
+		\addcontentsline{toc}{chapter}{Abstract English}
+	\fi	
 
-	\tableofcontents
-
+	
 	\iflistoffigurespage
 		\listoffigures
+		\addcontentsline{toc}{chapter}{Figurenlijst}
 	\fi
 	
 	\iflistoftablespage
 		\listoftables
+		\addcontentsline{toc}{chapter}{Tabellenlijst}
 	\fi
+
+	%\listoflistings
+	\addcontentsline{toc}{chapter}{Listingslijst}
 
 	\iflistofsymbolspage
 		%\chapter*{Lijst van symbolen}
 		\@listofsymbolsfile
+		\addcontentsline{toc}{chapter}{Afkortingenlijst}
 	\fi
+       
+    \tableofcontents   
        
 	\cleardoublepage
 	\pagenumbering{arabic}

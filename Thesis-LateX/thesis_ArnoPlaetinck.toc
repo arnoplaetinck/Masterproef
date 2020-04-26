@@ -1,44 +1,53 @@
 \babel@toc {dutch}{}
 \babel@toc {dutch}{}
+\contentsline {chapter}{Dankwoord}{v}{chapter*.1}
+\contentsline {chapter}{Abstract}{vii}{chapter*.2}
+\contentsline {chapter}{Abstract English}{ix}{chapter*.3}
+\contentsline {chapter}{Figurenlijst}{xi}{chapter*.4}
+\contentsline {chapter}{Tabellenlijst}{xiii}{chapter*.5}
+\contentsline {chapter}{Listingslijst}{xiii}{chapter*.5}
+\contentsline {chapter}{Afkortingenlijst}{xvi}{table.0.2}
 \contentsline {chapter}{\numberline {1}Inleiding}{3}{chapter.1}
 \contentsline {chapter}{\numberline {2}Literatuurstudie}{5}{chapter.2}
 \contentsline {section}{\numberline {2.1}Kadering}{6}{section.2.1}
 \contentsline {section}{\numberline {2.2}Artifici\"ele Intelligentie}{7}{section.2.2}
 \contentsline {section}{\numberline {2.3}Machine Learning}{8}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Leeralgoritmes en -technieken}{8}{subsection.2.3.1}
-\contentsline {subsubsection}{Artifici\"ele Neurale Netwerken}{8}{section*.10}
-\contentsline {paragraph}{Structuur van Neurale Netwerken}{8}{section*.11}
-\contentsline {subparagraph}{Lagen}{8}{section*.13}
-\contentsline {subparagraph}{Nodes}{10}{section*.14}
-\contentsline {subparagraph}{Activatie functie}{10}{section*.15}
-\contentsline {subparagraph}{Types activatiefuncties}{10}{section*.17}
-\contentsline {subsubsection}{Beslissingsboom}{12}{section*.19}
-\contentsline {paragraph}{Structuur van een beslissingsboom}{12}{section*.20}
-\contentsline {subsubsection}{Support Vector Machines}{12}{section*.22}
-\contentsline {subsubsection}{Regressie Analyse}{13}{section*.24}
-\contentsline {subsubsection}{Bayesian Netwerken}{13}{section*.26}
-\contentsline {subsubsection}{Genetische Algoritmes}{14}{section*.27}
-\contentsline {subsection}{\numberline {2.3.2}Keuze voor een Machine Learning-methode }{14}{subsection.2.3.2}
-\contentsline {subsubsection}{Regressie}{14}{section*.28}
-\contentsline {subsubsection}{Classificatie}{15}{section*.29}
-\contentsline {subsubsection}{Besluit}{16}{section*.30}
-\contentsline {subsection}{\numberline {2.3.3}Leertechnieken}{17}{subsection.2.3.3}
-\contentsline {subsubsection}{Supervised Learning}{17}{section*.31}
-\contentsline {subsubsection}{Unsupervised Learning}{17}{section*.32}
-\contentsline {subsubsection}{Reinforcement Learning}{17}{section*.33}
-\contentsline {section}{\numberline {2.4}Evolutie Single Board Computers}{18}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Geschiedenis}{18}{subsection.2.4.1}
-\contentsline {section}{\numberline {2.5}Assortiment aan 'off the shelf' toestellen}{20}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Beaglebone AI}{20}{subsection.2.5.1}
-\contentsline {subsubsection}{Specificaties}{20}{section*.36}
-\contentsline {subsection}{\numberline {2.5.2}Coral Dev Board}{21}{subsection.2.5.2}
-\contentsline {subsubsection}{Specificaties}{21}{section*.37}
-\contentsline {subsection}{\numberline {2.5.3}Nvidia Jetson Nano}{21}{subsection.2.5.3}
-\contentsline {subsubsection}{Specificaties}{21}{section*.38}
-\contentsline {subsection}{\numberline {2.5.4}Nvidia Jetson TX2}{22}{subsection.2.5.4}
-\contentsline {subsubsection}{Specificaties}{22}{section*.39}
-\contentsline {subsection}{\numberline {2.5.5}Raspberry Pi}{22}{subsection.2.5.5}
-\contentsline {subsubsection}{Specificaties}{22}{section*.40}
+\contentsline {subsection}{\numberline {2.3.1}Leertechnieken}{8}{subsection.2.3.1}
+\contentsline {subsubsection}{Supervised Learning}{8}{section*.11}
+\contentsline {subsubsection}{Unsupervised Learning}{8}{section*.12}
+\contentsline {subsubsection}{Reinforcement Learning}{9}{section*.13}
+\contentsline {subsection}{\numberline {2.3.2}Leeralgoritmes en -technieken}{9}{subsection.2.3.2}
+\contentsline {subsubsection}{Artifici\"ele Neurale Netwerken}{9}{section*.15}
+\contentsline {paragraph}{Structuur van Neurale Netwerken}{10}{section*.16}
+\contentsline {subparagraph}{Lagen}{10}{section*.18}
+\contentsline {subparagraph}{Nodes}{10}{section*.19}
+\contentsline {subparagraph}{Activatie functie}{11}{section*.20}
+\contentsline {subparagraph}{Types activatiefuncties}{11}{section*.22}
+\contentsline {subsubsection}{Beslissingsboom}{12}{section*.24}
+\contentsline {paragraph}{Structuur van een beslissingsboom}{12}{section*.25}
+\contentsline {subsubsection}{Support Vector Machines}{13}{section*.27}
+\contentsline {subsubsection}{Regressie Analyse}{13}{section*.29}
+\contentsline {subsubsection}{Bayesian Netwerken}{14}{section*.31}
+\contentsline {subsubsection}{Genetische Algoritmes}{14}{section*.32}
+\contentsline {subsection}{\numberline {2.3.3}Keuze voor een Machine Learning-methode }{15}{subsection.2.3.3}
+\contentsline {subsubsection}{Regressie}{15}{section*.33}
+\contentsline {subsubsection}{Classificatie}{15}{section*.34}
+\contentsline {subsubsection}{Besluit}{16}{section*.35}
+\contentsline {section}{\numberline {2.4}Evolutie Single Board Computers}{17}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Geschiedenis}{17}{subsection.2.4.1}
+\contentsline {section}{\numberline {2.5}Assortiment aan 'off the shelf' toestellen}{19}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Beaglebone AI}{19}{subsection.2.5.1}
+\contentsline {subsubsection}{Specificaties}{19}{section*.37}
+\contentsline {subsection}{\numberline {2.5.2}Coral Dev Board}{20}{subsection.2.5.2}
+\contentsline {subsubsection}{Specificaties}{20}{section*.38}
+\contentsline {subsection}{\numberline {2.5.3}Nvidia Jetson Nano}{20}{subsection.2.5.3}
+\contentsline {subsubsection}{Specificaties}{20}{section*.39}
+\contentsline {subsection}{\numberline {2.5.4}Nvidia Jetson TX2}{21}{subsection.2.5.4}
+\contentsline {subsubsection}{Specificaties}{21}{section*.40}
+\contentsline {subsection}{\numberline {2.5.5}Raspberry Pi}{21}{subsection.2.5.5}
+\contentsline {subsubsection}{Specificaties}{21}{section*.41}
+\contentsline {subsection}{\numberline {2.5.6}Personal Computer: Lenovo Legion Y520}{22}{subsection.2.5.6}
+\contentsline {subsubsection}{Specificaties}{22}{section*.42}
 \contentsline {section}{\numberline {2.6}Benchmarking van Machine Learning algoritmes}{23}{section.2.6}
 \contentsline {subsection}{\numberline {2.6.1}Bestaande benchmarks}{23}{subsection.2.6.1}
 \contentsline {chapter}{\numberline {3}Data verwerving}{25}{chapter.3}
@@ -46,29 +55,34 @@
 \contentsline {section}{\numberline {3.2}Verkennen edge-devices}{26}{section.3.2}
 \contentsline {section}{\numberline {3.3}Structuur programma}{27}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Regressie subprogramma's}{27}{subsection.3.3.1}
-\contentsline {subsubsection}{Programma 1: compair}{27}{section*.42}
-\contentsline {paragraph}{Aanmaken en trainen model}{27}{section*.45}
-\contentsline {paragraph}{Uitvoeren model}{29}{section*.46}
-\contentsline {subsubsection}{Programma 2: friction}{29}{section*.47}
-\contentsline {subsubsection}{Programma 3: narendra4}{29}{section*.48}
-\contentsline {subsubsection}{Programma 4: pt2}{30}{section*.49}
-\contentsline {subsubsection}{Programma 5: P0Y0-narendra4}{30}{section*.50}
-\contentsline {subsubsection}{Programma 6: gradient}{31}{section*.51}
+\contentsline {subsubsection}{Programma 1: compair}{27}{section*.45}
+\contentsline {paragraph}{Aanmaken en trainen model}{27}{section*.48}
+\contentsline {paragraph}{Uitvoeren model}{29}{section*.49}
+\contentsline {subsubsection}{Programma 2: friction}{29}{section*.50}
+\contentsline {subsubsection}{Programma 3: narendra4}{29}{section*.51}
+\contentsline {subsubsection}{Programma 4: pt2}{30}{section*.52}
+\contentsline {subsubsection}{Programma 5: P0Y0-narendra4}{30}{section*.53}
+\contentsline {subsubsection}{Programma 6: gradient}{31}{section*.54}
 \contentsline {subsection}{\numberline {3.3.2}Classificatie subprogramma's}{31}{subsection.3.3.2}
-\contentsline {subsubsection}{Programma 7: FashionMNIST}{31}{section*.52}
-\contentsline {paragraph}{Aanmaken en trainen model}{31}{section*.53}
-\contentsline {paragraph}{Uitvoeren model}{33}{section*.55}
-\contentsline {subsubsection}{Programma 8: NumberMNIST}{33}{section*.56}
-\contentsline {paragraph}{Aanmaken en trainen model}{33}{section*.57}
-\contentsline {paragraph}{Uitvoeren model}{34}{section*.59}
-\contentsline {subsubsection}{Programma 9: catsVSdogs}{34}{section*.60}
-\contentsline {subsubsection}{Programma 10: Image Recognition}{36}{section*.62}
+\contentsline {subsubsection}{Programma 7: FashionMNIST}{31}{section*.55}
+\contentsline {paragraph}{Aanmaken en trainen model}{31}{section*.56}
+\contentsline {paragraph}{Uitvoeren model}{33}{section*.58}
+\contentsline {subsubsection}{Programma 8: NumberMNIST}{33}{section*.59}
+\contentsline {paragraph}{Aanmaken en trainen model}{33}{section*.60}
+\contentsline {paragraph}{Uitvoeren model}{34}{section*.62}
+\contentsline {subsubsection}{Programma 9: catsVSdogs}{34}{section*.63}
+\contentsline {subsubsection}{Programma 10: Image Recognition}{36}{section*.65}
 \contentsline {subsection}{\numberline {3.3.3}Conversie naar TFLite}{36}{subsection.3.3.3}
 \contentsline {section}{\numberline {3.4}Uitvoeren metingen}{37}{section.3.4}
 \contentsline {section}{\numberline {3.5}Opslaan van data}{38}{section.3.5}
 \contentsline {chapter}{\numberline {4}Data verwerking}{39}{chapter.4}
-\contentsline {chapter}{\numberline {5}Resultaten}{41}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusie}{43}{chapter.6}
-\contentsline {chapter}{\numberline {A}Een aanhangsel}{47}{appendix.A}
-\contentsline {chapter}{\numberline {B}Beschrijving van deze masterproef in de vorm van een wetenschappelijk artikel}{49}{appendix.B}
-\contentsline {chapter}{\numberline {C}Poster}{51}{appendix.C}
+\contentsline {section}{\numberline {4.1}Data cleaning}{39}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Verwerpen data}{39}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Behandelen uitschieters}{40}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}Vormgeving resultaten}{41}{section.4.2}
+\contentsline {section}{\numberline {4.3}Overzicht code}{41}{section.4.3}
+\contentsline {chapter}{\numberline {5}Resultaten}{43}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusie}{45}{chapter.6}
+\contentsline {chapter}{\numberline {A}Een aanhangsel}{49}{appendix.A}
+\contentsline {chapter}{\numberline {B}Beschrijving van deze masterproef in de vorm van een wetenschappelijk artikel}{51}{appendix.B}
+\contentsline {chapter}{\numberline {C}Poster}{53}{appendix.C}

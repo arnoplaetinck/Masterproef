@@ -58,9 +58,9 @@ In deze sectie wordt de structuur van het hoofdprogramma besproken. De belangrij
 		\begin{figure}
 			\centering
 			\includegraphics[width=120mm]{afbeeldingen/compairPraktijk.PNG}
-			\caption{Praktische betekenis van het compair-subprogramma. \\Afbeelding te vinden op https://pyrenn.readthedocs.io/en/latest/examples.html.\\ Website werd geraadpleegd op 10/04/2020.}
+			\caption[Praktische betekenis van het compair-subprogramma.]{Praktische betekenis van het compair-subprogramma\cite{bron:compair}.}
 			\label{fig:compairPraktijk}
-			%bron: https://medium.com/machine-learning-bites/machine-learning-decision-tree-classifier-9eb67cad263e
+			%bron: https://pyrenn.readthedocs.io/en/latest/examples.html
 		\end{figure}
 	
 		\begin{table}[]
@@ -102,9 +102,11 @@ In deze sectie wordt de structuur van het hoofdprogramma besproken. De belangrij
 		
 		\subsubsection{Programma 2: friction}
 		Het friction-subprogramma is een voorbeeld dat een fysische grootheid berekent. Het gaat hier over de wrijvingskracht $F$ in functie van de snelheid $v$. Deze grootheden voldoen aan formule \ref{eq:friction}. 
+	
 		\begin{equation}\label{eq:friction}
 					F = \frac{\tanh(25 \cdot v)- \tanh(v)}{2} + \frac{\tanh(v)}{5}+0.03\cdot v			
 		\end{equation}
+	
 		Uit deze formule kan er afgeleid worden dat we met een statisch systeem met \'e\'en input, $v$, en \'e\'en output, $F$ werken. Voor analogie met de andere pyrenn-subprogramma's worden deze respectievelijk $P$ en $Y$ genoemd. De pyrenn-dataset waar we hier van gebruik maken bestaat uit 41 datapunten voor het trainen en 201 datapunten voor het testen van het model. Een voorbeeld van een datapunt kan in tabel \ref{tab:dataVoorbeelden} gevonden worden. Het model dat hier gebruikt wordt is een regulier \gls{nn} en bestaat uit vier lagen. De input- en outputlaag bestaan uit \'e\'en node. De twee hidden layers bestaan hier elk uit drie nodes. Zowel het cre\"eren en trainen als het uitvoeren van het model gebeuren aan analoge wijze als in listing \ref{lst:codecreatemodel} en \ref{lst:coderunmodel}.
 						
 		\subsubsection{Programma 3: narendra4}
@@ -164,7 +166,7 @@ J, E, e = prn.RTRL(net, data)
 			\begin{figure}
 				\centering
 				\includegraphics[width=80mm]{afbeeldingen/FashionMNIST_kledij.PNG}
-				\caption{Enkele voorbeelden uit de FashionMNIST-dataset. \\Afbeelding te vinden op https://becominghuman.ai/how-to-create-a-clothing-classifier-fashion-mnist-program-on-google-colab-99f620c24fcd\\ Website werd geraadpleegd op 13/04/2020.}
+				\caption[Enkele voorbeelden uit de FashionMNIST-dataset.]{Enkele voorbeelden uit de FashionMNIST-dataset\cite{bron:fashionmnist}.}
 				\label{fig:FashionMNIST-kledij}
 				%bron: https://becominghuman.ai/how-to-create-a-clothing-classifier-fashion-mnist-program-on-google-colab-99f620c24fcd
 			\end{figure}
@@ -208,7 +210,7 @@ output_data = interpreter.get_tensor(output_details[0]['index'])
 	
 				\newpage
 	
-		\begin{lstlisting}[caption={Structuur van het \gls{cnn} NumberMNIST.}, captionpos=b,label={lst:NumberMNISTmodel}]
+		\begin{lstlisting}[caption={Structuur van het Convolutioneel Neuraal Netwerk NumberMNIST.}, captionpos=b,label={lst:NumberMNISTmodel}]
 # Creating a Sequential Model and adding the layers
 model = keras.models.Sequential()
 model.add(keras.layers.Conv2D(28, kernel_size=(3, 3), input_shape=input_shape))
@@ -237,7 +239,7 @@ model.add(keras.layers.Dense(10, activation=tf.nn.softmax))
 			De dataset die hier werd toegepast is de cifar10-dataset\footnote{Datasets te vinden op: https://www.cs.toronto.edu/~kriz/cifar.html, website geraadpleegd op 15/04/20.}. Deze bevat 60.000 afbeeldingen van 32 bij 32 pixels. Hiervan worden er standaard 50.000 afbeeldingen gebruikt worden voor het trainen van het convolutioneel model en de overige voor het testen hiervan. In deze thesis wordt er echter voor gekozen om het aantal testafbeeldingen te verlagen naar 80 afbeeldingen van katten en honden. Dit wordt gedaan om sterk uiteenlopende looptijden in de resultaten te vermijden. In figuur \ref{fig:catsVSdogs1} is een afbeelding opgenomen. Hier is te zien dat een pixel, een RGB-pixel is met een waarde voor elke kleur. De vorm van de input is hier dus een list van $[32, 32, 3]$. Ook in dit subprogramma worden de data voorverwerkt door de grootte van de pixelwaarden te reduceren tot een getal tussen nul en \'e\'en. Dit wordt gerealiseerd door alle waardes te delen door 255. De volgende stappen, zoals compileren, trainen en runnen van het model, kan nu op analoge wijze gebeuren zoals aangegeven in paragraaf \ref{prg:FashionMNIST}.
 
 		
-\begin{lstlisting}[caption={Structuur van het \gls{cnn} catsVSdogs.}, captionpos=b,label={lst:catsVSdogsmodel}]
+\begin{lstlisting}[caption={Structuur van het Convolutioneel Neuraal Netwerk catsVSdogs.}, captionpos=b,label={lst:catsVSdogsmodel}]
 # Creating a Sequential Model and adding the layers
 model = models.Sequential()
 model.add(layers.Conv2D(32, (3, 3), activation='relu', input_shape=(32, 32, 3)))
@@ -276,7 +278,8 @@ model.add(layers.Dense(2, activation="softmax"))
 	\subsection{Conversie naar TFLite} \label{prg:ConversieTFL}
 	% hoe wordt een programma omgezet naar TFLite
 		Doordat er in deze thesis gebruik gemaakt wordt van devices die enkel met \gls{tfl} werken worden de modellen omgezet naar een \gls{tfl}-model. Dit gebeurt door een convertor-object te cre\"eren van het bestaande keras-model. Op deze convertor worden optimalisatietechnieken uitgevoerd waarna het model wordt omgezet naar een \gls{tfl}-equivalent model. Dit model wordt vervolgens met het commando $write()$ uitgeschreven naar het gewenste bestand. Dit nieuwe model kan vervolgens opgeroepen worden voor uitvoering op gewenste tijdstippen. In listing \ref{lst:TFLconversiemodel} kan de gebruikte code terug gevonden worden.
-	\begin{lstlisting}[caption={Converteren naar een \gls{tfl}-model.}, captionpos=b,label={lst:TFLconversiemodel}]
+	
+	\begin{lstlisting}[caption={Converteren naar een TFLite-model.}, captionpos=b,label={lst:TFLconversiemodel}]
 # Convert the model
 converter = tf.lite.TFLiteConverter.from_keras_model(model)
 converter.optimizations = [tf.lite.Optimize.DEFAULT]
@@ -289,7 +292,7 @@ open(path_model + "fashionMNISTmodel.tflite", "wb").write(tflite_quant_model)
 		
 		Het betreft twee belangrijke aanpassingen. De verandering van module en toevoeging van het $libedgetpu.so.1$-bestand. Dit bestand is de Edge \gls{tpu} runtime library. Deze bibliotheek helpt bij het verdelen van instructies over de \gls{cpu} en \gls{tpu}. 
 
-	\begin{lstlisting}[caption={Converteren naar een \gls{tfl}-programma.}, captionpos=b,label={lst:TFLconversieprogram}]
+	\begin{lstlisting}[caption={Converteren naar een TFLite-programma.}, captionpos=b,label={lst:TFLconversieprogram}]
 # Lines in original File:
 import tensorflow as tf
 interpreter = tf.lite.Interpreter(model_path=path_model)

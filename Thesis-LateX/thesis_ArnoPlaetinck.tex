@@ -87,6 +87,8 @@
 \newacronym{csv}{CSV}{Comma Seperated Value}
 \newacronym{rtrl}{RTRL}{Real Time Recurrent Learning}
 \newacronym{bptt}{BPTT}{Back Propagation Trough Time}
+\newacronym{pca}{PCA}{Principle Component Analysis}
+\newacronym{knn}{KNN}{K-Nearest Neighbors}
 
 \usepackage{sectsty}					% aanpassen van de fonts van sections en chapters
 \allsectionsfont{\sffamily}
@@ -112,13 +114,21 @@
 %abstract toevoegen?
 \abstractpagetrue
 \abstracts{abstract}					%.tex file met daarin het abstract
+%abstract toevoegen?
+\abstractengpagetrue
+\abstractseng{abstract}					%.tex file met daarin het abstracteng
 %lijst van figuren toevoegen?
 \listoffigurespagetrue
 %lijst van tabellen toevoegen?
 \listoftablespagetrue
+
+%lijst van listings toevoegen?
+%\listoflistingstrue
+
 %lijst van symbolen toevoegen?
 \listofsymbolspagetrue
 \listofsymbols{symbolen}				%.tex file met daarin de lijst van symbolen
+
 
 
 %informatie over het eindwerk, de promotor, ...
@@ -128,7 +138,7 @@
 
 %\campus{gent}
 
-\title{Accelerated edge computing\\ for Neural Networks}
+\title{Comparative Study of \\Single Board Computers for AI Edge Computing Purposes}
 
 % \author{naam student}
 \forename{Arno}
@@ -146,6 +156,7 @@
 \lstlistoflistings
 
 \input{inleiding}
+
 \input{Literatuurstudie}
 \input{Dataverwerving}
 \input{Data_verwerking}
