@@ -193,7 +193,7 @@
 	\titlep        
 
 	\ifacknowledgementspage 
-		\chapter*{Dankwoord} \@acknowledgementsfile
+		\chapter*{Voorwoord} \@acknowledgementsfile
 		\addcontentsline{toc}{chapter}{Dankwoord}
 	\fi
 
@@ -207,7 +207,9 @@
 		\addcontentsline{toc}{chapter}{Abstract English}
 	\fi	
 
-	
+    \tableofcontents   
+    \addcontentsline{toc}{chapter}{Inhoud}	
+    
 	\iflistoffigurespage
 		\listoffigures
 		\addcontentsline{toc}{chapter}{Figurenlijst}
@@ -218,7 +220,7 @@
 		\addcontentsline{toc}{chapter}{Tabellenlijst}
 	\fi
 
-	%\listoflistings
+	\lstlistoflistings
 	\addcontentsline{toc}{chapter}{Listingslijst}
 
 	\iflistofsymbolspage
@@ -227,7 +229,7 @@
 		\addcontentsline{toc}{chapter}{Afkortingenlijst}
 	\fi
        
-    \tableofcontents   
+
        
 	\cleardoublepage
 	\pagenumbering{arabic}

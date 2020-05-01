@@ -1,7 +1,43 @@
 \chapter{Conclusie}
 
 % Samenvatten van belangrijkste resultaten
+	% performantie gewijs: nano
+	% energieverbruik gewijs: coral
+% doel thesis nog benadrukken
 
-% Toekomstig werk
-	% uitbreiding andere boards
-	% meer programma's gespreid over meer onderdelen
+In deze studie is onderzocht hoe een benchmark opgesteld kan worden om verschillende toestellen te vergelijken met elkaar en zo inzicht te bieden bij een kosten-baten analyse. Met behulp van de packages Pyrenn en Tensorflow werden tien verschillende programma's opgesteld, waarvan zes regressie en vier classificatieprogramma's. Vervolgens werden deze uitgevoerd op vier toestellen: de Google Coral Dev, Nvidia Jetson Nano, Raspberry Pi en de Personal Computer. Hierbij werden twee metrics gemeten: de duur van executie en het verbruik van de \gls{cpu}. Deze data werd uitgeschreven naar \gls{csv}-bestanden. Als alle data verzameld werd kon de verkregen data verwerkt worden met behulp van extra data zoals kloksnelheid, prijs en energieconsumptie. Tot slot werd de data gevisualiseerd in staafdiagrammen en genormaliseerd om vergelijkbaarheid te bevorderen. \\
+
+Uit de resultaten blijkt dat de Personal Computer de laagste tijdswaarden blijft halen t.o.v. de edge-toestellen. Dit werd verwacht door de krachtige specificaties. Tussen de verschillende edge-toestellen is de Nano de \gls{sbc} met de laagste tijdwaarden. Het board word gevolgd door de Coral en de Pi. Deze bevindingen zijn onafhankelijk van het type uitgevoerde programma. Verder werden deze bevindingen ook terug gevonden indien er gecompenseerd werd voor de performantie van elke \gls{cpu}. Hier haalde de Coral wel lagere waarden dan de Nano bij het programma $Image ~Recognition$. \\
+
+Tot slot werd er gekeken naar het laagste energieverbruik van de verscheidene toestellen. Hier werd er gevonden dat vooral de Coral Dev minder energie verbruikt dan andere toestellen. De Coral werd eerst gevolgd door de Nano en daarna de Pi. De Personal Computer verbruikt het meest energie, voornamelijk door de extra randapparaten. De Nano had wel een lager verbruik dan de Coral bij classificatieprogramma's zoals NumberMNIST en catsVSdogs. \\
+
+Uit de benchmark blijkt dus dat de Nano een betere keuze is bij tijdsduurgevoelige applicaties in de edge waar de duur van executie van een programma zo laag mogelijk dient te zijn. De Coral is een betere optie bij applicaties waar energieverbruik van groter belang is. Hier kan wel de keuze voor Nano bij bepaalde programma's beter uitkomen.
+
+
+	
+	\newpage
+	\section{Toekomstig werk}
+	
+	% Toekomstig werk
+		% uitbreiding andere boards
+		% meer programma's gespreid over meer onderdelen
+		% uitbreidbaarheid verbeteren door bv met klasses te werken voor elk board
+		% manier om latency te verekenen in resultaten
+		
+	Toekomstig werk aan deze benchmark berust zich vooral op het uitbreiden van de huidige benchmark. Deze uitbreiding kan op meerdere vlakken gebeuren. Het eerste vlak waar gewerkt kan worden is het uitbreiden naar andere boards toe. Het kan interessant zijn om verschillende edge-devices te testen en te vergelijken met de huidige geteste \gls{sbc}s. Boards die hiervoor in aanmerking zouden komen zijn bijvoorbeeld: Raspberry Pi 4, Nvidia Jetson TX2 en Qualcom DragonBoard.
+	
+	Een tweede optie voor het uitbreiden van de benchmark is het toevoegen van meerdere programma's eventueel over meerder packages. Tot nu toe werden 2 packages voor classificatie- en regressiemodellen gebruikt. Het kan een interessant zijn om ook andere onderdelen van Machine Learning toe te passen en de resultaten hiervan te analyseren.
+	
+	Vervolgens is het ook mogelijk om de code verder te optimaliseren. Door gebruik te maken van klasses voor de boards en metingen is het eventueel mogelijk de code te vereenvoudigen. Bovendien zijn er nog mogelijkheden om de code zodanig aan te passen om het makkelijker te maken om meerdere toestellen en programma's toe te voegen aan de benchmark.
+	
+	Tot slot is het mogelijk om aanpassingen te maken om cloud-devices en edge-devices rechtstreeks met elkaar te vergelijken voor de executieduur. Hiervoor moet er een oplossing worden gevonden om de latency veroorzaakt door het verzenden van data over het internet in te calculeren.
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

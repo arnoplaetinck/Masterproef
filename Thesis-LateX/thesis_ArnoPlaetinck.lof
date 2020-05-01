@@ -2,23 +2,32 @@
 \babel@toc {dutch}{}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Routine bij Reinforcement Learning.}}{9}{figure.caption.14}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Structuur van een Neuraal Netwerk.}}{10}{figure.caption.17}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Algemene structuur van een node.}}{11}{figure.caption.21}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces De Sigmoid activatiefunctie.}}{12}{figure.caption.23}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Algemene structuur van een beslissingsboom.}}{13}{figure.caption.26}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Tweedimensionale Support Vector Machine.}}{14}{figure.caption.28}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Voorbeeld van Lineaire Regressie.}}{14}{figure.caption.30}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Eerste SBC: MMD-1.}}{17}{figure.caption.36}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Routine bij Reinforcement Learning.}}{7}{figure.caption.12}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Structuur van een Neuraal Netwerk.}}{8}{figure.caption.15}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Algemene structuur van een node.}}{9}{figure.caption.19}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces De Sigmoid activatiefunctie.}}{10}{figure.caption.21}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Algemene structuur van een beslissingsboom.}}{11}{figure.caption.24}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Tweedimensionale Support Vector Machine.}}{12}{figure.caption.26}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Voorbeeld van Lineaire Regressie.}}{12}{figure.caption.28}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Eerste SBC: MMD-1.}}{15}{figure.caption.34}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Praktische betekenis van het compair-subprogramma.}}{28}{figure.caption.46}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Enkele voorbeelden uit de FashionMNIST-dataset.}}{32}{figure.caption.57}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Een voorbeeld uit de NumberMNIST-dataset.\relax }}{34}{figure.caption.61}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Een voorbeeld van een kat uit de catsVSdogs-dataset.\relax }}{35}{figure.caption.64}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Een voorbeeld uit de Image Recognition-dataset.\relax }}{36}{figure.caption.66}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces De structuur van de benchmark.\relax }}{24}{figure.caption.42}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Praktische betekenis van het compair-subprogramma.}}{28}{figure.caption.44}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Enkele voorbeelden uit de FashionMNIST-dataset.}}{33}{figure.caption.56}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Een voorbeeld uit de NumberMNIST-dataset.\relax }}{35}{figure.caption.60}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Een voorbeeld van een kat uit de catsVSdogs-dataset.\relax }}{36}{figure.caption.63}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Een voorbeeld uit de Image Recognition-dataset.\relax }}{37}{figure.caption.65}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Een voorbeeld van uitschieters in data van de duur van het compairprogramma.\relax }}{40}{figure.caption.67}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Een voorbeeld van uitschieters in data van de duur van het compairprogramma.\relax }}{40}{figure.caption.66}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces De vorm van gebruikte variabelen. NOG OM TE ZETTEN NAAR VECTOR\relax }}{43}{figure.caption.67}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Staafdiagram met de latencydata.\relax }}{48}{figure.caption.68}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Staafdiagram met de genormaliseerde latencydata.\relax }}{49}{figure.caption.69}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Staafdiagram met de CPU-verbruikgegevens.\relax }}{49}{figure.caption.70}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Staafdiagram met de performantie van de toestellen.\relax }}{50}{figure.caption.71}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Staafdiagram met de genormaliseerde performantie van de toestellen.\relax }}{51}{figure.caption.72}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Staafdiagram van het energieverbruik.\relax }}{52}{figure.caption.73}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Staafdiagram van het genormaliseerde energieverbruik.\relax }}{52}{figure.caption.74}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

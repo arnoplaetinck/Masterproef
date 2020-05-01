@@ -16,6 +16,7 @@
 \usepackage[square,numbers]{natbib}		% use [1] notation
 \usepackage{listings}             		% voor het weergeven van broncode
 \usepackage{verbatim}					% weergeven van code, commando's, ...
+\usepackage{pythontex}					%
 \usepackage{hyperref}					% maak PDF van de thesis navigeerbaar
 \usepackage{url}						% URL's invoegen in tekst met behulp van \url{http://}
 \usepackage[small,bf,hang]{caption}     % om de captions wat te verbeteren
@@ -32,13 +33,16 @@
 \usepackage{graphicx}
 \graphicspath{ {./afbeeldingen/} }
 \usepackage{booktabs}					% gebruikt bij invoeren tabllen
-	
-\usepackage{listings}
+\usepackage{svg}
 \usepackage{color}
 
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 
 \lstset{frame=tb,
 	language=Python,
@@ -56,7 +60,25 @@
 	breakatwhitespace=true
 	tabsize=3
 }
-
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=4
+}
+\lstset{style=mystyle}
 \usepackage[acronym]{glossaries}        % voor afkortingen
 \makeglossaries
 \newacronym{sbc}{SBC}{Single Board Computers}
@@ -116,14 +138,14 @@
 \abstracts{abstract}					%.tex file met daarin het abstract
 %abstract toevoegen?
 \abstractengpagetrue
-\abstractseng{abstract}					%.tex file met daarin het abstracteng
+\abstractseng{abstracteng}					%.tex file met daarin het abstracteng
 %lijst van figuren toevoegen?
 \listoffigurespagetrue
 %lijst van tabellen toevoegen?
 \listoftablespagetrue
 
 %lijst van listings toevoegen?
-%\listoflistingstrue
+%\lstlistoflistingstrue
 
 %lijst van symbolen toevoegen?
 \listofsymbolspagetrue
@@ -152,8 +174,6 @@
 \selectlanguage{dutch}
 
 \preface
-%lijst van listings toevoegen?
-\lstlistoflistings
 
 \input{inleiding}
 
@@ -171,12 +191,14 @@
 % Eventueel enkele appendices
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
-\input{bijlage1}
+
 
 % Bijlage met daarin het wetenschappelijk artikel
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Beschrijving van deze masterproef in de vorm van een wetenschappelijk artikel}
-%\includepdf{artikel.pdf}
+\includepdf{Poster-ArnoPlaetinck.pdf}
+
+\input{bijlage1}
 
 % Bijlage met daarin de poster
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

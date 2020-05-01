@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2020.4.7)  10 APR 2020 23:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2020.4.7)  26 APR 2020 16:46
 entering extended mode
 **./symbolen.tex
 (symbolen.tex
@@ -6,7 +6,7 @@ LaTeX2e <2017-04-15>
 Babel <3.18> and hyphenation patterns for 1 language(s) loaded.
 ! Undefined control sequence.
 l.1 \chapter
-            *{Lijst van symbolen en acroniemen}
+            *{Lijst van acroniemen}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -21,7 +21,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.1 \chapter*
-             {Lijst van symbolen en acroniemen}
+             {Lijst van acroniemen}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -33,16 +33,6 @@ Missing character: There is no s in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no v in font nullfont!
 Missing character: There is no a in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no e in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no c in font nullfont!
@@ -57,269 +47,6 @@ Missing character: There is no n in font nullfont!
 
 Overfull \hbox (20.0pt too wide) in paragraph at lines 1--2
 []
- []
-
-! Undefined control sequence.
-l.3 \section
-            *{Symbols}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.3 \section*
-             {Symbols}
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-Missing character: There is no * in font nullfont!
-Missing character: There is no S in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no s in font nullfont!
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 3--4
-[] 
- []
-
-
-! LaTeX Error: Environment longtable undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.6 \begin{longtable}
-                     {ll}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.6 \begin{longtable}{l
-                       l}
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-Missing character: There is no l in font nullfont!
-Missing character: There is no l in font nullfont!
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 7.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 7.
-! Misplaced alignment tab character &.
-l.7 $\lambda_{ex}$  &
-                            Excitation wavelength\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-Missing character: There is no E in font nullfont!
-Missing character: There is no x in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no w in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no v in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
-! Misplaced alignment tab character &.
-l.8 $\lambda_{em}$  &
-                     	Emission wavelength\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-Missing character: There is no E in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no w in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no v in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
-! Misplaced alignment tab character &.
-l.9 $N(\ldots)$	&
-                 	Noise process\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-Missing character: There is no N in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no s in font nullfont!
-
-! LaTeX Error: \begin{document} ended by \end{longtable}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.11 \end{longtable}
-                    
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 6--12
-[]
- []
-
-
-Overfull \hbox (14.6622pt too wide) in paragraph at lines 6--12
-\OML/cmm/m/it/10 []$
- []
-
-
-Overfull \hbox (17.22359pt too wide) in paragraph at lines 6--12
-\OML/cmm/m/it/10 []$
- []
-
-
-Overfull \hbox (28.56938pt too wide) in paragraph at lines 6--12
-\OML/cmm/m/it/10 N\OT1/cmr/m/n/10 ([])$
- []
-
-
-Overfull \hbox (18.89992pt too wide) in paragraph at lines 6--12
-\OT1/cmr/m/sc/10 nog
- []
-
-
-Overfull \hbox (11.48882pt too wide) in paragraph at lines 6--12
-\OT1/cmr/m/sc/10 te
- []
-
-
-Overfull \hbox (24.31102pt too wide) in paragraph at lines 6--12
-\OT1/cmr/m/sc/10 doen
- []
-
-
-Overfull \hbox (11.93327pt too wide) in paragraph at lines 6--12
-\OT1/cmr/m/sc/10 op
- []
-
-
-Overfull \hbox (17.62213pt too wide) in paragraph at lines 6--12
-\OT1/cmr/m/sc/10 het
- []
-
-
-Overfull \hbox (26.55544pt too wide) in paragraph at lines 6--12
-\OT1/cmr/m/sc/10 einde
- []
-
-
-Overfull \hbox (17.51106pt too wide) in paragraph at lines 6--12
-\OT1/cmr/m/sc/10 van
- []
-
-
-Overfull \hbox (11.82217pt too wide) in paragraph at lines 6--12
-\OT1/cmr/m/sc/10 de
- []
-
-
-Overfull \hbox (21.39987pt too wide) in paragraph at lines 6--12
-\OT1/cmr/m/sc/10 the-
- []
-
-
-Overfull \hbox (12.17772pt too wide) in paragraph at lines 6--12
-\OT1/cmr/m/sc/10 sis
- []
-
-! Undefined control sequence.
-l.14 \section
-             *{Acronyms}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14 \section*
-              {Acronyms}
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-Missing character: There is no * in font nullfont!
-Missing character: There is no A in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no s in font nullfont!
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 14--15
-[] 
  []
 
 
@@ -811,7 +538,38 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no d in font nullfont!
 ! Misplaced alignment tab character &.
-l.31 \textsc{cpu}	&
+l.31 \textsc{topw}	&
+                     tera operations per Watt\\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no W in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no t in font nullfont!
+! Misplaced alignment tab character &.
+l.32 \textsc{cpu}	&
                     Central Processing Unit\\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -842,7 +600,7 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no t in font nullfont!
 ! Misplaced alignment tab character &.
-l.32 \textsc{relu}	&
+l.33 \textsc{relu}	&
                      rectified linear unit\\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -871,7 +629,7 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no t in font nullfont!
 ! Misplaced alignment tab character &.
-l.33 \textsc{dlib}	&
+l.34 \textsc{dlib}	&
                      Deep Learning Inference Benchmarks\\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -912,7 +670,7 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no k in font nullfont!
 Missing character: There is no s in font nullfont!
 ! Misplaced alignment tab character &.
-l.34 \textsc{dl}	&
+l.35 \textsc{dl}	&
                    Deep Learning\\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -934,7 +692,7 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no g in font nullfont!
 ! Misplaced alignment tab character &.
-l.35 \textsc{cnn}	&
+l.36 \textsc{cnn}	&
                     Convolutional Neural Networks\\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -971,7 +729,7 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no k in font nullfont!
 Missing character: There is no s in font nullfont!
 ! Misplaced alignment tab character &.
-l.36 \textsc{tf}	&
+l.37 \textsc{tf}	&
                    Tensorflow\\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -991,7 +749,7 @@ Missing character: There is no l in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no w in font nullfont!
 ! Misplaced alignment tab character &.
-l.37 \textsc{tfl}	&
+l.38 \textsc{tfl}	&
                     Tensorflow Lite\\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1015,7 +773,7 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no e in font nullfont!
 ! Misplaced alignment tab character &.
-l.38 \textsc{rnn}	&
+l.39 \textsc{rnn}	&
                     Recurrent Neural Network\\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1047,7 +805,7 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no k in font nullfont!
 ! Misplaced alignment tab character &.
-l.39 \textsc{csv}	&
+l.40 \textsc{csv}	&
                     Comma Seperated Value\\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1075,139 +833,298 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no e in font nullfont!
+! Misplaced alignment tab character &.
+l.41 \textsc{rtrl}	&
+                     Real Time Recurrent Learning\\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 16--40
+Missing character: There is no R in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+! Misplaced alignment tab character &.
+l.42 \textsc{bptt}	&
+                     Back Propagation Trough Time\\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no B in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no P in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+! Misplaced alignment tab character &.
+l.43 \textsc{pca}	&
+                    Principal Component Analysis\\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no P in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no C in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+! Misplaced alignment tab character &.
+l.44 \textsc{knn}	&
+                    K-Nearest Neighbors\\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no K in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no N in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no N in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 16--45
 []
  []
 
 
-Overfull \hbox (14.48878pt too wide) in paragraph at lines 16--40
+Overfull \hbox (14.48878pt too wide) in paragraph at lines 16--45
 \OT1/cmr/m/sc/10 lp-
  []
 
 
-Overfull \hbox (19.73328pt too wide) in paragraph at lines 16--40
+Overfull \hbox (19.73328pt too wide) in paragraph at lines 16--45
 \OT1/cmr/m/sc/10 wan
  []
 
 
-Overfull \hbox (15.2888pt too wide) in paragraph at lines 16--40
+Overfull \hbox (15.2888pt too wide) in paragraph at lines 16--45
 \OT1/cmr/m/sc/10 iot
  []
 
 
-Overfull \hbox (10.62216pt too wide) in paragraph at lines 16--40
+Overfull \hbox (10.62216pt too wide) in paragraph at lines 16--45
 \OT1/cmr/m/sc/10 isi
  []
 
 
-Overfull \hbox (16.28882pt too wide) in paragraph at lines 16--40
+Overfull \hbox (16.28882pt too wide) in paragraph at lines 16--45
 \OT1/cmr/m/sc/10 sbc
  []
 
 
-Overfull \hbox (18.39995pt too wide) in paragraph at lines 16--40
+Overfull \hbox (18.39995pt too wide) in paragraph at lines 16--45
 \OT1/cmr/m/sc/10 ann
  []
 
 
-Overfull \hbox (9.44446pt too wide) in paragraph at lines 16--40
+Overfull \hbox (9.44446pt too wide) in paragraph at lines 16--45
 \/cmr/m/n/10 e
  []
 
 
-Overfull \hbox (12.59993pt too wide) in paragraph at lines 16--40
+Overfull \hbox (12.59993pt too wide) in paragraph at lines 16--45
 \OT1/cmr/m/sc/10 ml
  []
 
 
-Overfull \hbox (12.26663pt too wide) in paragraph at lines 16--40
+Overfull \hbox (12.26663pt too wide) in paragraph at lines 16--45
 \OT1/cmr/m/sc/10 nn
  []
 
 
-Overfull \hbox (16.84436pt too wide) in paragraph at lines 16--40
+Overfull \hbox (16.84436pt too wide) in paragraph at lines 16--45
 \OT1/cmr/m/sc/10 soc
  []
 
 
-Overfull \hbox (9.15552pt too wide) in paragraph at lines 16--40
+Overfull \hbox (9.15552pt too wide) in paragraph at lines 16--45
 \OT1/cmr/m/sc/10 ai
  []
 
 
-Overfull \hbox (4.44444pt too wide) in paragraph at lines 16--40
+Overfull \hbox (4.44444pt too wide) in paragraph at lines 16--45
 \/cmr/m/n/10 e 
  []
 
 
-Overfull \hbox (17.2888pt too wide) in paragraph at lines 16--40
+Overfull \hbox (17.2888pt too wide) in paragraph at lines 16--45
 \OT1/cmr/m/sc/10 eve
  []
 
 
-Overfull \hbox (18.1777pt too wide) in paragraph at lines 16--40
+Overfull \hbox (18.1777pt too wide) in paragraph at lines 16--45
 \OT1/cmr/m/sc/10 svm
  []
 
 
-Overfull \hbox (17.62213pt too wide) in paragraph at lines 16--40
+Overfull \hbox (17.62213pt too wide) in paragraph at lines 16--45
 \OT1/cmr/m/sc/10 tpu
  []
 
 
-Overfull \hbox (19.64435pt too wide) in paragraph at lines 16--40
+Overfull \hbox (19.64435pt too wide) in paragraph at lines 16--45
 \OT1/cmr/m/sc/10 asic
  []
 
 
-Overfull \hbox (22.4221pt too wide) in paragraph at lines 16--40
+Overfull \hbox (22.4221pt too wide) in paragraph at lines 16--45
 \OT1/cmr/m/sc/10 tops
  []
 
 
-Overfull \hbox (17.62213pt too wide) in paragraph at lines 16--40
+Overfull \hbox (26.19987pt too wide) in paragraph at lines 16--45
+\OT1/cmr/m/sc/10 topw
+ []
+
+
+Overfull \hbox (17.62213pt too wide) in paragraph at lines 16--45
 \OT1/cmr/m/sc/10 cpu
  []
 
 
-Overfull \hbox (22.86656pt too wide) in paragraph at lines 16--40
+Overfull \hbox (22.86656pt too wide) in paragraph at lines 16--45
 \OT1/cmr/m/sc/10 relu
  []
 
 
-Overfull \hbox (20.19992pt too wide) in paragraph at lines 16--40
+Overfull \hbox (20.19992pt too wide) in paragraph at lines 16--45
 \OT1/cmr/m/sc/10 dlib
  []
 
 
-Overfull \hbox (11.37773pt too wide) in paragraph at lines 16--40
+Overfull \hbox (11.37773pt too wide) in paragraph at lines 16--45
 \OT1/cmr/m/sc/10 dl
  []
 
 
-Overfull \hbox (18.1777pt too wide) in paragraph at lines 16--40
+Overfull \hbox (18.1777pt too wide) in paragraph at lines 16--45
 \OT1/cmr/m/sc/10 cnn
  []
 
 
-Overfull \hbox (11.26662pt too wide) in paragraph at lines 16--40
+Overfull \hbox (11.26662pt too wide) in paragraph at lines 16--45
 \OT1/cmr/m/sc/10 tf
  []
 
 
-Overfull \hbox (16.39992pt too wide) in paragraph at lines 16--40
+Overfull \hbox (16.39992pt too wide) in paragraph at lines 16--45
 \OT1/cmr/m/sc/10 tfl
  []
 
 
-Overfull \hbox (18.28883pt too wide) in paragraph at lines 16--40
+Overfull \hbox (18.28883pt too wide) in paragraph at lines 16--45
 \OT1/cmr/m/sc/10 rnn
  []
 
 
-Overfull \hbox (16.62215pt too wide) in paragraph at lines 16--40
+Overfull \hbox (16.62215pt too wide) in paragraph at lines 16--45
 \OT1/cmr/m/sc/10 csv
+ []
+
+
+Overfull \hbox (22.42209pt too wide) in paragraph at lines 16--45
+\OT1/cmr/m/sc/10 rtrl
+ []
+
+
+Overfull \hbox (23.19987pt too wide) in paragraph at lines 16--45
+\OT1/cmr/m/sc/10 bptt
+ []
+
+
+Overfull \hbox (17.62213pt too wide) in paragraph at lines 16--45
+\OT1/cmr/m/sc/10 pca
+ []
+
+
+Overfull \hbox (18.62216pt too wide) in paragraph at lines 16--45
+\OT1/cmr/m/sc/10 knn
  []
 
 
@@ -1217,7 +1134,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.41 \end{longtable}
+l.47 \end{longtable}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1231,11 +1148,11 @@ or  <return>  to continue without it.
 
  
 Here is how much of TeX's memory you used:
- 22 strings out of 495204
- 295 string characters out of 3182360
- 47726 words of memory out of 3000000
- 3426 multiletter control sequences out of 15000+200000
+ 20 strings out of 495204
+ 267 string characters out of 3182360
+ 46726 words of memory out of 3000000
+ 3424 multiletter control sequences out of 15000+200000
  3941 words of font info for 15 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 18i,2n,16p,92b,107s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 16i,1n,16p,92b,107s stack positions out of 5000i,500n,10000p,200000b,50000s
 !  ==> Fatal error occurred, no output PDF file produced!

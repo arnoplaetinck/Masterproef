@@ -1,8 +1,65 @@
 % !TeX spellcheck = nl_NL
 \chapter{Data verwerving}
-
 % inleiding van dit hoofdstuk, wat ga ik allemaal bespreken
-In dit hoofdstuk wordt de verwerving van de data toegelicht. Er worden eerst enkele belangrijke softwaretools besproken, die gedurende de thesis gehanteerd zullen worden. Dan worden een aantal specificaties van de gebruikte toestellen besproken. Vervolgens worden de gehanteerde programma's doorgenomen op vlak van toegepaste data en type \gls{nn}. Het hoofdprogramma wordt in de Python-programmeertaal geschreven. Deze taal werd gekozen door de veelvuldige toepassingsmogelijkheden binnen \gls{ml}. Tot slot wordt de dataverwerving van de benchmark zelf ge\"illustreerd en besproken hoe de data opgeslagen wordt.
+In dit hoofdstuk wordt de verwerving van de data en de werking van de benchmark toegelicht. Als eerste wordt de structuur van de benchmark besproken. Vervolgens wordt er uitgebreid op de wijze van meten en het opslaan van data. Dan worden de gebruikte softwaretools besproken. Nadien wordt er over gegaan op de devices die gebruikt worden in deze thesis. Vervolgens worden de gehanteerde programma's doorgenomen op vlak van toegepaste data en type \gls{nn}. Het hoofdprogramma wordt in de Python-programmeertaal geschreven. Deze taal werd gekozen door de veelvuldige toepassingsmogelijkheden binnen \gls{ml}. En tot slot wordt er uitgelegd waarom er conversie van modellen naar TensorFlow Lite plaats vindt.
+
+\section{Structuur benchmark}
+In deze sectie wordt de structuur van de benchmark besproken. In figuur \ref{fig:structureflowchart} is de structuur op schematische wijze gepresenteerd. Op de figuur valt op dat de benchmark in drie onderdelen wordt gesplitst. De onderdelen zijn het trainen van de modellen voor de verschillende te testen programma's, het uitvoeren van de modellen en het weergeven van de resultaten. \\
+
+Het eerste deel is het gedeelte waar de modellen in opgebouwd en getraind zullen worden. Het proces begint hier met het voorbereiden van de data en de modellen voor de verschillende programma's. De toe te passen data krijgt de juiste vorm en de gedaante van het model wordt gedeclareerd. Vervolgens wordt het model getraind op de data en zal het geconverteerd worden naar een TFLite-model. In paragraaf \ref{prg:ConversieTFL} wordt uitgelegd waarom deze conversie gebeurd in plaats van het gebruik van een standaard TensorFlow model. Na de conversie wordt het model opgeslagen in een .tflite-bestand.
+
+Het tweede gedeelte bespreekt het uitvoeren van de verschillende modellen. Dit is het voornaamste onderdeel van de benchmark en gebeurt op de verschillende devices zelf. Hier wordt de data gemeten tijdens het uitvoeren van elk programma. Dit gebeurt nadat de modellen vanuit de .tflite-bestanden worden geladen en de data voor verwerkt werd. Na het uitvoeren wordt de data opgeslagen in een \gls{csv}-bestand.
+
+Het derde en laatste gedeelte bestaat uit het analyseren van data uit de benchmark met behulp van data uit de specificaties zoals kostprijs, vermogen en kloksnelheid. Deze worden verwerkt en uiteindelijk gevisualiseerd in staafdiagrammen.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=80mm]{afbeeldingen/structureFlowchart.png}
+	\caption{De structuur van de benchmark.}
+	\label{fig:structureflowchart}
+\end{figure}
+
+
+\section{Uitvoeren metingen}
+% uitleggen ophalen data zoals cpu% en tijddata
+In de benchmark worden twee belangrijke parameters gemeten. De tijdsduur dat het programma over het uitvoeren doet en het percentage van de \gls{cpu} dat gebruikt wordt tijdens het uitvoeren. Voor het meten van de tijdsduur wordt er gebruik gemaakt van de $time$-module. Met behulp van deze module kan de tijd via het commando $time.time()$ uitgedrukt worden in een floating point getal uitgedrukt in seconden. Als de tijd bij aanvang van het uitvoeren van het model opgeslagen wordt alsook bij het stoppen van het model, dan kan men de tijdsduur bekomen door het verschil te nemen tussen de stop-waarde en de start-waarde.\\
+Om het gebruik van de \gls{cpu} te meten wordt er gebruik gemaakt van de psutil-module. Deze module bevat het commando $psutil.cpu\_percent()$ waarmee het verbruik in percent opgevraagd kan worden. Het opvragen van dit commando geeft het verbruik sinds de laatste keer dat het commando werd opgevraagd weer. Dit betekent dat de functie twee keer opgeroepen moet worden. De eerste keer vlak voor het starten van het uitvoeren van het programma, de tweede keer vlak erna. Als de functie voor het eerst opgeroepen wordt, zal de waarde niet opgeslagen worden. De waarde die teruggegeven wordt bij de tweede keer opvragen wordt wel opgeslagen. Deze bevat het juiste percentage van het verbruik van de \gls{cpu} sinds de start van het uitvoeren van het programma. Met de parameter $percpu$ kan er per core in de \gls{cpu} gemeten worden. Aangezien alle te gebruiken devices over meerdere kernen beschikken zetten wij deze op $True$ om een beter beeld te krijgen van de werking van het programma. In listing \ref{lst:meting} bevindt zich een voorbeeld van de meetmethode in pseudocode.\\
+Om statistisch representatieve resultaten te bekomen zullen de metingen meerdere keren gebeuren. In deze thesis wordt er voor gekozen om elk programma 20 iteraties te laten voltooien. Naast de metingen van elk programma wordt er ook nog een meting gedaan over de totale duur van het uitvoeren van de verschillende programma's en het verbruik van de \gls{cpu} in idle-toestand.
+
+
+\begin{lstlisting}[caption={Meten van gewenste data.}, captionpos=b,label={lst:meting}]
+# Eerste keer opvragen van tijd en CPU-verbruik
+psutil.cpu_percent(interval=None, percpu=True)
+time_start = time.time()
+# Uitvoeren van het model op testdata
+model.run(y_test)
+# Tweede keer opvragen van tijd en CPU-verbruik en opslag in gewenste variabelen
+time_stop = time.time()
+cpu_data = psutil.cpu_percent(interval=None, percpu=True)
+time_run = time_stop - time_start
+time_total += time_run
+\end{lstlisting}
+
+% Hoe opslaan data
+\section{Opslaan van data}
+% gebruik maken van unieke filenaam
+Een belangrijk onderdeel van deze benchmark is het opslaan van de gegenereerde data. Om te voorkomen dat de data verwarrend en ongestructureerd is, wordt er getracht om data op gestructureerde wijze op te slaan in een bestand. Deze kan dan later op eenvoudige wijze verwerkt en gevisualiseerd worden. \\
+Voor de data opgeslagen wordt, gebeurt er een controle naar de waarde van de data. Indien het zou blijken dat tijdens het meten onrealistische waarden gegenereerd worden voor een bepaalde iteratie (bijvoorbeeld 0\% \gls{cpu}-verbruik) dan wordt de iteratie opnieuw uitgevoerd. Indien dit niet het geval is, wordt de data gelogd naar een \gls{csv}-bestand. Het bestand krijgt een unieke bestandsnaam gelinkt aan het moment van uitvoeren en aan het toestel waar de code op uitgevoerd wordt. In listing \ref{lst:logging} kan de log-functie teruggevonden worden.
+
+
+\begin{lstlisting}[caption={Opslaan van de gewenste data.}, captionpos=b,label={lst:logging}]
+def logging_data(program_index, stop, start, cpu):
+# Logging data
+cores_avg = mean(cpu)
+time_diff = stop-start
+with open("unique_file_name.csv", mode='a+') as data_file:
+data_writer = csv.DictWriter(data_file, fieldnames=fieldnames)
+data_writer.writerow(
+{'Naam': labels[program_index],
+'CPU Percentage': str(cores_avg),
+'timediff': str(time_diff)})
+\end{lstlisting}	
+
 
 % Verkennen te gebruiken software
 \section{Verkennen van software}
@@ -10,10 +67,13 @@ In dit hoofdstuk wordt de verwerving van de data toegelicht. Er worden eerst enk
 % uitleggen wat tensorflow is en hoe ik het gebruik. = tensorflowlite
 % wat is er nodig om tf te laten runnen op gpu / of te controleren
 
-In deze thesis worden twee belangrijke libraries gebruikt om \gls{ml} toe te passen op applicaties: pyrenn\footnote{Meer info over pyrenn is te vinden op https://pyrenn.readthedocs.io/en/latest/index.html } en \gls{tf}\footnote{Meer info over TensorFlow is te vinden op https://www.tensorflow.org/ }. Beiden zijn een toolbox die toelaten om op heel eenvoudige manieren \gls{nn}-modellen op te stellen,  deze te trainen en te laten uitvoeren. \\
+In deze thesis worden twee belangrijke libraries gebruikt om \gls{ml} op applicaties toe te passen: pyrenn\footnote{Meer info over pyrenn is te vinden op https://pyrenn.readthedocs.io/en/latest/index.html } en \gls{tf}\footnote{Meer info over TensorFlow is te vinden op https://www.tensorflow.org/ }. Beiden zijn een toolbox die toelaten om op heel eenvoudige manieren \gls{nn}-modellen op te stellen,  deze te trainen en te laten uitvoeren. \\
 Pyrenn is de eerste bibliotheek waar gebruik van gemaakt wordt in onderafdeling \ref{subsec:regrsubprog}. Het wordt toegepast op regressie-applicaties en maakt gebruik van het Levenberg-Marquardt algoritm voor het trainen van \gls{nn}. Bij \gls{tf} kan dit algoritme gekozen worden uit meerdere opties. De pyrenn-toolbox heeft 2 \textit{dependencies} of afhankelijkheden in Python namelijk: pandas en numpy packages. \\
 
-De tweede gebruikte bibliotheek is \gls{tf}. Dit is een gratis open-source software library dat gebruikt wordt om \gls{ml}-toepassingen uit te voeren, met voornamelijk \gls{nn} onder de applicaties en Python als gebruikte programmeertaal. Binnen de \gls{tf}-bibliotheek maken we gebruik van Keras. Dit is net als \gls{tf} een open-source \gls{nn}-bibliotheek in Python, maar is niet enkel beperkt tot \gls{tf}. Ook in andere bibliotheek-omgevingen kan Keras teruggevonden worden. Onder meer in Microsoft Cognitive Toolkit, R, Theano en PlaidML kan dit teruggevonden worden\cite{bron:kerasbackend}. In deze thesis is er voor gekozen om \gls{tf} te gebruiken voor de classificatietoepassingen. Bij het opstellen van een \gls{nn} wordt er gebruik gemaakt van de Keras-bibliotheek. Keras wordt gebruikt i.p.v. \gls{tf} direct aan te spreken doordat Keras meer gebruiksvriendelijk is.
+De tweede gebruikte bibliotheek is \gls{tf}. Dit is een gratis open-source software library dat gebruikt wordt om \gls{ml}-toepassingen uit te voeren, met voornamelijk \gls{nn} onder de applicaties en Python als gebruikte programmeertaal. Deze bibliotheek wordt door een groot gebruikersbestand gebruikt. Binnen de \gls{tf}-bibliotheek maken we gebruik van Keras. Dit is net als \gls{tf} een open-source \gls{nn}-bibliotheek in Python, maar is niet enkel beperkt tot \gls{tf}. Ook in andere bibliotheek-omgevingen kan Keras teruggevonden worden. Onder meer in Microsoft Cognitive Toolkit, R, Theano en PlaidML kan dit teruggevonden worden\cite{bron:kerasbackend}. In deze thesis is er voor gekozen om \gls{tf} te gebruiken voor de classificatietoepassingen. Bij het opstellen van een \gls{nn} wordt er gebruik gemaakt van de Keras-bibliotheek. Keras wordt gebruikt i.p.v. \gls{tf} direct aan te spreken doordat Keras meer gebruiksvriendelijk is.
+
+\newpage
+
 % Verkennen devices
 \section{Verkennen edge-devices}
 	% welke benodigdheden zijn er om programma's te runnen; coral dev: tflite
@@ -21,8 +81,8 @@ De tweede gebruikte bibliotheek is \gls{tf}. Dit is een gratis open-source softw
 
 In deze thesis wordt er gebruik gemaakt van drie verschillende edge-devices en een Personal Computer. De drie edge-toestellen zijn: Google Coral Dev Board, Nvidia Jetson Nano en de Raspberry Pi 3. Het zijn alle drie capabele toestellen die heel veelzijdig zijn op vlak van programma's die ze kunnen uitvoeren en randapparatuur dat kan aangesloten worden. In deze sectie worden verschillende eigenschappen van deze toestellen besproken. \\
 De Coral Dev Board is een development board dat \gls{ml} kan toepassen op de on-board Edge \gls{tpu}-coprocessor. Om modellen op dit toestel te runnen is er wel nood aan \gls{tfl}-compatibele modellen. In paragraaf \ref{prg:ConversieTFL} wordt er uitgelegd hoe een model naar \gls{tfl} omgezet kan worden. \\
-Alle devices, die onderworpen worden aan de benchmark, maken gebruik van \textit{dynamic frequency scaling}. Dit is het dynamisch veranderen van de frequentie naargelang de processor veel instructies te verwerken krijgt of niet. Op momenten dat de processor zich in een idle toestand bevindt, kan het gebruik maken van een lagere frequentie om minder vermogen te gebruiken. Door gebruik te maken van het commando $lscpu~|~grep~ MHz$ in een linux-terminal, is het mogelijk om de kloksnelheid weer te geven van het toestel in kwestie. Voor en tijdens het runnen van de benchmark werd dit toegepast om in kaart te brengen welke kloksnelheid werd toegepast op het moment van de benchmark. De Coral Dev gebruikt tijdens de benchmark de 1500 MHz frequentie, in idle toestand is dit 500 MHz. De Nano gebruikt een gelijkaardige kloksnelheid tijdens de benchmark: 1479 MHz. Voor de benchmark bedroeg deze frequentie 102 MHz. De Pi gebruikt dan weer 600 MHz in ruststand en 1200 MHz gedurende de benchmark. De gebruikte Personal Computer benut een klokfrequentie van 2500 MHz in rust en 3250 MHz tijdens de benchmark. \\
-Het verbruik van energie is een belangrijke parameter in het verkrijgen van inzicht in de resultaten. Het verbruikte vermogen voor elk toestel wordt in kaart gebracht. Er kan hiervoor de voedingsvoorziening uit datasheets beschouwd worden. Deze waarden houden echter ook vermogen voor randapparatuur zoals bijvoorbeeld een camera in. In deze thesis zal men vermogenswaarden gebruiken die representatiever zijn. Voor de Coral Dev betekent dit dat het board een vermogen van 2,65 Watt verbruikt. 2 Watt komt van de \gls{tpu} die 4 \gls{tops} uitvoert aan 2 \gls{topw}. De resterende 0,65 W wordt door de on-board ventilator gebruikt. Voor de Nano kan wel de datasheet voedingswaarde gebruikt worden. Dit komt neer op een verbruik van 10 Watt. De datasheet-waarde heeft hier wel al de randapparatuur in rekening gebracht. Indien er wel randapparatuur aangebracht wordt zal er op een andere manier voeding aan het board geleverd moeten worden. De Pi 3 verbruikt een 3,7 W bij het uitvoeren van programma's zonder randapparatuur. Tot slot verbruikt de Personal Computer 79.9 W bij actief gebruik. Deze waarde is inclusief peripherals zoals scherm, Wi-Fi, muis en toetsenbord aangezien deze niet los te koppelen zijn van de Personal Computer.\\
+Alle devices, die onderworpen worden aan de benchmark, maken gebruik van \textit{dynamic frequency scaling}. Dit is het dynamisch veranderen van de frequentie naargelang de processor veel instructies te verwerken krijgt of niet. Op momenten dat de processor zich in een idle toestand bevindt, kan het gebruik maken van een lagere frequentie om minder vermogen te gebruiken. Door gebruik te maken van het commando $lscpu~|~grep~ MHz$ in een linux-terminal, is het mogelijk om de kloksnelheid weer te geven van het toestel in kwestie. Voor en tijdens het runnen van de benchmark werd dit toegepast om in kaart te brengen welke kloksnelheid werd toegepast op het moment van de benchmark. De Coral Dev gebruikt tijdens de benchmark de 1500 MHz frequentie, in idle toestand is dit 500 MHz. De Nano gebruikt een gelijkaardige kloksnelheid tijdens de benchmark: 1479 MHz. Voor de benchmark begon, bedroeg deze frequentie 102 MHz. De Pi gebruikt dan weer 600 MHz in ruststand en 1200 MHz gedurende de benchmark. De gebruikte Personal Computer benut een klokfrequentie van 2500 MHz in rust en 3250 MHz tijdens de benchmark. \\
+Het verbruik van energie is een belangrijke parameter in het verkrijgen van inzicht in de resultaten. Het verbruikte vermogen voor elk toestel wordt in kaart gebracht. Er kan hiervoor de voedingsvoorziening uit datasheets beschouwd worden. Deze waarden houden echter ook vermogen voor randapparatuur zoals bijvoorbeeld een camera in. In deze thesis zal men vermogenswaarden gebruiken die representatiever zijn. Voor de Coral Dev betekent dit dat het board een vermogen van 2,65 Watt verbruikt. 2 Watt komt van de \gls{tpu} die 4 \gls{tops} uitvoert aan 2 \gls{topw}. De resterende 0,65 W wordt door de on-board ventilator gebruikt. Voor de Nano kan wel de datasheet voedingswaarde gebruikt worden. Dit komt neer op een verbruik van 5 Watt. De datasheet-waarde heeft hier wel al de randapparatuur in rekening gebracht. Indien er wel randapparatuur aangebracht wordt zal er op een andere manier voeding aan het board geleverd moeten worden. De Pi 3 verbruikt een 3,7 W bij het uitvoeren van programma's zonder randapparatuur. Tot slot verbruikt de Personal Computer 79.9 W bij actief gebruik. Deze waarde is inclusief peripherals zoals scherm, Wi-Fi, muis en toetsenbord aangezien deze niet los te koppelen zijn van de Personal Computer.\\
 Een laatste belangrijke parameter is de kostprijs. Deze werd voor de verschillende toestellen al aangehaald in hoofdstuk \ref{ch:literatuurstudie}.
 	
 In tabel \ref{tab:datadevices} kan de samenvatting van deze extra data worden teruggevonden. 
@@ -34,7 +94,7 @@ In tabel \ref{tab:datadevices} kan de samenvatting van deze extra data worden te
 			Toestel                    & Clockspeed {[}Mhz{]} & Price {[}\${]} & Power {[}W{]} \\ \hline
 			\multicolumn{1}{c|}{PC}    & 3250                 & 981            & 79,9          \\
 			\multicolumn{1}{c|}{Pi}    & 1200                 & 41,5           & 3,7           \\
-			\multicolumn{1}{c|}{Nano}  & 1479                 & 99             & 10            \\
+			\multicolumn{1}{c|}{Nano}  & 1479                 & 99             & 5             \\
 			\multicolumn{1}{c|}{Coral} & 1500                 & 149, 99        & 2,65          \\ \hline
 		\end{tabular}
 		\caption{Gegevens voor verscheidene toestellen.}
@@ -50,11 +110,8 @@ In deze sectie wordt de structuur van het hoofdprogramma besproken. De belangrij
 
 
 	\subsection{Regressie subprogramma's} \label{subsec:regrsubprog}
-	Voor de regressie subprogramma's werd er gekozen om gebruik te maken van pyrenn. Dit is een toolbox voor zowel Python als Matlab. Deze laat op een heel eenvoudige manier \gls{nn} trainen en uitvoeren. De volgende subprogramma's worden opgesteld met behulp van de pyrenn-voorbeelden. 
-
-		\subsubsection{Programma 1: compair}
-		Het eerste subprogramma is een \textit{compressed air storage system} of een samengedrukte lucht opslagsysteem. Het systeem heeft drie verschillende inputs en 2 gewenste outputs. De praktische werking wordt verduidelijkt in figuur \ref{fig:compairPraktijk} maar wordt in deze thesis niet verder op in gegaan. Hier wordt er een \gls{rnn} toegepast. Dit is een regulier \gls{nn} waar er een terugkoppeling bestaat tussen een node naar een vorige laag toe. 
-			
+	Voor de regressie subprogramma's werd er gekozen om gebruik te maken van pyrenn. Dit is een toolbox voor zowel Python als Matlab. Deze laat op een heel eenvoudige manier toe om \gls{nn} te trainen en uit te voeren. De volgende subprogramma's worden opgesteld met behulp van de pyrenn-voorbeelden. 
+	
 		\begin{figure}
 			\centering
 			\includegraphics[width=120mm]{afbeeldingen/compairPraktijk.PNG}
@@ -62,8 +119,15 @@ In deze sectie wordt de structuur van het hoofdprogramma besproken. De belangrij
 			\label{fig:compairPraktijk}
 			%bron: https://pyrenn.readthedocs.io/en/latest/examples.html
 		\end{figure}
+		
+		\newpage
+		
+		\subsubsection{Programma 1: compair}
+		Het eerste subprogramma is een \textit{compressed air storage system} of een samengedrukte lucht opslagsysteem. Het systeem heeft drie verschillende inputs en 2 gewenste outputs. De praktische werking wordt verduidelijkt in figuur \ref{fig:compairPraktijk} maar wordt in deze thesis niet verder op in gegaan. Hier wordt er een \gls{rnn} toegepast. Dit is een regulier \gls{nn} waar er een terugkoppeling bestaat tussen een node naar een vorige laag toe. 
+			
+
 	
-		\begin{table}[]
+		\begin{table}
 			\centering
 			\begin{tabular}{ccccccc}
 				\hline
@@ -77,28 +141,30 @@ In deze sectie wordt de structuur van het hoofdprogramma besproken. De belangrij
 			\label{tab:dataVoorbeelden}
 		\end{table}
 	
+
+	
 			\paragraph{Aanmaken en trainen model}
 			Voor dit subprogramma werd er gewerkt met een dataset voorzien door Pyrenn zelf. Deze dataset levert in totaal 960 data inzendingen voor de inputs en outputs. Hiervan zijn er 480 inzendingen voorzien voor trainen en 480 voor testen van het model. In tabel \ref{tab:dataVoorbeelden} kan u een voorbeeld vinden van \'e\'en datalijn. Hierbij is de inputdata $P$ een lijst van drie features $P1$, $P2$ en $P3$. Analoog geldt dat de te verwachten outputdata $Y$ een lijst voorstelt met twee features $Y1$ en $Y2$. Het \gls{nn} wordt hier gedefinieerd door vier lagen. Een inputlaag, twee verborgen lagen en een outputlaag. Het aantal nodes voor de input- en outputlaag zijn gekend: drie en twee nodes respectievelijk. Voor de twee hidden layers werd er gekozen voor vijf nodes elk te implementeren.\\
 			Het model kan gecre\"eerd worden met het commando \textit{CreateNN()} zoals te zien is in listing \ref{lst:codecreatemodel}. De variabele \textit{net} bevat de vorm van het model. In het commando kunnen parameters toegevoegd worden. Zo wordt in een lijst de grootte en de lengte van de laag meegegeven. De parameters $dIn$, $dIntern$ en $dOut$ kunnen gebruikt worden om wederkerende verbindingen aan te maken. Zo wordt in dit subprogramma $dOut$ op waarde 1 gezet om van de outputlaag een verbinding met een vertraging van 1 tijdsperiode naar de vorige laag aan te brengen. Vervolgens wordt het model getraind met de data met het commando \textit{train\_LM()}. Hierbij worden parameters zoals $k\_max$ en $E\_stop$ toegepast om respectievelijk aan te duiden voor hoeveel iteraties er maximaal getraind mag worden en de minimale fout dat mag bereikt worden. Tot slot word het model ook opgeslagen in een \gls{csv}-bestand via het commando \textit{saveNN()}. Het uitvoeren van het model kan dan op een apart device gebeuren. 
 
 			\begin{lstlisting}[caption={Cre\"eren en trainen van pyrenn-model.},captionpos=b, label = {lst:codecreatemodel}]
-	# Create and train NN
-	net = pyrenn.CreateNN([3, 5, 5, 2], dIn=[0], dIntern=[], dOut=[1])
-	net = pyrenn.train_LM(P, Y, net, verbose=True, k_max=500, E_stop=1e-5)
-	# Save outputs to certain file
-	prn.saveNN(net, "./models/compair.csv")
-			\end{lstlisting}
+# Create and train NN
+net = pyrenn.CreateNN([3, 5, 5, 2], dIn=[0], dIntern=[], dOut=[1])
+net = pyrenn.train_LM(P, Y, net, verbose=True, k_max=500, E_stop=1e-5)
+# Save outputs to certain file
+prn.saveNN(net, "./models/compair.csv")
+\end{lstlisting}
 			
 			\newpage
-			
+
 			\paragraph{Uitvoeren model} 
 			Via het commando \textit{loadNN()} kan het model van uit een bestand terug in een variabele worden opgeslagen. Het uitvoeren van het model op testdata kan gebeuren via de instructie \textit{NNOut()}. Het resultaat hiervan wordt in de variabele $y$ opgeslagen zoals in listing \ref{lst:coderunmodel}. In vele toepassingen is het wenselijk dat variabele $y$ zo nauw mogelijk aansluit met de echte waarden $Y$. In deze thesis is de accuraatheid van het model echter niet van belang. De parameters die hier onderzocht worden zijn onafhankelijk van de accuraatheid van het model. Deze worden dus ook niet berekend en verder gebruikt. 
 	\begin{lstlisting}[caption={uitvoeren van pyrenn-model.},captionpos=b, label = {lst:coderunmodel}]
-	# Load saved NN from file
-	net = prn.loadNN("./models/compair.csv")
-	# Calculate outputs of the trained NN for train and test data	
-	y = prn.NNOut(P, net)
-	\end{lstlisting}
+# Load saved NN from file
+net = prn.loadNN("./models/compair.csv")
+# Calculate outputs of the trained NN for train and test data	
+y = prn.NNOut(P, net)
+\end{lstlisting}
 		
 		\subsubsection{Programma 2: friction}
 		Het friction-subprogramma is een voorbeeld dat een fysische grootheid berekent. Het gaat hier over de wrijvingskracht $F$ in functie van de snelheid $v$. Deze grootheden voldoen aan formule \ref{eq:friction}. 
@@ -122,7 +188,7 @@ net = pyrenn.CreateNN([1, 3, 3, 1], dIn=[1, 2], dIntern=[], dOut=[1, 2, 3])
 net = pyrenn.train_LM(P, Y, net, verbose=True, k_max=200, E_stop=1e-3)
 # Save outputs to certain file
 prn.saveNN(net, "./models/narendra4.csv")
-		\end{lstlisting}
+\end{lstlisting}
 		
 		\subsubsection{Programma 4: pt2}
 		Het subprogramma pt2 is een programma dat een dynamisch systeem met \'e\'en input en \'e\'en output beschrijft. Het te gebruiken systeem hier is een tweede order transfer functie zoals in vergelijking \ref{eq:pt2} is opgetekend. De gebruikte pyrenn-dataset is ook hier een set met \'e\'en input feature, $P$, en \'e\'en output feature, $Y$. Ook van deze set is een datapunt opgenomen in tabel \ref{tab:dataVoorbeelden}. In totaal zijn er 1000 datapunten beschikbaar, waarvan 500 voor het trainen en 500 voor het testen. Voor het cre\"eren van dit model is er gekozen om naast de input- en outputlaag, twee hidden layers te implementeren met elk twee nodes. Voor deze hidden layers wordt er een vertraging van 1 tijdsperiode voorzien. Voor de uitgang wordt er een terugkoppeling van \'e\'en en twee tijdsperiodes voorzien. De waardes voor $dIntern$ en $dOut$ zijn dus respectievelijk $[1]$ en $[1,2]$ bij het aanmaken van dit model. Zowel trainen en runnen gebeuren analoog aan listing  \ref{lst:codecreatemodel} en \ref{lst:coderunmodel}.
@@ -134,13 +200,10 @@ prn.saveNN(net, "./models/narendra4.csv")
 		\subsubsection{Programma 5: P0Y0-narendra4}
 		Het P0Y0-narendra4-subprogramma is een programma dat gebruik maakt van al gekende data bij het uitvoeren van een getraind netwerk. Bij een \gls{rnn} is dit een interessant gegeven voor het model. Het kan meteen de vertraagde inputs and outputs een waarde geven in plaats van deze te initialiseren op nul. Dit bevordert de accuraatheid bij de start van het uitvoeren. Dit programma wordt toegepast op de narendra4-dataset. Het model wordt dus op dezelfde wijze gecre\"eerd en getraind. Het verschil ligt bij het uitvoeren van het model. Hierbij worden er aan het $NNOut()$ commando drie willekeurig opeenvolgende datapunten in lijstvorm gegeven voor zowel de input als output. 
 
-
-
-
-		\newpage
-
 		\subsubsection{Programma 6: gradient}
 		Dit subprogramma berekent de gradi\"ent-vector van de foutmarge van een \gls{nn}. Deze berekening is mogelijk met twee verschillende algoritmen: \gls{rtrl} en \gls{bptt}. In deze thesis wordt er gebruik gemaakt van het \gls{rtrl}-algoritme. Deze werd in de documentatie beschreven als een snellere oplossing bij het uitvoeren van het model. Dit subprogramma wordt toegepast op de pt2-dataset. Het model wordt bijgevolg op dezelfde wijze gedeclareerd als het pt2-subprogramma. De train- en run-commando's zijn te vinden in listing \ref{lst:gradient}.
+		
+		\newpage
 		
 \begin{lstlisting}[caption={Cre\"eren, trainen en runnen van pyrenn-model voor gradient.}, captionpos=b,label={lst:gradient}]
 # Create and train NN
@@ -171,6 +234,8 @@ J, E, e = prn.RTRL(net, data)
 				%bron: https://becominghuman.ai/how-to-create-a-clothing-classifier-fashion-mnist-program-on-google-colab-99f620c24fcd
 			\end{figure}
 
+			\newpage
+
 \begin{lstlisting}[caption={Cre\"eren en trainen van sequentieel model voor FashionMNIST.}, captionpos=b,label={lst:FashionMNISTtrain}]
 # Building the model
 model = tf.keras.Sequential([
@@ -184,13 +249,13 @@ model.compile(optimizer="adam",
 	metrics=["accuracy"])
 # training the model
 model.fit(train_images, train_labels, epochs=5)
-	\end{lstlisting}			
+\end{lstlisting}			
 						
-						
-			\newpage
-						
+											
 			\paragraph{Uitvoeren model}
 			Het uitvoeren van een \gls{tfl}-model gebeurt op een andere wijze dan een standaard \gls{tf}-model. Bij een gewoon model wordt de $predict()$-methode toegepast. Bij een \gls{tfl}-model wordt er eerst een \textit{interpreter} gedeclareerd waar de verschillende tensors aan gealloceerd worden. Vervolgens kan de ingangstensor toegewezen worden met de $set\_tensor()$-methode. Daarna kan het model gerund worden op de ingangstensor, waarna de output naar de outputtensor wordt gestuurd. Met de $get\_tensor()$ kan de output opgehaald en verwerkt worden. Dit is terug te vinden in listing \ref{lst:FashionMNISTrun}.
+	
+	\newpage
 	
 	\begin{lstlisting}[caption={Runnen van sequentieel model voor FashionMNIST.}, captionpos=b,label={lst:FashionMNISTrun}]
 # Load TFLite model and allocate tensors.
@@ -200,7 +265,7 @@ interpreter.allocate_tensors()
 interpreter.set_tensor(input_details[0]['index'], input_data)
 interpreter.invoke()
 output_data = interpreter.get_tensor(output_details[0]['index'])
-	\end{lstlisting}				
+\end{lstlisting}				
 
 			\subsubsection{Programma 8: NumberMNIST}
 				NumberMNIST is net zoals FashionMNIST een gekend voorbeeld in de \gls{ml}-wereld. In dit programma wordt er een model opgesteld met als doel handgeschreven getallen van nul t.e.m. negen te herkennen. Door de eenvoud is het mogelijk om dit programma op een volledig analoge wijze te verwezenlijken zoals in FashionMNIST. Om te vermijden dat dit een exacte kopie wordt, is er voor gekozen om gebruik te maken van een ander type model dan in FashionMNIST.
@@ -208,7 +273,6 @@ output_data = interpreter.get_tensor(output_details[0]['index'])
 				\paragraph{Aanmaken en trainen model}
 					De te gebruiken dataset\footnote{Datasets te vinden op: https://www.kaggle.com/c/digit-recognizer/data, website geraadpleegd op 13/04/20.} voor dit model vertoont vele gelijkenissen met de dataset van FashionMNIST. Elk datapunt bestaat uit een foto van 28 bij 28 pixels. Elke pixel bestaat uit slechts \'e\'en waarde i.p.v. drie zoals bij een RGB-afbeelding. De train-dataset bestaat 60.000 afbeeldingen, de test-dataset uit 10.000. Een voorbeeld van een afbeelding is te vinden in figuur \ref{fig:NumberMNIST}. De data worden voor dit programma op dezelfde manier voor verwerkt als in FashionMNIST. De grootte van de pixels wordt door de waarde 255 gedeeld zodat de waarde van de pixels tussen nul en \'e\'en liggen. Voor het opstellen van het model wordt er een andere richting uit gegaan. Voor dit model wordt er een \gls{cnn} opgebouwd. De structuur ervan kan in listing \ref{lst:NumberMNISTmodel} teruggevonden worden. De $Conv2D()$-methode zorgt voor de herkenning van bepaalde vormen in de afbeelding ongeacht de plaats. De opeenvolgende lagen brengen de vorm op een bepaalde plaats in verband met het juiste getal. De outputlaag is een laag met 10 nodes, \'e\'en voor elk getal, waar opnieuw een $softmax$-functie op toegepast wordt. Het compilen en het trainen van het model gebeurt analoog aan FashionMNIST zoals in listing \ref{lst:FashionMNISTtrain}.
 	
-				\newpage
 	
 		\begin{lstlisting}[caption={Structuur van het Convolutioneel Neuraal Netwerk NumberMNIST.}, captionpos=b,label={lst:NumberMNISTmodel}]
 # Creating a Sequential Model and adding the layers
@@ -228,7 +292,7 @@ model.add(keras.layers.Dense(10, activation=tf.nn.softmax))
 					\label{fig:NumberMNIST}
 				\end{figure}
 	
-	
+				\newpage
 			
 				\paragraph{Uitvoeren model}
 					Ook het uitvoeren van het model gebeurt op gelijkaardige wijze aan de methode in FashionMNIST. Er wordt een interpreter aangemaakt vanuit een opgeslagen model. Aan deze interpreter worden tensors toegekend die vervolgens worden ingevuld met testdata. Deze worden door het $invoke()$ commando uitgevoerd en resulteren in een tensor met de outputresultaten.
@@ -300,50 +364,11 @@ interpreter = tf.lite.Interpreter(model_path=path_model)
 import tflite_runtime.interpreter as tflite
 interpreter = tflite.Interpreter(model_path=path_model,
 				experimental_delegates=[tflite.load_delegate('libedgetpu.so.1')])
-	\end{lstlisting}	
+\end{lstlisting}	
 
 		
-		% uitleggen ophalen data zoals cpu% en tijddata
-\section{Uitvoeren metingen}
-
-	In de benchmark worden twee belangrijke parameters gemeten. De tijdsduur dat het programma over het uitvoeren doet en het percentage van de \gls{cpu} dat gebruikt wordt tijdens het uitvoeren. Voor het meten van de tijdsduur wordt er gebruik gemaakt van de $time$-module. Met behulp van deze module kan de tijd via het commando $time.time()$ uitgedrukt worden in een floating point getal uitgedrukt in seconden. Als de tijd bij aanvang van het uitvoeren van het model opgeslagen wordt alsook bij het stoppen van het model, dan kan men de tijdsduur bekomen door het verschil te nemen tussen de stop-waarde en de start-waarde.\\
-	Om het gebruik van de \gls{cpu} te meten wordt er gebruik gemaakt van de psutil-module. Deze module bevat het commando $psutil.cpu\_percent()$ waarmee het verbruik in percent kan opgevraagd worden. Het opvragen van dit commando geeft het verbruik weer, sinds de laatste keer dat het commando werd opgevraagd. Dit betekent dat de functie twee keer opgeroepen moet worden. De eerste keer vlak voor het starten van het uitvoeren van het programma, de tweede keer vlak erna. Als de functie voor het eerst opgeroepen wordt, zal de waarde niet opgeslagen worden. De waarde die teruggegeven wordt bij de tweede keer opvragen wordt wel opgeslagen. Deze bevat het juiste percentage van het verbruik van de \gls{cpu} sinds de start van het uitvoeren van het programma. Met de parameter $percpu$ kan er per core in de \gls{cpu} gemeten worden. Aangezien alle te gebruiken devices over meerdere kernen beschikken zetten wij deze op $True$ om een beter beeld te krijgen van de werking van het programma. In listing \ref{lst:meting} bevindt zich een voorbeeld van de meetmethode in pseudocode.\\
-	Om statistisch representatieve resultaten te bekomen zullen de metingen meerdere keren gebeuren. In deze thesis wordt er voor gekozen om elk programma 20 iteraties te laten voltooien. Naast de metingen van elk programma wordt er ook nog een meting gedaan over de totale duur van het uitvoeren van de verschillende programma's en het verbruik van de \gls{cpu} in idle-toestand.
 
 
-	\begin{lstlisting}[caption={Meten van gewenste data.}, captionpos=b,label={lst:meting}]
-# Eerste keer opvragen van tijd en CPU-verbruik
-psutil.cpu_percent(interval=None, percpu=True)
-time_start = time.time()
-# Uitvoeren van het model op testdata
-model.run(y_test)
-# Tweede keer opvragen van tijd en CPU-verbruik en opslag in gewenste variabelen
-time_stop = time.time()
-cpu_data = psutil.cpu_percent(interval=None, percpu=True)
-time_run = time_stop - time_start
-time_total += time_run
-\end{lstlisting}
-
-% Hoe opslaan data
-\section{Opslaan van data}
-	% gebruik maken van unieke filenaam
-	Een belangrijk onderdeel van deze benchmark is het opslaan van de gegenereerde data. Om te voorkomen dat de data verwarrend en ongestructureerd is, wordt er getracht om data op gestructureerde wijze op te slaan in een bestand. Deze kan dan later op eenvoudige wijze verwerkt en gevisualiseerd worden. \\
-	Voor de data opgeslagen worden, gebeurt er een controle naar de waarde van de data. Indien het zou blijken dat tijdens het meten onrealistische waarden gegenereerd worden voor een bepaalde iteratie (bijvoorbeeld 0\% \gls{cpu}-verbruik) dan wordt de iteratie opnieuw uitgevoerd. Indien dit niet het geval is, worden de data gelogd naar een \gls{csv}-bestand. Het bestand krijgt een unieke bestandsnaam gelinkt aan het moment van uitvoeren en aan het toestel waar de code op uitgevoerd wordt. In listing \ref{lst:logging} kan de log-functie teruggevonden worden.
-	
-	
-	\begin{lstlisting}[caption={Opslaan van de gewenste data.}, captionpos=b,label={lst:logging}]
-def logging_data(program_index, stop, start, cpu):
-# Logging data
-cores_avg = mean(cpu)
-time_diff = stop-start
-with open("unique_file_name.csv", mode='a+') as data_file:
-	data_writer = csv.DictWriter(data_file, fieldnames=fieldnames)
-	data_writer.writerow(
-		{'Naam': labels[program_index],
-		'CPU Percentage': str(cores_avg),
-		'timediff': str(time_diff)})
-\end{lstlisting}	
-	
 	
 	
 	

@@ -1,46 +1,59 @@
 \BOOKMARK [0][-]{chapter*.1}{Dankwoord}{}% 1
 \BOOKMARK [0][-]{chapter*.2}{Abstract}{}% 2
 \BOOKMARK [0][-]{chapter*.3}{Abstract English}{}% 3
-\BOOKMARK [0][-]{chapter*.4}{Figurenlijst}{}% 4
-\BOOKMARK [0][-]{chapter*.5}{Tabellenlijst}{}% 5
-\BOOKMARK [0][-]{chapter*.5}{Listingslijst}{}% 6
-\BOOKMARK [0][-]{table.0.2}{Afkortingenlijst}{}% 7
-\BOOKMARK [0][-]{chapter.1}{Inleiding}{}% 8
-\BOOKMARK [0][-]{chapter.2}{Literatuurstudie}{}% 9
-\BOOKMARK [1][-]{section.2.1}{Kadering}{chapter.2}% 10
-\BOOKMARK [1][-]{section.2.2}{Artifici\353le Intelligentie}{chapter.2}% 11
-\BOOKMARK [1][-]{section.2.3}{Machine Learning}{chapter.2}% 12
-\BOOKMARK [2][-]{subsection.2.3.1}{Leertechnieken}{section.2.3}% 13
-\BOOKMARK [2][-]{subsection.2.3.2}{Leeralgoritmes en -technieken}{section.2.3}% 14
-\BOOKMARK [2][-]{subsection.2.3.3}{Keuze voor een Machine Learning-methode }{section.2.3}% 15
-\BOOKMARK [1][-]{section.2.4}{Evolutie Single Board Computers}{chapter.2}% 16
-\BOOKMARK [2][-]{subsection.2.4.1}{Geschiedenis}{section.2.4}% 17
-\BOOKMARK [1][-]{section.2.5}{Assortiment aan 'off the shelf' toestellen}{chapter.2}% 18
-\BOOKMARK [2][-]{subsection.2.5.1}{Beaglebone AI}{section.2.5}% 19
-\BOOKMARK [2][-]{subsection.2.5.2}{Coral Dev Board}{section.2.5}% 20
-\BOOKMARK [2][-]{subsection.2.5.3}{Nvidia Jetson Nano}{section.2.5}% 21
-\BOOKMARK [2][-]{subsection.2.5.4}{Nvidia Jetson TX2}{section.2.5}% 22
-\BOOKMARK [2][-]{subsection.2.5.5}{Raspberry Pi}{section.2.5}% 23
-\BOOKMARK [2][-]{subsection.2.5.6}{Personal Computer: Lenovo Legion Y520}{section.2.5}% 24
-\BOOKMARK [1][-]{section.2.6}{Benchmarking van Machine Learning algoritmes}{chapter.2}% 25
-\BOOKMARK [2][-]{subsection.2.6.1}{Bestaande benchmarks}{section.2.6}% 26
-\BOOKMARK [0][-]{chapter.3}{Data verwerving}{}% 27
-\BOOKMARK [1][-]{section.3.1}{Verkennen van software}{chapter.3}% 28
-\BOOKMARK [1][-]{section.3.2}{Verkennen edge-devices}{chapter.3}% 29
-\BOOKMARK [1][-]{section.3.3}{Structuur programma}{chapter.3}% 30
-\BOOKMARK [2][-]{subsection.3.3.1}{Regressie subprogramma's}{section.3.3}% 31
-\BOOKMARK [2][-]{subsection.3.3.2}{Classificatie subprogramma's}{section.3.3}% 32
-\BOOKMARK [2][-]{subsection.3.3.3}{Conversie naar TFLite}{section.3.3}% 33
-\BOOKMARK [1][-]{section.3.4}{Uitvoeren metingen}{chapter.3}% 34
-\BOOKMARK [1][-]{section.3.5}{Opslaan van data}{chapter.3}% 35
-\BOOKMARK [0][-]{chapter.4}{Data verwerking}{}% 36
-\BOOKMARK [1][-]{section.4.1}{Data cleaning}{chapter.4}% 37
-\BOOKMARK [2][-]{subsection.4.1.1}{Verwerpen data}{section.4.1}% 38
-\BOOKMARK [2][-]{subsection.4.1.2}{Behandelen uitschieters}{section.4.1}% 39
-\BOOKMARK [1][-]{section.4.2}{Vormgeving resultaten}{chapter.4}% 40
-\BOOKMARK [1][-]{section.4.3}{Overzicht code}{chapter.4}% 41
-\BOOKMARK [0][-]{chapter.5}{Resultaten}{}% 42
-\BOOKMARK [0][-]{chapter.6}{Conclusie}{}% 43
-\BOOKMARK [0][-]{appendix.A}{Een aanhangsel}{}% 44
-\BOOKMARK [0][-]{appendix.B}{Beschrijving van deze masterproef in de vorm van een wetenschappelijk artikel}{}% 45
-\BOOKMARK [0][-]{appendix.C}{Poster}{}% 46
+\BOOKMARK [0][-]{chapter*.4}{Inhoud}{}% 4
+\BOOKMARK [0][-]{chapter*.5}{Figurenlijst}{}% 5
+\BOOKMARK [0][-]{chapter*.6}{Tabellenlijst}{}% 6
+\BOOKMARK [0][-]{chapter*.7}{Listingslijst}{}% 7
+\BOOKMARK [0][-]{table.0.1}{Afkortingenlijst}{}% 8
+\BOOKMARK [0][-]{chapter.1}{Inleiding}{}% 9
+\BOOKMARK [0][-]{chapter.2}{Literatuurstudie}{}% 10
+\BOOKMARK [1][-]{section.2.1}{Kadering}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.2}{Artifici\353le Intelligentie}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.3}{Machine Learning}{chapter.2}% 13
+\BOOKMARK [2][-]{subsection.2.3.1}{Leertechnieken}{section.2.3}% 14
+\BOOKMARK [2][-]{subsection.2.3.2}{Leeralgoritmes en -technieken}{section.2.3}% 15
+\BOOKMARK [2][-]{subsection.2.3.3}{Keuze voor een Machine Learning-methode }{section.2.3}% 16
+\BOOKMARK [1][-]{section.2.4}{Evolutie Single Board Computers}{chapter.2}% 17
+\BOOKMARK [2][-]{subsection.2.4.1}{Geschiedenis}{section.2.4}% 18
+\BOOKMARK [1][-]{section.2.5}{Assortiment aan 'off the shelf' toestellen}{chapter.2}% 19
+\BOOKMARK [2][-]{subsection.2.5.1}{Beaglebone AI}{section.2.5}% 20
+\BOOKMARK [2][-]{subsection.2.5.2}{Coral Dev Board}{section.2.5}% 21
+\BOOKMARK [2][-]{subsection.2.5.3}{Nvidia Jetson Nano}{section.2.5}% 22
+\BOOKMARK [2][-]{subsection.2.5.4}{Nvidia Jetson TX2}{section.2.5}% 23
+\BOOKMARK [2][-]{subsection.2.5.5}{Raspberry Pi}{section.2.5}% 24
+\BOOKMARK [2][-]{subsection.2.5.6}{Personal Computer: Lenovo Legion Y520}{section.2.5}% 25
+\BOOKMARK [1][-]{section.2.6}{Benchmarking van Machine Learning algoritmes}{chapter.2}% 26
+\BOOKMARK [2][-]{subsection.2.6.1}{Bestaande benchmarks}{section.2.6}% 27
+\BOOKMARK [0][-]{chapter.3}{Data verwerving}{}% 28
+\BOOKMARK [1][-]{section.3.1}{Structuur benchmark}{chapter.3}% 29
+\BOOKMARK [1][-]{section.3.2}{Uitvoeren metingen}{chapter.3}% 30
+\BOOKMARK [1][-]{section.3.3}{Opslaan van data}{chapter.3}% 31
+\BOOKMARK [1][-]{section.3.4}{Verkennen van software}{chapter.3}% 32
+\BOOKMARK [1][-]{section.3.5}{Verkennen edge-devices}{chapter.3}% 33
+\BOOKMARK [1][-]{section.3.6}{Structuur programma}{chapter.3}% 34
+\BOOKMARK [2][-]{subsection.3.6.1}{Regressie subprogramma's}{section.3.6}% 35
+\BOOKMARK [2][-]{subsection.3.6.2}{Classificatie subprogramma's}{section.3.6}% 36
+\BOOKMARK [2][-]{subsection.3.6.3}{Conversie naar TFLite}{section.3.6}% 37
+\BOOKMARK [0][-]{chapter.4}{Data verwerking}{}% 38
+\BOOKMARK [1][-]{section.4.1}{Data cleaning}{chapter.4}% 39
+\BOOKMARK [2][-]{subsection.4.1.1}{Verwerpen data}{section.4.1}% 40
+\BOOKMARK [2][-]{subsection.4.1.2}{Behandelen uitschieters}{section.4.1}% 41
+\BOOKMARK [1][-]{section.4.2}{Vormgeving resultaten}{chapter.4}% 42
+\BOOKMARK [2][-]{subsection.4.2.1}{Gebruikte grootheden}{section.4.2}% 43
+\BOOKMARK [2][-]{subsection.4.2.2}{Weergave resultaten}{section.4.2}% 44
+\BOOKMARK [1][-]{section.4.3}{Overzicht code}{chapter.4}% 45
+\BOOKMARK [2][-]{subsection.4.3.1}{Ophalen data}{section.4.3}% 46
+\BOOKMARK [2][-]{subsection.4.3.2}{Verwerken data}{section.4.3}% 47
+\BOOKMARK [2][-]{subsection.4.3.3}{Visualiseren data}{section.4.3}% 48
+\BOOKMARK [0][-]{chapter.5}{Resultaten}{}% 49
+\BOOKMARK [1][-]{section.5.1}{Ruwe benchmark gegevens}{chapter.5}% 50
+\BOOKMARK [1][-]{section.5.2}{Performantie}{chapter.5}% 51
+\BOOKMARK [1][-]{section.5.3}{Energieverbruik}{chapter.5}% 52
+\BOOKMARK [0][-]{chapter.6}{Conclusie}{}% 53
+\BOOKMARK [1][-]{section.6.1}{Toekomstig werk}{chapter.6}% 54
+\BOOKMARK [0][-]{appendix.A}{Beschrijving van deze masterproef in de vorm van een wetenschappelijk artikel}{}% 55
+\BOOKMARK [0][-]{appendix.B}{Benchmark code}{}% 56
+\BOOKMARK [1][-]{section.B.1}{Runnen benchmark}{appendix.B}% 57
+\BOOKMARK [1][-]{section.B.2}{Plotten resultaten}{appendix.B}% 58
+\BOOKMARK [0][-]{appendix.C}{Poster}{}% 59
